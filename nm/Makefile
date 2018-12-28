@@ -6,20 +6,23 @@
 #    By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 13:13:35 by ygarrot           #+#    #+#              #
-#    Updated: 2018/12/26 14:29:05 by ygarrot          ###   ########.fr        #
+#    Updated: 2018/12/28 17:08:11 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = ft_nm 
 
 FLAGS = -Wall -Werror -Wextra -g3
+FLAGS +=  -fsanitize=address
 
 SRC_FOLDER = src/
 INCLUDE =  includes/
 OBJ_DIR = mkdir obj
-SRC_FP = \
-				 nm.c
-
+# :r !ls
+SRC_FP =\
+				segment_command.c \
+		nlist.c \
+		nm.c
 OBJ = $(addprefix $(SRC_FOLDER), $(SRC_FP:.c=.o))
 LIBFT = ../libft/libft.a
 
@@ -27,7 +30,7 @@ all: $(NAME)
 
 src/%.o: src/%.c
 
-	gcc $(FLAGS) -o $@ -c $<  -I $(INCLUDE)
+	@gcc $(FLAGS) -o $@ -c $<  -I $(INCLUDE)
 
 $(NAME): $(OBJ)
 	@make -C ../libft -j

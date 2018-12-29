@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/28 14:08:01 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/12/29 15:44:00 by ygarrot          ###   ########.fr       */
+/*   Updated: 2018/12/29 16:05:17 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ void		set_section_addresses(t_section_64 *section,
 
 	nm = ptr;
 	index = -1;
-	ft_printf("%s\n", section->sectname);
 	if (!ft_strcmp(section->segname, SEG_DATA))
 	{
 		if (!ft_strcmp(section->sectname, SECT_DATA))	
@@ -47,8 +46,5 @@ void		set_section_addresses(t_section_64 *section,
 			!ft_strcmp(section->sectname, SECT_TEXT))
 		index = TEXT_ADD;
 	if (index != -1)
-	{
 		nm->sect_address[index] = address + 1;
-		ft_printf("%x, %d\n", address, index);
-	}
 }

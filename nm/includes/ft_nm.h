@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:01 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/12/29 15:45:13 by ygarrot          ###   ########.fr       */
+/*   Updated: 2018/12/29 16:04:49 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ typedef struct	s_nm
 void	iter_over_section(t_segment_command_64 *segm, void	*struc,
 		void	(*f)(t_section_64*, void *ptr, uint32_t index));
 char		get_flag(t_list64 ptr, int type, t_nm *nm);
+void		print_nm_format(t_list64 ptr, char	*string_table, t_nm *nm);
 void		set_section_addresses(t_section_64 *section, void *ptr, uint32_t index);
 
 #endif

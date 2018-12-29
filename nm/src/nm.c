@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:58 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/12/29 15:27:59 by ygarrot          ###   ########.fr       */
+/*   Updated: 2018/12/29 16:05:08 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,7 @@ void	print_output(int nsyms, int symoff, int stroff, void *ptr, t_nm *nm)
 	string_table = ptr + stroff;
 	for (i = 0; i < nsyms; ++i)
 	{
-		if (array[i].n_type & N_STAB)
-			continue ;
-		if (*(string_table + array[i].n_un.n_strx))
-		{
-			ft_printf("%c: ", get_flag(array[i], 0, nm));
-			ft_printf("%s\n",  string_table + array[i].n_un.n_strx);
-		}
+			print_nm_format(array[i], string_table, nm);
 	}
 }
 

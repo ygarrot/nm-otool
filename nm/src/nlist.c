@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/28 14:47:16 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/12/29 15:48:27 by ygarrot          ###   ########.fr       */
+/*   Updated: 2018/12/29 16:34:29 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ char	get_flag(t_list64 ptr, int type, t_nm *nm)
 	template = (t_list_temp [5]){
 		{N_UNDF, 'u'},	
 			{N_ABS, 'a'},	
-			{N_SECT, 'u'},
 			{N_INDR, 'i'},
 			{-1, '?'}
 	};
@@ -56,5 +55,19 @@ char	get_flag(t_list64 ptr, int type, t_nm *nm)
 		flag = get_flag_from_template(template, ptr.n_type & N_TYPE);
 	/* ft_printf(" n_type: %#x, n_sect: %#x, n_desc: %#x, n_value: %#x, str: ", ptr.n_type, ptr.n_sect, */
 	/* 		GET_COMM_ALIGN(ptr.n_desc), ptr.n_value); */
-		return (ptr.n_type & N_EXT ? ft_toupper(flag) : flag);
+	return (ptr.n_type & N_EXT ? ft_toupper(flag) : flag);
 }
+
+void		print_nm_format(t_list64 ptr, char	*string_table, t_nm *nm)
+{
+	char	flag;
+
+	if (ptr.n_type & N_STAB)
+		return ;
+	if (!*(string_table + ptr.n_un.n_strx))
+		return ;
+	if ((flag = get_flag(ptr, 0, nm)) != 'U')
+		;
+		ft_printf("%016llx", ptr.n_value);
+		ft_printf("%c %s\n", flag, string_table + ptr.n_un.n_strx);
+	}

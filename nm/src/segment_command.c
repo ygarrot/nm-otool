@@ -6,14 +6,14 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/28 14:08:01 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/12/29 14:58:03 by ygarrot          ###   ########.fr       */
+/*   Updated: 2018/12/29 15:44:00 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_nm.h"
 
-void	iter_over_section(t_segment_command_64 *segm, void	*struc,
-		void	(*f)(t_section_64*, t_nm *struc))
+void	iter_over_section(t_segment_command_64 *segm, void *struc,
+		void	(*f)(t_section_64*, void *struc, uint32_t index))
 {
 	t_section_64 						*section;
 	uint32_t								i;
@@ -22,23 +22,33 @@ void	iter_over_section(t_segment_command_64 *segm, void	*struc,
 	section = (void*) segm + sizeof(*segm);
 	while (++i < segm->nsects)
 	{
-		(*f)(section, struc);
+		(*f)(section, struc, i);
 		section = (void*)section + sizeof(*section);	
 	}
 }
 
-void		set_section_addresses(t_section_64 *section, t_nm	*nm)
+void		set_section_addresses(t_section_64 *section,
+		void	*ptr, uint32_t address)
 {
-	ft_printf("%d\n", nm->count_sect);
-	nm->count_sect++;
+	int index;
+	t_nm		*nm;
+
+	nm = ptr;
+	index = -1;
+	ft_printf("%s\n", section->sectname);
 	if (!ft_strcmp(section->segname, SEG_DATA))
 	{
-			if (!ft_strcmp(section->sectname, SECT_DATA))	
-				nm->sect_address[DATA_ADD] = nm->count_sect;
-			if (!ft_strcmp(section->sectname, SECT_BSS))
-				nm->sect_address[BSS_ADD] = nm->count_sect;
+		if (!ft_strcmp(section->sectname, SECT_DATA))	
+			index = DATA_ADD;
+		if (!ft_strcmp(section->sectname, SECT_BSS))
+			index = BSS_ADD;
 	}
 	if (!ft_strcmp(section->segname, SEG_TEXT) &&
 			!ft_strcmp(section->sectname, SECT_TEXT))
-		nm->sect_address[TEXT_ADD] = nm->count_sect;
+		index = TEXT_ADD;
+	if (index != -1)
+	{
+		nm->sect_address[index] = address + 1;
+		ft_printf("%x, %d\n", address, index);
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:01 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/12/28 17:08:11 by ygarrot          ###   ########.fr       */
+/*   Updated: 2018/12/29 14:36:49 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,31 +21,37 @@
 # include <mach-o/nlist.h>
 # include <mach-o/loader.h>
 # include <sys/stat.h>
-
-typedef struct section_64 t_section_64;
-typedef struct	segment_command_64 t_segment_command_64;
-typedef struct nlist_64 t_list64;
-
-typedef struct s_list_temp
-{
-	int		symb;
-	char	c;
-}												t_list_temp;
-
-typedef struct s_nm
-{
-	long			sect_adress[10];
-	int		opt;
-}							t_nm;
  
 enum
 {
-	O_FKA	
+	BSS_ADD,
+	DATA_ADD,
+	TEXT_ADD
+}	e_sect;
 
+typedef struct mach_header_64				t_mach_header_64;
+typedef struct load_command					t_load_command;
+typedef struct symtab_command				t_symtab_command;
+typedef struct section_64						t_section_64;
+typedef struct segment_command_64		t_segment_command_64;
+typedef struct nlist_64							t_list64;
 
-}opt;
+typedef struct	s_list_temp
+{
+	int		symb;
+	char	c;
+}				t_list_temp;
 
-void		iter_over_section(t_segment_command_64 *segm);
-char		get_flag(t_list64 ptr, int type);
+typedef struct	s_nm
+{
+	size_t		count_sect;
+	long			sect_address[TEXT_ADD + 1];
+	int				opt;
+}								t_nm;
+
+void	iter_over_section(t_segment_command_64 *segm, void	*struc,
+		void	(*f)(t_section_64*, t_nm *struc));
+char		get_flag(t_list64 ptr, int type, t_nm *nm);
+void		set_section_addresses(t_section_64 *section, t_nm	*nm);
 
 #endif

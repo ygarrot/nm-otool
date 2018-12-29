@@ -6,12 +6,12 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:58 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/12/28 17:08:11 by ygarrot          ###   ########.fr       */
+/*   Updated: 2018/12/29 14:45:58 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_nm.h"
-void	print_output(int nsyms, int symoff, int stroff, void *ptr)
+void	print_output(int nsyms, int symoff, int stroff, void *ptr, t_nm *nm)
 {
 	int		i;
 	char		*string_table;
@@ -22,14 +22,10 @@ void	print_output(int nsyms, int symoff, int stroff, void *ptr)
 	for (i = 0; i < nsyms; ++i)
 	{
 		if (array[i].n_type & N_STAB)
-		{
 			continue ;
-		}
-//		if (array[i].n_type & N_EXT)
-//			ft_printf("n_ext\n");
 		if (*(string_table + array[i].n_un.n_strx))
 		{
-			get_flag(array[i], 0);
+			ft_printf("%c: ", get_flag(array[i], 0, nm));
 			ft_printf("%s\n",  string_table + array[i].n_un.n_strx);
 		}
 	}
@@ -37,12 +33,13 @@ void	print_output(int nsyms, int symoff, int stroff, void *ptr)
 
 void	handle64(void *ptr)
 {
-	int		ncmds;
-	int		i;
-	struct	mach_header_64	*header;
-	struct	load_command *lc;
-	struct	symtab_command	*sym;
-	t_segment_command_64 *segm;
+	int										ncmds;
+	int										i;
+	t_mach_header_64 			*header;
+	t_load_command 				*lc;
+	t_symtab_command			*sym;
+	t_segment_command_64	*segm;
+	t_nm								nm;
 
 	header = (struct mach_header_64 *) ptr;
 	ncmds = header->ncmds;
@@ -51,14 +48,13 @@ void	handle64(void *ptr)
 	{
 		if (lc->cmd == LC_SYMTAB)
 		{
-			sym = (struct symtab_command *)lc;	
-			print_output(sym->nsyms,sym->symoff, sym->stroff, ptr);
+			sym = (t_symtab_command *)lc;	
+			print_output(sym->nsyms,sym->symoff, sym->stroff, ptr, &nm);
 		}
 		if (lc->cmd == LC_SEGMENT_64)
 		{
 			segm = (struct segment_command_64*)lc;
-			ft_printf("%s\n", segm->segname);
-			iter_over_section(segm);
+			iter_over_section(segm, &nm, &set_section_addresses);
 		}
 		lc = (void*)lc + lc->cmdsize;
 	}
@@ -86,6 +82,7 @@ int main(int ac, char **av)
 	int 		fd;
 	char		*ptr;
 	struct	stat buf;
+
 	if (ac != 2)
 		return (ft_error("please give me an arg"));
 	if ((fd = open(av[1], O_RDONLY)) < 0)

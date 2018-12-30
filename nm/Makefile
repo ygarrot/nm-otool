@@ -6,7 +6,7 @@
 #    By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 13:13:35 by ygarrot           #+#    #+#              #
-#    Updated: 2018/12/29 14:34:11 by ygarrot          ###   ########.fr        #
+#    Updated: 2018/12/30 14:40:28 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,8 @@ OBJ_DIR = mkdir obj
 # :r !ls
 SRC_FP =\
 				segment_command.c \
+				ptr_utils.c \
+				ft_hashcmp.c \
 		nlist.c \
 		nm.c
 OBJ = $(addprefix $(SRC_FOLDER), $(SRC_FP:.c=.o))

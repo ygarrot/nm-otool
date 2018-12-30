@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:01 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/12/30 16:22:01 by ygarrot          ###   ########.fr       */
+/*   Updated: 2018/12/30 17:16:01 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,14 @@ typedef struct	s_nm
 	char			*string_table;
 	long			sect_address[TEXT_ADD + 1];
 	t_btree		*btree;
+	int				iter_nb;
 	int				opt;
+	void *header;
 }								t_nm;
 
 void	iter_over_section(t_segment_command_64 *segm, void	*struc,
 		void	(*f)(t_section_64*, void *ptr, uint32_t index));
+void	apply_symtab(t_symtab_command *sym, t_nm *nm);
 char		get_flag(t_list64 ptr, int type, t_nm *nm);
 void		print_nm_format(void *ptr, void *nm);
 void		set_section_addresses(void *section, void *ptr, uint32_t index);
@@ -73,6 +76,6 @@ void	iter_over_mem(void *ptr, void *struc, int type,
 		void	(*f)(void*, void *struc, uint32_t index));
 int		ft_alphacmp(void *s1, void *s2);
 t_nm		*get_nm(t_nm *nm);
-void	print_output(int nsyms, int symoff, int stroff, void *ptr, t_nm *nm);
+void	print_output(int nsyms, int symoff, t_nm *nm);
 void		cross_command(void	*ptr, void	*struc, uint32_t index);
 #endif

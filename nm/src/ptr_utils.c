@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/30 11:34:41 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/12/30 16:22:52 by ygarrot          ###   ########.fr       */
+/*   Updated: 2018/12/30 17:36:05 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,14 @@
 
 int		get_iter_nb(void *ptr, int type)
 {
+	t_nm *nm;
+
+	if (!(nm = get_nm(0)))
+		return (0);
 	if (type == LOAD_COMMAND)
 			return (((t_mach_header_64*)(ptr -sizeof(t_mach_header_64)))->ncmds);
 	if (type == SYM_TAB)
-			return (((t_symtab_command*)(ptr - sizeof(t_symtab_command)))->nsyms);
+			return (nm->iter_nb);
 	if (type == SECTION_64)
 			return (((t_segment_command_64*)(ptr - sizeof(t_segment_command_64)))->nsects);
 	return (0);
@@ -42,7 +46,7 @@ int		get_inc_value(void *ptr, int type)
 	if (type == LOAD_COMMAND)
 		return (((t_load_command*)ptr)->cmdsize);
 	if (type == SYM_TAB)
-		return (1);
+		return (0);
 	if (type == SECTION_64)
 		return (sizeof(t_section_64));
 	return (0);

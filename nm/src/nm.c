@@ -6,58 +6,11 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:58 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/12/30 16:24:00 by ygarrot          ###   ########.fr       */
+/*   Updated: 2018/12/30 17:40:28 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_nm.h"
-
-void	print_output(int nsyms, int symoff, int stroff, void *ptr, t_nm *nm)
-{
-	int		i;
-	char		*string_table;
-	t_list64 *array;
-
-	array = ptr + symoff;
-	string_table = ptr + stroff;
-	for (i = 0; i < nsyms; ++i)
-	{
-		btree_insert_data(&nm->btree, &array[i], ft_alphacmp, ft_del_nothing);
-	}
-			/* print_nm_format(array[i], string_table, nm); */
-			iter_btree(&nm->btree, nm, print_nm_format);
-}
-
-void	handle64(void *ptr)
-{
-	int										ncmds;
-	int										i;
-	t_mach_header_64 			*header;
-	t_load_command 				*lc;
-	t_symtab_command			*sym;
-	t_segment_command_64	*segm;
-	t_nm								*nm;
-
-	header = (struct mach_header_64 *) ptr;
-	ncmds = header->ncmds;
-	lc = (void*) ptr + sizeof(*header);
-	nm = get_nm(NULL);
-	for (i = 0; i < ncmds; ++i) 
-	{
-		if (lc->cmd == LC_SYMTAB)
-		{
-			sym = (t_symtab_command *)lc;	
-			nm->string_table = ptr + sym->stroff;
-			print_output(sym->nsyms,sym->symoff, sym->stroff, ptr, nm);
-		}
-		if (lc->cmd == LC_SEGMENT_64)
-		{
-			segm = (struct segment_command_64*)lc;
-			iter_over_mem((void*)segm + sizeof(*segm), nm,SECTION_64, &set_section_addresses);
-		}
-		lc = (void*)lc + lc->cmdsize;
-	}
-}
 
 int		ft_error(char *str)
 {
@@ -68,13 +21,14 @@ int		ft_error(char *str)
 void		get_arch(void *ptr)
 {
 	unsigned int		magic_number;
-	/* t_nm								nm; */
+	 t_nm								*nm; 
 
 	magic_number = *(int *)ptr;
 	if (magic_number == MH_MAGIC_64)
 	{
-			handle64(ptr);
-		/* iter_over_mem(ptr + sizeof(t_mach_header_64), &nm, LOAD_COMMAND, &cross_command); */ 
+			nm = get_nm(0);
+		nm->header = (t_mach_header_64*)ptr ;
+		 iter_over_mem(ptr + sizeof(t_mach_header_64), nm, LOAD_COMMAND, &cross_command);  
 	}
 }
 

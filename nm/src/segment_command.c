@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/28 14:08:01 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/12/30 16:20:35 by ygarrot          ###   ########.fr       */
+/*   Updated: 2018/12/30 17:37:41 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,22 +36,27 @@ void		set_section_addresses(void *ptr,
 		nm->sect_address[index] = address + 1;
 }
 
-/* void		cross_command(void	*ptr, void	*struc, uint32_t index) */
-/* { */
-/* 		t_load_command	*lc; */
-/* 		t_symtab_command			*sym; */
-/* 		t_nm		*nm; */
 
-/* 		nm = struc; */
-/* 		(void)index; */
-/* 		lc = ptr; */
-/* 		if (lc->cmd == LC_SYMTAB) */
-/* 		{ */
-/* 			sym = (t_symtab_command*)lc; */
-/* 			print_output(sym->nsyms,sym->symoff, sym->stroff, ptr, nm); */
-/* 		} */
-/* 		if (lc->cmd == LC_SEGMENT_64) */
-/* 		{ */
-/* 			iter_over_mem((t_segment_command_64*)lc,  &nm,SECTION_64, &set_section_addresses); */
-/* 		} */
-/* } */
+void	cross_command(void *ptr, void *struc, uint32_t index)
+{
+	t_load_command 				*lc;
+	t_symtab_command			*sym;
+	t_segment_command_64	*segm;
+	t_nm								*nm;
+
+	lc =  ptr;
+	nm = struc;
+	(void)index;
+	if (lc->cmd == LC_SYMTAB)
+	{
+		sym = (t_symtab_command *)lc;	
+		apply_symtab(sym, nm);
+			/* nm->string_table = ptr + sym->stroff; */
+			/* print_output(sym->nsyms,sym->symoff, nm); */
+	}
+	if (lc->cmd == LC_SEGMENT_64)
+	{
+		segm = (struct segment_command_64*)lc;
+		iter_over_mem((void*)segm + sizeof(*segm), nm,SECTION_64, &set_section_addresses);
+	}
+}

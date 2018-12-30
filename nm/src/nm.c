@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:58 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/12/30 14:48:00 by ygarrot          ###   ########.fr       */
+/*   Updated: 2018/12/30 15:37:07 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	print_output(int nsyms, int symoff, int stroff, void *ptr, t_nm *nm)
 	{
 		btree_insert_data(&nm->btree, &array[i], ft_alphacmp, ft_del_nothing);
 	}
-			print_nm_format(array[i], string_table, nm);
+			/* print_nm_format(array[i], string_table, nm); */
 			iter_btree(&nm->btree, nm, print_nm_format);
 }
 
@@ -36,19 +36,19 @@ void	handle64(void *ptr)
 	t_load_command 				*lc;
 	t_symtab_command			*sym;
 	t_segment_command_64	*segm;
-	t_nm								nm;
+	t_nm								*nm;
 
 	header = (struct mach_header_64 *) ptr;
 	ncmds = header->ncmds;
 	lc = (void*) ptr + sizeof(*header);
-	get_nm(&nm);
+	nm = get_nm(NULL);
 	for (i = 0; i < ncmds; ++i) 
 	{
 		if (lc->cmd == LC_SYMTAB)
 		{
 			sym = (t_symtab_command *)lc;	
-			print_output(sym->nsyms,sym->symoff, sym->stroff, ptr, &nm);
-			nm.string_table = ptr + sym->stroff;
+			nm->string_table = ptr + sym->stroff;
+			print_output(sym->nsyms,sym->symoff, sym->stroff, ptr, nm);
 			/* iter_over_mem(ptr + sym->symoff, &nm, SYM_TAB, &print_nm_format); */ 
 		}
 		if (lc->cmd == LC_SEGMENT_64)

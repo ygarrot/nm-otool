@@ -6,13 +6,13 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/28 14:08:01 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/12/30 15:04:36 by ygarrot          ###   ########.fr       */
+/*   Updated: 2018/12/30 16:20:35 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_nm.h"
 
-void		set_section_addresses(void	*ptr,
+void		set_section_addresses(void *ptr,
 		void	*struc, uint32_t address)
 {
 	int index;

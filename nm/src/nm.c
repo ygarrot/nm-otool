@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:58 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/12/30 15:37:07 by ygarrot          ###   ########.fr       */
+/*   Updated: 2018/12/30 16:24:00 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,11 @@ void	handle64(void *ptr)
 			sym = (t_symtab_command *)lc;	
 			nm->string_table = ptr + sym->stroff;
 			print_output(sym->nsyms,sym->symoff, sym->stroff, ptr, nm);
-			/* iter_over_mem(ptr + sym->symoff, &nm, SYM_TAB, &print_nm_format); */ 
 		}
 		if (lc->cmd == LC_SEGMENT_64)
 		{
 			segm = (struct segment_command_64*)lc;
-			iter_over_mem(segm,  &nm,SECTION_64, &set_section_addresses);
+			iter_over_mem((void*)segm + sizeof(*segm), nm,SECTION_64, &set_section_addresses);
 		}
 		lc = (void*)lc + lc->cmdsize;
 	}

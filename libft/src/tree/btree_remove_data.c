@@ -6,7 +6,7 @@
 /*   By: tcharrie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/08 14:55:48 by tcharrie          #+#    #+#             */
-/*   Updated: 2018/06/17 17:08:59 by tcharrie         ###   ########.fr       */
+/*   Updated: 2018/12/31 16:55:22 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void		btree_remove_data(t_btree **root, void *data,
 	val = cmpf(data, root[0]->item);
 	if (val < 0)
 		btree_remove_data(&(root[0]->left), data, cmpf, del);
-	else if (val > 0)
+	else if (val >= 0)
 		btree_remove_data(&(root[0]->right), data, cmpf, del);
 	else if (!root[0]->left || !root[0]->right)
 		btree_remove_data_easy(root, del);

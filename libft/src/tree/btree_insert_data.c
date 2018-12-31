@@ -6,7 +6,7 @@
 /*   By: tcharrie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/21 16:16:59 by tcharrie          #+#    #+#             */
-/*   Updated: 2018/12/30 17:47:47 by ygarrot          ###   ########.fr       */
+/*   Updated: 2018/12/31 16:56:14 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 static int	btree_insert_data_n(void *item, int val,
 		t_btree *tmp)
 {
-	if (val > 0)
+	if (val >= 0)
 		tmp->right = btree_create_node(item);
 	else
 		tmp->left = btree_create_node(item);
-	if (val > 0 && tmp->right)
+	if (val >= 0 && tmp->right)
 		tmp->right->parent = tmp;
 	else if (val < 0 && tmp->left)
 		tmp->left->parent = tmp;
@@ -34,21 +34,22 @@ int			btree_insert_data(t_btree **root, void *item, int (*cmpf)(void *,
 	t_btree	*tmp;
 	int		val;
 
+	(void)del;
 	if (!root)
 		return (-1);
 	else if (!(tmp = *root))
 		return (-!(*root = btree_create_node(item)));
 	val = cmpf(item, tmp->item);
-	while (val && ((tmp->left && val < 0) || (tmp->right && val > 0)))
+	while ((tmp->left && val < 0) || (tmp->right && val >= 0))
 	{
 		tmp = (val < 0) ? (tmp->left) : (tmp->right);
 		val = cmpf(item, tmp->item);
 	}
-	if (!val)
-	{
-		del(tmp->item);
-		tmp->item = item;
-		return (0);
-	}
+	/* if (!val) */
+	/* { */
+	/* 	del(tmp->item); */
+	/* 	tmp->item = item; */
+	/* 	return (0); */
+	/* } */
 	return (btree_insert_data_n(item, val, tmp));
 }

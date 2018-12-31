@@ -36,14 +36,14 @@
                  U ___asan_version_mismatch_check_apple_900
                  U ___stack_chk_fail
                  U ___stack_chk_guard
-                 T __mh_execute_header
-0000000100001520 T _apply_sort_sym
-0000000100001610 T _apply_symtab
+0000000100000000 T __mh_execute_header
+0000000100001510 T _apply_sort_sym
+0000000100001600 T _apply_symtab
 0000000100004640 t _asan.module_ctor
 0000000100004660 t _asan.module_dtor
 0000000100006030 T _bin_count
 00000001000081a0 T _btree_create_node
-0000000100002260 T _btree_erase
+0000000100002250 T _btree_erase
 00000001000081e0 T _btree_insert_data
 0000000100008370 t _btree_insert_data_n
 00000001000053b0 T _chooseconv
@@ -59,17 +59,17 @@
 00000001000060d0 T _convwchar
 0000000100006200 T _convwstr
 0000000100003f00 T _cross_arch
-0000000100001360 T _cross_command
+0000000100001350 T _cross_command
 00000001000097a8 S _e_sect
 00000001000097ac S _e_strcut
                  U _free
                  U _fstat$INODE64
-0000000100001d90 T _ft_alphacmp
+0000000100001d80 T _ft_alphacmp
 0000000100004d60 T _ft_bzero
 0000000100005290 T _ft_capitalize
 00000001000051c0 T _ft_charchr
-0000000100001fb0 T _ft_del_nothing
-0000000100001fc0 T _ft_del_nothing_2
+0000000100001fa0 T _ft_del_nothing
+0000000100001fb0 T _ft_del_nothing_2
 0000000100003d40 T _ft_error
 0000000100004670 T _ft_imaxtoabase
 00000001000049b0 T _ft_ismax
@@ -91,19 +91,19 @@
 0000000100004db0 T _ft_toupper
 0000000100004860 T _ft_uimaxtoabase
 0000000100007010 T _get_fields
-0000000100002ec0 T _get_flag
+0000000100002eb0 T _get_flag
 0000000100009760 s _get_flag.template
-00000001000028c0 T _get_flag_from_section
-0000000100002740 T _get_flag_from_template
-0000000100001bd0 T _get_inc_value
-0000000100001930 T _get_iter_nb
-00000001000018c0 T _get_magic
-0000000100001d40 T _get_nm
+00000001000028b0 T _get_flag_from_section
+0000000100002730 T _get_flag_from_template
+0000000100001bc0 T _get_inc_value
+0000000100001920 T _get_iter_nb
+00000001000018b0 T _get_magic
+0000000100001d30 T _get_nm
 00000001000096e0 s _get_nm.nm
 0000000100006f70 T _initlist
 0000000100003db0 T _is_fat_header
-0000000100001fd0 T _iter_btree
-0000000100001ca0 T _iter_over_mem
+0000000100001fc0 T _iter_btree
+0000000100001c90 T _iter_over_mem
 00000001000042f0 T _main
                  U _malloc
                  U _mmap
@@ -112,12 +112,12 @@
 00000001000072f0 T _parse_arg
 0000000100006850 T _parse_colors
 0000000100007e40 T _print1
-00000001000036b0 T _print_nm_format
+00000001000036a0 T _print_nm_format
 0000000100006650 T _putf
 0000000100007650 T _putstrnb
 0000000100006340 T _reset_int_tab
-0000000100001220 T _set_section_64_addresses
-00000001000010e0 T _set_section_addresses
+0000000100001210 T _set_section_64_addresses
+00000001000010d0 T _set_section_addresses
 0000000100003d60 T _swap_int
                  U _write
                  U dyld_stub_binder

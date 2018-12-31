@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/28 14:47:16 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/12/31 16:40:21 by ygarrot          ###   ########.fr       */
+/*   Updated: 2018/12/31 16:44:49 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void		print_nm_format(void *ptr, void *struc)
 
 	list = *((t_list64*)ptr);
 	nm = struc;
-	mask = (nm->current_arch == MH_MAGIC_64 ? 0xffffff : 0xff);
+	mask = (nm->current_arch == MH_MAGIC_64 ? 0xffffffff : 0xff);
 	string_table = nm->string_table;
 	if (list.n_type & N_STAB)
 		return ;
@@ -78,7 +78,7 @@ void		print_nm_format(void *ptr, void *struc)
 		;
 	int format = (mask == 0xff ? 8 : 16);
 		if (list.n_value & mask)
-			ft_printf("%0*llx", format,list.n_value );
+			ft_printf("%0*llx", format,list.n_value & mask);
 		else
 			ft_printf("%*c",format, ' ');
 		ft_printf(" %c %s\n", flag, string_table + list.n_un.n_strx);

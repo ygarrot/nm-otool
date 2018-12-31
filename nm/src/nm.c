@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:58 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/12/30 17:40:28 by ygarrot          ###   ########.fr       */
+/*   Updated: 2018/12/31 15:34:58 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,65 @@ int		ft_error(char *str)
 	ft_putstr(str);
 	return (-1);
 }
+int	swap_int(int num)
+{
+	int swapped = ((num>>24)&0xff) | // move byte 3 to byte 0
+		((num<<8)&0xff0000) | // move byte 1 to byte 2
+		((num>>8)&0xff00) | // move byte 2 to byte 1
+		((num<<24)&0xff000000); // byte 0 to byte 3
+	return swapped;
+}
+void	is_fat_header(t_fat_header *fat_header)
+{
+	int		offset;
+	int		nfat;
+	t_fat_arch *arch;
 
-void		get_arch(void *ptr)
+	arch = (t_fat_arch*)(fat_header + 1);
+	nfat = swap_int(fat_header->nfat_arch);
+	ft_printf("nfat : %d\n", nfat);
+	t_nm *nm = get_nm(0);
+	while (--nfat >= 0)
+	{
+		offset = swap_int(arch->offset);
+		ft_bzero(nm, sizeof(*nm));
+		btree_erase(&nm->btree, ft_del_nothing_2); 
+		if (nm->btree)
+			d
+
+		cross_arch((void*)fat_header + offset);
+		arch++;
+	}
+}
+
+void		cross_arch(void *ptr)
 {
 	unsigned int		magic_number;
-	 t_nm								*nm; 
+	t_nm								*nm; 
 
+	if (!ptr)
+		return ;
 	magic_number = *(int *)ptr;
+	nm = get_nm(0);
+	nm->current_arch = magic_number;
 	if (magic_number == MH_MAGIC_64)
+	{	
+		return ;
+	nm->header = (t_mach_header_64*)ptr ;
+		nm->iter_nb = ((t_mach_header_64*)ptr)->ncmds;
+		iter_over_mem(ptr + sizeof(t_mach_header_64), nm, LOAD_COMMAND, &cross_command);  
+	}
+	else if (magic_number == MH_MAGIC)
 	{
-			nm = get_nm(0);
-		nm->header = (t_mach_header_64*)ptr ;
-		 iter_over_mem(ptr + sizeof(t_mach_header_64), nm, LOAD_COMMAND, &cross_command);  
+		d
+	nm->header = (t_mach_header*)ptr ;
+		nm->iter_nb = ((t_mach_header*)ptr)->ncmds;
+		iter_over_mem(ptr + sizeof(t_mach_header), nm, LOAD_COMMAND, &cross_command);
+	}
+	else if (magic_number == FAT_MAGIC || magic_number == FAT_CIGAM)
+		is_fat_header(ptr);
+	else {
+			ft_printf("T ki %#x?\n", magic_number);
 	}
 }
 
@@ -46,6 +93,6 @@ int main(int ac, char **av)
 		return (ft_error("fstat"));
 	if ((ptr = mmap(0, buf.st_size, PROT_READ, MAP_PRIVATE, fd, 0)) == MAP_FAILED)
 		return (ft_error("mmap errror\n"));
-	get_arch(ptr);
+	cross_arch(ptr);
 	return (EXIT_SUCCESS);
 }

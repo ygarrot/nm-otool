@@ -1,43 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   section_sort.c                                     :+:      :+:    :+:   */
+/*   btree_erase.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/30 14:00:39 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/12/31 15:27:24 by ygarrot          ###   ########.fr       */
+/*   Created: 2018/05/12 16:15:45 by ygarrot           #+#    #+#             */
+/*   Updated: 2018/06/09 17:26:30 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_nm.h"
+#include "../../includes/sh.h"
 
-
-void	ft_del_nothing(void *why)
+void	*erasehash(void **item)
 {
-	(void)why;
-	return ; 
-}
+	char	**t;
 
-void	*ft_del_nothing_2(void **why)
-{
-	(void)why;
-	return (0); 
-}
-
-void		iter_btree(t_btree **root, void *struc, void (*f)(void *, void *struc))
-{
-	void	*content;
-
-	if (!root || !*root)
-		return ;
-	content = (*root)->item;
-	if ((*root)->left)
-		iter_btree(&(*root)->left, struc, f);
-	if (content)
-		(*f)(content, struc);
-	if ((*root)->right)
-		iter_btree(&(*root)->right, struc, f);
+	t = (char**)*item;
+	if (!t)
+		return (0);
+	ft_memdel((void**)&t[0]);
+	ft_memdel((void**)&t[1]);
+	ft_memdel((void**)&t);
+	return (0);
 }
 
 void	btree_erase(t_btree **root, void *erase(void **))
@@ -49,9 +34,16 @@ void	btree_erase(t_btree **root, void *erase(void **))
 	if ((*root)->right)
 		btree_erase(&((*root)->right), erase);
 	erase(&((*root)->item));
-	ft_memdel((void**)&root);
-	/* free(*root); */
-	/* *root = 0; */
+	free(*root);
+	*root = 0;
 }
 
+void	erase_hash_tab(t_btree **hash_tb)
+{
+	long	i;
 
+	i = -1;
+	while (++i < HASH_SIZE)
+		btree_erase(&hash_tb[i], erasehash);
+	ft_memdel((void**)&hash_tb);
+}

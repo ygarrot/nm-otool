@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:58 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/12/31 15:34:58 by ygarrot          ###   ########.fr       */
+/*   Updated: 2018/12/31 15:47:09 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,12 @@ void	is_fat_header(t_fat_header *fat_header)
 
 	arch = (t_fat_arch*)(fat_header + 1);
 	nfat = swap_int(fat_header->nfat_arch);
-	ft_printf("nfat : %d\n", nfat);
 	t_nm *nm = get_nm(0);
 	while (--nfat >= 0)
 	{
 		offset = swap_int(arch->offset);
 		ft_bzero(nm, sizeof(*nm));
 		btree_erase(&nm->btree, ft_del_nothing_2); 
-		if (nm->btree)
-			d
-
 		cross_arch((void*)fat_header + offset);
 		arch++;
 	}
@@ -60,14 +56,12 @@ void		cross_arch(void *ptr)
 	nm->current_arch = magic_number;
 	if (magic_number == MH_MAGIC_64)
 	{	
-		return ;
 	nm->header = (t_mach_header_64*)ptr ;
 		nm->iter_nb = ((t_mach_header_64*)ptr)->ncmds;
 		iter_over_mem(ptr + sizeof(t_mach_header_64), nm, LOAD_COMMAND, &cross_command);  
 	}
 	else if (magic_number == MH_MAGIC)
 	{
-		d
 	nm->header = (t_mach_header*)ptr ;
 		nm->iter_nb = ((t_mach_header*)ptr)->ncmds;
 		iter_over_mem(ptr + sizeof(t_mach_header), nm, LOAD_COMMAND, &cross_command);

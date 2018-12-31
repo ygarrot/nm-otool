@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/24 10:23:57 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/04/24 15:33:34 by ygarrot          ###   ########.fr       */
+/*   Updated: 2018/12/31 16:35:54 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <wchar.h>
 # include <limits.h>
 # define FLAGS "+0- #"
-# define NBR "0132456789."
+# define NBR "0132456789.*"
 # define SPECIFIER "hljz"
 # define CONVERT "uoxUOXpdDicCsS"
 

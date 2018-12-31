@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:58 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/12/31 15:47:09 by ygarrot          ###   ########.fr       */
+/*   Updated: 2018/12/31 17:14:57 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,37 +56,48 @@ void		cross_arch(void *ptr)
 	nm->current_arch = magic_number;
 	if (magic_number == MH_MAGIC_64)
 	{	
-	nm->header = (t_mach_header_64*)ptr ;
+		nm->header = (t_mach_header_64*)ptr ;
 		nm->iter_nb = ((t_mach_header_64*)ptr)->ncmds;
 		iter_over_mem(ptr + sizeof(t_mach_header_64), nm, LOAD_COMMAND, &cross_command);  
 	}
 	else if (magic_number == MH_MAGIC)
 	{
-	nm->header = (t_mach_header*)ptr ;
+		nm->header = (t_mach_header*)ptr ;
 		nm->iter_nb = ((t_mach_header*)ptr)->ncmds;
 		iter_over_mem(ptr + sizeof(t_mach_header), nm, LOAD_COMMAND, &cross_command);
 	}
 	else if (magic_number == FAT_MAGIC || magic_number == FAT_CIGAM)
 		is_fat_header(ptr);
 	else {
-			ft_printf("T ki %#x?\n", magic_number);
+		ft_printf("T ki %#x?\n", magic_number);
 	}
 }
 
-int main(int ac, char **av)
+int	mmap_file(char *file)
 {
 	int 		fd;
 	char		*ptr;
 	struct	stat buf;
 
-	if (ac != 2)
-		return (ft_error("please give me an arg"));
-	if ((fd = open(av[1], O_RDONLY)) < 0)
+	if ((fd = open(file, O_RDONLY)) < 0)
 		return (ft_error("error open\n"));
 	if (fstat(fd, &buf) < 0)
 		return (ft_error("fstat"));
 	if ((ptr = mmap(0, buf.st_size, PROT_READ, MAP_PRIVATE, fd, 0)) == MAP_FAILED)
 		return (ft_error("mmap errror\n"));
 	cross_arch(ptr);
+	return (0);
+}
+int main(int ac, char **av)
+{
+	int		i;
+
+	i = -1;
+	if (ac < 2)
+		return (mmap_file("a.out"));
+	while (++i < ac)
+	{
+			mmap_file(av[i]);
+	}
 	return (EXIT_SUCCESS);
 }

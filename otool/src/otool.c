@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:34:12 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/12/31 17:34:15 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/02 11:48:37 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,9 @@ void	is_fat_header(t_fat_header *fat_header)
 
 	arch = (t_fat_arch*)(fat_header + 1);
 	nfat = swap_int(fat_header->nfat_arch);
-	t_nm *nm = get_nm(0);
 	while (--nfat >= 0)
 	{
 		offset = swap_int(arch->offset);
-		ft_bzero(nm, sizeof(*nm));
-		btree_erase(&nm->btree, ft_del_nothing_2); 
 		cross_arch((void*)fat_header + offset);
 		arch++;
 	}
@@ -49,24 +46,23 @@ void	is_fat_header(t_fat_header *fat_header)
 void		cross_arch(void *ptr)
 {
 	unsigned int		magic_number;
-	t_nm								*nm; 
+	t_otool								*otool; 
 
 	if (!ptr)
 		return ;
+	otool = get_otool(0);
 	magic_number = *(int *)ptr;
-	nm = get_nm(0);
-	nm->current_arch = magic_number;
+	otool->magic_number = magic_number;
 	if (magic_number == MH_MAGIC_64)
 	{	
-		nm->header = (t_mach_header_64*)ptr ;
-		nm->iter_nb = ((t_mach_header_64*)ptr)->ncmds;
-		iter_over_mem(ptr + sizeof(t_mach_header_64), nm, LOAD_COMMAND, &cross_command);  
+		otool->header  = ptr;
+		otool->iter_nb = ((t_mach_header_64*)ptr)->ncmds;
+		iter_over_mem(ptr + sizeof(t_mach_header_64), otool, LOAD_COMMAND, &cross_command);  
 	}
 	else if (magic_number == MH_MAGIC)
 	{
-		nm->header = (t_mach_header*)ptr ;
-		nm->iter_nb = ((t_mach_header*)ptr)->ncmds;
-		iter_over_mem(ptr + sizeof(t_mach_header), nm, LOAD_COMMAND, &cross_command);
+		otool->iter_nb = ((t_mach_header*)ptr)->ncmds;
+		iter_over_mem(ptr + sizeof(t_mach_header), otool, LOAD_COMMAND, &cross_command);
 	}
 	else if (magic_number == FAT_MAGIC || magic_number == FAT_CIGAM)
 		is_fat_header(ptr);
@@ -90,15 +86,17 @@ int	mmap_file(char *file)
 	cross_arch(ptr);
 	return (0);
 }
+
 int main(int ac, char **av)
 {
 	int		i;
 
-	i = -1;
+	i = 0;
 	if (ac < 2)
 		return (mmap_file("a.out"));
 	while (++i < ac)
 	{
+			ft_printf("%s\n", av[i]);
 			mmap_file(av[i]);
 	}
 	return (EXIT_SUCCESS);

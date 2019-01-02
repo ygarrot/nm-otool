@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:32:25 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/12/31 17:32:32 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/01 14:55:13 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,14 @@ enum
 	SECTION,
 }	e_strcut;
 
+typedef struct s_otool
+{
+	unsigned long	magic_number;
+	void		*ptr;
+	int			iter_nb;
+	void		*header;
+}								t_otool;
+
 typedef struct fat_header 					t_fat_header;
 typedef struct fat_arch 						t_fat_arch;
 typedef struct mach_header				t_mach_header;
@@ -50,6 +58,7 @@ typedef struct nlist_64							t_list64;
 typedef struct nlist								t_nlist;
 
 
+t_otool		*get_otool(t_otool *ptr);
 void	iter_over_mem(void *ptr, void *struc, int type,
 		void	(*f)(void*, void *struc, uint32_t index));
 void		cross_command(void	*ptr, void	*struc, uint32_t index);

@@ -6,11 +6,11 @@
 #    By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 13:13:35 by ygarrot           #+#    #+#              #
-#    Updated: 2018/12/31 17:07:19 by ygarrot          ###   ########.fr        #
+#    Updated: 2019/01/01 13:31:23 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ft_nm 
+NAME = ft_otool
 
 FLAGS = -Wall -Werror -Wextra -g3
 FLAGS +=  -fsanitize=address
@@ -20,15 +20,19 @@ INCLUDE =  includes/
 OBJ_DIR = mkdir obj
 # :r !ls
 SRC_FP =\
-		otool.c
+					otool.c \
+				ptr_utils.c\
+					print_otool.c
+
+ALL_SRC = $(SRC_FOLDER)/$(SRC_FP) + $(SHARED_FOLDER)/$(SHARED_SRC)
 OBJ = $(addprefix $(SRC_FOLDER), $(SRC_FP:.c=.o))
+
 LIBFT = ../libft/libft.a
 
 all: $(NAME)
 
-src/%.o: src/%.c
-
-	@gcc $(FLAGS) -o $@ -c $<  -I $(INCLUDE)
+%.o: %.c
+			@gcc $(FLAGS) -o $@ -c $<  -I $(INCLUDE)
 
 $(NAME): $(OBJ)
 	@make -C ../libft -j

@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:32:25 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/01 14:55:13 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/02 13:11:11 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,22 @@ enum
 	SECTION,
 }	e_strcut;
 
+typedef	struct s_sec
+{
+		int		size;
+		int		addr;
+		int		offset;
+		unsigned char	*ptr;
+}							t_sec;
+
 typedef struct s_otool
 {
+	t_sec					section;
 	unsigned long	magic_number;
 	void		*ptr;
 	int			iter_nb;
 	void		*header;
+	int			vm_address;
 }								t_otool;
 
 typedef struct fat_header 					t_fat_header;

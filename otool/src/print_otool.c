@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/01 12:47:14 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/02 11:49:32 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/02 13:42:01 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,32 +44,51 @@ int		get_section_offset(void *ptr, t_otool *otool)
 		return (((t_section*)ptr)->offset);
 }
 
+void		set_section_values(void *ptr, t_otool *otool)
+{
+	t_section_64		*section_64;
+	t_section				*section;
+	t_sec						*o_section;
+
+	o_section = &otool->section;
+	if (otool->magic_number == MH_MAGIC_64)
+	{
+		section_64 = ptr;
+		o_section->size = section_64->size;
+		o_section->ptr = otool->header + section_64->offset;
+		o_section->addr = section_64->addr;
+	}
+	else
+	{	
+		section = ptr;
+		/* .o_section = { .size = .section->size, .ptr =  otool->header + section->offset, .add = section->addr}; */
+		o_section->size = section->size;
+		o_section->ptr = otool->header + section->offset;
+		o_section->addr = section->addr;
+	}
+}
+
 void	print_otool(void *ptr, void *struc, uint32_t index)
 {
-	uint32_t		i;
-	unsigned char		*mem;
-	t_section_64 *section;
+	int								i;
+	t_otool						*otool;
 
 	(void)index;
-	section = ptr;
-	t_otool *otool = struc;
 	if (!is_text_sect(ptr, struc))
 			return ;
-	mem = otool->header + section->offset;
-	/* mem = otool->header + get_section_offset(ptr, struc); */
+	set_section_values(ptr, struc); 
 	otool = struc;
 	i = 0;
 	ft_printf("Contents of (__TEXT,__text) section\n");
 	char *flag = otool->magic_number == MH_MAGIC ? "%08x%s" : "%016llx%s";
-	while (i < section->size)
+	while (i < otool->section.size)
 	{
-		int	i2 = -1;
-		ft_printf(flag,section->offset + i, "         ");
-		while (++i2 < 16)
-			ft_printf("%02x ", mem[i2]);
-		ft_printf("\n");
-		mem +=16;
-		i+=16;
+		if (!(i%16))
+			ft_printf(flag,otool->section.addr + i, "        ");
+		ft_printf("%02x ", otool->section.ptr[i]);
+		i++;
+		if (i && !(i%16))
+			ft_printf("\n");
 	}
 }
 
@@ -80,7 +99,9 @@ void	cross_command(void *ptr, void *struc, uint32_t index)
 	lc =  ptr;
 	(void)index;
 	if (lc->cmd == LC_SEGMENT_64)
+	{
 		iter_over_mem(ptr + sizeof(t_segment_command_64), struc, SECTION_64, &print_otool);
+	}
 	if (lc->cmd == LC_SEGMENT)
 	{
 		iter_over_mem(ptr + sizeof(t_segment_command), 

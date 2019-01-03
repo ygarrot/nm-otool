@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:34:12 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/03 16:35:38 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/03 16:57:37 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,6 @@ void		cross_arch(void *ptr)
 		is_fat_header(ptr);
 	else if (!ft_memcmp(ptr, ARLIB, ft_strlen(ARLIB)))
 	{
-		d
 		char **str = ft_strsplit((char*)ptr + 8, ' ');
 		(void)str;
 		ranlib_handler(ptr, otool);

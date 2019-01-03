@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/30 11:34:41 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/03 14:40:45 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/03 17:17:15 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,12 @@ int		get_inc_value(void *ptr, int type)
 	if (type == SECTION)
 		return (sizeof(t_section));
 	if (type == SYM_TAB_L)
-		return (sizeof(t_symbol_info));
+	{
+		char **str = ft_strsplit(ptr, ' ');
+		int size = ft_atoi(str[5]);
+			/* TODO: LEAK */
+		return (size + sizeof(t_object_header));
+	}
 	return (0);
 }
 

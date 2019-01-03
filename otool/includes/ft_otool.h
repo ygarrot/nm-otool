@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:32:25 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/03 14:15:21 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/03 15:02:57 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ enum
 #define SYM_TAB_L  888
 typedef	struct s_sec
 {
-	int		size;
-	int		addr;
+	uintmax_t	size;
+	uintmax_t	addr;
 	int		offset;
 	unsigned char	*ptr;
 }							t_sec;
@@ -90,7 +90,7 @@ typedef struct ranlib_64						t_ranlib_64;
 
 typedef struct 	s_symbol_table {
 	uint32_t       size;  
-	t_ranlib_64		ranlib;
+	t_symbol_info		ranlib;
 }								t_symbol_table;
 
 typedef struct fat_header 					t_fat_header;

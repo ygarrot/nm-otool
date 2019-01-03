@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:34:12 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/03 14:15:21 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/03 15:06:47 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,7 @@ int	mmap_file(char *file)
 	struct	stat buf;
 	t_otool	*otool;
 
+	ft_printf("%s:\n", file);
 	if ((fd = open(file, O_RDONLY)) < 0)
 		return (ft_error("error open\n"));
 	if (fstat(fd, &buf) < 0)

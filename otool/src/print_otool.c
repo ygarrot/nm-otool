@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/01 12:47:14 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/03 14:15:21 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/03 15:10:00 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void		set_section_values(void *ptr, t_otool *otool)
 
 void	print_otool(void *ptr, void *struc, uint32_t index)
 {
-	int								i;
+	uintmax_t								i;
 	t_otool						*otool;
 
 	(void)index;
@@ -80,7 +80,7 @@ void	print_otool(void *ptr, void *struc, uint32_t index)
 	otool = struc;
 	i = 0;
 	ft_printf("Contents of (__TEXT,__text) section\n");
-	char *flag = otool->magic_number == MH_MAGIC ? "%08x%s" : "%016llx%s";
+	char *flag = otool->magic_number == MH_MAGIC ? "%08x\t" : "%016llx\t";
 	while (i < otool->section.size)
 	{
 		if (!(i%16))

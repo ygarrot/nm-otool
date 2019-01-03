@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/30 11:34:41 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/03 14:15:21 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/03 14:40:45 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int		get_inc_value(void *ptr, int type)
 	if (type == SECTION)
 		return (sizeof(t_section));
 	if (type == SYM_TAB_L)
-		return (sizeof(t_ranlib_64));
+		return (sizeof(t_symbol_info));
 	return (0);
 }
 

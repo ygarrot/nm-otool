@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 17:39:02 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/03 14:45:32 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/03 15:16:55 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,16 +36,13 @@ void	cross_symbol(void *ptr)
 	sym = (t_symbol_info*)ptr;
 	t_object_header *obj ; 
 	obj= (t_object_header*)ptr;
-	ft_printf("%llx\n", sym->object );
-		ft_printf("symhead: %p\n", otool->symhead);
 	char *str = otool->symhead + (sym->object);
 	file = &str[ft_strlento(str, '\n') +1];
-	ft_printf("%s(%s)\n", otool->file_name,file); 
+	ft_printf("%s(%s):\n", otool->file_name,file); 
 	(void)index;
 	/* ft_printf("%s %d\n", str, sizeof(t_object_header)); */
 	/* ft_printf("len : %d\n", ft_strlento(str, '\n') +1); */
 	cross_arch(str + 80);
-	ft_putendl("");
 }
 
 void	ft_del_nothing(void *nothing)
@@ -57,7 +54,6 @@ void	tree_sort(void *ptr, void *struc, uint32_t index)
 {
 
 	(void)index;
-	ft_printf("elem2: %llx\n", ((t_symbol_info*)ptr)->object);
 	btree_insert_data(&((t_otool*)struc)->ranlib, ptr, offset_cmp, ft_del_nothing); 
 }
 

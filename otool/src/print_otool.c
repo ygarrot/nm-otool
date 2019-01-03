@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/01 12:47:14 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/03 15:10:00 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/03 15:20:11 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void	print_otool(void *ptr, void *struc, uint32_t index)
 			ft_printf(flag,otool->section.addr + i, "        ");
 		ft_printf("%02x ", otool->section.ptr[i]);
 		i++;
-		if (i && !(i%16))
+		if (i && !(i%16) && i < otool->section.size)
 			ft_printf("\n");
 	}
 }

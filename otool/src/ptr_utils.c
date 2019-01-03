@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/30 11:34:41 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/02 13:31:57 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/03 14:15:21 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,6 @@ int		get_magic(void *ptr)
 	return magic_number;
 }
 
-t_otool		*get_otool(t_otool *ptr)
-{
-		static t_otool otool;
-
-		if (ptr)
-			otool = *ptr;
-		return (&otool);
-}
-
 int		get_iter_nb(void *ptr, int type)
 {
 	t_otool *otool;
@@ -40,6 +31,8 @@ int		get_iter_nb(void *ptr, int type)
 			return (((t_segment_command_64*)(ptr - sizeof(t_segment_command_64)))->nsects);
 	if (type == SECTION)
 			return (((t_segment_command*)(ptr - sizeof(t_segment_command)))->nsects);
+	if (type == SYM_TAB_L)
+		return (otool->iter_nb);
 	return (0);
 }
 
@@ -51,6 +44,8 @@ int		get_inc_value(void *ptr, int type)
 		return (sizeof(t_section_64));
 	if (type == SECTION)
 		return (sizeof(t_section));
+	if (type == SYM_TAB_L)
+		return (sizeof(t_ranlib_64));
 	return (0);
 }
 
@@ -59,12 +54,20 @@ void	iter_over_mem(void *child, void *struc, int type,
 {
 	uint32_t							iter_nb;
 	uint32_t								i;
+	int											inc_value;
 
+	t_otool *otool = struc;
 	i = -1;
 	iter_nb = get_iter_nb(child, type);
 	while (++i < iter_nb)
 	{
 		(*f)(child, struc, i);
-		child = (void*)child + get_inc_value(child, type);
+		inc_value = get_inc_value(child, type);
+		if (!otool->offset_handler(otool, child, inc_value)) 
+		{
+			ft_putendl("ABORT\n");
+			return ;
+		}
+		child = (void*)child + inc_value;
 	}
 }

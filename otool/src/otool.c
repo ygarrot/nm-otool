@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:34:12 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/02 13:41:41 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/03 14:15:21 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,24 @@ int		ft_error(char *str)
 
 int	swap_int(int num)
 {
-	int swapped = ((num>>24)&0xff) | // move byte 3 to byte 0
-		((num<<8)&0xff0000) | // move byte 1 to byte 2
-		((num>>8)&0xff00) | // move byte 2 to byte 1
-		((num<<24)&0xff000000); // byte 0 to byte 3
+	int swapped = ((num>>24)&0xff) |
+		((num<<8)&0xff0000) |
+		((num>>8)&0xff00) |
+		((num<<24)&0xff000000);
 	return swapped;
+}
+
+
+int		get_value_from_addr(unsigned char *map, int index, int nb_bytes)
+{
+	int ret;
+	int i;
+
+	ret = 0;
+	i = -1;
+	while (++i < nb_bytes)
+		ret = (ret << 8) | map[index + i];
+	return (ret);
 }
 
 void	is_fat_header(t_fat_header *fat_header)
@@ -51,7 +64,7 @@ void		cross_arch(void *ptr)
 	if (!ptr)
 		return ;
 	otool = get_otool(0);
-	magic_number = *(int *)ptr;
+	magic_number = *(unsigned int *)ptr;
 	otool->magic_number = magic_number;
 	if (magic_number == MH_MAGIC_64)
 	{	
@@ -67,8 +80,14 @@ void		cross_arch(void *ptr)
 	}
 	else if (magic_number == FAT_MAGIC || magic_number == FAT_CIGAM)
 		is_fat_header(ptr);
+	else if (!ft_memcmp(ptr, ARLIB, ft_strlen(ARLIB)))
+	{
+		char **str = ft_strsplit((char*)ptr + 8, ' ');
+		(void)str;
+		ranlib_handler(ptr, otool);
+		}
 	else {
-		ft_printf("T ki %#x?\n", magic_number);
+		ft_printf("T ki %#x  %d?\n", magic_number, magic_number);
 	}
 }
 
@@ -77,15 +96,20 @@ int	mmap_file(char *file)
 	int 		fd;
 	char		*ptr;
 	struct	stat buf;
+	t_otool	*otool;
 
-	ft_printf("%s\n", file);
 	if ((fd = open(file, O_RDONLY)) < 0)
 		return (ft_error("error open\n"));
 	if (fstat(fd, &buf) < 0)
 		return (ft_error("fstat"));
 	if ((ptr = mmap(0, buf.st_size, PROT_READ, MAP_PRIVATE, fd, 0)) == MAP_FAILED)
 		return (ft_error("mmap errror\n"));
+	otool = get_otool(0);
+	otool->offset = ptr+buf.st_size;
+	otool->file_name = file;
 	cross_arch(ptr);
+	munmap(ptr, buf.st_size);
+	ft_putendl("");
 	return (0);
 }
 

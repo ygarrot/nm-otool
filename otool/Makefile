@@ -6,7 +6,7 @@
 #    By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 13:13:35 by ygarrot           #+#    #+#              #
-#    Updated: 2019/01/01 13:31:23 by ygarrot          ###   ########.fr        #
+#    Updated: 2019/01/03 14:15:21 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,8 @@ OBJ_DIR = mkdir obj
 # :r !ls
 SRC_FP =\
 					otool.c \
+					otool_struct.c \
+					cross_symbol.c\
 				ptr_utils.c\
 					print_otool.c
 

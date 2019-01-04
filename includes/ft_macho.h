@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/04 12:30:12 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/04 12:31:40 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/04 15:25:10 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,11 @@
 # include <sys/stat.h>
 
 #define ARLIB "!<arch>\n"
-#define NOTOBJ "is not an object file\n" 
+#define FT_EISDIR "Is a directory"
+#define NOTOBJ "is not an object file" 
 #define SYM_TAB_L  888
+#define FT_ENOENT "No such file or directory."
+#define NOT_MACHO "Object is not a Mach-O file type."
 
 typedef struct ranlib_64						t_ranlib_64;
 typedef struct fat_header 					t_fat_header;

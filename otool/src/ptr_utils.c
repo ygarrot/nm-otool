@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/30 11:34:41 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/04 11:48:10 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/04 15:25:04 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ int		get_inc_value(void *ptr, int type)
 		if (ft_tablen(str) < 5)
 			return (INT_MAX);
 		int size = ft_atoi(str[5]);
-			/* TODO: LEAK */
 		ft_free_dblechar_tab(str);
 		return (size + 60);
 	}

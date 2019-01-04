@@ -6,15 +6,15 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:34:12 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/04 12:08:46 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/04 15:25:06 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_otool.h"
 
-int		ft_error(char *str)
+int		ft_error(char *file, char *str)
 {
-	ft_putstr(str);
+	ft_printf("'%s' %s\n", file, str);
 	return (-1);
 }
 
@@ -66,26 +66,21 @@ void		cross_arch(void *ptr)
 	otool = get_otool(0);
 	magic_number = *(unsigned int *)ptr;
 	otool->magic_number = magic_number;
+		otool->header  = ptr;
 	if (magic_number == MH_MAGIC_64)
 	{	
-		otool->header  = ptr;
 		otool->iter_nb = ((t_mach_header_64*)ptr)->ncmds;
 		iter_over_mem(ptr + sizeof(t_mach_header_64), otool, LOAD_COMMAND, &cross_command);  
 	}
 	else if (magic_number == MH_MAGIC)
 	{
-		otool->header  = ptr;
 		otool->iter_nb = ((t_mach_header*)ptr)->ncmds;
 		iter_over_mem(ptr + sizeof(t_mach_header), otool, LOAD_COMMAND, &cross_command);
 	}
 	else if (magic_number == FAT_MAGIC || magic_number == FAT_CIGAM)
 		is_fat_header(ptr);
 	else if (!ft_memcmp(ptr, ARLIB, ft_strlen(ARLIB)))
-	{
-		char **str = ft_strsplit((char*)ptr + 8, ' ');
-		(void)str;
 		ranlib_handler(ptr, otool);
-		}
 	else {
 		ft_printf("T ki %#x  %d?\n", magic_number, magic_number);
 		ft_printf(NOTOBJ);
@@ -101,18 +96,21 @@ int	mmap_file(char *file)
 	t_otool	*otool;
 
 
-	ft_printf("%s:", file);
 	if ((fd = open(file, O_RDONLY)) < 0)
-		return (ft_error("error open\n"));
+		return (ft_error(file, FT_ENOENT));
 	if (fstat(fd, &buf) < 0)
-		return (ft_error("fstat"));
+		return (ft_error(file, "fstat"));
+	if (is_directory(fd))
+		return (ft_error(file, FT_EISDIR));
 	if ((ptr = mmap(0, buf.st_size, PROT_READ, MAP_PRIVATE, fd, 0)) == MAP_FAILED)
-		return (ft_error("mmap errror\n"));
+		return (ft_error(file, "mmap errror"));
 	otool = get_otool(0);
 	otool->offset = ptr+buf.st_size;
 	otool->file_name = file;
+	ft_printf("%s:\n", file);
 	cross_arch(ptr);
-	munmap(ptr, buf.st_size);
+	if (munmap(ptr, buf.st_size))
+		return (ft_error(file, "munmap errror"));
 	return (0);
 }
 

@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:32:25 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/04 12:42:08 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/04 15:25:13 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,9 @@ void		ranlib_handler(void *ptr, void *struc);
 void		cross_symbol(void	*ptr, void	*struc, uint32_t index);
 void		cross_command(void	*ptr, void	*struc, uint32_t index);
 void		cross_arch(void *ptr);
+int		is_section_type(t_section *section, char *type);
+int		is_section64_type(t_section_64	*section64, char *type);
+int		is_segment_type(t_section *section, char *type);
+int		is_segment64_type(t_section_64	*section64, char *type);
+int		is_text_sect(void *sect, unsigned int arch_type);
 #endif

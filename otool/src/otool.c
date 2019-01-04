@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:34:12 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/04 15:25:06 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/04 16:26:25 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,6 @@ void		cross_arch(void *ptr)
 		ft_printf("T ki %#x  %d?\n", magic_number, magic_number);
 		ft_printf(NOTOBJ);
 	}
-	ft_putendl("");
 }
 
 int	mmap_file(char *file)

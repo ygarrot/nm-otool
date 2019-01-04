@@ -6,12 +6,22 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 17:39:02 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/04 13:44:56 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/04 16:27:31 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "ft_otool.h"
+
+int			get_symtab_size(char *ptr)
+{
+		char **str = ft_strsplit(ptr, ' ');
+		if (ft_tablen(str) < 5)
+			return (INT_MAX);
+		int size = ft_atoi(str[5]);
+		ft_free_dblechar_tab(str);
+		return (size + 60);
+}
 
 void	cross_symbol(void *ptr, void *struc, uint32_t index)
 {
@@ -31,7 +41,10 @@ void	cross_symbol(void *ptr, void *struc, uint32_t index)
 /* TODO : check offset */
 	cross_arch(str + len);
 }
-
+int ft_memalign(int size, int alignment)
+{
+	return ((size + alignment) & (~alignment));
+}
 void	ranlib_handler(void *ptr, void *struc)
 {
 	t_otool *otool;
@@ -47,5 +60,5 @@ void	ranlib_handler(void *ptr, void *struc)
 	otool->symhead = ptr;
 	otool->string_table = (void*)table + table->size;
 	otool->type = RANLIB_64;
-	iter_over_mem(strr - 20 + ft_atoi(tab[5]), otool, SYM_TAB_L, &cross_symbol);
+	iter_over_mem(ptr + 68 + ft_atoi(tab[5]), otool, SYM_TAB_L, &cross_symbol);
 }

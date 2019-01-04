@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/01 12:47:14 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/04 15:25:01 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/04 16:26:27 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ void	print_otool(void *ptr, void *struc, uint32_t index)
 		if (++i && !(i % 16) && i < otool->section.size)
 			ft_printf("\n");
 	}
+	ft_putendl("");
 }
 
 void	cross_command(void *ptr, void *struc, uint32_t index)

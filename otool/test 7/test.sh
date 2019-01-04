@@ -15,7 +15,7 @@ if [ $TESTNM != 0 ]; then
 		COUNT=$(diff their mine | wc -l)
 		if [ $COUNT != 0 ]; then
 			echo "32bits test NM : FAILED! : "$FILE1": see their, mine."
-			exit 1
+			echo failed
 		else
 			echo "32bits test NM : SUCCESS! : "$FILE1
 		fi
@@ -32,7 +32,7 @@ if [ $TESTNM != 0 ]; then
 			COUNT=$(diff their mine | wc -l)
 			if [ $COUNT != 0 ]; then
 				echo "64bits tests NM: FAILED! : "$FILE1": see their, mine."
-				exit 1
+				echo failed
 			else
 				echo "64bits tests NM: SUCCESS! :"$FILE1
 			fi
@@ -44,7 +44,7 @@ if [ $TESTNM != 0 ]; then
 	COUNT=$(diff their mine | wc -l)
 	if [ $COUNT != 0 ]; then
 		echo "Fat tests NM: FAILED! : /bin/bash: see their, mine."
-		exit 1
+		echo failed
 	else
 		echo "Fat tests NM: SUCCESS! : /bin/bash"
 	fi
@@ -53,7 +53,7 @@ if [ $TESTNM != 0 ]; then
 	COUNT=$(diff their mine | wc -l)
 	if [ $COUNT != 0 ]; then
 		echo "Fat tests NM: FAILED! : /bin/sh: see their, mine."
-		exit 1
+		echo failed
 	else
 		echo "Fat tests NM: SUCCESS! : /bin/sh"
 	fi
@@ -62,7 +62,7 @@ if [ $TESTNM != 0 ]; then
 	COUNT=$(diff their mine | wc -l)
 	if [ $COUNT != 0 ]; then
 		echo "Fat tests: FAILED! : /bin/sync: see their, mine."
-		exit 1
+		echo failed
 	else
 		echo "Fat tests: SUCCESS! : /bin/sync"
 	fi
@@ -75,7 +75,7 @@ if [ $TESTNM != 0 ]; then
 		COUNT=$(diff their mine | wc -l)
 		if [ $COUNT != 0 ]; then
 			echo "Archive tests NM: FAILED! : "$FILE1": see their, mine."
-			exit 1
+			echo failed
 		else
 			echo "Archive tests NM: SUCCESS! :"$FILE1
 		fi
@@ -97,7 +97,7 @@ if [ $TESTNM != 0 ]; then
 			COUNT=$(cat their mine | sort | uniq -u | wc -l)
 			if [ $COUNT != 0 ]; then
 				echo "/usr/lib tests NM: FfAILED! : "$FILE1": see their, mine."
-				exit 1;
+				echo failed;
 			else
 				echo "/usr/lib tests NM: SUCCESS! :"$FILE1
 			fi
@@ -119,12 +119,12 @@ if [ $TESTNM != 0 ]; then
 			COUNTEM=$(cat mine_err | grep "Permission denied" | wc -l)
 			if [ $COUNT != 0 ]; then
 				echo "/sbin tests NM: FAILED! : "$FILE1": see their, mine."
-				exit 1
+				echo failed
 			else
 				echo "/sbin tests NM: SUCCESS! :"$FILE1
 			fi
 			if [ $COUNTET != $COUNTEM ]; then
-				exit 1
+				echo failed
 			fi
 		fi
 	done
@@ -138,7 +138,7 @@ if [ $TESTNM != 0 ]; then
 		COUNT=$(cat their mine | sort | uniq -u | wc -l)
 		if [ $COUNT != 0 ]; then
 			echo "/usr/bin tests NM: FAILED! : "$FILE1": see their, mine."
-			exit 1
+			echo failed
 		else
 			echo "/usr/bin tests NM: SUCCESS! :"$FILE1
 		fi
@@ -154,7 +154,7 @@ if [ $TESTNM != 0 ]; then
 		COUNT=$(cat their mine | sort | uniq -u | wc -l)
 		if [ $COUNT != 0 ]; then
 			echo "/usr/sbin tests NM: FAILED! : "$FILE1": see their, mine."
-			exit 1
+			echo failed
 		else
 			echo "/usr/bin tests NM: SUCCESS! :"$FILE1
 		fi
@@ -171,7 +171,7 @@ if [ $TESTOTOOL != 0 ]; then
 		COUNT=$(diff their mine | wc -l)
 		if [ $COUNT != 0 ]; then
 			echo "32bits test OTOOL : FAILED! : "$FILE1": see their, mine."
-			exit 1
+			echo failed
 		else
 			echo "32bits test OTOOL : SUCCESS! : "$FILE1
 		fi
@@ -188,7 +188,7 @@ if [ $TESTOTOOL != 0 ]; then
 			COUNT=$(diff their mine | wc -l)
 			if [ $COUNT != 0 ]; then
 				echo "Standard tests OTOOL: FAILED! : "$FILE1": see their, mine."
-				exit 1
+				echo failed
 			else
 				echo "Standard tests OTOOL: SUCCESS! :"$FILE1
 			fi
@@ -200,7 +200,7 @@ if [ $TESTOTOOL != 0 ]; then
 	COUNT=$(diff their mine | wc -l)
 	if [ $COUNT != 0 ]; then
 		echo "Fat tests OTOOL: FAILED! : /bin/bash: see their, mine."
-		exit 1
+		echo failed
 	else
 		echo "Fat tests OTOOL: SUCCESS! : /bin/bash"
 	fi
@@ -209,7 +209,7 @@ if [ $TESTOTOOL != 0 ]; then
 	COUNT=$(diff their mine | wc -l)
 	if [ $COUNT != 0 ]; then
 		echo "Fat tests OTOOL: FAILED! : /bin/sh: see their, mine."
-		exit 1
+		echo failed
 	else
 		echo "Fat tests OTOOL: SUCCESS! : /bin/sh"
 	fi
@@ -218,7 +218,7 @@ if [ $TESTOTOOL != 0 ]; then
 	COUNT=$(diff their mine | wc -l)
 	if [ $COUNT != 0 ]; then
 		echo "Fat tests OTOOL: FAILED! : /bin/sync: see their, mine."
-		exit 1
+		echo failed
 	else
 		echo "Fat tests OTOOL: SUCCESS! : /bin/sync"
 	fi
@@ -231,7 +231,7 @@ if [ $TESTOTOOL != 0 ]; then
 		COUNT=$(diff their mine | wc -l)
 		if [ $COUNT != 0 ]; then
 			echo "Archive tests OTOOL: FAILED! : "$FILE1": see their, mine."
-			exit 1
+			echo failed
 		else
 			echo "Archive tests OTOOL: SUCCESS! :"$FILE1
 		fi
@@ -253,7 +253,7 @@ if [ $TESTOTOOL != 0 ]; then
 			COUNT=$(cat their mine | sort | uniq -u | wc -l)
 			if [ $COUNT != 0 ]; then
 				echo "/usr/lib tests OTOOL: FfAILED! : "$FILE1": see their, mine."
-				exit 1;
+				echo failed;
 			else
 				echo "/usr/lib tests OTOOL: SUCCESS! :"$FILE1
 			fi
@@ -275,12 +275,12 @@ if [ $TESTOTOOL != 0 ]; then
 			COUNTEM=$(cat mine_err | grep "Permission denied" | wc -l)
 			if [ $COUNT != 0 ]; then
 				echo "/sbin tests OTOOL: FAILED! : "$FILE1": see their, mine."
-				exit 1
+				echo failed
 			else
 				echo "/sbin tests OTOOL: SUCCESS! :"$FILE1
 			fi
 			if [ $COUNTET != $COUNTEM ]; then
-				exit 1
+				echo failed
 			fi
 		fi
 	done
@@ -294,7 +294,7 @@ if [ $TESTOTOOL != 0 ]; then
 		COUNT=$(cat their mine | sort | uniq -u | wc -l)
 		if [ $COUNT != 0 ]; then
 			echo "/usr/bin tests OTOOL: FAILED! : "$FILE1": see their, mine."
-			exit 1
+			echo failed
 		else
 			echo "/usr/bin tests OTOOL: SUCCESS! :"$FILE1
 		fi
@@ -310,7 +310,7 @@ if [ $TESTOTOOL != 0 ]; then
 		COUNT=$(cat their mine | sort | uniq -u | wc -l)
 		if [ $COUNT != 0 ]; then
 			echo "/usr/sbin tests OTOOL: FAILED! : "$FILE1": see their, mine."
-			exit 1
+			echo failed
 		else
 			echo "/usr/bin tests OTOOL: SUCCESS! :"$FILE1
 		fi

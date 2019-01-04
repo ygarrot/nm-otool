@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/01 12:47:14 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/04 16:26:27 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/04 17:01:51 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,13 @@ void		set_section_values(void *ptr, t_otool *otool)
 
 	section_64 = ptr;
 	section = ptr;
+
 	if (otool->magic_number == MH_MAGIC_64)
 		otool->section = (t_sec){ .size = section_64->size, .ptr =  otool->header + section_64->offset, .addr = section_64->addr};
 	else
+	{
 		otool->section = (t_sec){ .size = section->size, .ptr =  otool->header + section->offset, .addr = section->addr};
+	}	
 }
 
 void	print_otool(void *ptr, void *struc, uint32_t index)

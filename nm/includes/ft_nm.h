@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:01 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/12/31 15:30:37 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/04 12:44:25 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,7 @@
 
 # include "./debug.h"
 # include "../../libft/includes/libft.h"
-# include <stdlib.h>
-# include <sys/mman.h>
-# include <stdio.h>
-# include <fcntl.h>
-# include <mach-o/nlist.h>
-# include <mach-o/loader.h>
-# include <mach-o/fat.h>
-# include <sys/stat.h>
+#include "../../includes/ft_macho.h"
 
 enum
 {
@@ -30,31 +23,6 @@ enum
 	DATA_ADD,
 	TEXT_ADD
 }	e_sect;
-
-enum
-{
-	MACH_HEADER,
-	MACH_HEADER_64,
-	LOAD_COMMAND,
-	SEGMENT_COMMAND_64,
-	SEGMENT_COMMAND,
-	SYM_TAB,
-	SECTION_64,
-	SECTION,
-}	e_strcut;
-
-typedef struct fat_header 					t_fat_header;
-typedef struct fat_arch 						t_fat_arch;
-typedef struct mach_header				t_mach_header;
-typedef struct mach_header_64				t_mach_header_64;
-typedef struct load_command					t_load_command;
-typedef struct symtab_command				t_symtab_command;
-typedef struct section_64						t_section_64;
-typedef struct section							t_section;
-typedef struct segment_command			t_segment_command;
-typedef struct segment_command_64		t_segment_command_64;
-typedef struct nlist_64							t_list64;
-typedef struct nlist								t_nlist;
 
 typedef struct	s_list_temp
 {

@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:34:12 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/03 16:57:37 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/04 12:08:46 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,9 @@ void		cross_arch(void *ptr)
 		}
 	else {
 		ft_printf("T ki %#x  %d?\n", magic_number, magic_number);
+		ft_printf(NOTOBJ);
 	}
+	ft_putendl("");
 }
 
 int	mmap_file(char *file)
@@ -98,7 +100,8 @@ int	mmap_file(char *file)
 	struct	stat buf;
 	t_otool	*otool;
 
-	ft_printf("%s:\n", file);
+
+	ft_printf("%s:", file);
 	if ((fd = open(file, O_RDONLY)) < 0)
 		return (ft_error("error open\n"));
 	if (fstat(fd, &buf) < 0)
@@ -122,6 +125,5 @@ int main(int ac, char **av)
 		return (mmap_file("./a.out"));
 	while (++i < ac)
 		mmap_file(av[i]);
-	ft_putendl("");
 	return (EXIT_SUCCESS);
 }

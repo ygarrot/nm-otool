@@ -6,7 +6,7 @@
 #    By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 13:13:35 by ygarrot           #+#    #+#              #
-#    Updated: 2018/12/30 17:16:41 by ygarrot          ###   ########.fr        #
+#    Updated: 2019/01/04 12:44:03 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,9 @@ FLAGS = -Wall -Werror -Wextra -g3
 FLAGS +=  -fsanitize=address
 
 SRC_FOLDER = src/
-INCLUDE =  includes/
+INCLUDE =  includes/\
+					 -I ../includes/
+
 OBJ_DIR = mkdir obj
 # :r !ls
 SRC_FP =\

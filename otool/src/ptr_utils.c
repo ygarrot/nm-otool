@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/30 11:34:41 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/03 17:17:15 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/04 11:48:10 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int		get_iter_nb(void *ptr, int type)
 	if (type == SECTION)
 			return (((t_segment_command*)(ptr - sizeof(t_segment_command)))->nsects);
 	if (type == SYM_TAB_L)
-		return (otool->iter_nb);
+		return (UINT_MAX);
 	return (0);
 }
 
@@ -47,9 +47,12 @@ int		get_inc_value(void *ptr, int type)
 	if (type == SYM_TAB_L)
 	{
 		char **str = ft_strsplit(ptr, ' ');
+		if (ft_tablen(str) < 5)
+			return (INT_MAX);
 		int size = ft_atoi(str[5]);
 			/* TODO: LEAK */
-		return (size + sizeof(t_object_header));
+		ft_free_dblechar_tab(str);
+		return (size + 60);
 	}
 	return (0);
 }
@@ -70,7 +73,7 @@ void	iter_over_mem(void *child, void *struc, int type,
 		inc_value = get_inc_value(child, type);
 		if (!otool->offset_handler(otool, child, inc_value)) 
 		{
-			ft_putendl("ABORT\n");
+/* TODO : handle it lul */
 			return ;
 		}
 		child = (void*)child + inc_value;

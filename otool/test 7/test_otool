@@ -1,0 +1,4 @@
+for file in `ls -R /`
+do
+	otool -t $file 
+done

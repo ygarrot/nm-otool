@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   otool_struct.c                                     :+:      :+:    :+:   */
+/*   is_directory.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/03 11:42:36 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/04 11:40:20 by ygarrot          ###   ########.fr       */
+/*   Created: 2019/01/04 12:22:07 by ygarrot           #+#    #+#             */
+/*   Updated: 2019/01/04 12:37:49 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_otool.h"
+#include <sys/types.h>
+#include <sys/stat.h>
 
-int		offset_handler(t_otool *otool, void *ptr, int inc_value)
-{
-	/* ft_printf("%lld %lld \n", otool->offset, ptr + inc_value); */
-	return (otool->offset > ptr + inc_value);
-}
+int isDirectory(int fd) {
+	struct stat statbuf;
 
-t_otool		*get_otool(t_otool *ptr)
-{
-		static t_otool otool;
-
-		if (ptr)
-			otool = *ptr;
-		if (!otool.offset_handler)
-			otool.offset_handler = offset_handler;
-		return (&otool);
+	if (fstat(fd, &statbuf) != 0)
+		return (0);
+	return (S_ISDIR(statbuf.st_mode));
 }

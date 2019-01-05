@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:32:25 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/05 11:00:55 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/05 14:49:02 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	iter_over_mem(void *ptr, void *struc, int type,
 void		ranlib_handler(void *ptr, void *struc);
 void		cross_symbol(void	*ptr, void	*struc, uint32_t index);
 void		cross_command(void	*ptr, void	*struc, uint32_t index);
-void		cross_arch(void *ptr);
+void		cross_arch(void *ptr, char *file_name);
 int		is_section_type(t_section *section, char *type);
 int		is_section64_type(t_section_64	*section64, char *type);
 int		is_segment_type(t_section *section, char *type);

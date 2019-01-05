@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/05 10:08:00 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/05 11:00:36 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/05 14:49:49 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ void	is_fat_header(void *fat_header, void *otool)
 	t_fat_arch *arch;
 
 	(void)otool;
-	arch = (t_fat_arch*)(fat_header + 1);
+	arch = (t_fat_arch*)(fat_header + sizeof(t_fat_header));
 	nfat = ft_swap_int(((t_fat_header*)fat_header)->nfat_arch);
 	while (--nfat >= 0)
 	{
 		offset = ft_swap_int(arch->offset);
-		cross_arch((void*)fat_header + offset);
+		cross_arch((void*)fat_header + offset, 0);
 		return ;
 		arch++;
 	}
@@ -39,6 +39,7 @@ void	handle_header64(void *ptr, void *otool)
 
 void	handle_header32(void *ptr, void *otool)
 {
-		((t_otool*)otool)->iter_nb = ((t_mach_header*)ptr)->ncmds;
+		t_otool			*o = otool;
+		o->iter_nb = ((t_mach_header*)ptr)->ncmds;
 		iter_over_mem(ptr + sizeof(t_mach_header), otool, LOAD_COMMAND, &cross_command);
 }

@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 17:39:02 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/04 16:27:31 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/05 14:50:21 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	cross_symbol(void *ptr, void *struc, uint32_t index)
 	while (!str[len])
 		len++;
 /* TODO : check offset */
-	cross_arch(str + len);
+	cross_arch(str + len, 0);
 }
 int ft_memalign(int size, int alignment)
 {

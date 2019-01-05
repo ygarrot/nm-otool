@@ -1,403 +1,377 @@
- /bin/syslog.py
-/bin/yubikey_shell
- /usr/bin/2to3
- /usr/bin/2to3-
- /usr/bin/2to3-3.4
- /usr/bin/afmtodit
- /usr/bin/alias
- /usr/bin/apropos
- /usr/bin/audiodevice
- /usr/bin/auval
- /usr/bin/bashbug
- /usr/bin/bg
- /usr/bin/binhex.pl
- /usr/bin/binhex5.18.pl
- /usr/bin/bitesize.d
- /usr/bin/btmmdiagnose
- /usr/bin/bzdiff
- /usr/bin/bzmore
- /usr/bin/c2ph
- /usr/bin/c2ph5.16
- /usr/bin/c2ph5.18
- /usr/bin/c_rehash
- /usr/bin/cd
- /usr/bin/command
- /usr/bin/config_data
- /usr/bin/config_data5.16
- /usr/bin/config_data5.18
- /usr/bin/corelist
- /usr/bin/corelist5.16
- /usr/bin/corelist5.18
- /usr/bin/cpan
- /usr/bin/cpan2dist
- /usr/bin/cpan2dist5.16
- /usr/bin/cpan2dist5.18
- /usr/bin/cpan5.16
- /usr/bin/cpan5.18
- /usr/bin/cpanp
- /usr/bin/cpanp-run-perl
- /usr/bin/cpanp-run-perl5.16
- /usr/bin/cpanp-run-perl5.18
- /usr/bin/cpanp5.16
- /usr/bin/cpanp5.18
- /usr/bin/cpu_profiler.d
- /usr/bin/cpuwalk.d
- /usr/bin/crc32
- /usr/bin/crc325.16
- /usr/bin/crc325.18
- /usr/bin/creatbyproc.d
- /usr/bin/csdiagnose
- /usr/bin/cups-config
- /usr/bin/curl-config
- /usr/bin/dappprof
- /usr/bin/dapptrace
- /usr/bin/dbicadmin
- /usr/bin/dbicadmin5.16
- /usr/bin/dbicadmin5.18
- /usr/bin/dbilogstrip
- /usr/bin/dbilogstrip5.16
- /usr/bin/dbilogstrip5.18
- /usr/bin/dbiprof
- /usr/bin/dbiprof5.16
- /usr/bin/dbiprof5.18
- /usr/bin/dbiproxy
- /usr/bin/dbiproxy5.16
- /usr/bin/dbiproxy5.18
- /usr/bin/debinhex.pl
- /usr/bin/debinhex5.18.pl
- /usr/bin/diskhits
- /usr/bin/dispqlen.d
- /usr/bin/dockutil
- /usr/bin/dtruss
- /usr/bin/easy_install
- /usr/bin/easy_install-2.6
- /usr/bin/easy_install-2.7
- /usr/bin/easy_install-3.4
- /usr/bin/enc2xs
- /usr/bin/enc2xs5.16
- /usr/bin/enc2xs5.18
- /usr/bin/erb
- /usr/bin/errinfo
- /usr/bin/execsnoop
- /usr/bin/eyapp
- /usr/bin/eyapp5.16
- /usr/bin/eyapp5.18
- /usr/bin/fc
- /usr/bin/fddist
- /usr/bin/fg
- /usr/bin/filebyproc.d
- /usr/bin/find2perl
- /usr/bin/find2perl5.16
- /usr/bin/find2perl5.18
- /usr/bin/findrule
- /usr/bin/findrule5.16
- /usr/bin/findrule5.18
- /usr/bin/fixproc
- /usr/bin/format-sql
- /usr/bin/format-sql5.16
- /usr/bin/format-sql5.18
- /usr/bin/fuser
- /usr/bin/gdiffmk
- /usr/bin/gem
- /usr/bin/gen_bridge_metadata
- /usr/bin/getopts
- /usr/bin/gnuattach
- /usr/bin/gnudoit
- /usr/bin/groffer
- /usr/bin/grog
- /usr/bin/gzexe
- /usr/bin/h2ph
- /usr/bin/h2ph5.16
- /usr/bin/h2ph5.18
- /usr/bin/h2xs
- /usr/bin/h2xs5.16
- /usr/bin/h2xs5.18
- /usr/bin/hash
- /usr/bin/hotspot.d
- /usr/bin/htmltree
- /usr/bin/htmltree5.16
- /usr/bin/htmltree5.18
- /usr/bin/httpdstat.d
- /usr/bin/idle
- /usr/bin/idle3
- /usr/bin/idle3.4
- /usr/bin/imptrace
- /usr/bin/instmodsh
- /usr/bin/instmodsh5.16
- /usr/bin/instmodsh5.18
- /usr/bin/iofile.d
- /usr/bin/iofileb.d
- /usr/bin/iopattern
- /usr/bin/iopending
- /usr/bin/iosnoop
- /usr/bin/iotop
- /usr/bin/ip2cc
- /usr/bin/ip2cc5.16
- /usr/bin/ip2cc5.18
- /usr/bin/ipcount
- /usr/bin/ipcount5.16
- /usr/bin/ipcount5.18
- /usr/bin/iptab
- /usr/bin/iptab5.16
- /usr/bin/iptab5.18
- /usr/bin/irb
- /usr/bin/jobs
- /usr/bin/json_pp
- /usr/bin/json_pp5.16
- /usr/bin/json_pp5.18
- /usr/bin/kill.d
- /usr/bin/krb5-config
- /usr/bin/lastwords
- /usr/bin/libnetcfg
- /usr/bin/libnetcfg5.16
- /usr/bin/libnetcfg5.18
- /usr/bin/loads.d
- /usr/bin/localedef
- /usr/bin/lwp-download
- /usr/bin/lwp-download5.16
- /usr/bin/lwp-download5.18
- /usr/bin/lwp-dump
- /usr/bin/lwp-dump5.16
- /usr/bin/lwp-dump5.18
- /usr/bin/lwp-mirror
- /usr/bin/lwp-mirror5.16
- /usr/bin/lwp-mirror5.18
- /usr/bin/lwp-request
- /usr/bin/lwp-request5.16
- /usr/bin/lwp-request5.18
- /usr/bin/macerror
- /usr/bin/macerror5.16
- /usr/bin/macerror5.18
- /usr/bin/macreport
- /usr/bin/mib2c
- /usr/bin/mib2c-update
- /usr/bin/mmroff
- /usr/bin/moo-outdated
- /usr/bin/moo-outdated5.18
- /usr/bin/moose-outdated
- /usr/bin/moose-outdated5.16
- /usr/bin/moose-outdated5.18
- /usr/bin/mp2bug
- /usr/bin/ncurses5.4-config
- /usr/bin/neqn
- /usr/bin/net-server
- /usr/bin/net-server5.16
- /usr/bin/net-server5.18
- /usr/bin/net-snmp-cert
- /usr/bin/net-snmp-config
- /usr/bin/net-snmp-create-v3-user
- /usr/bin/newproc.d
- /usr/bin/nroff
- /usr/bin/opensnoop
- /usr/bin/openssl
- /usr/bin/package-stash-conflicts
- /usr/bin/package-stash-conflicts5.16
- /usr/bin/package-stash-conflicts5.18
- /usr/bin/pagesize
- /usr/bin/par.pl
- /usr/bin/par5.16.pl
- /usr/bin/par5.18.pl
- /usr/bin/pathopens.d
- /usr/bin/pcap-config
- /usr/bin/perlbug
- /usr/bin/perlbug5.16
- /usr/bin/perlbug5.18
- /usr/bin/perldoc
- /usr/bin/perldoc5.16
- /usr/bin/perldoc5.18
- /usr/bin/perlivp
- /usr/bin/perlivp5.16
- /usr/bin/perlivp5.18
- /usr/bin/perlthanks
- /usr/bin/perlthanks5.16
- /usr/bin/perlthanks5.18
- /usr/bin/phar.phar
- /usr/bin/php-config
- /usr/bin/phpize
- /usr/bin/piconv
- /usr/bin/piconv5.16
- /usr/bin/piconv5.18
- /usr/bin/pidpersec.d
- /usr/bin/pip3
- /usr/bin/pip3.4
- /usr/bin/pl2pm
- /usr/bin/pl2pm5.16
- /usr/bin/pl2pm5.18
- /usr/bin/pod2html
- /usr/bin/pod2html5.16
- /usr/bin/pod2html5.18
- /usr/bin/pod2latex
- /usr/bin/pod2latex5.16
- /usr/bin/pod2latex5.18
- /usr/bin/pod2man
- /usr/bin/pod2man5.16
- /usr/bin/pod2man5.18
- /usr/bin/pod2readme
- /usr/bin/pod2readme5.16
- /usr/bin/pod2readme5.18
- /usr/bin/pod2text
- /usr/bin/pod2text5.16
- /usr/bin/pod2text5.18
- /usr/bin/pod2usage
- /usr/bin/pod2usage5.16
- /usr/bin/pod2usage5.18
- /usr/bin/podchecker
- /usr/bin/podchecker5.16
- /usr/bin/podchecker5.18
- /usr/bin/podselect
- /usr/bin/podselect5.16
- /usr/bin/podselect5.18
- /usr/bin/power_report.sh
- /usr/bin/pp
- /usr/bin/pp5.16
- /usr/bin/pp5.18
- /usr/bin/priclass.d
- /usr/bin/pridist.d
- /usr/bin/procsystime
- /usr/bin/prove
- /usr/bin/prove5.16
- /usr/bin/prove5.18
- /usr/bin/psed
- /usr/bin/psed5.16
- /usr/bin/psed5.18
- /usr/bin/pstruct
- /usr/bin/pstruct5.16
- /usr/bin/pstruct5.18
- /usr/bin/ptar
- /usr/bin/ptar5.16
- /usr/bin/ptar5.18
- /usr/bin/ptardiff
- /usr/bin/ptardiff5.16
- /usr/bin/ptardiff5.18
- /usr/bin/ptargrep
- /usr/bin/ptargrep5.16
- /usr/bin/ptargrep5.18
- /usr/bin/pwhich
- /usr/bin/pwhich5.16
- /usr/bin/pwhich5.18
- /usr/bin/pydoc
- /usr/bin/pydoc3
- /usr/bin/pydoc3.4
- /usr/bin/python-config
- /usr/bin/python3
- /usr/bin/python3-config
- /usr/bin/python3.4
- /usr/bin/python3.4-config
- /usr/bin/python3.4m
- /usr/bin/python3.4m-config
- /usr/bin/pyvenv
- /usr/bin/pyvenv-3.4
- /usr/bin/rails
- /usr/bin/rake
- /usr/bin/rbx
- /usr/bin/rdoc
- /usr/bin/read
- /usr/bin/ri
- /usr/bin/runocc.d
- /usr/bin/rvictl
- /usr/bin/rwbypid.d
- /usr/bin/rwbytype.d
- /usr/bin/rwsnoop
- /usr/bin/s2p
- /usr/bin/s2p5.16
- /usr/bin/s2p5.18
- /usr/bin/sampleproc
- /usr/bin/scandeps.pl
- /usr/bin/scandeps5.16.pl
- /usr/bin/scandeps5.18.pl
- /usr/bin/seeksize.d
- /usr/bin/setregproptool
- /usr/bin/setuids.d
- /usr/bin/shar
- /usr/bin/shasum
- /usr/bin/shasum5.16
- /usr/bin/shasum5.18
- /usr/bin/sigdist.d
- /usr/bin/smc
- /usr/bin/smtpd.py
- /usr/bin/snmp-bridge-mib
- /usr/bin/snmpconf
- /usr/bin/spfd
- /usr/bin/spfd5.16
- /usr/bin/spfd5.18
- /usr/bin/spfquery
- /usr/bin/spfquery5.16
- /usr/bin/spfquery5.18
- /usr/bin/splain
- /usr/bin/splain5.16
- /usr/bin/splain5.18
- /usr/bin/ssh-copy-id
- /usr/bin/stty.pl
- /usr/bin/stty5.16.pl
- /usr/bin/stty5.18.pl
- /usr/bin/sudo
- /usr/bin/syscallbypid.d
- /usr/bin/syscallbyproc.d
- /usr/bin/syscallbysysc.d
- /usr/bin/systriage
- /usr/bin/testrb
- /usr/bin/tethered-caching
- /usr/bin/texi2dvi
- /usr/bin/texi2pdf
- /usr/bin/timer_analyser.d
- /usr/bin/timerfires
- /usr/bin/tkmib
- /usr/bin/tkpp
- /usr/bin/tkpp5.16
- /usr/bin/tkpp5.18
- /usr/bin/topsyscall
- /usr/bin/topsysproc
- /usr/bin/traptoemail
- /usr/bin/treereg
- /usr/bin/treereg5.16
- /usr/bin/treereg5.18
- /usr/bin/type
- /usr/bin/ulimit
- /usr/bin/umask
- /usr/bin/unalias
- /usr/bin/uuto
- /usr/bin/vimtutor
- /usr/bin/wait
- /usr/bin/weblatency.d
- /usr/bin/whatis
- /usr/bin/wish8.4
- /usr/bin/wish8.5
- /usr/bin/xattr
- /usr/bin/xattr-2.6
- /usr/bin/xattr-2.7
- /usr/bin/xgettext.pl
- /usr/bin/xgettext5.16.pl
- /usr/bin/xgettext5.18.pl
- /usr/bin/xml2-config
- /usr/bin/xpath
- /usr/bin/xpath5.16
- /usr/bin/xpath5.18
- /usr/bin/xslt-config
- /usr/bin/xsubpp
- /usr/bin/xsubpp5.16
- /usr/bin/xsubpp5.18
- /usr/bin/zcmp
- /usr/bin/zdiff
- /usr/bin/zforce
- /usr/bin/zipdetails
- /usr/bin/zipdetails5.16
- /usr/bin/zipdetails5.18
- /usr/bin/zipgrep
- /usr/bin/zless
- /usr/bin/zmore
- /usr/bin/znew
- /usr/sbin/apachectl
- /usr/sbin/apxs
- /usr/sbin/cupsd
- /usr/sbin/dbmmanage
- /usr/sbin/envvars
- /usr/sbin/envvars-std
- /usr/sbin/httpd-wrapper
- /usr/sbin/kadmin.local
- /usr/sbin/ntptrace
- /usr/sbin/periodic
- /usr/sbin/sc_auth
- /usr/sbin/smbdiagnose
- /usr/sbin/snmpd
- /usr/sbin/uusched
- /usr/sbin/visudo
+ /bin/wait4path
+/bin/sync
+./ar/.DS_Store
+ /sbin/dmesg
+ /sbin/dynamic_pager
+ /sbin/halt
+ /sbin/kextload
+ /sbin/kextunload
+ /sbin/nologin
+ /sbin/reboot
+ /sbin/shutdown
+ /sbin/yubikey_shell
+/usr/bin/a2p
+/usr/bin/a2p5.16
+/usr/bin/a2p5.18
+/usr/bin/arch
+/usr/bin/at
+/usr/bin/atq
+/usr/bin/atrm
+/usr/bin/audiodevice
+/usr/bin/auvaltool
+/usr/bin/batch
+usr/bin/chfn
+usr/bin/chpass
+usr/bin/chsh
+usr/bin/darwinup
+usr/bin/db_archive
+usr/bin/db_checkpoint
+usr/bin/db_codegen
+usr/bin/db_deadlock
+usr/bin/db_dump
+usr/bin/db_hotbackup
+usr/bin/db_load
+usr/bin/db_printlog
+usr/bin/db_recover
+usr/bin/db_stat
+usr/bin/db_upgrade
+usr/bin/db_verify
+usr/bin/expect
+usr/bin/file
+usr/bin/filtercalltree
+usr/bin/gcore
+usr/bin/getconf
+usr/bin/hostinfo
+usr/bin/kextutil
+usr/bin/latency
+usr/bin/login
+usr/bin/lskq
+usr/bin/lsmp
+usr/bin/machine
+usr/bin/macreport
+usr/bin/memory_pressure
+usr/bin/newgrp
+usr/bin/nsupdate
+usr/bin/ntp-keygen
+usr/bin/ntpq
+usr/bin/objdump
+usr/bin/od
+usr/bin/odutil
+usr/bin/open
+usr/bin/opendiff
+usr/bin/openssl
+usr/bin/osacompile
+usr/bin/osadecompile
+usr/bin/osalang
+usr/bin/osascript
+usr/bin/otool
+usr/bin/pagestuff
+usr/bin/parl
+usr/bin/parl5.16
+usr/bin/parl5.18
+usr/bin/parldyn
+usr/bin/parldyn5.16
+usr/bin/parldyn5.18
+usr/bin/passwd
+usr/bin/paste
+usr/bin/patch
+usr/bin/pathchk
+usr/bin/pbcopy
+usr/bin/pbpaste
+usr/bin/pcsctest
+usr/bin/perl
+usr/bin/perl5.16
+usr/bin/perl5.18
+usr/bin/pfbtops
+usr/bin/pgrep
+usr/bin/php
+usr/bin/pubsub
+usr/bin/python
+usr/bin/python3
+usr/bin/python3-32
+usr/bin/python3.4
+usr/bin/python3.4-32
+usr/bin/python3.4m
+usr/bin/pythonw
+usr/bin/qtmodernizer
+usr/bin/ruby
+usr/bin/rvictl
+usr/bin/sc_usage
+usr/bin/setregproptool
+usr/bin/smc
+usr/bin/sqlite3
+usr/bin/sudo
+usr/bin/tab2space
+usr/bin/tidy
+usr/bin/tig
+usr/bin/time
+usr/bin/timer_analyser.d
+usr/bin/timerfires
+usr/bin/tkmib
+usr/bin/tkpp
+usr/bin/tkpp5.16
+usr/bin/tkpp5.18
+usr/bin/tmdiagnose
+usr/bin/tmutil
+usr/bin/toe
+usr/bin/top
+usr/bin/tops
+usr/bin/topsyscall
+usr/bin/topsysproc
+usr/bin/touch
+usr/bin/tput
+usr/bin/tr
+usr/bin/trace
+usr/bin/traptoemail
+usr/bin/treereg
+usr/bin/treereg5.16
+usr/bin/treereg5.18
+usr/bin/trimforce
+usr/bin/troff
+usr/bin/true
+usr/bin/tset
+usr/bin/tsort
+usr/bin/tty
+usr/bin/type
+usr/bin/ul
+usr/bin/ulimit
+usr/bin/umask
+usr/bin/unalias
+usr/bin/uname
+usr/bin/uncompress
+usr/bin/unexpand
+usr/bin/unifdef
+usr/bin/unifdefall
+usr/bin/uniq
+usr/bin/units
+usr/bin/UnRezWack
+usr/bin/unvis
+usr/bin/unzip
+usr/bin/unzipsfx
+usr/bin/update_dyld_shared_cache
+usr/bin/uptime
+usr/bin/usbkdp
+usr/bin/users
+usr/bin/uucp
+usr/bin/uudecode
+usr/bin/uuencode
+usr/bin/uuidgen
+usr/bin/uulog
+usr/bin/uuname
+usr/bin/uupick
+usr/bin/uustat
+usr/bin/uuto
+usr/bin/uux
+usr/bin/vim
+usr/bin/vimtutor
+usr/bin/vis
+usr/bin/vm_stat
+usr/bin/vmmap
+usr/bin/vmmap32
+usr/bin/w
+usr/bin/wait
+usr/bin/wall
+usr/bin/wc
+usr/bin/wdutil
+usr/bin/weblatency.d
+usr/bin/what
+usr/bin/whatis
+usr/bin/whereis
+usr/bin/which
+usr/bin/who
+usr/bin/whoami
+usr/bin/whois
+usr/bin/wish8.4
+usr/bin/wish8.5
+usr/bin/write
+usr/bin/xar
+usr/bin/xargs
+usr/bin/xattr
+usr/bin/xattr-2.6
+usr/bin/xattr-2.7
+usr/bin/xcode-select
+usr/bin/xcodebuild
+usr/bin/xcrun
+usr/bin/xcscontrol
+usr/bin/xcsdiagnose
+usr/bin/xed
+usr/bin/xgettext.pl
+usr/bin/xgettext5.16.pl
+usr/bin/xgettext5.18.pl
+usr/bin/xip
+usr/bin/xml2-config
+usr/bin/xml2man
+usr/bin/xmlcatalog
+usr/bin/xmllint
+usr/bin/xpath
+usr/bin/xpath5.16
+usr/bin/xpath5.18
+usr/bin/xslt-config
+usr/bin/xsltproc
+usr/bin/xsubpp
+usr/bin/xsubpp5.16
+usr/bin/xsubpp5.18
+usr/bin/xxd
+usr/bin/yacc
+usr/bin/yes
+usr/bin/ypcat
+usr/bin/ypmatch
+usr/bin/ypwhich
+usr/bin/zcat
+usr/bin/zcmp
+usr/bin/zdiff
+usr/bin/zegrep
+usr/bin/zfgrep
+usr/bin/zforce
+usr/bin/zgrep
+usr/bin/zip
+usr/bin/zipcloak
+usr/bin/zipdetails
+usr/bin/zipdetails5.16
+usr/bin/zipdetails5.18
+usr/bin/zipgrep
+usr/bin/zipinfo
+usr/bin/zipnote
+usr/bin/zipsplit
+usr/bin/zless
+usr/bin/zmore
+usr/bin/znew
+usr/bin/zprint
+/usr/sbin/ab
+/usr/sbin/ac
+/usr/sbin/accton
+/usr/sbin/amt
+/usr/sbin/apachectl
+/usr/sbin/appsleepd
+/usr/sbin/apxs
+/usr/sbin/arp
+/usr/sbin/aslmanager
+/usr/sbin/asr
+/usr/sbin/audit
+/usr/sbin/auditd
+/usr/sbin/auditreduce
+/usr/sbin/automount
+/usr/sbin/avbdeviced
+/usr/sbin/bless
+/usr/sbin/blued
+/usr/sbin/bluetoothaudiod
+/usr/sbin/bnepd
+/usr/sbin/BootCacheControl
+/usr/sbin/cfprefsd
+/usr/sbin/chat
+/usr/sbin/checkgid
+/usr/sbin/chown
+/usr/sbin/chroot
+/usr/sbin/coreaudiod
+/usr/sbin/createhomedir
+/usr/sbin/cron
+/usr/sbin/cupsaccept
+/usr/sbin/cupsaddsmb
+/usr/sbin/cupsctl
+/usr/sbin/cupsfilter
+/usr/sbin/dbmmanage
+/usr/sbin/ddns-confgen
+/usr/sbin/defragcli
+/usr/sbin/dev_mkdb
+/usr/sbin/DevToolsSecurity
+/usr/sbin/disktool
+/usr/sbin/diskutil
+/usr/sbin/distnoted
+/usr/sbin/dnctl
+/usr/sbin/dnsextd
+/usr/sbin/dot_clean
+/usr/sbin/dsconfigad
+/usr/sbin/dsconfigldap
+/usr/sbin/dseditgroup
+/usr/sbin/dsenableroot
+/usr/sbin/dtrace
+/usr/sbin/edquota
+/usr/sbin/envvars
+/usr/sbin/envvars-std
+/usr/sbin/fcgistarter
+/usr/sbin/fdisk
+/usr/sbin/filecoordinationd
+/usr/sbin/FileStatsAgent
+/usr/sbin/firmwarepasswd
+/usr/sbin/gpt
+/usr/sbin/graphicssession
+/usr/sbin/gssd
+/usr/sbin/hdik
+/usr/sbin/htcacheclean
+/usr/sbin/htdbm
+/usr/sbin/htdigest
+/usr/sbin/htpasswd
+/usr/sbin/httpd
+/usr/sbin/httpd-wrapper
+/usr/sbin/httxt2dbm
+/usr/sbin/installer
+/usr/sbin/ioalloccount
+/usr/sbin/ioclasscount
+/usr/sbin/ioreg
+/usr/sbin/iostat
+/usr/sbin/ipconfig
+/usr/sbin/iscsid
+/usr/sbin/kadmin
+/usr/sbin/kadmin.local
+/usr/sbin/kdcsetup
+/usr/sbin/KernelEventAgent
+/usr/sbin/kextcache
+/usr/sbin/kextfind
+/usr/sbin/kextlibs
+/usr/sbin/kextstat
+/usr/sbin/krbservicesetup
+/usr/sbin/ktutil
+/usr/sbin/languagesetup
+/usr/sbin/localemanager
+/usr/sbin/logresolve
+/usr/sbin/lpadmin
+/usr/sbin/lpc
+/usr/sbin/lpinfo
+/usr/sbin/lpmove
+/usr/sbin/lsof
+/usr/sbin/mDNSResponder
+/usr/sbin/mDNSResponderHelper
+/usr/sbin/mkextunpack
+/usr/sbin/mkfile
+/usr/sbin/mkpassdb
+/usr/sbin/mtree
+/usr/sbin/ndp
+/usr/sbin/netbiosd
+/usr/sbin/NetBootClientStatus
+/usr/sbin/netstat
+/usr/sbin/networksetup
+/usr/sbin/newsyslog
+/usr/sbin/nfs4mapid
+/usr/sbin/nlcontrol
+/usr/sbin/notifyd
+/usr/sbin/ntpd
+/usr/sbin/ntpdate
+/usr/sbin/ntpdc
+/usr/sbin/ntptrace
+/usr/sbin/nvram
+/usr/sbin/ocspd
+/usr/sbin/PasswordService
+/usr/sbin/pdisk
+/usr/sbin/periodic
+/usr/sbin/php-fpm
+/usr/sbin/postdrop
+/usr/sbin/postfix
+/usr/sbin/postkick
+/usr/sbin/postlock
+/usr/sbin/postlog
+/usr/sbin/postmap
+/usr/sbin/postmulti
+/usr/sbin/postqueue
+/usr/sbin/postsuper
+/usr/sbin/purge
+/usr/sbin/pwd_mkdb
+/usr/sbin/sa
+/usr/sbin/setregproptool
+/usr/sbin/sysctl
+/usr/sbin/systemsoundserverd
+/usr/sbin/taskpolicy
+/usr/sbin/vifs
+/usr/sbin/vipw
+/usr/sbin/visudo
+/usr/sbin/zdump
+/usr/sbin/zic

@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:34:12 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/05 11:16:55 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/05 15:00:32 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 int		ft_error(char *file, char *str)
 {
 	ft_printf("'%s': %s\n", file, str);
-	return (-1);
+	return (EXIT_FAILURE);
 }
 
-void		cross_arch(void *ptr)
+void		cross_arch(void *ptr, char *file_name)
 {
 	unsigned int		magic_number;
 	t_otool								*otool; 
@@ -28,24 +28,27 @@ void		cross_arch(void *ptr)
 	unsigned int  *arch_type_r = 
 		(unsigned int[3]){MH_CIGAM_64, MH_CIGAM, FAT_CIGAM};
 	void	(*func_tab[4])(void *ptr, void *otool) = 
-	{is_fat_header, handle_header64, handle_header32, ranlib_handler};
+	{handle_header64, handle_header32,is_fat_header, ranlib_handler};
 
 	if (!ptr)
 		return ;
 	otool = get_otool(0);
 	magic_number = *(unsigned int *)ptr;
 	otool->magic_number = magic_number;
-		otool->header  = ptr;
-	if ((index = ft_uint_isin(magic_number, arch_type_r, 3))
-	||(index = ft_uint_isin(magic_number, arch_type , 3))
-	|| (!ft_strcmp(ptr, ARLIB) && (index = 4)))
-		{
-		ft_putendl("");
-		func_tab[index](ptr, otool);
-		}
-		else
-			ft_printf(" %s\n", NOTOBJ);
-		/* ft_printf("T ki %#x  %d?\n", magic_number, magic_number); */
+	otool->header  = ptr;
+	if ((index = ft_uint_isin(magic_number, arch_type_r, 3)) > 0
+			||(index = ft_uint_isin(magic_number, arch_type , 3)) > 0
+			|| (!ft_memcmp(ptr, ARLIB, ft_strlen(ARLIB)) && (index = 4)))
+	{
+		if (index == 4)
+			ft_printf("Archive : ");
+		if (file_name)
+			ft_printf("%s%s", file_name, index == 4 ? "\n" : ":\n");
+		func_tab[index - 1](ptr, otool);
+	}
+	else
+		ft_printf(" %s\n", NOTOBJ);
+	/* ft_printf("T ki %#x  %d?\n", magic_number, magic_number); */
 }
 
 int	mmap_file(char *file)
@@ -67,21 +70,22 @@ int	mmap_file(char *file)
 	otool = get_otool(0);
 	otool->offset = ptr+buf.st_size;
 	otool->file_name = file;
-	ft_printf("%s:", file);
-	cross_arch(ptr);
+	cross_arch(ptr, file);
 	if (munmap(ptr, buf.st_size))
 		return (ft_error(file, "munmap errror"));
-	return (0);
+	return (EXIT_SUCCESS);
 }
 
 int main(int ac, char **av)
 {
 	int		i;
+	int		ret;
 
 	i = 0;
 	if (ac < 2)
 		return (mmap_file("./a.out"));
 	while (++i < ac)
-		mmap_file(av[i]);
+		if ((ret = mmap_file(av[i])) != EXIT_SUCCESS)
+				return (EXIT_FAILURE);
 	return (EXIT_SUCCESS);
 }

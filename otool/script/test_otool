@@ -1,5 +1,5 @@
 rm t t2
-for file in `find /Applications -name '*.dylib'`;
+for file in `find /Applications  -maxdepth 1 -type f -name '*.dylib'`;
 do
 ./ft_otool $file > t2 
 otool -t $file >t

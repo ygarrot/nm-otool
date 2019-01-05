@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/01 12:47:14 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/04 17:01:51 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/05 14:21:18 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,9 @@ void	cross_command(void *ptr, void *struc, uint32_t index)
 
 	lc =  ptr;
 	(void)index;
-	if (lc->cmd == LC_SEGMENT_64)
+	int tes = lc->cmd;
+
+	if (tes == LC_SEGMENT_64)
 	{
 		iter_over_mem(ptr + sizeof(t_segment_command_64), struc, SECTION_64, &print_otool);
 	}

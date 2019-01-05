@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:34:12 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/04 17:03:37 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/05 11:16:55 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,52 +14,21 @@
 
 int		ft_error(char *file, char *str)
 {
-	ft_printf("'%s' %s\n", file, str);
+	ft_printf("'%s': %s\n", file, str);
 	return (-1);
-}
-
-int	swap_int(int num)
-{
-	int swapped = ((num>>24)&0xff) |
-		((num<<8)&0xff0000) |
-		((num>>8)&0xff00) |
-		((num<<24)&0xff000000);
-	return swapped;
-}
-
-
-int		get_value_from_addr(unsigned char *map, int index, int nb_bytes)
-{
-	int ret;
-	int i;
-
-	ret = 0;
-	i = -1;
-	while (++i < nb_bytes)
-		ret = (ret << 8) | map[index + i];
-	return (ret);
-}
-
-void	is_fat_header(t_fat_header *fat_header)
-{
-	int		offset;
-	int		nfat;
-	t_fat_arch *arch;
-
-	arch = (t_fat_arch*)(fat_header + 1);
-	nfat = swap_int(fat_header->nfat_arch);
-	while (--nfat >= 0)
-	{
-		offset = swap_int(arch->offset);
-		cross_arch((void*)fat_header + offset);
-		arch++;
-	}
 }
 
 void		cross_arch(void *ptr)
 {
 	unsigned int		magic_number;
 	t_otool								*otool; 
+	int index;
+	unsigned int *arch_type = 
+		(unsigned int[3]){MH_MAGIC_64, MH_MAGIC, FAT_MAGIC};
+	unsigned int  *arch_type_r = 
+		(unsigned int[3]){MH_CIGAM_64, MH_CIGAM, FAT_CIGAM};
+	void	(*func_tab[4])(void *ptr, void *otool) = 
+	{is_fat_header, handle_header64, handle_header32, ranlib_handler};
 
 	if (!ptr)
 		return ;
@@ -67,24 +36,16 @@ void		cross_arch(void *ptr)
 	magic_number = *(unsigned int *)ptr;
 	otool->magic_number = magic_number;
 		otool->header  = ptr;
-	if (magic_number == MH_MAGIC_64)
-	{	
-		otool->iter_nb = ((t_mach_header_64*)ptr)->ncmds;
-		iter_over_mem(ptr + sizeof(t_mach_header_64), otool, LOAD_COMMAND, &cross_command);  
-	}
-	else if (magic_number == MH_MAGIC)
-	{
-		otool->iter_nb = ((t_mach_header*)ptr)->ncmds;
-		iter_over_mem(ptr + sizeof(t_mach_header), otool, LOAD_COMMAND, &cross_command);
-	}
-	else if (magic_number == FAT_MAGIC || magic_number == FAT_CIGAM)
-		is_fat_header(ptr);
-	else if (!ft_memcmp(ptr, ARLIB, ft_strlen(ARLIB)))
-		ranlib_handler(ptr, otool);
-	else {
+	if ((index = ft_uint_isin(magic_number, arch_type_r, 3))
+	||(index = ft_uint_isin(magic_number, arch_type , 3))
+	|| (!ft_strcmp(ptr, ARLIB) && (index = 4)))
+		{
+		ft_putendl("");
+		func_tab[index](ptr, otool);
+		}
+		else
+			ft_printf(" %s\n", NOTOBJ);
 		/* ft_printf("T ki %#x  %d?\n", magic_number, magic_number); */
-		ft_printf(NOTOBJ);
-	}
 }
 
 int	mmap_file(char *file)
@@ -106,7 +67,7 @@ int	mmap_file(char *file)
 	otool = get_otool(0);
 	otool->offset = ptr+buf.st_size;
 	otool->file_name = file;
-	ft_printf("%s:\n", file);
+	ft_printf("%s:", file);
 	cross_arch(ptr);
 	if (munmap(ptr, buf.st_size))
 		return (ft_error(file, "munmap errror"));

@@ -6,7 +6,7 @@
 #    By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 12:06:15 by ygarrot           #+#    #+#              #
-#    Updated: 2019/01/04 14:49:53 by ygarrot          ###   ########.fr        #
+#    Updated: 2019/01/05 10:56:54 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ SRC += \
 	   to/ft_uimaxtoa_base.c
 
 SRC += \
+	   tern/ft_uint_isin.c \
 	   tern/ft_abs.c \
 	   tern/ft_int_isin.c \
 	   tern/ft_isalnum.c \
@@ -64,6 +65,7 @@ SRC += \
 	   print/ft_putnbr_recc.c
 
 SRC += \
+	   mem/ft_swap_int.c \
 	   mem/ft_memalloc.c \
 	   mem/ft_memccpy.c \
 	   mem/ft_memchr.c \

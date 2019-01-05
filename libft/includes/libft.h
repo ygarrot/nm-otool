@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 15:23:29 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/04 14:45:40 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/05 10:57:20 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,7 @@ int				ft_abs(int value);
 int				ft_atoi(const char *str);
 int				ft_atoi_base(const char *str, int base);
 
+int				ft_uint_isin(unsigned int tofind, unsigned int *tab, int size);
 int				ft_int_isin(int tofind, int *tab, int size);
 int				ft_isalnum(int c);
 int				ft_isalnum(int c);
@@ -199,7 +200,8 @@ int				ft_lenchar_r(char *str, int pos);
 int				ft_lenchar_l(char *str, int pos);
 int				ft_isin_unicode(char *str, char *pattern);
 
-int is_directory(int fd);
-int is_regular_file(int fd);
+int 			is_directory(int fd);
+int 			is_regular_file(int fd);
+int				ft_swap_int(int num);
 
 #endif

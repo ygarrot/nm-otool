@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:32:25 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/04 15:46:55 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/05 11:00:55 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,9 @@ typedef struct s_otool
 	int			vm_address;
 }								t_otool;
 
+void	is_fat_header(void *ptr, void *otool);
+void	handle_header64(void *ptr, void *otool);
+void	handle_header32(void *ptr, void *otool);
 t_otool		*get_otool(t_otool *ptr);
 void	iter_over_mem(void *ptr, void *struc, int type,
 		void	(*f)(void*, void *struc, uint32_t index));

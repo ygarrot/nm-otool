@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_int_isin.c                                      :+:      :+:    :+:   */
+/*   ft_swap_int.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/01 12:21:55 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/05 11:15:36 by ygarrot          ###   ########.fr       */
+/*   Created: 2019/01/05 10:50:18 by ygarrot           #+#    #+#             */
+/*   Updated: 2019/01/05 10:54:46 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int		ft_int_isin(int tofind, int *tab, int size)
+int	ft_swap_int(int num)
 {
-	while (size && tofind != tab[size - 1])
-		size--;
-	return (size);
+	return (((num >> 24) & 0xff) | ((num << 8) & 0xff0000) |
+		((num >> 8) & 0xff00) | ((num << 24) & 0xff000000));
 }
+

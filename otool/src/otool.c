@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:34:12 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/06 13:35:04 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/06 15:53:32 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void		cross_arch(void *ptr, char *file_name)
 	otool = get_otool(0);
 	magic_number = *(unsigned int *)ptr;
 	otool->head.magic = magic_number;
-	otool->head.ptr  = ptr;
+	otool->head.ptr = ptr;
 	if ((index = ft_uint_isin(magic_number, arch_type_r, 3)) > 0
 			||(index = ft_uint_isin(magic_number, arch_type , 3)) > 0
 			|| (!ft_memcmp(ptr, ARLIB, ft_strlen(ARLIB)) && (index = 4)))

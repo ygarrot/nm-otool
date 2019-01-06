@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 11:49:33 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/06 13:36:31 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/06 15:55:06 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,25 +24,33 @@ int		get_nb_from_map(unsigned char *map, int index, int nb_bytes)
 	return (ret);
 }
 
-void	print_classic(unsigned char *ptr, int i)
+void	print_32(unsigned char *ptr, int i)
 {
-	/* if (!(i%4)) */
-	/* 	ft_printf("%0.8x ", *(int*)(ptr + i)); */
-			ft_printf("%02x ", ptr[i]);
+	if (!(i%4))
+		ft_printf("%0.8x ", *(int*)(ptr + i));
+}
+
+void	print_64(unsigned char *ptr, int i)
+{
+	ft_printf("%02x ", ptr[i]);
 }
 
 int	otool_format(t_sec section, char *flag)
 {
 	unsigned int	i;
+	t_cpu_family cpu;
 
 	i = 0;
+	(void)flag;
+	t_otool *otool = get_otool(0);
+	cpu = get_cpu_family(otool->head.cputype);
 	while (i < section.size)
 	{
 		if (!(i % 16))
 		{
-			ft_printf(flag,section.addr + i, "        ");
+			ft_printf(cpu.print_format,section.addr + i, "        ");
 		}
-		print_classic(section.ptr, i);
+		cpu.print_func(section.ptr, i);
 		if (++i && !(i % 16) && i < section.size)
 			ft_printf("\n");
 	}

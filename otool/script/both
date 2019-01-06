@@ -1,0 +1,6 @@
+echo "script started"
+
+rm diff mine their
+./ft_otool $@ >mine 2>>mine
+otool -t $@ >their 2>>their
+git diff --no-index their mine > diff 

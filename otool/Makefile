@@ -6,7 +6,7 @@
 #    By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 13:13:35 by ygarrot           #+#    #+#              #
-#    Updated: 2019/01/05 14:17:30 by ygarrot          ###   ########.fr        #
+#    Updated: 2019/01/06 13:30:22 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ SRC_FP =\
 					otool_struct.c \
 				  mach_header.c \
 					cross_symbol.c\
+					print_memory.c\
 				ptr_utils.c\
 					print_otool.c
 

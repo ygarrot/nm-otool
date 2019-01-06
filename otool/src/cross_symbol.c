@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 17:39:02 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/05 14:50:21 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/06 13:39:41 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	cross_symbol(void *ptr, void *struc, uint32_t index)
 	otool = struc;
 	str = ptr;
 	file = &str[ft_strlento(str, '\n') +1];
-	ft_printf("%s(%s):\n", otool->file_name,file); 
+	ft_printf("%s(%s):\n", otool->file.name,file); 
 	len = ft_strlen(str);
 	while (!str[len])
 		len++;
@@ -56,9 +56,9 @@ void	ranlib_handler(void *ptr, void *struc)
 	tab = ft_strsplit((char*)ptr + 8, ' ');
 	strr = (unsigned char*)ptr + 8 + ft_strlen((char*)ptr + 4) ;
 	table = (void*)strr;
-	otool->iter_nb = table->size / sizeof(t_symbol_info);
-	otool->symhead = ptr;
-	otool->string_table = (void*)table + table->size;
-	otool->type = RANLIB_64;
+	otool->mem.iter_nb = table->size / sizeof(t_symbol_info);
+	otool->symtab.symhead = ptr;
+	otool->head.string_table = (void*)table + table->size;
+	otool->head.type = RANLIB_64;
 	iter_over_mem(ptr + 68 + ft_atoi(tab[5]), otool, SYM_TAB_L, &cross_symbol);
 }

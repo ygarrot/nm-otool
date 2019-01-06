@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:32:25 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/05 14:49:02 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/06 13:38:41 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include "../../libft/includes/libft.h"
 # include "../../includes/ft_macho.h"
 
+typedef struct s_otool t_otool;
 typedef	struct s_sec
 {
 	uintmax_t	size;
@@ -25,22 +26,41 @@ typedef	struct s_sec
 	unsigned char	*ptr;
 }							t_sec;
 
-typedef struct s_otool
+typedef struct s_head_utils
+{
+	int			no_arch;
+	unsigned long	magic;
+	void		*ptr;
+	int			type;
+	void		*string_table;
+
+}								t_head_utils;
+
+typedef struct s_file_attribute
+{
+	char			*name;
+	void		*offset;
+}								t_file_attribute;
+
+typedef struct s_symtab_utils
+{
+	void		*symhead;
+}								t_symtab_utils;
+
+typedef struct s_mem_utils
+{
+	int			iter_nb;
+	int			(*offset_handler)(struct s_otool *ot, void *ptr, int inc_value);
+}								t_mem_utils;
+
+struct s_otool
 {
 	t_sec					section;
-	unsigned long	magic_number;
-	void		*ptr;
-	int			iter_nb;
-	void		*offset;
-	void		*string_table;
-	char			*file_name;
-	t_btree		*ranlib;
-	void		*header;
-	int			type;
-	int			(*offset_handler)(struct s_otool *ot, void *ptr, int inc_value);
-	void		*symhead;
-	int			vm_address;
-}								t_otool;
+	t_file_attribute file;
+	t_head_utils			head;
+	t_symtab_utils		symtab;
+	t_mem_utils			mem;
+};
 
 void	is_fat_header(void *ptr, void *otool);
 void	handle_header64(void *ptr, void *otool);
@@ -50,6 +70,8 @@ void	iter_over_mem(void *ptr, void *struc, int type,
 		void	(*f)(void*, void *struc, uint32_t index));
 void		ranlib_handler(void *ptr, void *struc);
 void		cross_symbol(void	*ptr, void	*struc, uint32_t index);
+void	print_otool(void *ptr, void *struc, uint32_t index);
+void		set_section_values(void *ptr, t_otool *otool);
 void		cross_command(void	*ptr, void	*struc, uint32_t index);
 void		cross_arch(void *ptr, char *file_name);
 int		is_section_type(t_section *section, char *type);

@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:34:12 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/05 15:00:32 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/06 13:35:04 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ void		cross_arch(void *ptr, char *file_name)
 		return ;
 	otool = get_otool(0);
 	magic_number = *(unsigned int *)ptr;
-	otool->magic_number = magic_number;
-	otool->header  = ptr;
+	otool->head.magic = magic_number;
+	otool->head.ptr  = ptr;
 	if ((index = ft_uint_isin(magic_number, arch_type_r, 3)) > 0
 			||(index = ft_uint_isin(magic_number, arch_type , 3)) > 0
 			|| (!ft_memcmp(ptr, ARLIB, ft_strlen(ARLIB)) && (index = 4)))
@@ -68,8 +68,9 @@ int	mmap_file(char *file)
 	if ((ptr = mmap(0, buf.st_size, PROT_READ, MAP_PRIVATE, fd, 0)) == MAP_FAILED)
 		return (ft_error(file, "mmap errror"));
 	otool = get_otool(0);
-	otool->offset = ptr+buf.st_size;
-	otool->file_name = file;
+	otool->file.offset = ptr+buf.st_size;
+	otool->head.no_arch = 0;
+	otool->file.name = file;
 	cross_arch(ptr, file);
 	if (munmap(ptr, buf.st_size))
 		return (ft_error(file, "munmap errror"));

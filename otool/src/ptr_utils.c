@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/30 11:34:41 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/05 14:19:12 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/06 13:40:02 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		get_iter_nb(void *ptr, int type)
 
 	otool = get_otool(0);
 	if (type == LOAD_COMMAND)
-			return (otool->iter_nb);
+			return (otool->mem.iter_nb);
 	if (type == SECTION_64)
 			return (((t_segment_command_64*)(ptr - sizeof(t_segment_command_64)))->nsects);
 	if (type == SECTION)
@@ -70,7 +70,7 @@ void	iter_over_mem(void *child, void *struc, int type,
 	{
 		(*f)(child, struc, i);
 		inc_value = get_inc_value(child, type);
-		if (!otool->offset_handler(otool, child, inc_value)) 
+		if (!otool->mem.offset_handler(otool, child, inc_value)) 
 		{
 			/* ft_printf("ABORT\n"); */
 /* TODO : handle it lul */

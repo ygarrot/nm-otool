@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/05 10:08:00 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/06 15:53:32 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/06 17:00:11 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,21 @@ void	is_fat_header(void *fat_header, void *struc)
 	while (--nfat >= 0)
 	{
 		offset = ft_swap_int(arch->offset);
+		unsigned int magic = *(unsigned int*)(fat_header + offset); 
 		if (otool->head.no_arch
-				|| *(unsigned int*)(fat_header + offset) == MH_MAGIC_64)
+				|| (magic == MH_MAGIC_64 && 
+						((t_mach_header_64*)((void*)fat_header + offset))->cputype == CPU_TYPE_X86_64)
+	|| (magic == MH_MAGIC &&  
+						((t_mach_header*)((void*)fat_header + offset))->cputype == CPU_TYPE_X86_64))
 		{	
 			cross_arch((void*)fat_header + offset, 0);
-			return ;
+			if (!otool->head.no_arch)
+				return ;
 		}
 		arch++;
 	}
+	if (otool->head.no_arch)
+		return;
 	otool->head.no_arch = 1;
 	is_fat_header(fat_header, otool);
 }

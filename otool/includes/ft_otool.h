@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:32:25 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/06 15:55:55 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/06 16:19:48 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ typedef struct s_symtab_utils
 
 typedef struct s_mem_utils
 {
+	int			error;
 	int			iter_nb;
 	int			(*offset_handler)(struct s_otool *ot, void *ptr, int inc_value);
 }								t_mem_utils;
@@ -83,7 +84,7 @@ void		cross_symbol(void	*ptr, void	*struc, uint32_t index);
 void	print_otool(void *ptr, void *struc, uint32_t index);
 void		set_section_values(void *ptr, t_otool *otool);
 void		cross_command(void	*ptr, void	*struc, uint32_t index);
-void		cross_arch(void *ptr, char *file_name);
+int		cross_arch(void *ptr, char *file_name);
 int		is_section_type(t_section *section, char *type);
 int		is_section64_type(t_section_64	*section64, char *type);
 int		is_segment_type(t_section *section, char *type);

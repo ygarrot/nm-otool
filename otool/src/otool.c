@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:34:12 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/06 15:53:32 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/06 17:11:37 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int		ft_error(char *file, char *str)
 	return (EXIT_FAILURE);
 }
 
-void		cross_arch(void *ptr, char *file_name)
+int		cross_arch(void *ptr, char *file_name)
 {
 	unsigned int		magic_number;
 	t_otool								*otool; 
@@ -31,7 +31,7 @@ void		cross_arch(void *ptr, char *file_name)
 	{handle_header64, handle_header32,is_fat_header, ranlib_handler};
 
 	if (!ptr)
-		return ;
+		return (EXIT_FAILURE);
 	otool = get_otool(0);
 	magic_number = *(unsigned int *)ptr;
 	otool->head.magic = magic_number;
@@ -40,19 +40,18 @@ void		cross_arch(void *ptr, char *file_name)
 			||(index = ft_uint_isin(magic_number, arch_type , 3)) > 0
 			|| (!ft_memcmp(ptr, ARLIB, ft_strlen(ARLIB)) && (index = 4)))
 	{
-		if (index == 4)
-			ft_printf("Archive : ");
-		if (file_name)
-			ft_printf("%s%s", file_name, index == 4 ? "\n" : ":\n");
-		func_tab[index - 1](ptr, otool);
+		print_arch(file, ptr);
+				func_tab[index - 1](ptr, otool);
 	}
 	else
 		ft_printf(" %s\n", NOTOBJ);
 	/* ft_printf("T ki %#x  %d?\n", magic_number, magic_number); */
+	return (otool->mem.error);
 }
 
 int	mmap_file(char *file)
 {
+	int			ret;
 	int 		fd;
 	char		*ptr;
 	struct	stat buf;
@@ -68,13 +67,13 @@ int	mmap_file(char *file)
 	if ((ptr = mmap(0, buf.st_size, PROT_READ, MAP_PRIVATE, fd, 0)) == MAP_FAILED)
 		return (ft_error(file, "mmap errror"));
 	otool = get_otool(0);
-	otool->file.offset = ptr+buf.st_size;
+	otool->file.offset = ptr + buf.st_size;
 	otool->head.no_arch = 0;
 	otool->file.name = file;
-	cross_arch(ptr, file);
+	ret = cross_arch(ptr, file);
 	if (munmap(ptr, buf.st_size))
 		return (ft_error(file, "munmap errror"));
-	return (EXIT_SUCCESS);
+	return (ret);
 }
 
 int main(int ac, char **av)

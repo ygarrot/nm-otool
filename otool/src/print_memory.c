@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 11:49:33 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/23 18:33:30 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/23 18:56:29 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	otool_format(t_sec section)
 	{
 		if (!(i % 16))
 		{
-			ft_printf(cpu.print_format,otool, section.addr +i, "        ");
+			ft_printf(cpu.print_format, get_int_indian(otool, (long)section.addr)+ i , "        ");
 		}
 		cpu.print_func(section.ptr, i);
 		if (++i && !(i % 16) && i < section.size)

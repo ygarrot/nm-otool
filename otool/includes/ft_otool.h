@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:32:25 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/23 16:41:42 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/23 18:53:39 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,5 +94,5 @@ void	print_32(unsigned char *ptr, int i);
 void	print_64(unsigned char *ptr, int i);
 char		*print_arch(char *r, void *ptr);
 int		is_text_sect(void *sect, unsigned int arch_type);
-int		get_int_indian(t_otool *otool, int to_convert);
+long		get_int_indian(t_otool *otool, long to_convert);
 #endif

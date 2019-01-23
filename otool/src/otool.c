@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:34:12 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/06 17:11:37 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/23 13:15:28 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int		cross_arch(void *ptr, char *file_name)
 			||(index = ft_uint_isin(magic_number, arch_type , 3)) > 0
 			|| (!ft_memcmp(ptr, ARLIB, ft_strlen(ARLIB)) && (index = 4)))
 	{
-		print_arch(file, ptr);
+		print_arch(file_name, ptr);
 				func_tab[index - 1](ptr, otool);
 	}
 	else

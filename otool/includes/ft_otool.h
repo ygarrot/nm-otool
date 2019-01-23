@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:32:25 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/06 16:19:48 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/23 13:20:28 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,5 +91,6 @@ int		is_segment_type(t_section *section, char *type);
 int		is_segment64_type(t_section_64	*section64, char *type);
 void	print_32(unsigned char *ptr, int i);
 void	print_64(unsigned char *ptr, int i);
+char		*print_arch(char *r, void *ptr);
 int		is_text_sect(void *sect, unsigned int arch_type);
 #endif

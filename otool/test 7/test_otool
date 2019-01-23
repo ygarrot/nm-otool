@@ -1,7 +1,0 @@
-rm error
-rm otoolhome
-for file in `find ~/ 2>/dev/null`
-do
-	echo $file >> error
-	otool -t $file >> otoolhome 2>>error
-done

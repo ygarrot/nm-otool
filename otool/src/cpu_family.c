@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 14:13:16 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/23 13:31:18 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/23 18:23:32 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,15 @@ char		*print_arch(char *file_name, void *ptr)
 {
 	t_cpu_family		cpu;
 
-	cpu = get_cpu_family(*(int*)ptr);
+	cpu = get_cpu_family(get_int_indian(get_otool(0), *(unsigned int*)(ptr + sizeof(unsigned int))));
 	int is_lib = ft_memcmp(ptr, ARLIB, ft_strlen(ARLIB));
 	if (!is_lib)
 		ft_printf("Archive : ");
 	if (file_name)
-		ft_printf("%s%s", file_name, !is_lib ? "\n" : ":\n");
+		ft_printf("%s", file_name);
+	if (*cpu.name != '?' && get_otool(0)->head.no_arch)
+		ft_printf(" (architecture %s)", cpu.name);
+	ft_printf(is_lib? ":\n" : "\n");
 
 
 	return NULL;

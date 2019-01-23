@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/05 10:08:00 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/06 17:00:11 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/23 18:10:07 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	is_fat_header(void *fat_header, void *struc)
 	while (--nfat >= 0)
 	{
 		offset = ft_swap_int(arch->offset);
+		ft_bzero(&otool->mem, sizeof(otool->mem));
 		unsigned int magic = *(unsigned int*)(fat_header + offset); 
 		if (otool->head.no_arch
 				|| (magic == MH_MAGIC_64 && 
@@ -33,15 +34,15 @@ void	is_fat_header(void *fat_header, void *struc)
 	|| (magic == MH_MAGIC &&  
 						((t_mach_header*)((void*)fat_header + offset))->cputype == CPU_TYPE_X86_64))
 		{	
-			cross_arch((void*)fat_header + offset, 0);
 			if (!otool->head.no_arch)
 				return ;
+			cross_arch((void*)fat_header + offset, otool->file.name);
 		}
 		arch++;
 	}
 	if (otool->head.no_arch)
 		return;
-	otool->head.no_arch = 1;
+	otool->head.no_arch = true;
 	is_fat_header(fat_header, otool);
 }
 
@@ -64,7 +65,7 @@ void	handle_header32(void *ptr, void *otool)
 
 	o = otool;
 	header = ptr;
-	o->mem.iter_nb = header->ncmds;
-	o->head.cputype = header->cputype; 
+	o->mem.iter_nb = get_int_indian(o,header->ncmds);
+	o->head.cputype = get_int_indian(o,header->cputype); 
 	iter_over_mem(ptr + sizeof(t_mach_header), otool, LOAD_COMMAND, &cross_command);
 }

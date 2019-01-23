@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:34:12 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/23 13:15:28 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/23 18:25:31 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,15 +36,16 @@ int		cross_arch(void *ptr, char *file_name)
 	magic_number = *(unsigned int *)ptr;
 	otool->head.magic = magic_number;
 	otool->head.ptr = ptr;
-	if ((index = ft_uint_isin(magic_number, arch_type_r, 3)) > 0
+	if (((index = ft_uint_isin(magic_number, arch_type_r, 3)) > 0 && (otool->mem.is_big_endian =true))
 			||(index = ft_uint_isin(magic_number, arch_type , 3)) > 0
 			|| (!ft_memcmp(ptr, ARLIB, ft_strlen(ARLIB)) && (index = 4)))
 	{
-		print_arch(file_name, ptr);
-				func_tab[index - 1](ptr, otool);
+		if (index != 3)
+			print_arch(file_name, ptr);
+		func_tab[index - 1](ptr, otool);
 	}
 	else
-		ft_printf(" %s\n", NOTOBJ);
+		ft_printf("%s: %s\n", file_name, NOTOBJ);
 	/* ft_printf("T ki %#x  %d?\n", magic_number, magic_number); */
 	return (otool->mem.error);
 }
@@ -86,6 +87,6 @@ int main(int ac, char **av)
 		return (mmap_file("./a.out"));
 	while (++i < ac)
 		if ((ret = mmap_file(av[i])) != EXIT_SUCCESS)
-				return (EXIT_FAILURE);
+			return (EXIT_FAILURE);
 	return (EXIT_SUCCESS);
 }

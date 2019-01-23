@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:32:25 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/23 13:20:28 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/23 16:41:42 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ typedef struct s_symtab_utils
 
 typedef struct s_mem_utils
 {
+	bool	is_big_endian;
 	int			error;
 	int			iter_nb;
 	int			(*offset_handler)(struct s_otool *ot, void *ptr, int inc_value);
@@ -93,4 +94,5 @@ void	print_32(unsigned char *ptr, int i);
 void	print_64(unsigned char *ptr, int i);
 char		*print_arch(char *r, void *ptr);
 int		is_text_sect(void *sect, unsigned int arch_type);
+int		get_int_indian(t_otool *otool, int to_convert);
 #endif

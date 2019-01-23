@@ -6,7 +6,7 @@
 #    By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 13:13:35 by ygarrot           #+#    #+#              #
-#    Updated: 2019/01/06 16:19:48 by ygarrot          ###   ########.fr        #
+#    Updated: 2019/01/23 16:45:11 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ OBJ_DIR = mkdir obj
 # :r !ls
 SRC_FP =\
 					otool.c \
+					indian.c \
 					section.c \
 					otool_struct.c \
 				  mach_header.c \

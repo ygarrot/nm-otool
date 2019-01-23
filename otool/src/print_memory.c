@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 11:49:33 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/06 16:19:47 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/23 18:33:30 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,28 +27,27 @@ int		get_nb_from_map(unsigned char *map, int index, int nb_bytes)
 void	print_32(unsigned char *ptr, int i)
 {
 	if (!(i%4))
-		ft_printf("%0.8x ", *(int*)(ptr + i));
+		ft_printf("%0.8x ", get_int_indian(get_otool(0), *(int*)(ptr + i)));
 }
 
 void	print_64(unsigned char *ptr, int i)
 {
-	ft_printf("%02x ", ptr[i]);
+	ft_printf("%02x ", get_int_indian(get_otool(0), ptr[i]));
 }
 
-int	otool_format(t_sec section, char *flag)
+int	otool_format(t_sec section)
 {
 	unsigned int	i;
 	t_cpu_family cpu;
 
 	i = 0;
-	(void)flag;
 	t_otool *otool = get_otool(0);
 	cpu = get_cpu_family(otool->head.cputype);
 	while (i < section.size)
 	{
 		if (!(i % 16))
 		{
-			ft_printf(cpu.print_format,section.addr + i, "        ");
+			ft_printf(cpu.print_format,otool, section.addr +i, "        ");
 		}
 		cpu.print_func(section.ptr, i);
 		if (++i && !(i % 16) && i < section.size)
@@ -61,7 +60,6 @@ int	otool_format(t_sec section, char *flag)
 void	print_otool(void *ptr, void *struc, uint32_t index)
 {
 	t_otool						*otool;
-	char 						*flag;
 
 	(void)index;
 	otool = struc;
@@ -69,6 +67,5 @@ void	print_otool(void *ptr, void *struc, uint32_t index)
 			return ;
 	set_section_values(ptr, struc); 
 	ft_printf("Contents of (__TEXT,__text) section\n");
-	flag = otool->head.magic == MH_MAGIC ? "%08x\t" : "%016llx\t";
-	otool_format(otool->section, flag);
+	otool_format(otool->section);
 }

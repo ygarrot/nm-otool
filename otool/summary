@@ -1,0 +1,181 @@
+[!] NM_PATH and OTOOL_PATH not found but PROJECT_PATH exists
+[?] attempting to compile ft_nm and ft_otool
+[36m
+Compiling library libft.a... [32mDONE(B[m
+[+] total amount of files to process: 83
+-----------------
+| NM unit_tests |
+-----------------
+
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/32/32_exe_hard                              [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/32/MachO-iOS-arm1176JZFS-bash               [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/32/MachO-iOS-armv7s-Helloworld              [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/32/MachO-OSX-ppc-openssl-1.0.1h             [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/32/MachO-OSX-x86-ls                         [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/64/64_bundle                                [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/64/64_exe_easy                              [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/64/64_exe_hard                              [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/64/64_exe_medium                            [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/64/64_lib_dynamic_hard                      [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/64/64_lib_dynamic_medium                    [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/64/global                                   [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/64/MachO-OSX-x64-ls                         [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/32_exe_hard_corupted                [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 127 but the error messages were not compared for more flexibility
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/64_corrupted_string_table           [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 127 but the error messages were not compared for more flexibility
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/64_exe_hard_corupted                [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 127 but the error messages were not compared for more flexibility
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/audiodevice_corupted                [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 127 but the error messages were not compared for more flexibility
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/bad_string_index                    [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/curl_truncated_load                 [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 127 but the error messages were not compared for more flexibility
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/fat_bad_string_index                [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/fat_hard_corupted                   [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 127 but the error messages were not compared for more flexibility
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/fat_not_fail_except_one             [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 127 but the error messages were not compared for more flexibility
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/indirect_bad_string                 [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/mega_bad_string                     [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/truncated_10_load                   [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 127 but the error messages were not compared for more flexibility
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/truncated_cputype                   [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 127 but the error messages were not compared for more flexibility
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/truncated_load_2                    [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 127 but the error messages were not compared for more flexibility
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat/appsleepd                               [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat/audiodevice                             [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat/fat_hard                                [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat/MachO-iOS-armv7-armv7s-arm64-Helloworld [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat/MachO-OSX-ppc-and-i386-bash             [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libAccountPolicyTranslation.dylib   [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libarchive.dylib                    [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libate.dylib                        [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libblas.dylib                       [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libc++.1.dylib                      [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libc++.dylib                        [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libcblas.dylib                      [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libclapack.dylib                    [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libcom_err.dylib                    [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libcompression.dylib                [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libcoretls.dylib                    [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libdes425.dylib                     [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libdns_services.dylib               [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libextension.dylib                  [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libf77lapack.dylib                  [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libform.5.4.dylib                   [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libform.dylib                       [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libFosl_dynamic.dylib               [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libft_malloc_x86_64_Darwin.so       [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libgssapi_krb5.dylib                [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libhunspell-1.2.dylib               [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libicucore.dylib                    [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libinfo.dylib                       [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libk5crypto.dylib                   [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libkrb4.dylib                       [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libkrb5.dylib                       [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libkrb524.dylib                     [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libkrb5support.dylib                [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/liblapack.dylib                     [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libmenu.dylib                       [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libmx.A.dylib                       [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libobjc.A.dylib                     [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libobjc.dylib                       [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libpmenergy.dylib                   [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libpmsample.dylib                   [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libsqlite3.0.dylib                  [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libsqlite3.dylib                    [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libstdc++.6.0.9.dylib               [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libstdc++.6.dylib                   [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libstdc++.dylib                     [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libsystemstats.dylib                [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libz.1.dylib                        [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libz.dylib                          [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/PN548_API.dylib                     [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/PN548_HAL_OSX.dylib                 [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/PN548_OSX.dylib                     [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/ssh-keychain.dylib                  [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/test_facile                                 [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/test_half_obj                               [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 127 but the error messages were not compared for more flexibility
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/test_moins_facile                           [91mERROR[0m: nm returned 0, ft_nm returned 127.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/test_wrong_lc_command_size                  [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 127 but the error messages were not compared for more flexibility
+--------------------
+| OTOOL unit_tests |
+--------------------
+
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/32/32_exe_hard                              [92mOK[0m
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/32/MachO-iOS-arm1176JZFS-bash               [92mOK[0m
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/32/MachO-iOS-armv7s-Helloworld              [92mOK[0m
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/32/MachO-OSX-ppc-openssl-1.0.1h             [91mERROR[0m: otool returned 0, ft_otool returned 1.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/32/MachO-OSX-x86-ls                         [92mOK[0m
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/64/64_bundle                                [92mOK[0m
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/64/64_exe_easy                              [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/64/64_exe_hard                              [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/64/64_exe_medium                            [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/64/64_lib_dynamic_hard                      [92mOK[0m
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/64/64_lib_dynamic_medium                    [92mOK[0m
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/64/global                                   [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/64/MachO-OSX-x64-ls                         [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/32_exe_hard_corupted                [92mOK[0m: [93mWARNING[0m otool returned 1 and ft_otool returned -6 but the error messages were not compared for more flexibility
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/64_corrupted_string_table           [91mERROR[0m: otool returned 1, ft_otool returned 0.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/64_exe_hard_corupted                [92mOK[0m: [93mWARNING[0m otool returned 1 and ft_otool returned -6 but the error messages were not compared for more flexibility
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/audiodevice_corupted                [92mOK[0m: [93mWARNING[0m otool returned 1 and ft_otool returned -6 but the error messages were not compared for more flexibility
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/bad_string_index                    [91mERROR[0m: otool returned 1, ft_otool returned 0.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/curl_truncated_load                 [92mOK[0m: [93mWARNING[0m otool returned 1 and ft_otool returned 1 but the error messages were not compared for more flexibility
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/fat_bad_string_index                [91mERROR[0m: otool returned 1, ft_otool returned 0.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/fat_hard_corupted                   [92mOK[0m: [93mWARNING[0m otool returned 1 and ft_otool returned -6 but the error messages were not compared for more flexibility
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/fat_not_fail_except_one             [91mERROR[0m: otool returned 1, ft_otool returned 0.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/indirect_bad_string                 [91mERROR[0m: otool returned 1, ft_otool returned 0.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/mega_bad_string                     [91mERROR[0m: otool returned 1, ft_otool returned 0.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/truncated_10_load                   [91mERROR[0m: otool returned 1, ft_otool returned 0.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/truncated_cputype                   [91mERROR[0m: otool returned 1, ft_otool returned 0.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/corrupt/truncated_load_2                    [92mOK[0m: [93mWARNING[0m otool returned 1 and ft_otool returned 1 but the error messages were not compared for more flexibility
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat/appsleepd                               [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat/audiodevice                             [92mOK[0m
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat/fat_hard                                [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat/MachO-iOS-armv7-armv7s-arm64-Helloworld [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat/MachO-OSX-ppc-and-i386-bash             [91mERROR[0m: otool returned 0, ft_otool returned 1.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libAccountPolicyTranslation.dylib   [92mOK[0m
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libarchive.dylib                    [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libate.dylib                        [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libblas.dylib                       [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libc++.1.dylib                      [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libc++.dylib                        [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libcblas.dylib                      [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libclapack.dylib                    [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libcom_err.dylib                    [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libcompression.dylib                [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libcoretls.dylib                    [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libdes425.dylib                     [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libdns_services.dylib               [92mOK[0m
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libextension.dylib                  [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libf77lapack.dylib                  [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libform.5.4.dylib                   [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libform.dylib                       [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libFosl_dynamic.dylib               [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libft_malloc_x86_64_Darwin.so       [92mOK[0m
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libgssapi_krb5.dylib                [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libhunspell-1.2.dylib               [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libicucore.dylib                    [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libinfo.dylib                       [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libk5crypto.dylib                   [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libkrb4.dylib                       [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libkrb5.dylib                       [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libkrb524.dylib                     [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libkrb5support.dylib                [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/liblapack.dylib                     [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libmenu.dylib                       [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libmx.A.dylib                       [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libobjc.A.dylib                     [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libobjc.dylib                       [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libpmenergy.dylib                   [92mOK[0m
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libpmsample.dylib                   [92mOK[0m
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libsqlite3.0.dylib                  [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libsqlite3.dylib                    [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libstdc++.6.0.9.dylib               [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libstdc++.6.dylib                   [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libstdc++.dylib                     [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libsystemstats.dylib                [92mOK[0m
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libz.1.dylib                        [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/libz.dylib                          [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/PN548_API.dylib                     [92mOK[0m
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/PN548_HAL_OSX.dylib                 [92mOK[0m
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/PN548_OSX.dylib                     [92mOK[0m
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/fat_lib/ssh-keychain.dylib                  [92mOK[0m
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/test_facile                                 [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/test_half_obj                               [91mERROR[0m: otool returned 1, ft_otool returned 0.
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/test_moins_facile                           [91mERROR[0m: output differs
+	+ /Users/ygarrot/git/nm-otool/otool/unit_test/custom_tests/test_wrong_lc_command_size                  [91mERROR[0m: otool returned 1, ft_otool returned 0.
+
+[!] total amount of errors: [91m130[0m

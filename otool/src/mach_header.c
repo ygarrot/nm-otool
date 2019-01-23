@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/05 10:08:00 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/23 18:10:07 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/23 19:01:46 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,10 @@ void	is_fat_header(void *fat_header, void *struc)
 	|| (magic == MH_MAGIC &&  
 						((t_mach_header*)((void*)fat_header + offset))->cputype == CPU_TYPE_X86_64))
 		{	
+			cross_arch((void*)fat_header + offset, otool->file.name);
 			if (!otool->head.no_arch)
 				return ;
-			cross_arch((void*)fat_header + offset, otool->file.name);
+		ft_printf("ici");
 		}
 		arch++;
 	}

@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:34:12 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/23 18:25:31 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/24 14:21:16 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int		cross_arch(void *ptr, char *file_name)
 	else
 		ft_printf("%s: %s\n", file_name, NOTOBJ);
 	/* ft_printf("T ki %#x  %d?\n", magic_number, magic_number); */
-	return (otool->mem.error);
+	return (otool->error);
 }
 
 int	mmap_file(char *file)

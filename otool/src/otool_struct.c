@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/03 11:42:36 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/06 13:39:08 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/24 14:21:16 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 int		offset_handler(t_otool *otool, void *ptr, int inc_value)
 {
-	/* ft_printf("%lld %lld \n", otool->offset, ptr + inc_value); */
-	return (otool->file.offset > ptr + inc_value);
+	return (otool->error = (otool->file.offset < ptr + inc_value));
 }
 
 t_otool		*get_otool(t_otool *ptr)
@@ -24,7 +23,7 @@ t_otool		*get_otool(t_otool *ptr)
 
 		if (ptr)
 			otool = *ptr;
-		if (!otool.mem.offset_handler)
-			otool.mem.offset_handler = offset_handler;
+		if (!otool.offset_handler)
+			otool.offset_handler = offset_handler;
 		return (&otool);
 }

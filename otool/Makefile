@@ -6,14 +6,14 @@
 #    By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 13:13:35 by ygarrot           #+#    #+#              #
-#    Updated: 2019/01/23 16:45:11 by ygarrot          ###   ########.fr        #
+#    Updated: 2019/01/24 13:50:49 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = ft_otool
 
-FLAGS = -Wall -Werror -Wextra -g3
-FLAGS +=  -fsanitize=address
+FLAGS = -Wall -Werror -Wextra
+FLAGS +=  -fsanitize=address -g3
 
 SRC_FOLDER = src/
 INCLUDE =  includes/\

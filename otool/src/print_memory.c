@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 11:49:33 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/23 18:56:29 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/24 14:21:16 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ int	otool_format(t_sec section)
 	cpu = get_cpu_family(otool->head.cputype);
 	while (i < section.size)
 	{
+		if (otool->offset_handler(otool, section.ptr, i + 1))
+			return(EXIT_FAILURE);
 		if (!(i % 16))
 		{
 			ft_printf(cpu.print_format, get_int_indian(otool, (long)section.addr)+ i , "        ");
@@ -64,7 +66,7 @@ void	print_otool(void *ptr, void *struc, uint32_t index)
 	(void)index;
 	otool = struc;
 	if (!is_text_sect(ptr, otool->head.magic))
-			return ;
+		return ;
 	set_section_values(ptr, struc); 
 	ft_printf("Contents of (__TEXT,__text) section\n");
 	otool_format(otool->section);

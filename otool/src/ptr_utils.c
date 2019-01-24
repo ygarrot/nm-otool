@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/30 11:34:41 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/23 17:22:31 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/24 14:21:16 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,9 +70,8 @@ void	iter_over_mem(void *child, void *struc, int type,
 	{
 		(*f)(child, struc, i);
 		inc_value = get_int_indian(struc, get_inc_value(child, type));
-		if (!otool->mem.offset_handler(otool, child, inc_value)) 
+		if (otool->error || otool->offset_handler(otool, child, inc_value)) 
 		{
-			otool->mem.error = 1;
 			/* ft_printf("ABORT\n"); */
 /* TODO : handle it lul */
 			return ;

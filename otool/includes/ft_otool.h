@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:32:25 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/23 18:53:39 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/24 14:20:06 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,13 +59,13 @@ typedef struct s_symtab_utils
 typedef struct s_mem_utils
 {
 	bool	is_big_endian;
-	int			error;
 	int			iter_nb;
-	int			(*offset_handler)(struct s_otool *ot, void *ptr, int inc_value);
 }								t_mem_utils;
 
 struct s_otool
 {
+	int			error;
+	int			(*offset_handler)(struct s_otool *ot, void *ptr, int inc_value);
 	t_sec					section;
 	t_file_attribute file;
 	t_head_utils			head;

@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/05 10:08:00 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/23 19:01:46 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/24 14:34:16 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,16 @@ void	is_fat_header(void *fat_header, void *struc)
 	t_fat_arch *arch;
 
 	otool = struc;
+	if (otool->offset_handler(otool, fat_header, sizeof(t_fat_header)))
+			return ;
 	arch = (t_fat_arch*)(fat_header + sizeof(t_fat_header));
 	nfat = ft_swap_int(((t_fat_header*)fat_header)->nfat_arch);
 	while (--nfat >= 0)
 	{
-		offset = ft_swap_int(arch->offset);
 		ft_bzero(&otool->mem, sizeof(otool->mem));
+		offset = ft_swap_int(arch->offset);
+		if (otool->offset_handler(otool, fat_header, offset))
+				return ;
 		unsigned int magic = *(unsigned int*)(fat_header + offset); 
 		if (otool->head.no_arch
 				|| (magic == MH_MAGIC_64 && 
@@ -37,7 +41,6 @@ void	is_fat_header(void *fat_header, void *struc)
 			cross_arch((void*)fat_header + offset, otool->file.name);
 			if (!otool->head.no_arch)
 				return ;
-		ft_printf("ici");
 		}
 		arch++;
 	}

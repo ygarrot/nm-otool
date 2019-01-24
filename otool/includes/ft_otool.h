@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:32:25 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/24 14:20:06 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/24 15:35:01 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ typedef struct s_otool t_otool;
 
 typedef struct s_cpu_family
 {
-		int		type;
-		char	*name;
-		char	*print_format;
+		const int		type;
+		const char	*name;
+		const char	*print_format;
 		void	(*print_func)(unsigned char *ptr, int index);
 }							t_cpu_family;
 

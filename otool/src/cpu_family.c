@@ -6,23 +6,24 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 14:13:16 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/24 14:36:29 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/24 14:47:31 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_otool.h"
 
-t_cpu_family get_cpu_family(int type )
+t_cpu_family	get_cpu_family(int type)
 {
-	char * flags32 = "%08llx\t";
-	char * flags64 = "%016llx\t";
-	int		i;
+	static const char	*flags32 = "%08llx\t";
+	static const char	*flags64 = "%016llx\t";
+	int					i;
+	t_cpu_family		*cpu_family;
 
 	i = 0;
-	t_cpu_family cpu_family[14] ={
+	cpu_family = (t_cpu_family[14]){
 		{ CPU_TYPE_VAX, "vax", flags32, print_32},
 		{ CPU_TYPE_MC680x0, "mc680", flags32, print_32},
-		{ CPU_TYPE_X86 , "i386", flags32, print_64},
+		{ CPU_TYPE_X86, "i386", flags32, print_64},
 		{ CPU_TYPE_I386, "i386", flags32, print_32},
 		{ CPU_TYPE_X86_64, "x86_64", flags64, print_64},
 		{ CPU_TYPE_MC98000, "mc98000", flags32, print_32},
@@ -40,12 +41,13 @@ t_cpu_family get_cpu_family(int type )
 	return (cpu_family[i]);
 }
 
-char		*print_arch(char *file_name, void *ptr)
+char			*print_arch(char *file_name, void *ptr)
 {
-	int is_lib;
 	t_cpu_family		cpu;
+	int					is_lib;
 
-	cpu = get_cpu_family(get_int_indian(get_otool(0), *(unsigned int*)(ptr + sizeof(unsigned int))));
+	cpu = get_cpu_family(get_int_indian(get_otool(0),
+				*(unsigned int*)(ptr + sizeof(unsigned int))));
 	is_lib = ft_memcmp(ptr, ARLIB, ft_strlen(ARLIB));
 	if (!is_lib)
 		ft_printf("Archive : ");
@@ -53,8 +55,6 @@ char		*print_arch(char *file_name, void *ptr)
 		ft_printf("%s", file_name);
 	if (*cpu.name != '?' && get_otool(0)->head.no_arch)
 		ft_printf(" (architecture %s)", cpu.name);
-	ft_printf(is_lib? ":\n" : "\n");
-
-
-	return NULL;
+	ft_printf(is_lib ? ":\n" : "\n");
+	return (NULL);
 }

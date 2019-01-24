@@ -6,7 +6,7 @@
 #    By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 13:13:35 by ygarrot           #+#    #+#              #
-#    Updated: 2019/01/04 12:44:03 by ygarrot          ###   ########.fr        #
+#    Updated: 2019/01/24 17:58:19 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,20 +22,24 @@ INCLUDE =  includes/\
 OBJ_DIR = mkdir obj
 # :r !ls
 SRC_FP =\
-				segment_command.c \
-				symtab_command.c \
-				ptr_utils.c \
-				ft_alphacmp.c \
-				tree_tools.c \
-		nlist.c \
-		nm.c
+	cross_symbol.c\
+	cpu_family.c\
+	ft_alphacmp.c\
+	mach_header.c\
+	nlist.c\
+	nm.c\
+	nm_init.c\
+	ptr_utils.c\
+	segment_command.c\
+	symtab_command.c\
+	tree_tools.c
+
 OBJ = $(addprefix $(SRC_FOLDER), $(SRC_FP:.c=.o))
-LIBFT = ../libft/libft.a
+	LIBFT = ../libft/libft.a
 
 all: $(NAME)
 
 src/%.o: src/%.c
-
 	@gcc $(FLAGS) -o $@ -c $<  -I $(INCLUDE)
 
 $(NAME): $(OBJ)

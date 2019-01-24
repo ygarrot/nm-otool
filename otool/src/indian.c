@@ -6,12 +6,11 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/23 15:51:55 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/24 15:19:27 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/24 17:42:21 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_otool.h"
-#include <stdio.h>
 #include <inttypes.h>
 
 long		get_int_indian(t_otool *otool, long value)

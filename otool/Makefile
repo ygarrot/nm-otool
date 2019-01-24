@@ -6,7 +6,7 @@
 #    By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 13:13:35 by ygarrot           #+#    #+#              #
-#    Updated: 2019/01/24 13:50:49 by ygarrot          ###   ########.fr        #
+#    Updated: 2019/01/24 16:54:33 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,16 +22,16 @@ INCLUDE =  includes/\
 OBJ_DIR = mkdir obj
 # :r !ls
 SRC_FP =\
-					otool.c \
-					indian.c \
-					section.c \
-					otool_struct.c \
-				  mach_header.c \
-					cross_symbol.c\
-					print_memory.c\
-					cpu_family.c \
+				otool.c \
+				indian.c \
+				section.c \
+				otool_struct.c \
+				mach_header.c \
+				cross_symbol.c\
+				print_memory.c\
+				cpu_family.c \
 				ptr_utils.c\
-					print_otool.c
+				print_otool.c
 
 ALL_SRC = $(SRC_FOLDER)/$(SRC_FP) + $(SHARED_FOLDER)/$(SHARED_SRC)
 OBJ = $(addprefix $(SRC_FOLDER), $(SRC_FP:.c=.o))
@@ -41,7 +41,7 @@ LIBFT = ../libft/libft.a
 all: $(NAME)
 
 %.o: %.c
-			@gcc $(FLAGS) -o $@ -c $<  -I $(INCLUDE)
+	@gcc $(FLAGS) -o $@ -c $<  -I $(INCLUDE)
 
 $(NAME): $(OBJ)
 	@make -C ../libft -j

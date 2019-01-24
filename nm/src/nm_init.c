@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_alphacmp.c                                      :+:      :+:    :+:   */
+/*   nm_init.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/30 14:40:51 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/24 17:59:36 by ygarrot          ###   ########.fr       */
+/*   Created: 2019/01/24 17:40:41 by ygarrot           #+#    #+#             */
+/*   Updated: 2019/01/24 17:55:36 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_nm.h"
+#include <inttypes.h>
 
-int		ft_alphacmp(void *s1, void *s2)
+int		offset_handler(t_nm *nm, void *ptr, int inc_value)
 {
-	t_nm		*nm;
+	return (nm->error = (nm->file.offset < ptr + inc_value));
+}
 
-	nm = get_nm(NULL);
-	if (!s1 || !s2 || !nm->head.string_table)
-		return (0);
-	return (ft_strcmp(nm->head.string_table + (*(t_list64*)s1).n_un.n_strx,
-				nm->head.string_table + ((*(t_list64*)s2).n_un.n_strx)));
+t_nm	*get_nm(t_nm *ptr)
+{
+	static t_nm nm;
+
+	if (ptr)
+		nm = *ptr;
+	if (!nm.offset_handler)
+		nm.offset_handler = offset_handler;
+	return (&nm);
+}
+
+long		get_int_indian(t_nm *nm, long value)
+{
+	return (nm->mem.is_big_endian ? __builtin_bswap32(value) : value);
 }

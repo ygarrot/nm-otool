@@ -6,98 +6,93 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:58 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/12/31 17:14:57 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/24 17:55:35 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_nm.h"
 
-int		ft_error(char *str)
+int		ft_error(char *file, char *str)
 {
-	ft_putstr(str);
+	ft_printf("'%s': %s\n", file, str);
+	return (EXIT_FAILURE);
+}
+
+int		is_valid_arch(unsigned int magic_number, t_nm *nm, void *ptr)
+{
+	int				index;
+	unsigned int	*arch_type;
+	unsigned int	*arch_type_r;
+	void			(*const func_tab[4])(void *ptr,
+			void *nm) = {handle_header64,
+		handle_header32, is_fat_header, ranlib_handler};
+
+	arch_type = (unsigned int[3]){MH_MAGIC_64, MH_MAGIC, FAT_MAGIC};
+	arch_type_r = (unsigned int[3]){MH_CIGAM_64, MH_CIGAM, FAT_CIGAM};
+	if (((index = ft_uint_isin(magic_number, arch_type_r, 3)) > 0
+				&& (nm->mem.is_big_endian = true))
+			|| (index = ft_uint_isin(magic_number, arch_type, 3)) > 0
+			|| (!ft_memcmp(ptr, ARLIB, ft_strlen(ARLIB)) && (index = 4)))
+	{
+		index != 3 ? print_arch(nm->file.name, ptr) : 0;
+		func_tab[index - 1](ptr, nm);
+	}
 	return (-1);
 }
-int	swap_int(int num)
-{
-	int swapped = ((num>>24)&0xff) | // move byte 3 to byte 0
-		((num<<8)&0xff0000) | // move byte 1 to byte 2
-		((num>>8)&0xff00) | // move byte 2 to byte 1
-		((num<<24)&0xff000000); // byte 0 to byte 3
-	return swapped;
-}
-void	is_fat_header(t_fat_header *fat_header)
-{
-	int		offset;
-	int		nfat;
-	t_fat_arch *arch;
 
-	arch = (t_fat_arch*)(fat_header + 1);
-	nfat = swap_int(fat_header->nfat_arch);
-	t_nm *nm = get_nm(0);
-	while (--nfat >= 0)
-	{
-		offset = swap_int(arch->offset);
-		ft_bzero(nm, sizeof(*nm));
-		btree_erase(&nm->btree, ft_del_nothing_2); 
-		cross_arch((void*)fat_header + offset);
-		arch++;
-	}
-}
-
-void		cross_arch(void *ptr)
+int		cross_arch(void *ptr, char *file_name)
 {
-	unsigned int		magic_number;
-	t_nm								*nm; 
+	unsigned int	magic_number;
+	t_nm			*nm;
 
 	if (!ptr)
-		return ;
-	magic_number = *(int *)ptr;
+		return (EXIT_FAILURE);
 	nm = get_nm(0);
-	nm->current_arch = magic_number;
-	if (magic_number == MH_MAGIC_64)
-	{	
-		nm->header = (t_mach_header_64*)ptr ;
-		nm->iter_nb = ((t_mach_header_64*)ptr)->ncmds;
-		iter_over_mem(ptr + sizeof(t_mach_header_64), nm, LOAD_COMMAND, &cross_command);  
-	}
-	else if (magic_number == MH_MAGIC)
-	{
-		nm->header = (t_mach_header*)ptr ;
-		nm->iter_nb = ((t_mach_header*)ptr)->ncmds;
-		iter_over_mem(ptr + sizeof(t_mach_header), nm, LOAD_COMMAND, &cross_command);
-	}
-	else if (magic_number == FAT_MAGIC || magic_number == FAT_CIGAM)
-		is_fat_header(ptr);
-	else {
-		ft_printf("T ki %#x?\n", magic_number);
-	}
+	magic_number = *(unsigned int *)ptr;
+	nm->head.magic = magic_number;
+	nm->head.ptr = ptr;
+	if (!is_valid_arch(magic_number, nm, ptr))
+		ft_printf("%s: %s\n", file_name, NOTOBJ);
+	return (nm->error);
 }
 
-int	mmap_file(char *file)
+int		mmap_file(char *file)
 {
-	int 		fd;
+	int			ret;
+	int			fd;
 	char		*ptr;
-	struct	stat buf;
+	struct stat	buf;
+	t_nm		*nm;
 
 	if ((fd = open(file, O_RDONLY)) < 0)
-		return (ft_error("error open\n"));
+		return (ft_error(file, FT_ENOENT));
 	if (fstat(fd, &buf) < 0)
-		return (ft_error("fstat"));
-	if ((ptr = mmap(0, buf.st_size, PROT_READ, MAP_PRIVATE, fd, 0)) == MAP_FAILED)
-		return (ft_error("mmap errror\n"));
-	cross_arch(ptr);
-	return (0);
+		return (ft_error(file, "fstat"));
+	if (is_directory(fd))
+		return (ft_error(file, FT_EISDIR));
+	if ((ptr = mmap(0, buf.st_size,
+			PROT_READ, MAP_PRIVATE, fd, 0)) == MAP_FAILED)
+		return (ft_error(file, "mmap errror"));
+	nm = get_nm(0);
+	nm->file.offset = ptr + buf.st_size;
+	nm->head.no_arch = 0;
+	nm->file.name = file;
+	ret = cross_arch(ptr, file);
+	if (munmap(ptr, buf.st_size))
+		return (ft_error(file, "munmap errror"));
+	return (ret);
 }
-int main(int ac, char **av)
+
+int		main(int ac, char **av)
 {
 	int		i;
+	int		ret;
 
-	i = -1;
+	i = 0;
 	if (ac < 2)
-		return (mmap_file("a.out"));
+		return (mmap_file("./a.out"));
 	while (++i < ac)
-	{
-			mmap_file(av[i]);
-	}
+		if ((ret = mmap_file(av[i])) != EXIT_SUCCESS)
+			return (EXIT_FAILURE);
 	return (EXIT_SUCCESS);
 }

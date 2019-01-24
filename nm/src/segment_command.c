@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/28 14:08:01 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/02 11:42:11 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/24 17:55:36 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,9 @@ void	cross_command(void *ptr, void *struc, uint32_t index)
 	nm = struc;
 	(void)index;
 	if (lc->cmd == LC_SYMTAB)
+	{
 		apply_symtab((t_symtab_command*)lc, nm);
+	}
 	if (lc->cmd == LC_SEGMENT_64)
 	{
 		t_section_64 *t = (t_section_64*)(ptr + sizeof(t_segment_command_64));

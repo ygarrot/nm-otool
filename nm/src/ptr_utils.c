@@ -12,47 +12,49 @@
 
 #include "ft_nm.h"
 
-int		get_magic(void *ptr)
+int get_magic(void *ptr)
 {
-	int	magic_number;
+	int magic_number;
 
-	magic_number = *(int*)ptr;
+	magic_number = *(int *)ptr;
 	return (magic_number);
 }
 
-int		get_iter_nb(void *ptr, int type)
+int get_iter_nb(void *ptr, int type)
 {
-	t_nm		*nm;
+	t_nm *nm;
 
 	nm = get_nm(0);
 	if (type == LOAD_COMMAND)
 		return (nm->mem.iter_nb);
 	if (type == SECTION_64)
 	{
-		return (((t_segment_command_64*)(ptr
-						- sizeof(t_segment_command_64)))->nsects);
+		return (((t_segment_command_64 *)(ptr - sizeof(t_segment_command_64)))->nsects);
 	}
 	if (type == SECTION)
 	{
-		return (((t_segment_command*)(ptr
-						- sizeof(t_segment_command)))->nsects);
+		return (((t_segment_command *)(ptr - sizeof(t_segment_command)))->nsects);
 	}
+	if (type == SYM_TAB)
+		return (nm->mem.iter_nb);
 	if (type == SYM_TAB_L)
 		return (UINT_MAX);
 	return (0);
 }
 
-int		get_inc_value(void *ptr, int type)
+int get_inc_value(void *ptr, int type)
 {
-	char	**str;
-	int		size;
+	char **str;
+	int size;
 
 	if (type == LOAD_COMMAND)
-		return (((t_load_command*)ptr)->cmdsize);
+		return (((t_load_command *)ptr)->cmdsize);
 	if (type == SECTION_64)
 		return (sizeof(t_section_64));
 	if (type == SECTION)
 		return (sizeof(t_section));
+	if (type == SYM_TAB)
+		return (0);
 	if (type == SYM_TAB_L)
 	{
 		str = ft_strsplit(ptr, ' ');
@@ -65,13 +67,13 @@ int		get_inc_value(void *ptr, int type)
 	return (0);
 }
 
-void	iter_over_mem(void *child, void *struc, int type,
-		void (*f)(void *elem, void *struc, uint32_t index))
+void iter_over_mem(void *child, void *struc, int type,
+				   void (*f)(void *elem, void *struc, uint32_t index))
 {
-	t_nm		*nm;
-	uint32_t	iter_nb;
-	uint32_t	i;
-	int			inc_value;
+	t_nm *nm;
+	uint32_t iter_nb;
+	uint32_t i;
+	int inc_value;
 
 	nm = struc;
 	i = -1;
@@ -84,8 +86,8 @@ void	iter_over_mem(void *child, void *struc, int type,
 		{
 			/* ft_printf("ABORT\n"); */
 			/* TODO : handle it lul */
-			return ;
+			return;
 		}
-		child = (void*)child + inc_value;
+		child = (void *)child + inc_value;
 	}
 }

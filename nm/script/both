@@ -1,0 +1,6 @@
+echo "script started"
+
+rm diff mine their
+./ft_nm $@ >mine 2>>mine
+nm $@ >their 2>>their
+git diff --no-index their mine > diff 

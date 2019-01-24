@@ -74,9 +74,6 @@ void	cross_command(void *ptr, void *struc, uint32_t index)
 	}
 	if (lc->cmd == LC_SEGMENT_64)
 	{
-		t_section_64 *t = (t_section_64*)(ptr + sizeof(t_segment_command_64));
-		if (!ft_strcmp(t->sectname, SECT_TEXT))
-			ft_printf("offset: %x\n",t->offset); 
 		iter_over_mem(ptr + sizeof(t_segment_command_64), nm, SECTION_64, &set_section_64_addresses);
 	}		
 	if (lc->cmd == LC_SEGMENT)

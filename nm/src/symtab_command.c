@@ -29,7 +29,6 @@ void	apply_symtab(t_symtab_command *sym, t_nm *nm)
 {
 	nm->head.string_table = nm->head.ptr +  sym->stroff;
 	nm->mem.iter_nb = sym->nsyms;
-	ft_printf("iter_nb:%d", nm->mem.iter_nb);
 	iter_over_mem(nm->head.ptr + sym->symoff, nm, SYM_TAB, &apply_sort_sym);
 	iter_btree(&nm->btree, nm, print_nm_format);
 }

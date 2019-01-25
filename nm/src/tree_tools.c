@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/30 14:00:39 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/24 17:55:37 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/25 13:57:52 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	btree_erase(t_btree **root, void *erase(void **))
 	if ((*root)->right)
 		btree_erase(&((*root)->right), erase);
 	erase(&((*root)->item));
-	ft_memdel((void**)&root);
+	/* ft_memdel((void**)&root); */
 }
 
 

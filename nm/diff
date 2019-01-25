@@ -1,33 +1,9 @@
 diff --git a/their b/mine
-index 0092c2f..aef4310 100644
+index 82e99e5..c412f5f 100644
 --- a/their
 +++ b/mine
 @@ -1,3 +1,4 @@
-+./ft_nm:
- 000000010000bbc0 s _.str
- 000000010000bc00 s _.str
- 000000010000c140 s _.str
-@@ -232,11 +233,11 @@
- 0000000100007790 T _ft_uimaxtoabase
- 00000001000078e0 T _ft_uint_isin
- 0000000100001610 T _get_cpu_family
--000000010000e2a0 d _get_cpu_family.flags32
--000000010000e2e0 d _get_cpu_family.flags64
-+000000010000e2a0 s _get_cpu_family.flags32
-+000000010000e2e0 s _get_cpu_family.flags64
- 000000010000a5e0 T _get_fields
- 0000000100003fa0 T _get_flag
--000000010000e320 b _get_flag.template
-+000000010000e320 s _get_flag.template
- 00000001000039a0 T _get_flag_from_section
- 0000000100003820 T _get_flag_from_template
- 0000000100006100 T _get_inc_value
-@@ -244,7 +245,7 @@
- 0000000100005ed0 T _get_iter_nb
- 0000000100005e60 T _get_magic
- 0000000100005d40 T _get_nm
--000000010000e360 b _get_nm.nm
-+000000010000e360 s _get_nm.nm
- 00000001000010a0 T _get_symtab_size
- 0000000100003630 T _handle_header32
- 0000000100003450 T _handle_header64
++unit_test/custom_tests/fat_lib/libmenu.dylib:
+                  U _TABSIZE
+                  U __DefaultRuneLocale
+                  U ___error

@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:01 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/04 12:44:25 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/25 13:50:20 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ typedef struct s_symtab_utils
 {
 	void *symhead;
 } t_symtab_utils;
+
 typedef struct s_nm
 {
 	int error;

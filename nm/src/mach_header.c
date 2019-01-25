@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/05 10:08:00 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/24 17:55:35 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/25 12:39:32 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int		is_user_arch(t_nm *nm, void *fat_header, int offset)
 			|| (magic == MH_MAGIC && header->cputype == CPU_TYPE_X86_64))
 	{
 		cross_arch((void*)fat_header + offset, nm->file.name);
+		btree_erase(&nm->btree, ft_del_nothing_2);
 		if (!nm->head.no_arch)
 			return (1);
 	}

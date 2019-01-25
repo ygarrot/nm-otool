@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/28 14:47:16 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/24 17:55:35 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/25 13:53:10 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ char get_flag_from_section(int type, long sect_address[TEXT_ADD + 1])
 {
 	t_list_temp *template;
 
+
+	/* ft_printf("%d %d %d type %d ", sect_address[DATA_ADD], */ 
+			/* sect_address[BSS_ADD], sect_address[TEXT_ADD], type); */
 	template = (t_list_temp[5]){
 		{sect_address[DATA_ADD], 'd'},
 		{sect_address[BSS_ADD], 'b'},
@@ -52,7 +55,7 @@ char get_flag(t_list64 list, int type, t_nm *nm)
 	else
 		flag = get_flag_from_template(template, list.n_type & N_TYPE);
 	/* ft_printf(" n_type: %#x, n_sect: %#x, n_desc: %#x, n_value: %#x, str: ", list.n_type, list.n_sect, */
-	/* 		GET_COMM_ALIGN(list.n_desc), list.n_value); */
+			/* GET_COMM_ALIGN(list.n_desc), list.n_value); */
 	return (list.n_type & N_EXT ? ft_toupper(flag) : flag);
 }
 

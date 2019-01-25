@@ -1,0 +1,6252 @@
+../unit_test/custom_tests/lib_stat/libftprintf.a(ft_printf.o):
+0000000000000208 s EH_frame1
+                 U _count_flags
+                 U _free
+000000000000012a T _ft_printf
+                 U _ft_printf_dispatch
+                 t _parse_args
+                 U _parse_printf_attr
+                 U _write
+../unit_test/custom_tests/lib_stat/libftprintf.a(check_flag.o):
+0000000000000208 s 4  10846 4215  100644  588       `
+check_more_flag.o
+                 U #1/28           1422457684  10846 4215  100644  588       `
+check_more_flag.o
+                 U is_hexa
+000000000000012a S ame1
+                 U s_string
+                 s    1422457684  10846 4215  100644  588       `
+check_more_flag.o
+00000000000000b0 s EH_frame1
+                 U _is_char
+                 S _is_char
+000000000000008c S _is_hexa
+0000000000000023 S _is_int
+0000000000000069 S _is_octal
+0000000000000046 S _is_string
+                 U a
+../unit_test/custom_tests/lib_stat/libftprintf.a(check_more_flag.o):
+0000000000000208 s o
+                 U 100644  2468      `
+attr.o
+                 U 1422457684  10846 4215  100644  2468      `
+attr.o
+000000000000012a S 0846 4215  100644  2468      `
+attr.o
+                 U 
+
+
+
+#1/12           1422457684  10846 4215  100644  2468      `
+attr.o
+                 s      `
+attr.o
+00000000000000b0 s 84  10846 4215  100644  2468      `
+attr.o
+0000000000000028 s EH_frame1
+                 U _is_uint
+                 S _is_uint
+000000000000008c S  1422457684  10846 4215  100644  2468      `
+attr.o
+0000000000000023 S EH_frame1
+0000000000000069 S            1422457684  10846 4215  100644  2468      `
+attr.o
+0000000000000046 S 1
+                 U 7684  10846 4215  100644  2468      `
+attr.o
+                 S _is_uint
+../unit_test/custom_tests/lib_stat/libftprintf.a(attr.o):
+00000000000003c0 s EH_frame1
+                 s _check_correct
+                 U _get_cond_ciip
+                 U _get_cond_ihu
+                 U _get_cond_iiouh
+                 U _get_cond_mfnh
+                 U _get_cond_spsc
+                 U _init_printfv
+                 U _is_conversion
+                 U _is_flag
+                 U _is_int
+                 U _is_number
+                 U _is_special_char
+00000000000001ca s _loop_bad_attr
+                 U _manage_conversion
+                 U _manage_first_flag
+                 U _manage_main_flag
+                 U _manage_min_size
+                 U _manage_special_char
+0000000000000118 s _parse_int
+0000000000000313 S _parse_printf_attr
+0000000000000208 s onversion
+                 U mfnh
+                 U _get_cond_ihu
+000000000000012a S 
+                 U _cond_iiouh
+                 s d_spsc
+00000000000000b0 s d_ihu
+0000000000000028 s _ciip
+                 U _get_cond_ciip
+                 S _get_cond_ciip
+000000000000008c S 
+0000000000000023 S _ciip
+0000000000000069 S uh
+0000000000000046 S et_cond_iiouh
+                 U ond_ihu
+                 S _get_cond_ciip
+../unit_test/custom_tests/lib_stat/libftprintf.a(attr_check.o):
+00000000000003c0 s 
+                 s 
+                 U _authorized_conversions
+                 U ecial_char
+                 U versions
+                 U _number
+                 U g
+                 U nversion.o
+                 U 
+
+
+
+#1/28           1422457684  10846 4215  100644  1836      `
+attr_conversion.o
+                 U      1422457684  10846 4215  100644  1836      `
+attr_conversion.o
+                 U c
+                 U 5  100644  1836      `
+attr_conversion.o
+                 U 457684  10846 4215  100644  1836      `
+attr_conversion.o
+00000000000001ca s 
+                 U 
+                 U 
+                 U 
+                 U 
+                 U 
+0000000000000118 s 
+0000000000000313 S 1836      `
+attr_conversion.o
+0000000000000208 s 1/28           1422457684  10846 4215  100644  1836      `
+attr_conversion.o
+0000000000000240 s EH_frame1
+                 S _authorized_conversions
+0000000000000165 S _is_flag
+0000000000000126 S _is_number
+00000000000000c4 S _is_prec
+00000000000000e7 S _is_special_char
+                 U s_flag
+                 U ecial_char
+000000000000012a S s_number
+                 U ions
+                 s me1
+00000000000000b0 s ar
+0000000000000028 s ed_conversions
+                 U _authorized_conversions
+                 S _authorized_conversions
+000000000000008c S pecial_char
+0000000000000023 S ed_conversions
+0000000000000069 S prec
+0000000000000046 S rsions
+                 U char
+                 S _authorized_conversions
+../unit_test/custom_tests/lib_stat/libftprintf.a(attr_conversion.o):
+00000000000003c0 s 
+                 s 
+                 U _ft_strcmp
+                 U onversion
+                 U strlen
+                 U LC1
+                 U 
+                 U  10846 4215  100644  1756      `
+attr_mgmt.o
+                 U onversion
+                 U k_conversion
+                 U mp
+                 U 
+
+
+#1/20           1422457684  10846 4215  100644  1756      `
+attr_mgmt.o
+                 U ion
+00000000000001ca s 
+                 U 
+                 U 00644  1756      `
+attr_mgmt.o
+                 U 
+                 U attr_mgmt.o
+                 U 
+0000000000000118 s 
+0000000000000313 S         1422457684  10846 4215  100644  1756      `
+attr_mgmt.o
+0000000000000230 s EH_frame1
+000000000000021c s LC0
+000000000000021f s LC1
+0000000000000221 s LC2
+0000000000000223 s LC3
+0000000000000226 s LC4
+0000000000000228 s LC5
+00000000000000ca s _check_conversion
+                 U _ft_strcmp
+                 U _ft_strlen
+                 U _ft_strncmp
+                 s _get_int_conversion
+0000000000000148 S _is_conversion
+0000000000000208 s sion
+0000000000000240 s C5
+                 S _ft_strcmp
+0000000000000165 S LC3
+0000000000000126 S C0
+00000000000000c4 S t_strncmp
+00000000000000e7 S 
+                 U 3
+                 U onversion
+000000000000012a S 
+                 U en
+                 s t_int_conversion
+00000000000000b0 s n
+0000000000000028 s p
+                 U _ft_strcmp
+                 S _ft_strcmp
+000000000000008c S conversion
+0000000000000023 S p
+0000000000000069 S rncmp
+0000000000000046 S rlen
+                 U ion
+                 S _ft_strcmp
+../unit_test/custom_tests/lib_stat/libftprintf.a(attr_mgmt.o):
+00000000000003c0 s 
+                 s 
+                 U _manage_min_size
+                 U al_char
+                 U e
+                 U e_conversion
+                 U s_conversion
+                 U frame1
+                 U anage_first_flag
+                 U g
+                 U ge_special_char
+                 U ag
+                 U g
+00000000000001ca s 
+                 U `
+attr_conditions.o
+                 U 1/28           1422457684  10846 4215  100644  1652      `
+attr_conditions.o
+                 U 
+                 U 457684  10846 4215  100644  1652      `
+attr_conditions.o
+                 U 5  100644  1652      `
+attr_conditions.o
+0000000000000118 s 
+0000000000000268 s EH_frame1
+                 U _authorized_conversions
+0000000000000313 S zed_conversions
+0000000000000230 s anage_main_flag
+000000000000021c s anage_conversion
+000000000000021f s e_conversion
+0000000000000221 s nversion
+0000000000000223 s sion
+0000000000000226 s 
+0000000000000228 s _conversion
+00000000000000ca s t_flag
+                 U _manage_min_size
+                 U _size
+                 U rec
+                 s version
+0000000000000148 S special_char
+0000000000000208 s _first_flag
+                 U _is_conversion
+                 U _is_flag
+                 U _is_prec
+000000000000018a S _manage_conversion
+00000000000001d0 S _manage_first_flag
+0000000000000214 S _manage_main_flag
+                 S _manage_min_size
+000000000000008e S _manage_special_char
+0000000000000240 s conversion
+                 S _manage_min_size
+0000000000000165 S sion
+0000000000000126 S nage_conversion
+00000000000000c4 S c
+00000000000000e7 S _special_char
+                 U on
+                 U al_char
+000000000000012a S ge_conversion
+                 U s_prec
+                 s sion
+00000000000000b0 s _manage_conversion
+0000000000000028 s in_size
+                 U _manage_min_size
+                 S _manage_min_size
+000000000000008c S ial_char
+0000000000000023 S in_size
+0000000000000069 S anage_special_char
+0000000000000046 S _is_prec
+                 U r
+                 S _manage_min_size
+../unit_test/custom_tests/lib_stat/libftprintf.a(attr_conditions.o):
+00000000000003c0 s 
+                 s 
+                 U _get_cond_ciip
+                 U nd_iiouh
+                 U _is_char
+                 U ctal
+                 U is_hexa
+                 U 2457684  10846 4215  100644  2036      `
+dispatch_helper.o
+                 U nd_ihu
+                 U d_mfnh
+                 U 
+                 U rame1
+                 U et_cond_spsc
+00000000000001ca s 
+                 U νώ
+                 U  4215  100644  2036      `
+dispatch_helper.o
+                 U 
+                 U       `
+dispatch_helper.o
+                 U helper.o
+0000000000000118 s 
+0000000000000268 s 1422457684  10846 4215  100644  2036      `
+dispatch_helper.o
+                 U e1
+0000000000000313 S #1/28           1422457684  10846 4215  100644  2036      `
+dispatch_helper.o
+00000000000001f8 s EH_frame1
+                 S _get_cond_ciip
+0000000000000230 s ond_spsc
+000000000000021c s is_octal
+000000000000021f s ctal
+0000000000000221 s 
+0000000000000223 s _uint
+0000000000000226 s t
+0000000000000228 s s_hexa
+00000000000000ca s t_cond_mfnh
+                 U _get_cond_ciip
+                 U iip
+                 U r
+                 s xa
+0000000000000148 S et_cond_iiouh
+0000000000000208 s u
+                 U 
+                 U mfnh
+                 U s_char
+000000000000018a S 
+00000000000001d0 S cond_ihu
+0000000000000214 S _cond_spsc
+                 S _get_cond_ciip
+000000000000008e S s_int
+0000000000000240 s _hexa
+                 S _get_cond_ciip
+0000000000000165 S _uint
+0000000000000126 S s_octal
+00000000000000c4 S _is_int
+00000000000000e7 S get_cond_iiouh
+                 U int
+                 U nd_iiouh
+000000000000012a S octal
+                 U char
+                 s _get_cond_ihu
+00000000000000b0 s 
+0000000000000028 s _ciip
+                 U _get_cond_ciip
+                 S _get_cond_ciip
+00000000000000e2 S _get_cond_ihu
+000000000000005d S _get_cond_iiouh
+0000000000000134 S _get_cond_mfnh
+000000000000019b S _get_cond_spsc
+                 U _is_char
+                 U _is_hexa
+                 U _is_int
+                 U _is_octal
+                 U _is_uint
+000000000000008c S ond_iiouh
+0000000000000023 S _ciip
+0000000000000069 S int
+0000000000000046 S s_char
+                 U uh
+                 S _get_cond_ciip
+../unit_test/custom_tests/lib_stat/libftprintf.a(dispatch_helper.o):
+00000000000003c0 s 
+                 s 46 4215  100644  4588      `
+dispatch.o
+                 U _count_flags
+                 U 
+                 U ulti_int_init
+                 U spatch
+                 U h_string
+                 U pointer
+                 U tch_wstring
+                 U spatch_int
+                 U ulti_set
+                 U 
+                 U t
+00000000000001ca s  `
+dispatch.o
+                 U ame1
+                 U tch_hexa
+                 U    1422457684  10846 4215  100644  4588      `
+dispatch.o
+                 U char
+                 U har
+0000000000000118 s   4588      `
+dispatch.o
+0000000000000268 s ch_pointer
+                 U ispatch_unsigned
+0000000000000313 S unsigned
+00000000000001f8 s ctal
+                 S _count_flags
+0000000000000230 s ispatch_octal
+000000000000021c s f_dispatch
+000000000000021f s spatch
+0000000000000221 s ch
+0000000000000223 s dispatch_string
+0000000000000226 s atch_string
+0000000000000228 s _string
+00000000000000ca s g
+                 U _count_flags
+                 U s
+                 U t_init
+                 s ing
+0000000000000148 S i_set
+0000000000000208 s string
+                 U tch_string
+                 U atch_int
+                 U ti_int_init
+000000000000018a S ntf_dispatch
+00000000000001d0 S patch_wstring
+0000000000000214 S _dispatch_octal
+                 S _count_flags
+000000000000008e S it
+0000000000000240 s string
+                 S _count_flags
+0000000000000165 S dispatch_string
+0000000000000126 S _dispatch
+00000000000000c4 S init
+00000000000000e7 S ti_set
+                 U spatch_string
+                 U 
+000000000000012a S ispatch
+                 U _int_init
+                 s 
+0000000000000340 s EH_frame1
+                 s _arg_option
+00000000000000b0 s ntf_dispatch
+0000000000000028 s ags
+                 U _count_flags
+                 S _count_flags
+00000000000000e2 S 
+000000000000011c S _count_flags
+                 U _dispatch_char
+                 U _dispatch_hexa
+                 U _dispatch_int
+                 U _dispatch_octal
+                 U _dispatch_pointer
+                 U _dispatch_string
+                 U _dispatch_unsigned
+                 U _dispatch_wchar
+                 U _dispatch_wstring
+00000000000001dd S _ft_printf_dispatch
+                 U _multi_int_init
+                 U _multi_set
+000000000000005d S lti_set
+0000000000000134 S ring
+000000000000019b S int
+                 U ulti_int_init
+                 U ch_string
+                 U init
+                 U tf_dispatch
+                 U h
+000000000000008c S t
+0000000000000023 S ags
+0000000000000069 S 
+0000000000000046 S ti_int_init
+                 U rintf_dispatch
+                 S _count_flags
+../unit_test/custom_tests/lib_stat/libftprintf.a(dispatch.o):
+00000000000003c0 s 
+                 s 
+                 U _dispatch_string
+                 U tring
+                 U g
+                 U h_wstring
+                 U atch_int
+                 U 
+                 U ax_int
+                 U h_octal
+                 U g
+                 U tch_unsigned
+                 U put_uoctal
+00000000000001ca s  
+                 U 0644  2516      `
+dispatch_next.o
+                 U 
+                 U ispatch_next.o
+                 U 0           1422457685  10846 4215  100644  2516      `
+dispatch_next.o
+                 U 57685  10846 4215  100644  2516      `
+dispatch_next.o
+0000000000000118 s 
+0000000000000268 s har
+                 U _unsigned
+0000000000000313 S d
+00000000000001f8 s ispatch_unsigned
+                 S _dispatch_string
+0000000000000230 s uoctal
+000000000000021c s patch_wstring
+000000000000021f s h_wstring
+0000000000000221 s tring
+0000000000000223 s g
+0000000000000226 s ispatch_int
+0000000000000228 s tch_int
+00000000000000ca s spatch_octal
+                 U _dispatch_string
+                 U tring
+                 U widestring
+                 s int
+0000000000000148 S put_string
+0000000000000208 s t
+                 U spatch_int
+                 U octal
+                 U _put_widestring
+000000000000018a S ispatch_wstring
+00000000000001d0 S _max_int
+0000000000000214 S t_uoctal
+                 S _dispatch_string
+000000000000008e S string
+0000000000000240 s ch_int
+                 S _dispatch_string
+0000000000000165 S g
+0000000000000126 S atch_wstring
+00000000000000c4 S destring
+00000000000000e7 S _put_string
+                 U _dispatch_int
+                 U tring
+000000000000012a S ch_wstring
+                 U ut_widestring
+                 s 
+0000000000000340 s 5  100644  2516      `
+dispatch_next.o
+                 s 5  10846 4215  100644  2516      `
+dispatch_next.o
+0000000000000c98 s EH_frame1
+00000000000001be S _dispatch_int
+0000000000000567 S _dispatch_octal
+00000000000000b0 s ispatch_wstring
+0000000000000028 s _string
+                 U _dispatch_string
+                 S _dispatch_string
+00000000000000e2 S 
+000000000000011c S _dispatch_string
+                 U 1
+                 U ax_int
+                 U atch_octal
+                 U t_uoctal
+                 U igned_char
+                 U ng
+                 U ch_unsigned
+                 U        1422457685  10846 4215  100644  2516      `
+dispatch_next.o
+                 U _put_max_int
+00000000000001dd S ring
+                 U ing
+                 U ing
+000000000000005d S 
+0000000000000134 S _dispatch_octal
+000000000000019b S 
+                 S _dispatch_string
+00000000000008ff S _dispatch_unsigned
+                 U g
+                 U patch_int
+                 U destring
+                 U spatch_wstring
+                 U ring
+000000000000008c S string
+0000000000000023 S _string
+0000000000000069 S ring
+0000000000000046 S _put_widestring
+                 U _dispatch_wstring
+                 S _dispatch_string
+0000000000000114 S _dispatch_wstring
+                 U _put_max_int
+                 U _put_string
+                 U _put_umax_int
+                 U _put_uoctal
+                 U _put_usigned_char
+                 U _put_widestring
+../unit_test/custom_tests/lib_stat/libftprintf.a(dispatch_next.o):
+00000000000003c0 s __text
+                 s 
+                 U _dispatch_pointer
+                 U hexa
+                 U er
+                 U _char
+                 U ed_char
+                 U 215  100644  2260      `
+secondary_call.o
+                 U dechar
+                 U h_wchar
+                 U ispatch_hexa
+                 U            1422457685  10846 4215  100644  2260      `
+secondary_call.o
+                 U H_frame1
+00000000000001ca s 
+                 U 
+                 U 260      `
+secondary_call.o
+                 U 
+                 U y_call.o
+                 U 
+0000000000000118 s 
+0000000000000268 s 6 4215  100644  2260      `
+secondary_call.o
+                 U         1422457685  10846 4215  100644  2260      `
+secondary_call.o
+0000000000000313 S 1422457685  10846 4215  100644  2260      `
+secondary_call.o
+00000000000001f8 s 1/20           1422457685  10846 4215  100644  2260      `
+secondary_call.o
+00000000000005c0 s EH_frame1
+00000000000003db S _dispatch_char
+00000000000000aa S _dispatch_hexa
+                 S _dispatch_pointer
+                 S _dispatch_pointer
+0000000000000518 S _dispatch_wchar
+                 U _put_signed_char
+                 U _put_uhexa
+0000000000000230 s ame1
+000000000000021c s atch_char
+000000000000021f s _char
+0000000000000221 s r
+0000000000000223 s ut_signed_char
+0000000000000226 s igned_char
+0000000000000228 s d_char
+00000000000000ca s spatch_wchar
+                 U _dispatch_pointer
+                 U ointer
+                 U _uhexa
+                 s ar
+0000000000000148 S atch_hexa
+0000000000000208 s r
+                 U gned_char
+                 U wchar
+                 U 
+000000000000018a S spatch_char
+00000000000001d0 S widechar
+0000000000000214 S frame1
+                 S _dispatch_pointer
+000000000000008e S xa
+0000000000000240 s _char
+                 S _dispatch_pointer
+0000000000000165 S ut_signed_char
+0000000000000126 S tch_char
+00000000000000c4 S hexa
+00000000000000e7 S patch_hexa
+                 U _signed_char
+                 U hexa
+000000000000012a S h_char
+                 U put_uhexa
+                 s _put_widechar
+0000000000000340 s 
+                 s 
+0000000000000c98 s 60      `
+secondary_call.o
+00000000000001be S _signed_char
+0000000000000567 S _dispatch_wchar
+00000000000000b0 s spatch_char
+0000000000000028 s _pointer
+                 U _dispatch_pointer
+                 S _dispatch_pointer
+00000000000000e2 S _put_widechar
+000000000000011c S _dispatch_pointer
+                 U `
+secondary_call.o
+                 U 644  2260      `
+secondary_call.o
+                 U atch_wchar
+                 U frame1
+                 U 5  10846 4215  100644  2260      `
+secondary_call.o
+                 U put_signed_char
+                 U           1422457685  10846 4215  100644  2260      `
+secondary_call.o
+                 U l.o
+                 U put_widechar
+00000000000001dd S exa
+                 U nter
+                 U _dispatch_hexa
+000000000000005d S spatch_hexa
+0000000000000134 S _dispatch_wchar
+000000000000019b S 
+                 S _dispatch_pointer
+00000000000008ff S 
+                 U er
+                 U ned_char
+                 U hexa
+                 U patch_char
+                 U 
+000000000000008c S _hexa
+0000000000000023 S _pointer
+0000000000000069 S 
+0000000000000046 S 
+                 U _put_widechar
+                 U dispatch_char
+                 S _dispatch_pointer
+0000000000000114 S dispatch_char
+                 U put_widechar
+                 U patch_hexa
+                 U 15  100644  2260      `
+secondary_call.o
+                 U EH_frame1
+                 U 22457685  10846 4215  100644  2260      `
+secondary_call.o
+                 U 
+../unit_test/custom_tests/lib_stat/libftprintf.a(secondary_call.o):
+00000000000003c0 s 6 4215  100644  2052      `
+wstr_call.o
+00000000000002a0 s EH_frame1
+                 U _char_tos
+                 U _count_hexdigit
+                 U _decimal_hex
+                 U _free
+                 U _ft_putustr
+                 U _ft_strnew
+                 U _ft_ustrdup
+                 U _ft_ustrjoin
+                 U _ft_ustrlen
+                 U _ft_ustrsub
+000000000000005a S _put_pointer
+                 S _put_signed_char
+                 U _put_string
+000000000000013b S _put_usigned_char
+0000000000000184 S _put_ustring
+00000000000000d0 S _put_widechar
+                 U _put_widestring
+                 U _uchar_tos
+                 U _ustring_fill
+                 U _wchar_tos
+                 s me1
+                 U _put_signed_char
+                 U _free
+                 U r
+                 U nter
+                 U digit
+                 U ar
+                 U w
+                 U _put_widechar
+                 U _string
+                 U put_widestring
+                 U char
+00000000000001ca s 422457685  10846 4215  100644  2052      `
+wstr_call.o
+                 U _fill
+                 U _put_ustring
+                 U _ft_putustr
+                 U trsub
+                 U 
+0000000000000118 s           1422457685  10846 4215  100644  2052      `
+wstr_call.o
+0000000000000268 s _char
+                 U _widestring
+0000000000000313 S ing
+00000000000001f8 s os
+00000000000005c0 s echar
+00000000000003db S 
+00000000000000aa S ut_string
+                 S _put_signed_char
+                 S _put_signed_char
+0000000000000518 S mal_hex
+                 U count_hexdigit
+                 U char_tos
+0000000000000230 s 
+000000000000021c s _pointer
+000000000000021f s nter
+0000000000000221 s 
+0000000000000223 s unt_hexdigit
+0000000000000226 s hexdigit
+0000000000000228 s igit
+00000000000000ca s _hex
+                 U _put_signed_char
+                 U _char
+                 U _tos
+                 s 
+0000000000000148 S ring
+0000000000000208 s cimal_hex
+                 U exdigit
+                 U ut_widechar
+                 U _char_tos
+000000000000018a S ut_pointer
+00000000000001d0 S new
+0000000000000214 S ar
+                 S _put_signed_char
+000000000000008e S 
+0000000000000240 s git
+                 S _put_signed_char
+0000000000000165 S unt_hexdigit
+0000000000000126 S pointer
+00000000000000c4 S os
+00000000000000e7 S tring
+                 U t_hexdigit
+                 U _free
+000000000000012a S inter
+                 U har_tos
+                 s t_strnew
+0000000000000340 s tring_fill
+                 s _ustrlen
+0000000000000c98 s put_ustring
+00000000000001be S t_hexdigit
+0000000000000567 S mal_hex
+00000000000000b0 s ut_pointer
+0000000000000028 s ed_char
+                 U _put_signed_char
+                 S _put_signed_char
+00000000000000e2 S t_strnew
+000000000000011c S _put_signed_char
+                 U ing
+                 U r_tos
+                 U ex
+                 U ar
+                 U usigned_char
+                 U ount_hexdigit
+                 U ut_widestring
+                 U 
+                 U _strnew
+00000000000001dd S free
+                 U har
+                 U ut_string
+000000000000005d S string
+0000000000000134 S mal_hex
+000000000000019b S dechar
+                 S _put_signed_char
+00000000000008ff S _tos
+                 U r
+                 U xdigit
+                 U os
+                 U t_pointer
+                 U _count_hexdigit
+000000000000008c S 
+0000000000000023 S ed_char
+0000000000000069 S put_string
+0000000000000046 S _char_tos
+                 U t_strnew
+                 U _put_pointer
+                 S _put_signed_char
+0000000000000114 S _put_pointer
+                 U _strnew
+                 U tring
+                 U r
+                 U echar
+                 U g
+                 U _char_tos
+../unit_test/custom_tests/lib_stat/libftprintf.a(wstr_call.o):
+00000000000003c0 s 
+00000000000002a0 s 
+                 U wstrjoin_nullable
+                 U _nullable
+                 U strdup
+                 U putwstr
+                 U tr_call.o
+                 U trsub
+                 U       1422457685  10846 4215  100644  2100      `
+str_call.o
+                 U 2100      `
+str_call.o
+                 U 7685  10846 4215  100644  2100      `
+str_call.o
+                 U 
+
+#1/20           1422457685  10846 4215  100644  2100      `
+str_call.o
+000000000000005a S r
+                 S _ft_wstrjoin
+                 U ullable
+000000000000013b S oin_wstr
+0000000000000184 S 
+00000000000000d0 S of
+                 U estring
+                 U 
+                 U 4215  100644  2100      `
+str_call.o
+                 U ll
+                 s 
+                 U _ft_wstrjoin
+                 U putwstr
+                 U t_wstrjoin_nullable
+                 U utstr_nullable
+                 U _ft_wstrsub
+                 U str
+                 U _wstrdup
+                 U of
+                 U ble
+                 U string
+                 U ng_fill
+00000000000001ca s  
+                 U 0644  2100      `
+str_call.o
+                 U 
+                 U tr_call.o
+                 U 0           1422457685  10846 4215  100644  2100      `
+str_call.o
+                 U 57685  10846 4215  100644  2100      `
+str_call.o
+0000000000000118 s 
+00000000000002c8 s EH_frame1
+0000000000000196 s _fill_wstr
+                 U _free
+                 U _ft_putwstr
+                 U _ft_wputstr_nullable
+                 U _ft_wstrdup
+                 U _ft_wstrjoin
+                 U _ft_wstrjoin_nullable
+                 U _ft_wstrsub
+                 s _join_wstr
+000000000000020b S _put_widestring
+00000000000000fb s _sub_wstr
+                 U _wsizeof
+                 U _wstring_fill
+0000000000000268 s b_wstr
+                 U ing
+0000000000000313 S e
+00000000000001f8 s widestring
+00000000000005c0 s ing_fill
+00000000000003db S tr
+00000000000000aa S lable
+                 S _ft_wstrjoin
+                 S _ft_wstrjoin
+0000000000000518 S p
+                 U nullable
+                 U strjoin_nullable
+0000000000000230 s ill
+000000000000021c s t_wputstr_nullable
+000000000000021f s utstr_nullable
+0000000000000221 s r_nullable
+0000000000000223 s llable
+0000000000000226 s le
+0000000000000228 s ft_wstrsub
+00000000000000ca s wsizeof
+                 U _ft_wstrjoin
+                 U n
+                 U oin_nullable
+                 s strsub
+0000000000000148 S 
+0000000000000208 s dup
+                 U e
+                 U 
+                 U wstrjoin_nullable
+000000000000018a S _ft_wputstr_nullable
+00000000000001d0 S ft_wstrdup
+0000000000000214 S _fill
+                 S _ft_wstrjoin
+000000000000008e S nullable
+0000000000000240 s t_wstrsub
+                 S _ft_wstrjoin
+0000000000000165 S llable
+0000000000000126 S _wputstr_nullable
+00000000000000c4 S n_nullable
+00000000000000e7 S e
+                 U able
+                 U putwstr
+000000000000012a S putstr_nullable
+                 U trjoin_nullable
+                 s sub
+0000000000000340 s 5  100644  2100      `
+str_call.o
+                 s 5  10846 4215  100644  2100      `
+str_call.o
+0000000000000c98 s EH_frame1
+00000000000001be S able
+0000000000000567 S p
+00000000000000b0 s _ft_wputstr_nullable
+0000000000000028 s oin
+                 U _ft_wstrjoin
+                 S _ft_wstrjoin
+00000000000000e2 S sub
+000000000000011c S _ft_wstrjoin
+                 U 1
+                 U l_wstr
+                 U izeof
+                 U _fill
+                 U str
+                 U ullable
+                 U tring
+                 U        1422457685  10846 4215  100644  2100      `
+str_call.o
+                 U ub
+00000000000001dd S utwstr
+                 U _ft_wstrjoin_nullable
+                 U lable
+000000000000005d S le
+0000000000000134 S p
+000000000000019b S ring_fill
+                 S _ft_wstrjoin
+00000000000008ff S t_widestring
+                 U t_wstrjoin_nullable
+                 U 
+                 U n_nullable
+                 U ft_wputstr_nullable
+                 U _nullable
+000000000000008c S _putwstr
+0000000000000023 S oin
+0000000000000069 S llable
+0000000000000046 S wstrjoin_nullable
+                 U sub
+                 U r
+                 S _ft_wstrjoin
+0000000000000114 S r
+                 U ub
+                 U e
+                 U tr
+                 U ing_fill
+                 U _join_wstr
+                 U wstrjoin_nullable
+../unit_test/custom_tests/lib_stat/libftprintf.a(str_call.o):
+00000000000003c0 s 
+00000000000002a0 s ϊνώ
+                 U rdup
+                 U _ft_strjoin_nullable
+                 U tstr
+                 U g_fill
+                 U o
+                 U able
+                 U 22457685  10846 4215  100644  3004      `
+hex_call.o
+                 U   `
+hex_call.o
+                 U 846 4215  100644  3004      `
+hex_call.o
+                 U           1422457685  10846 4215  100644  3004      `
+hex_call.o
+000000000000005a S 
+                 S _ft_strsub
+                 U trlen
+000000000000013b S r
+0000000000000184 S frame1
+00000000000000d0 S tr_nullable
+                 U free
+                 U str
+                 U 0644  3004      `
+hex_call.o
+                 U ut_string
+                 s 
+                 U _ft_strsub
+                 U g_fill
+                 U strdup
+                 U join
+                 U n_nullable
+                 U in_str
+                 U putstr
+                 U tr_nullable
+                 U n
+                 U ree
+                 U le
+00000000000001ca s 
+                 U 04      `
+hex_call.o
+                 U frame1
+                 U o
+                 U     1422457685  10846 4215  100644  3004      `
+hex_call.o
+                 U 0846 4215  100644  3004      `
+hex_call.o
+0000000000000118 s 
+00000000000002d0 s EH_frame1
+00000000000002c6 s LC0
+00000000000002c8 s LC1
+0000000000000098 s _fill_str
+                 U _free
+                 U _ft_putstr
+                 U _ft_putstr_nullable
+                 U _ft_strdup
+                 U _ft_strjoin
+                 U _ft_strjoin_nullable
+                 U _ft_strlen
+                 U _ft_strsub
+0000000000000113 s _join_str
+00000000000002c8 s rame1
+0000000000000196 s tr
+                 U 
+                 U tring_fill
+                 U ft_strjoin
+                 U ft_putstr
+                 U _ft_strsub
+                 U t_strdup
+                 U n_nullable
+                 s str
+000000000000020b S string
+00000000000000fb s tr
+                 U t_putstr_nullable
+                 U nullable
+0000000000000268 s _join_str
+                 U 
+0000000000000230 S _put_string
+                 U _string_fill
+                 s _sub_str
+0000000000000313 S b_str
+00000000000001f8 s g
+00000000000005c0 s ble
+00000000000003db S l
+00000000000000aa S len
+                 S _ft_strsub
+                 S _ft_strsub
+0000000000000518 S _ft_putstr_nullable
+                 U ft_strjoin_nullable
+                 U dup
+0000000000000230 s put_string
+000000000000021c s _strjoin
+000000000000021f s join
+0000000000000221 s 
+0000000000000223 s _strjoin_nullable
+0000000000000226 s join_nullable
+0000000000000228 s _nullable
+00000000000000ca s _putstr_nullable
+                 U _ft_strsub
+                 U _ft_strdup
+                 U _ft_strlen
+                 s lable
+0000000000000148 S string_fill
+0000000000000208 s r
+                 U oin_nullable
+                 U _nullable
+                 U rdup
+000000000000018a S ft_strjoin
+00000000000001d0 S t_putstr
+0000000000000214 S 
+                 S _ft_strsub
+000000000000008e S strlen
+0000000000000240 s nullable
+                 S _ft_strsub
+0000000000000165 S _strjoin_nullable
+0000000000000126 S strjoin
+00000000000000c4 S t_strlen
+00000000000000e7 S _string_fill
+                 U trjoin_nullable
+                 U g_fill
+000000000000012a S rjoin
+                 U up
+                 s le
+0000000000000340 s 4  3004      `
+hex_call.o
+                 s  4215  100644  3004      `
+hex_call.o
+0000000000000c98 s rame1
+00000000000001be S trjoin_nullable
+0000000000000567 S _ft_putstr_nullable
+00000000000000b0 s ft_strjoin
+0000000000000028 s b
+                 U _ft_strsub
+                 S _ft_strsub
+00000000000000e2 S le
+000000000000011c S _ft_strsub
+                 U /20           1422457685  10846 4215  100644  3004      `
+hex_call.o
+                 U C1
+                 U utstr_nullable
+                 U 
+                 U ll_str
+                 U t_strjoin_nullable
+                 U ee
+                 U 422457685  10846 4215  100644  3004      `
+hex_call.o
+                 U e
+00000000000001dd S _fill
+                 U t_strdup
+                 U len
+000000000000005d S 
+0000000000000134 S _ft_putstr_nullable
+000000000000019b S able
+                 S _ft_strsub
+00000000000008ff S ing
+                 U strdup
+                 U in_nullable
+                 U t_strlen
+                 U t_strjoin
+                 U _ft_strjoin_nullable
+000000000000008c S ng_fill
+0000000000000023 S b
+0000000000000069 S rlen
+0000000000000046 S rdup
+                 U le
+                 U 
+                 S _ft_strsub
+0000000000000114 S 
+                 U e
+                 U _string_fill
+                 U n_str
+                 U ble
+                 U str
+                 U rdup
+../unit_test/custom_tests/lib_stat/libftprintf.a(hex_call.o):
+00000000000003c0 s 
+00000000000002a0 s  `
+oct_call.o
+                 U e
+                 U _strlen
+                 U exdigit
+                 U ill
+                 U 4  1972      `
+oct_call.o
+                 U xa
+                 U 
+                 U 6 4215  100644  1972      `
+oct_call.o
+                 U           1422457685  10846 4215  100644  1972      `
+oct_call.o
+                 U 
+000000000000005a S t_strjoin
+                 S _decimal_hex
+                 U up
+000000000000013b S _fill_hex
+0000000000000184 S hex
+00000000000000d0 S trnew
+                 U 
+                 U _alternate_hex
+                 U 22457685  10846 4215  100644  1972      `
+oct_call.o
+                 U ing
+                 s _call.o
+                 U _decimal_hex
+                 U ill
+                 U ree
+                 U n
+                 U ut_uhexa
+                 U C3
+                 U _hexdigit
+                 U trnew
+                 U string_fill
+                 U _transform_hex
+                 U t_string
+00000000000001ca s 
+                 U   10846 4215  100644  1972      `
+oct_call.o
+                 U hex
+                 U 4  1972      `
+oct_call.o
+                 U ame1
+                 U            1422457685  10846 4215  100644  1972      `
+oct_call.o
+0000000000000118 s 
+00000000000002d0 s te_hex
+00000000000002c6 s nsform_hex
+00000000000002c8 s ernate_hex
+0000000000000098 s ill_hex
+                 U 1
+                 U ount_hexdigit
+                 U it
+                 U x
+                 U _strjoin
+                 U _strlen
+                 U _strdup
+                 U _decimal_hex
+0000000000000113 s 2
+00000000000002c8 s ex
+0000000000000196 s alternate_hex
+                 U orm_hex
+                 U ng_fill
+                 U strjoin
+                 U unt_hexdigit
+                 U _decimal_hex
+                 U _free
+                 U ut_uhexa
+                 s x
+000000000000020b S 
+00000000000000fb s 
+                 U 
+                 U ew
+0000000000000268 s 2
+                 U ansform_hex
+0000000000000230 S tring
+                 U ring_fill
+                 s rm_hex
+0000000000000313 S hex
+00000000000001f8 s LC1
+00000000000005c0 s ut_string
+00000000000003db S ft_strjoin
+00000000000000aa S 
+                 S _decimal_hex
+                 S _decimal_hex
+0000000000000518 S it
+                 U strlen
+                 U 
+0000000000000230 s ring
+000000000000021c s rjoin
+000000000000021f s n
+0000000000000221 s t_strlen
+0000000000000223 s rlen
+0000000000000226 s 
+0000000000000228 s t_uhexa
+00000000000000ca s _ft_strnew
+                 U _decimal_hex
+                 U x
+                 U _strdup
+                 s exa
+0000000000000148 S ing_fill
+0000000000000208 s igit
+                 U _put_uhexa
+                 U new
+                 U e
+000000000000018a S strjoin
+00000000000001d0 S nt_hexdigit
+0000000000000214 S string
+                 S _decimal_hex
+000000000000008e S dup
+0000000000000240 s _uhexa
+                 S _decimal_hex
+0000000000000165 S rlen
+0000000000000126 S join
+00000000000000c4 S trdup
+00000000000000e7 S ring_fill
+                 U en
+                 U ill
+000000000000012a S in
+                 U _ft_strdup
+                 s 
+0000000000000340 s 57685  10846 4215  100644  1972      `
+oct_call.o
+                 s        1422457685  10846 4215  100644  1972      `
+oct_call.o
+0000000000000530 s EH_frame1
+0000000000000527 s LC0
+0000000000000529 s LC1
+000000000000052a s LC2
+000000000000052d s LC3
+000000000000020f s _alternate_hex
+                 U _count_hexdigit
+0000000000000c98 s ex
+00000000000001be S en
+0000000000000567 S it
+00000000000000b0 s strjoin
+0000000000000028 s hex
+                 U _decimal_hex
+                 S _decimal_hex
+00000000000000e2 S 
+                 U _decimal_hex
+000000000000011c S _decimal_hex
+0000000000000145 s _fill_hex
+                 U _free
+                 U _ft_strdup
+                 U _ft_strjoin
+                 U _ft_strlen
+                 U _ft_strnew
+                 U _hex
+000000000000036a s _join_hex
+                 U _put_string
+0000000000000473 S _put_uhexa
+                 U _string_fill
+                 s _transform_hex
+                 U rnate_hex
+                 U t_strnew
+                 U string
+                 U _hex
+                 U trlen
+                 U transform_hex
+                 U 
+                 U _count_hexdigit
+00000000000001dd S ll
+                 U _free
+                 U 
+000000000000005d S tring_fill
+0000000000000134 S it
+000000000000019b S put_string
+                 S _decimal_hex
+00000000000008ff S 0
+                 U ree
+                 U put_uhexa
+                 U trdup
+                 U trjoin
+                 U _strlen
+000000000000008c S fill
+0000000000000023 S hex
+0000000000000069 S p
+0000000000000046 S e
+                 U 
+                 U t_strjoin
+                 S _decimal_hex
+0000000000000114 S t_strjoin
+                 U _count_hexdigit
+                 U ring_fill
+                 U 3
+                 U ut_string
+                 U x
+                 U e
+../unit_test/custom_tests/lib_stat/libftprintf.a(oct_call.o):
+00000000000003c0 s @
+00000000000002a0 s 
+                 U strjoin
+                 U nt_octdigit
+                 U imal_octal
+                 U en
+                 U 
+                 U strnew
+                 U 4215  100644  1932      `
+uintmax_call.o
+                 U .o
+                 U   1932      `
+uintmax_call.o
+                 U 7685  10846 4215  100644  1932      `
+uintmax_call.o
+000000000000005a S t_uoctal
+                 S _string_fill
+                 U ree
+000000000000013b S oin_oct
+0000000000000184 S        1422457685  10846 4215  100644  1932      `
+uintmax_call.o
+00000000000000d0 S ut_string
+                 U alternate_oct
+                 U 
+                 U `
+uintmax_call.o
+                 U l_oct
+                 s 
+                 U _string_fill
+                 U en
+                 U t_strjoin
+                 U 
+                 U t
+                 U e1
+                 U ecimal_octal
+                 U ut_string
+                 U _ft_strlen
+                 U lternate_oct
+                 U 
+00000000000001ca s 
+                 U x_call.o
+                 U        1422457685  10846 4215  100644  1932      `
+uintmax_call.o
+                 U 
+                 U 10846 4215  100644  1932      `
+uintmax_call.o
+                 U 4  1932      `
+uintmax_call.o
+0000000000000118 s 
+00000000000002d0 s           1422457685  10846 4215  100644  1932      `
+uintmax_call.o
+00000000000002c6 s nate_oct
+00000000000002c8 s /20           1422457685  10846 4215  100644  1932      `
+uintmax_call.o
+0000000000000098 s n_oct
+                 U _alternate_oct
+                 U w
+                 U octal
+                 U l
+                 U _uoctal
+                 U nt_octdigit
+                 U in
+                 U _string_fill
+0000000000000113 s rame1
+00000000000002c8 s       1422457685  10846 4215  100644  1932      `
+uintmax_call.o
+0000000000000196 s 
+0000000000000280 s EH_frame1
+0000000000000278 s LC0
+00000000000000a6 s _alternate_oct
+                 U _count_octdigit
+                 U _decimal_octal
+                 s _fill_oct
+                 U _free
+                 U _ft_strjoin
+                 U _ft_strlen
+                 U _ft_strnew
+                 U e_oct
+                 U strlen
+                 U uoctal
+                 U 
+                 U _string_fill
+                 U _ft_strjoin
+                 U t
+                 s _join_oct
+000000000000020b S ct
+00000000000000fb s H_frame1
+0000000000000103 s _join_oct
+                 U _put_string
+00000000000001c8 S _put_uoctal
+                 U _string_fill
+                 U tal
+                 U string
+0000000000000268 s rame1
+                 U rnate_oct
+0000000000000230 S ill_oct
+                 U t_strlen
+                 s _oct
+0000000000000313 S t
+00000000000001f8 s 0
+00000000000005c0 s g
+00000000000003db S ut_uoctal
+00000000000000aa S e
+                 S _string_fill
+                 S _string_fill
+0000000000000518 S octal
+                 U t_octdigit
+                 U trjoin
+0000000000000230 s ll_oct
+000000000000021c s ctal
+000000000000021f s 
+0000000000000221 s unt_octdigit
+0000000000000223 s octdigit
+0000000000000226 s igit
+0000000000000228 s 
+00000000000000ca s al
+                 U _string_fill
+                 U l
+                 U in
+                 s _strnew
+0000000000000148 S _strlen
+0000000000000208 s l_octal
+                 U git
+                 U _string
+                 U strjoin
+000000000000018a S uoctal
+00000000000001d0 S _decimal_octal
+0000000000000214 S fill_oct
+                 S _string_fill
+000000000000008e S free
+0000000000000240 s _ft_strnew
+                 S _string_fill
+0000000000000165 S octdigit
+0000000000000126 S tal
+00000000000000c4 S 
+00000000000000e7 S t_strlen
+                 U tdigit
+                 U en
+000000000000012a S l
+                 U rjoin
+                 s rnew
+0000000000000340 s intmax_call.o
+                 s 932      `
+uintmax_call.o
+0000000000000530 s 685  10846 4215  100644  1932      `
+uintmax_call.o
+0000000000000527 s t
+0000000000000529 s 0
+000000000000052a s _frame1
+000000000000052d s me1
+000000000000020f s 
+                 U new
+0000000000000c98 s       1422457685  10846 4215  100644  1932      `
+uintmax_call.o
+00000000000001be S tdigit
+0000000000000567 S octal
+00000000000000b0 s uoctal
+0000000000000028 s ill
+                 U _string_fill
+                 S _string_fill
+00000000000000e2 S rnew
+                 U _string_fill
+000000000000011c S _string_fill
+0000000000000145 s oin_oct
+                 U _ft_strjoin
+                 U rjoin
+                 U put_uoctal
+                 U count_octdigit
+                 U al
+                 U 22457685  10846 4215  100644  1932      `
+uintmax_call.o
+000000000000036a s    1422457685  10846 4215  100644  1932      `
+uintmax_call.o
+                 U ing
+0000000000000473 S git
+                 U 
+                 s lternate_oct
+                 U 20           1422457685  10846 4215  100644  1932      `
+uintmax_call.o
+                 U 
+                 U fill_oct
+                 U ct
+                 U _octdigit
+                 U ternate_oct
+                 U  4215  100644  1932      `
+uintmax_call.o
+                 U new
+00000000000001dd S n
+                 U _ft_strjoin
+                 U e
+000000000000005d S ft_strlen
+0000000000000134 S octal
+000000000000019b S ng
+                 S _string_fill
+00000000000008ff S LC0
+                 U t_strjoin
+                 U it
+                 U 
+                 U octal
+                 U nt_octdigit
+000000000000008c S len
+0000000000000023 S ill
+0000000000000069 S ee
+0000000000000046 S strjoin
+                 U rnew
+                 U t_uoctal
+                 S _string_fill
+0000000000000114 S t_uoctal
+                 U new
+                 U t_strlen
+                 U 1
+                 U g
+                 U _join_oct
+                 U strjoin
+../unit_test/custom_tests/lib_stat/libftprintf.a(uintmax_call.o):
+00000000000003c0 s @
+00000000000002a0 s 
+                 U _string_fill
+                 U _umax_int
+                 U b_digituim
+                 U in
+                 U 
+                 U mtoa
+                 U 4215  100644  3108      `
+intmax_call.o
+                 U o
+                 U   3108      `
+intmax_call.o
+                 U 7685  10846 4215  100644  3108      `
+intmax_call.o
+000000000000005a S t_string
+                 S _free
+                 U ll
+000000000000013b S n_umaxint
+0000000000000184 S        1422457685  10846 4215  100644  3108      `
+intmax_call.o
+00000000000000d0 S 0
+                 U int
+                 U 1
+                 U `
+intmax_call.o
+                 U 
+                 s 
+                 U _free
+                 U in
+                 U p
+                 U 
+                 U _ft_uimtoa
+                 U ame1
+                 U _nb_digituim
+                 U 0
+                 U ft_strjoin
+                 U nt
+                 U axint
+00000000000001ca s 
+                 U _call.o
+                 U        1422457685  10846 4215  100644  3108      `
+intmax_call.o
+                 U 
+                 U 10846 4215  100644  3108      `
+intmax_call.o
+                 U 4  3108      `
+intmax_call.o
+0000000000000118 s 
+00000000000002d0 s           1422457685  10846 4215  100644  3108      `
+intmax_call.o
+00000000000002c6 s C1
+00000000000002c8 s /20           1422457685  10846 4215  100644  3108      `
+intmax_call.o
+0000000000000098 s umaxint
+                 U xint
+                 U _get_nb_digituim
+                 U ituim
+                 U trdup
+                 U _string
+                 U _umax_int
+                 U ng_fill
+                 U _free
+0000000000000113 s _frame1
+00000000000002c8 s       1422457685  10846 4215  100644  3108      `
+intmax_call.o
+0000000000000196 s 
+0000000000000248 s EH_frame1
+000000000000023e s LC0
+000000000000023f s LC1
+0000000000000280 s t
+0000000000000278 s _umaxint
+00000000000000a6 s xint
+                 U _put_umax_int
+                 U et_nb_digituim
+                 s xint
+                 U fill
+                 U dup
+                 U ft_strjoin
+                 U t_uimtoa
+                 U LC2
+0000000000000241 s LC2
+000000000000004a s _fill_umaxint
+                 U trjoin
+                 U string
+                 U get_nb_digituim
+                 U _free
+                 U dup
+                 U _ft_uimtoa
+                 s oin_umaxint
+000000000000020b S ill_umaxint
+00000000000000fb s 
+0000000000000103 s oin_umaxint
+                 U LC0
+00000000000001c8 S _put_string
+                 U _free
+                 U uim
+                 U sub_umaxint
+0000000000000268 s _frame1
+                 U LC1
+0000000000000230 S nt
+                 U _strjoin
+                 s C2
+                 U _free
+                 U _ft_strdup
+                 U _ft_strjoin
+                 U _ft_uimtoa
+                 U _get_nb_digituim
+00000000000000d5 s _join_umaxint
+0000000000000313 S _join_umaxint
+                 U _put_string
+0000000000000190 S _put_umax_int
+                 U _string_fill
+                 s _sub_umaxint
+00000000000001f8 s maxint
+00000000000005c0 s maxint
+00000000000003db S ut_string
+00000000000000aa S 
+                 S _free
+                 S _free
+0000000000000518 S ituim
+                 U umax_int
+                 U string_fill
+0000000000000230 s t
+000000000000021c s ring
+000000000000021f s 
+0000000000000221 s t_umax_int
+0000000000000223 s ax_int
+0000000000000226 s nt
+0000000000000228 s ft_uimtoa
+00000000000000ca s im
+                 U _free
+                 U trdup
+                 U ng_fill
+                 s imtoa
+0000000000000148 S strjoin
+0000000000000208 s igituim
+                 U t
+                 U _sub_umaxint
+                 U _string_fill
+000000000000018a S string
+00000000000001d0 S et_nb_digituim
+0000000000000214 S int
+                 S _free
+000000000000008e S ill
+0000000000000240 s t_uimtoa
+                 S _free
+0000000000000165 S ax_int
+0000000000000126 S ing
+00000000000000c4 S _fill
+00000000000000e7 S _strjoin
+                 U _int
+                 U in
+000000000000012a S g
+                 U tring_fill
+                 s oa
+0000000000000340 s ntmax_call.o
+                 s 108      `
+intmax_call.o
+0000000000000530 s 685  10846 4215  100644  3108      `
+intmax_call.o
+0000000000000527 s ll_umaxint
+0000000000000529 s maxint
+000000000000052a s EH_frame1
+000000000000052d s rame1
+000000000000020f s 1
+                 U a
+0000000000000c98 s       1422457685  10846 4215  100644  3108      `
+intmax_call.o
+00000000000001be S _int
+0000000000000567 S ituim
+00000000000000b0 s string
+0000000000000028 s _strdup
+                 U _free
+                 S _free
+00000000000000e2 S oa
+                 U _free
+000000000000011c S _free
+0000000000000145 s n_umaxint
+                 U dup
+                 U tring_fill
+                 U put_string
+                 U put_umax_int
+                 U im
+                 U 22457685  10846 4215  100644  3108      `
+intmax_call.o
+000000000000036a s    1422457685  10846 4215  100644  3108      `
+intmax_call.o
+                 U _umaxint
+0000000000000473 S t
+                 U _ft_strjoin
+                 s nt
+                 U 20           1422457685  10846 4215  100644  3108      `
+intmax_call.o
+                 U 
+                 U int
+                 U xint
+                 U max_int
+                 U t
+                 U  4215  100644  3108      `
+intmax_call.o
+                 U a
+00000000000001dd S n
+                 U dup
+                 U 
+000000000000005d S t_strjoin
+0000000000000134 S ituim
+000000000000019b S umaxint
+                 S _free
+00000000000008ff S _umaxint
+                 U p
+                 U 
+                 U _fill
+                 U tring
+                 U _umax_int
+000000000000008c S oin
+0000000000000023 S _strdup
+0000000000000069 S l
+0000000000000046 S _string_fill
+                 U oa
+                 U t_string
+                 S _free
+0000000000000114 S t_string
+                 U a
+                 U _strjoin
+                 U me1
+                 U maxint
+                 U oin_umaxint
+                 U _string_fill
+../unit_test/custom_tests/lib_stat/libftprintf.a(intmax_call.o):
+00000000000003c0 s 100644  1732      `
+intmax_call_helper.o
+00000000000002a0 s me1
+                 U 
+                 U b_fill
+                 U _neg_int
+                 U ll
+                 U n_int
+                 U n
+                 U join_int_prec
+                 U fill_int
+                 U c
+                 U string
+000000000000005a S t_flag
+                 S _ft_strjoin
+                 U p
+000000000000013b S ut_max_int
+0000000000000184 S t_imtoa
+00000000000000d0 S _joinprec_neg_int
+                 U indefault_int
+                 U _digitim
+                 U ill_int_prec
+                 U int
+                 s 
+                 U _ft_strjoin
+                 U ll
+                 U ee
+                 U int_nb_fill
+                 U _strlen
+                 U _nb_digitim
+                 U in_neg_int
+                 U _joinprec_neg_int
+                 U tring_fill
+                 U ndefault_int
+                 U _neg_int
+00000000000001ca s 5  10846 4215  100644  1732      `
+intmax_call_helper.o
+                 U prec
+                 U t_imtoa
+                 U n_int
+                 U 
+                 U ec
+0000000000000118 s   1422457685  10846 4215  100644  1732      `
+intmax_call_helper.o
+00000000000002d0 s 
+0000000000000508 s EH_frame1
+00000000000004fe s LC0
+0000000000000500 s LC1
+0000000000000502 s LC2
+000000000000019c s _fill_int
+00000000000000a6 s _fill_int_prec
+                 U _free
+                 U _ft_imtoa
+                 U _ft_strdup
+                 U _ft_strjoin
+                 U _ft_strlen
+                 U _get_nb_digitim
+00000000000002c6 s ault_int
+00000000000002c8 s itim
+0000000000000098 s _max_int
+                 U oindefault_int
+                 U s_join_neg_int
+                 U int
+                 U 
+                 U _flag
+                 U b_fill
+                 U strdup
+                 U _ft_strjoin
+0000000000000113 s get_nb_digitim
+00000000000002c8 s _imtoa
+                 U _int_flag
+                 U _int_nb_fill
+00000000000002ff s _join_int
+                 s _join_int_prec
+0000000000000196 s digitim
+0000000000000248 s 
+000000000000023e s os_joinprec_neg_int
+000000000000023f s fault_int
+0000000000000280 s nt
+0000000000000278 s os_joindefault_int
+00000000000000a6 s oindefault_int
+                 U nt_nb_fill
+                 U join_neg_int
+                 s neg_int
+                 U dup
+                 U free
+                 U tring_fill
+                 U trlen
+                 U t_int
+0000000000000241 s t_int
+000000000000004a s nt
+                 U g_fill
+                 U flag
+                 U _join_neg_int
+                 U _ft_strjoin
+                 U free
+                 U _strlen
+                 s _put_max_int
+000000000000020b S 
+00000000000000fb s t
+0000000000000103 s _put_max_int
+                 U os_joinprec_neg_int
+00000000000001c8 S _int_flag
+                 U _ft_strjoin
+                 U t
+                 U inprec_neg_int
+0000000000000268 s get_nb_digitim
+                 U fault_int
+0000000000000230 S g_int
+                 U ing_fill
+                 s _int
+                 U _ft_strjoin
+                 U rjoin
+                 U string_fill
+                 U _strlen
+                 U s_join_neg_int
+00000000000000d5 s t
+0000000000000313 S t
+                 U _int_flag
+0000000000000190 S nt_nb_fill
+                 U 
+                 s oinprec_neg_int
+00000000000001f8 s _joindefault_int
+00000000000005c0 s c_neg_int
+00000000000003db S nt_flag
+00000000000000aa S _string_fill
+                 S _ft_strjoin
+                 S _ft_strjoin
+0000000000000518 S int
+                 U _fill
+                 U _ft_strdup
+0000000000000230 s _int
+000000000000021c s ag
+000000000000021f s int_nb_fill
+0000000000000221 s nb_fill
+0000000000000223 s ill
+0000000000000226 s _ft_strlen
+0000000000000228 s strlen
+00000000000000ca s 
+                 U _ft_strjoin
+                 U 
+                 U strdup
+                 s en
+0000000000000148 S ng_fill
+0000000000000208 s g_int
+                 U ft_strlen
+                 U oinprec_neg_int
+                 U 
+000000000000018a S flag
+00000000000001d0 S join_neg_int
+0000000000000214 S eg_int
+                 S _ft_strjoin
+000000000000008e S up
+0000000000000240 s trlen
+                 S _ft_strjoin
+0000000000000165 S ill
+0000000000000126 S g
+00000000000000c4 S rdup
+00000000000000e7 S ing_fill
+                 U l
+                 U ll
+000000000000012a S _int_nb_fill
+                 U ft_strdup
+                 s _pos_join_neg_int
+0000000000000340 s _int_prec
+                 s C1
+0000000000000530 s tring
+0000000000000527 s _pos_joindefault_int
+0000000000000529 s _joindefault_int
+000000000000052a s 
+000000000000052d s t_nb_digitim
+000000000000020f s _digitim
+                 U pos_join_neg_int
+0000000000000c98 s _imtoa
+00000000000001be S l
+0000000000000567 S int
+00000000000000b0 s flag
+0000000000000028 s in
+                 U _ft_strjoin
+                 S _ft_strjoin
+                 U _pos_join_neg_int
+00000000000000e2 S _pos_join_neg_int
+                 U _ft_strjoin
+000000000000011c S _ft_strjoin
+                 U _pos_joindefault_int
+                 U _pos_joinprec_neg_int
+000000000000040b S _put_max_int
+                 U _put_string
+                 U _string_fill
+0000000000000145 s ut_max_int
+                 U free
+                 U ft_strdup
+                 U int_flag
+                 U t_nb_fill
+                 U 
+                 U put_string
+000000000000036a s toa
+                 U rec_neg_int
+0000000000000473 S ft_strlen
+                 U string_fill
+                 s ndefault_int
+                 U tim
+                 U pos_joinprec_neg_int
+                 U eg_int
+                 U x_int
+                 U fill
+                 U default_int
+                 U _join_int_prec
+                 U pos_join_neg_int
+00000000000001dd S l
+                 U free
+                 U _string_fill
+000000000000005d S ring_fill
+0000000000000134 S int
+000000000000019b S ec_neg_int
+                 S _ft_strjoin
+00000000000008ff S os_joindefault_int
+                 U ee
+                 U t_strlen
+                 U rdup
+                 U lag
+                 U b_fill
+000000000000008c S ill
+0000000000000023 S in
+0000000000000069 S 
+0000000000000046 S 
+                 U _pos_join_neg_int
+                 U t_flag
+                 S _ft_strjoin
+0000000000000114 S t_flag
+                 U pos_join_neg_int
+                 U ing_fill
+                 U nb_digitim
+                 U c_neg_int
+                 U _put_max_int
+                 U 
+../unit_test/custom_tests/lib_stat/libftprintf.a(intmax_call_helper.o):
+00000000000003c0 s __text
+00000000000002a0 s 
+                 U _fill
+                 U 
+                 U _joindefault_int
+                 U t
+                 U 
+                 U eg_int
+                 U o
+                 U 
+                 U 
+                 U ring_helper.o
+000000000000005a S strjoin
+                 S _int_flag
+                 U _join_neg_int
+000000000000013b S 457685  10846 4215  100644  1700      `
+string_helper.o
+0000000000000184 S 700      `
+string_helper.o
+00000000000000d0 S int
+                 U 0           1422457685  10846 4215  100644  1700      `
+string_helper.o
+                 U   100644  1700      `
+string_helper.o
+                 U 
+                 U me1
+                 s 
+                 U _int_flag
+                 U t
+                 U nb_fill
+                 U _free
+                 U prec_neg_int
+                 U 215  100644  1700      `
+string_helper.o
+                 U os_joindefault_int
+                 U int
+                 U n_neg_int
+                 U            1422457685  10846 4215  100644  1700      `
+string_helper.o
+                 U H_frame1
+00000000000001ca s 
+                 U 
+                 U 700      `
+string_helper.o
+                 U 
+                 U elper.o
+                 U 
+0000000000000118 s 
+00000000000002d0 s   1700      `
+string_helper.o
+0000000000000508 s 
+00000000000004fe s lper.o
+0000000000000500 s 
+0000000000000502 s 
+000000000000019c s 
+00000000000000a6 s 
+                 U nt_nb_fill
+                 U  1700      `
+string_helper.o
+                 U fill
+                 U _int_flag
+                 U oinprec_neg_int
+                 U 46 4215  100644  1700      `
+string_helper.o
+00000000000002c6 s        1422457685  10846 4215  100644  1700      `
+string_helper.o
+00000000000002c8 s 0644  1700      `
+string_helper.o
+0000000000000098 s 7685  10846 4215  100644  1700      `
+string_helper.o
+                 U 20           1422457685  10846 4215  100644  1700      `
+string_helper.o
+                 U t
+                 U default_int
+                 U int_nb_fill
+                 U trjoin
+                 U 
+                 U 
+                 U _int_flag
+0000000000000113 s 6 4215  100644  1700      `
+string_helper.o
+00000000000002c8 s 00      `
+string_helper.o
+                 U ft_strjoin
+                 U 
+00000000000002ff s 
+                 s .o
+0000000000000196 s  100644  1700      `
+string_helper.o
+0000000000000248 s 846 4215  100644  1700      `
+string_helper.o
+000000000000023e s t_int
+000000000000023f s         1422457685  10846 4215  100644  1700      `
+string_helper.o
+0000000000000280 s 10846 4215  100644  1700      `
+string_helper.o
+0000000000000278 s 
+00000000000000a6 s 20           1422457685  10846 4215  100644  1700      `
+string_helper.o
+                 U free
+                 U _pos_joindefault_int
+                 s _frame1
+                 U os_join_neg_int
+                 U t_nb_fill
+                 U n_neg_int
+                 U ec_neg_int
+                 U     1422457685  10846 4215  100644  1700      `
+string_helper.o
+0000000000000241 s     1422457685  10846 4215  100644  1700      `
+string_helper.o
+000000000000004a s e1
+                 U g_int
+                 U rjoin
+                 U 
+                 U _int_flag
+                 U t_nb_fill
+                 U prec_neg_int
+                 s 22457685  10846 4215  100644  1700      `
+string_helper.o
+000000000000020b S 
+00000000000000fb s 0846 4215  100644  1700      `
+string_helper.o
+0000000000000103 s 22457685  10846 4215  100644  1700      `
+string_helper.o
+                 U t_int
+00000000000001c8 S ft_strjoin
+                 U _int_flag
+                 U fault_int
+                 U 
+0000000000000268 s 6 4215  100644  1700      `
+string_helper.o
+                 U         1422457685  10846 4215  100644  1700      `
+string_helper.o
+0000000000000230 S rame1
+                 U neg_int
+                 s    1422457685  10846 4215  100644  1700      `
+string_helper.o
+                 U _int_flag
+                 U lag
+                 U in_neg_int
+                 U prec_neg_int
+                 U t
+00000000000000d5 s 1422457685  10846 4215  100644  1700      `
+string_helper.o
+0000000000000313 S 1422457685  10846 4215  100644  1700      `
+string_helper.o
+                 U ft_strjoin
+0000000000000190 S free
+                 U _fill
+                 s t
+00000000000001f8 s 1/20           1422457685  10846 4215  100644  1700      `
+string_helper.o
+00000000000001e8 s EH_frame1
+00000000000005c0 s EH_frame1
+00000000000001e5 s LC0
+                 U _free
+                 U _ft_strjoin
+00000000000003db S _strjoin
+00000000000000aa S oin_neg_int
+                 S _int_flag
+                 S _int_flag
+0000000000000518 S default_int
+                 U _pos_joinprec_neg_int
+                 U fill
+0000000000000230 s ame1
+000000000000021c s oin
+000000000000021f s _free
+0000000000000221 s e
+0000000000000223 s os_joinprec_neg_int
+0000000000000226 s oinprec_neg_int
+0000000000000228 s rec_neg_int
+00000000000000ca s ault_int
+                 U _int_flag
+                 U int_nb_fill
+                 U 
+                 s neg_int
+0000000000000148 S eg_int
+0000000000000208 s indefault_int
+                 U inprec_neg_int
+                 U t
+                 U _fill
+000000000000018a S rjoin
+00000000000001d0 S _pos_joindefault_int
+0000000000000214 S frame1
+                 S _int_flag
+000000000000008e S s_join_neg_int
+0000000000000240 s ec_neg_int
+                 S _int_flag
+0000000000000165 S os_joinprec_neg_int
+0000000000000126 S in
+00000000000000c4 S pos_join_neg_int
+00000000000000e7 S neg_int
+                 U _joinprec_neg_int
+                 U t
+000000000000012a S 
+                 U ill
+                 s _int
+0000000000000340 s 
+                 s 
+0000000000000530 s ing_helper.o
+0000000000000527 s 
+0000000000000529 s 1/20           1422457685  10846 4215  100644  1700      `
+string_helper.o
+000000000000052a s 846 4215  100644  1700      `
+string_helper.o
+000000000000052d s 4215  100644  1700      `
+string_helper.o
+000000000000020f s   100644  1700      `
+string_helper.o
+                 U int
+0000000000000c98 s 00      `
+string_helper.o
+00000000000001be S _joinprec_neg_int
+0000000000000567 S default_int
+00000000000000b0 s rjoin
+0000000000000028 s 
+                 U _int_flag
+                 S _int_flag
+                 U _int
+00000000000000e2 S _int
+                 U _int_flag
+                 S _int_flag
+000000000000011c S _int_flag
+                 U 
+                 U ult_int
+000000000000040b S 22457685  10846 4215  100644  1700      `
+string_helper.o
+                 U  `
+string_helper.o
+                 U oin_neg_int
+0000000000000145 s 457685  10846 4215  100644  1700      `
+string_helper.o
+                 U t_nb_fill
+                 U ill
+                 U t_strjoin
+                 U ree
+                 U ault_int
+                 U `
+string_helper.o
+000000000000036a s      `
+string_helper.o
+                 U 0
+0000000000000473 S inprec_neg_int
+                 U in_neg_int
+                 s            1422457685  10846 4215  100644  1700      `
+string_helper.o
+                 U 644  1700      `
+string_helper.o
+                 U lt_int
+                 U frame1
+                 U 5  10846 4215  100644  1700      `
+string_helper.o
+                 U pos_joinprec_neg_int
+                 U           1422457685  10846 4215  100644  1700      `
+string_helper.o
+                 U .o
+                 U int
+00000000000001dd S 
+0000000000000043 S _int_nb_fill
+                 U t_nb_fill
+                 U oin_neg_int
+000000000000005d S _neg_int
+0000000000000077 S _pos_join_neg_int
+000000000000016b S _pos_joindefault_int
+00000000000000f1 S _pos_joinprec_neg_int
+0000000000000134 S default_int
+000000000000019b S 
+                 S _int_flag
+00000000000008ff S 
+                 U nb_fill
+                 U nprec_neg_int
+                 U pos_join_neg_int
+                 U join
+                 U 
+000000000000008c S nt
+0000000000000023 S 
+0000000000000069 S join_neg_int
+0000000000000046 S _fill
+                 U _int
+                 U strjoin
+                 S _int_flag
+0000000000000114 S strjoin
+                 U int
+                 U neg_int
+                 U 15  100644  1700      `
+string_helper.o
+                 U EH_frame1
+                 U 22457685  10846 4215  100644  1700      `
+string_helper.o
+                 U _fill
+../unit_test/custom_tests/lib_stat/libftprintf.a(string_helper.o):
+00000000000003c0 s 
+00000000000002a0 s 
+                 U string_fill
+                 U _nullable
+                 U mcpy
+                 U har_tos
+                 U 
+                 U rnew
+                 U lper.o
+                 U 
+                 U 
+                 U     `
+int_helper.o
+000000000000005a S s
+                 S _rev
+                 U l
+000000000000013b S     1422457685  10846 4215  100644  1596      `
+int_helper.o
+0000000000000184 S 00644  1596      `
+int_helper.o
+00000000000000d0 S tr_nullable
+                 U me1
+                 U 846 4215  100644  1596      `
+int_helper.o
+                 U 
+                 U rite
+                 s 
+                 U _rev
+                 U har_tos
+                 U 
+                 U rjoin_nullable
+                 U _ft_strnew
+                 U  10846 4215  100644  1596      `
+int_helper.o
+                 U memcpy
+                 U tr_nullable
+                 U alloc
+                 U e1
+                 U le
+00000000000001ca s 
+                 U 
+                 U 00644  1596      `
+int_helper.o
+                 U 
+                 U int_helper.o
+                 U 
+0000000000000118 s 
+00000000000002d0 s   100644  1596      `
+int_helper.o
+0000000000000508 s 
+00000000000004fe s nt_helper.o
+0000000000000500 s Οϊνώ
+0000000000000502 s 
+000000000000019c s 
+00000000000000a6 s 
+                 U len
+                 U  100644  1596      `
+int_helper.o
+                 U tring_fill
+                 U _rev
+                 U le
+                 U 685  10846 4215  100644  1596      `
+int_helper.o
+00000000000002c6 s 1/20           1422457685  10846 4215  100644  1596      `
+int_helper.o
+00000000000002c8 s 4215  100644  1596      `
+int_helper.o
+0000000000000098 s   1422457685  10846 4215  100644  1596      `
+int_helper.o
+                 U ame1
+                 U _ft_memcpy
+                 U _ft_putstr_nullable
+                 U rlen
+                 U 
+                 U _nullable
+                 U g_fill
+                 U _rev
+0000000000000113 s 85  10846 4215  100644  1596      `
+int_helper.o
+00000000000002c8 s 0644  1596      `
+int_helper.o
+                 U _tos
+                 U trjoin_nullable
+00000000000002ff s 
+                 s elper.o
+0000000000000196 s 46 4215  100644  1596      `
+int_helper.o
+0000000000000248 s 7685  10846 4215  100644  1596      `
+int_helper.o
+000000000000023e s tstr_nullable
+000000000000023f s #1/20           1422457685  10846 4215  100644  1596      `
+int_helper.o
+0000000000000280 s 457685  10846 4215  100644  1596      `
+int_helper.o
+0000000000000278 s H_frame1
+00000000000000a6 s ame1
+                 U join_nullable
+                 U t_memcpy
+                 s e
+                 U ill
+                 U en
+                 U alloc
+                 U t_strnew
+                 U 0           1422457685  10846 4215  100644  1596      `
+int_helper.o
+0000000000000241 s 0           1422457685  10846 4215  100644  1596      `
+int_helper.o
+000000000000004a s ite
+                 U c
+                 U _ft_strjoin_nullable
+                 U ft_memcpy
+                 U _rev
+                 U en
+                 U _ft_strnew
+                 s       1422457685  10846 4215  100644  1596      `
+int_helper.o
+000000000000020b S e
+00000000000000fb s 57685  10846 4215  100644  1596      `
+int_helper.o
+0000000000000103 s       1422457685  10846 4215  100644  1596      `
+int_helper.o
+                 U tstr_nullable
+00000000000001c8 S _tos
+                 U _rev
+                 U t_putstr_nullable
+                 U nullable
+0000000000000268 s 85  10846 4215  100644  1596      `
+int_helper.o
+                 U #1/20           1422457685  10846 4215  100644  1596      `
+int_helper.o
+0000000000000230 S _write
+                 U loc
+                 s            1422457685  10846 4215  100644  1596      `
+int_helper.o
+                 U _rev
+                 U ft_strlen
+                 U malloc
+                 U _ft_strnew
+                 U _ft_memcpy
+00000000000000d5 s         1422457685  10846 4215  100644  1596      `
+int_helper.o
+0000000000000313 S         1422457685  10846 4215  100644  1596      `
+int_helper.o
+0000000000000228 s EH_frame1
+00000000000000dd S _char_tos
+                 U _ft_memcpy
+00000000000001fa S _ft_putstr_nullable
+000000000000011a S _ft_strjoin_nullable
+                 U _ft_strlen
+                 U _ft_strnew
+                 U _malloc
+                 U _tos
+0000000000000190 S join_nullable
+                 U string_fill
+                 s _nullable
+                 S _rev
+0000000000000072 S _string_fill
+                 U _write
+00000000000001f8 s frame1
+00000000000001e8 s ble
+00000000000005c0 s ble
+00000000000001e5 s ullable
+                 U rjoin_nullable
+                 U r_tos
+00000000000003db S os
+00000000000000aa S _malloc
+                 S _rev
+                 S _rev
+0000000000000518 S _ft_putstr_nullable
+                 U nullable
+                 U tring_fill
+0000000000000230 s write
+000000000000021c s t_strjoin_nullable
+000000000000021f s rjoin_nullable
+0000000000000221 s n_nullable
+0000000000000223 s llable
+0000000000000226 s le
+0000000000000228 s ft_strnew
+00000000000000ca s _putstr_nullable
+                 U _rev
+                 U rlen
+                 U g_fill
+                 s trnew
+0000000000000148 S oc
+0000000000000208 s y
+                 U e
+                 U _nullable
+                 U string_fill
+000000000000018a S _ft_strjoin_nullable
+00000000000001d0 S t_memcpy
+0000000000000214 S 
+                 S _rev
+000000000000008e S ll
+0000000000000240 s t_strnew
+                 S _rev
+0000000000000165 S llable
+0000000000000126 S _strjoin_nullable
+00000000000000c4 S fill
+00000000000000e7 S loc
+                 U able
+                 U har_tos
+000000000000012a S trjoin_nullable
+                 U ring_fill
+                 s ew
+0000000000000340 s 
+                 s ϊνώ
+0000000000000530 s    `
+int_helper.o
+0000000000000527 s 
+0000000000000529 s frame1
+000000000000052a s 7685  10846 4215  100644  1596      `
+int_helper.o
+000000000000052d s   10846 4215  100644  1596      `
+int_helper.o
+000000000000020f s 846 4215  100644  1596      `
+int_helper.o
+                 U w
+0000000000000c98 s 0644  1596      `
+int_helper.o
+00000000000001be S able
+0000000000000567 S _ft_putstr_nullable
+00000000000000b0 s _ft_strjoin_nullable
+0000000000000028 s strlen
+                 U _rev
+                 S _rev
+                 U ew
+00000000000000e2 S ew
+                 U _rev
+                 S _rev
+000000000000011c S _rev
+                 U 
+                 U putstr_nullable
+000000000000040b S       1422457685  10846 4215  100644  1596      `
+int_helper.o
+                 U 596      `
+int_helper.o
+                 U _malloc
+0000000000000145 s     1422457685  10846 4215  100644  1596      `
+int_helper.o
+                 U en
+                 U ring_fill
+                 U tos
+                 U oin_nullable
+                 U _putstr_nullable
+                 U 96      `
+int_helper.o
+000000000000036a s 4  1596      `
+int_helper.o
+                 U lable
+0000000000000473 S e
+                 U malloc
+                 s e1
+                 U 215  100644  1596      `
+int_helper.o
+                 U utstr_nullable
+                 U 
+                 U 422457685  10846 4215  100644  1596      `
+int_helper.o
+                 U ullable
+                 U 1
+                 U elper.o
+                 U w
+00000000000001dd S ar_tos
+0000000000000043 S trlen
+                 U en
+                 U _malloc
+000000000000005d S lloc
+0000000000000077 S _fill
+000000000000016b S t_memcpy
+00000000000000f1 S nullable
+0000000000000134 S _ft_putstr_nullable
+000000000000019b S able
+                 S _rev
+00000000000008ff S H_frame1
+                 U 
+                 U 
+                 U fill
+                 U ft_strjoin_nullable
+                 U _nullable
+000000000000008c S char_tos
+0000000000000023 S strlen
+0000000000000069 S 
+0000000000000046 S string_fill
+                 U ew
+                 U s
+                 S _rev
+0000000000000114 S s
+                 U w
+                 U loc
+                 U 10846 4215  100644  1596      `
+int_helper.o
+                 U ble
+                 U       1422457685  10846 4215  100644  1596      `
+int_helper.o
+                 U string_fill
+../unit_test/custom_tests/lib_stat/libftprintf.a(int_helper.o):
+00000000000003c0 s 
+00000000000002a0 s 
+                 U _get_nb_digitim
+                 U v
+                 U 
+
+#1/20           1422457685  10846 4215  100644  1596      `
+ustr_helper.o
+                 U mtoa
+                 U 
+                 U rame1
+                 U 
+                 U 
+                 U 
+                 U 
+000000000000005a S ft_strnew
+                 S _get_nb_digituim
+                 U gitim
+000000000000013b S       `
+ustr_helper.o
+0000000000000184 S ϊνώ
+00000000000000d0 S      1422457685  10846 4215  100644  1596      `
+ustr_helper.o
+                 U 15  100644  1596      `
+ustr_helper.o
+                 U r.o
+                 U 
+                 U 5  10846 4215  100644  1596      `
+ustr_helper.o
+                 s 
+                 U _get_nb_digituim
+                 U mtoa
+                 U m
+                 U w
+                 U a
+                 U lper.o
+                 U 
+
+
+
+#1/20           1422457685  10846 4215  100644  1596      `
+ustr_helper.o
+                 U      1422457685  10846 4215  100644  1596      `
+ustr_helper.o
+                 U m
+                 U 5  100644  1596      `
+ustr_helper.o
+                 U 457685  10846 4215  100644  1596      `
+ustr_helper.o
+00000000000001ca s _TEXT
+                 U 
+                 U ϊνώ
+                 U 
+                 U P
+                 U 
+0000000000000118 s 
+00000000000002d0 s 
+0000000000000508 s 
+00000000000004fe s 
+0000000000000500 s 
+0000000000000502 s 
+000000000000019c s 
+00000000000000a6 s 
+                 U tuim
+                 U 
+                 U get_nb_digitim
+                 U _get_nb_digituim
+                 U mtoa
+                 U r_helper.o
+00000000000002c6 s 00644  1596      `
+ustr_helper.o
+00000000000002c8 s 
+0000000000000098 s     `
+ustr_helper.o
+                 U 215  100644  1596      `
+ustr_helper.o
+                 U 
+                 U 20           1422457685  10846 4215  100644  1596      `
+ustr_helper.o
+                 U ituim
+                 U t_strnew
+                 U v
+                 U nb_digitim
+                 U _get_nb_digituim
+0000000000000113 s _helper.o
+00000000000002c8 s νώ
+                 U a
+                 U ew
+00000000000002ff s 
+                 s  
+0000000000000196 s .o
+0000000000000248 s tr_helper.o
+000000000000023e s        1422457685  10846 4215  100644  1596      `
+ustr_helper.o
+000000000000023f s 100644  1596      `
+ustr_helper.o
+0000000000000280 s ustr_helper.o
+0000000000000278 s 46 4215  100644  1596      `
+ustr_helper.o
+00000000000000a6 s 215  100644  1596      `
+ustr_helper.o
+                 U 
+                 U 
+                 s 57685  10846 4215  100644  1596      `
+ustr_helper.o
+                 U digitim
+                 U uim
+                 U m
+                 U EH_frame1
+                 U 44  1596      `
+ustr_helper.o
+0000000000000241 s 44  1596      `
+ustr_helper.o
+000000000000004a s   10846 4215  100644  1596      `
+ustr_helper.o
+                 U t_uimtoa
+                 U _strnew
+                 U 
+                 U _get_nb_digituim
+                 U uim
+                 U a
+                 s 96      `
+ustr_helper.o
+000000000000020b S 10846 4215  100644  1596      `
+ustr_helper.o
+00000000000000fb s str_helper.o
+0000000000000103 s 96      `
+ustr_helper.o
+                 U        1422457685  10846 4215  100644  1596      `
+ustr_helper.o
+00000000000001c8 S a
+                 U _get_nb_digituim
+                 U            1422457685  10846 4215  100644  1596      `
+ustr_helper.o
+                 U   1422457685  10846 4215  100644  1596      `
+ustr_helper.o
+0000000000000268 s _helper.o
+                 U 100644  1596      `
+ustr_helper.o
+0000000000000230 S 685  10846 4215  100644  1596      `
+ustr_helper.o
+                 U _ft_uimtoa
+                 s 4  1596      `
+ustr_helper.o
+                 U _get_nb_digituim
+                 U b_digituim
+                 U im
+                 U a
+                 U 
+00000000000000d5 s 1596      `
+ustr_helper.o
+0000000000000313 S 1596      `
+ustr_helper.o
+0000000000000228 s 846 4215  100644  1596      `
+ustr_helper.o
+00000000000000dd S uimtoa
+                 U 
+00000000000001fa S 20           1422457685  10846 4215  100644  1596      `
+ustr_helper.o
+000000000000011a S _strnew
+                 U nb_digituim
+                 U a
+                 U tim
+                 U a
+0000000000000190 S 
+                 U _get_nb_digitim
+                 s    1422457685  10846 4215  100644  1596      `
+ustr_helper.o
+                 S _get_nb_digituim
+0000000000000072 S 
+                 U 685  10846 4215  100644  1596      `
+ustr_helper.o
+00000000000001f8 s  4215  100644  1596      `
+ustr_helper.o
+00000000000001e8 s 2457685  10846 4215  100644  1596      `
+ustr_helper.o
+00000000000005c0 s 2457685  10846 4215  100644  1596      `
+ustr_helper.o
+00000000000001e5 s  1422457685  10846 4215  100644  1596      `
+ustr_helper.o
+                 U w
+                 U oa
+00000000000003db S _ft_strnew
+00000000000000aa S tim
+                 S _get_nb_digituim
+                 S _get_nb_digituim
+0000000000000518 S 20           1422457685  10846 4215  100644  1596      `
+ustr_helper.o
+                 U 
+                 U get_nb_digitim
+0000000000000230 s 85  10846 4215  100644  1596      `
+ustr_helper.o
+000000000000021c s trnew
+000000000000021f s w
+0000000000000221 s ev
+0000000000000223 s ft_imtoa
+0000000000000226 s mtoa
+0000000000000228 s 
+00000000000000ca s           1422457685  10846 4215  100644  1596      `
+ustr_helper.o
+                 U _get_nb_digituim
+                 U ituim
+                 U nb_digitim
+                 s frame1
+0000000000000148 S ft_uimtoa
+0000000000000208 s 1/20           1422457685  10846 4215  100644  1596      `
+ustr_helper.o
+                 U toa
+                 U    1422457685  10846 4215  100644  1596      `
+ustr_helper.o
+                 U _get_nb_digitim
+000000000000018a S _strnew
+00000000000001d0 S 
+0000000000000214 S 7685  10846 4215  100644  1596      `
+ustr_helper.o
+                 S _get_nb_digituim
+000000000000008e S igitim
+0000000000000240 s EH_frame1
+0000000000000288 s EH_frame1
+0000000000000178 S _ft_imtoa
+                 U _ft_strnew
+00000000000000b6 S _ft_uimtoa
+000000000000004f S _get_nb_digitim
+                 S _get_nb_digituim
+                 S _get_nb_digituim
+0000000000000165 S ft_imtoa
+0000000000000126 S rnew
+00000000000000c4 S _digitim
+00000000000000e7 S _ft_uimtoa
+                 U _imtoa
+                 U _rev
+                 U mtoa
+000000000000012a S ew
+                 U et_nb_digitim
+                 s me1
+0000000000000340 s 
+                 s 
+0000000000000530 s 
+0000000000000527 s 0846 4215  100644  1596      `
+ustr_helper.o
+0000000000000529 s  4215  100644  1596      `
+ustr_helper.o
+000000000000052a s tr_helper.o
+000000000000052d s elper.o
+000000000000020f s r.o
+                 U e1
+0000000000000c98 s νώ
+00000000000001be S _imtoa
+0000000000000567 S 20           1422457685  10846 4215  100644  1596      `
+ustr_helper.o
+00000000000000b0 s _strnew
+0000000000000028 s igituim
+                 U _get_nb_digituim
+                 S _get_nb_digituim
+                 U me1
+00000000000000e2 S me1
+                 U _get_nb_digituim
+                 S _get_nb_digituim
+000000000000011c S _get_nb_digituim
+                 U 0846 4215  100644  1596      `
+ustr_helper.o
+                 U          1422457685  10846 4215  100644  1596      `
+ustr_helper.o
+000000000000040b S 96      `
+ustr_helper.o
+                 U 
+                 U tim
+0000000000000145 s       `
+ustr_helper.o
+                 U uim
+                 U et_nb_digitim
+                 U 
+                 U _rev
+                 U           1422457685  10846 4215  100644  1596      `
+ustr_helper.o
+                 U 
+000000000000036a s 
+                 U 422457685  10846 4215  100644  1596      `
+ustr_helper.o
+0000000000000473 S toa
+                 U im
+                 s 5  100644  1596      `
+ustr_helper.o
+                 U 
+                 U         1422457685  10846 4215  100644  1596      `
+ustr_helper.o
+                 U 7685  10846 4215  100644  1596      `
+ustr_helper.o
+                 U  `
+ustr_helper.o
+                 U _ft_imtoa
+                 U   100644  1596      `
+ustr_helper.o
+                 U  
+                 U e1
+00000000000001dd S toa
+0000000000000043 S gituim
+                 U uim
+                 U tim
+000000000000005d S 
+0000000000000077 S b_digitim
+000000000000016b S 
+00000000000000f1 S 
+0000000000000134 S 20           1422457685  10846 4215  100644  1596      `
+ustr_helper.o
+000000000000019b S 22457685  10846 4215  100644  1596      `
+ustr_helper.o
+                 S _get_nb_digituim
+00000000000008ff S 46 4215  100644  1596      `
+ustr_helper.o
+                 U m
+                 U oa
+                 U _digitim
+                 U strnew
+                 U v
+000000000000008c S imtoa
+0000000000000023 S igituim
+0000000000000069 S itim
+0000000000000046 S _get_nb_digitim
+                 U me1
+                 U ft_strnew
+                 S _get_nb_digituim
+0000000000000114 S ft_strnew
+                 U e1
+                 U _ft_uimtoa
+                 U per.o
+                 U 2457685  10846 4215  100644  1596      `
+ustr_helper.o
+                 U 96      `
+ustr_helper.o
+                 U _get_nb_digitim
+../unit_test/custom_tests/lib_stat/libftprintf.a(ustr_helper.o):
+00000000000003c0 s 
+00000000000002a0 s 
+                 U strlen
+                 U ll
+                 U memalloc
+                 U _memcpy
+                 U 
+                 U strdup
+                 U er.o
+                 U 
+                 U 
+                 U tr_next_helper.o
+000000000000005a S y
+                 S _ft_ustrsub
+                 U _ustrnew
+000000000000013b S 457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+0000000000000184 S 180      `
+ustr_next_helper.o
+00000000000000d0 S ar_tos
+                 U 8           1422457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+                 U   100644  1180      `
+ustr_next_helper.o
+                 U 
+                 U e1
+                 s 
+                 U _ft_ustrsub
+                 U _memcpy
+                 U _ustrlen
+                 U ng_fill
+                 U 
+                 U 215  100644  1180      `
+ustr_next_helper.o
+                 U t_memalloc
+                 U ar_tos
+                 U rnew
+                 U            1422457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+                 U _frame1
+00000000000001ca s 
+                 U 
+                 U 180      `
+ustr_next_helper.o
+                 U 
+                 U t_helper.o
+                 U 
+0000000000000118 s 
+00000000000002d0 s   1180      `
+ustr_next_helper.o
+0000000000000508 s 
+00000000000004fe s _helper.o
+0000000000000500 s Οϊνώ
+0000000000000502 s 
+000000000000019c s 
+00000000000000a6 s 
+                 U _ft_ustrlen
+                 U  1180      `
+ustr_next_helper.o
+                 U trlen
+                 U _ft_ustrsub
+                 U loc
+                 U 46 4215  100644  1180      `
+ustr_next_helper.o
+00000000000002c6 s        1422457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+00000000000002c8 s 0644  1180      `
+ustr_next_helper.o
+0000000000000098 s 7685  10846 4215  100644  1180      `
+ustr_next_helper.o
+                 U 28           1422457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+                 U p
+                 U loc
+                 U 
+                 U 
+                 U ll
+                 U n
+                 U _ft_ustrsub
+0000000000000113 s 6 4215  100644  1180      `
+ustr_next_helper.o
+00000000000002c8 s 80      `
+ustr_next_helper.o
+                 U mcpy
+                 U ing_fill
+00000000000002ff s 
+                 s per.o
+0000000000000196 s  100644  1180      `
+ustr_next_helper.o
+0000000000000248 s 846 4215  100644  1180      `
+ustr_next_helper.o
+000000000000023e s char_tos
+000000000000023f s         1422457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+0000000000000280 s 10846 4215  100644  1180      `
+ustr_next_helper.o
+0000000000000278 s 
+#1/28           1422457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+00000000000000a6 s 28           1422457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+                 U g_fill
+                 U _ft_memalloc
+                 s frame1
+                 U ft_ustrnew
+                 U ft_ustrlen
+                 U rnew
+                 U ft_ustrdup
+                 U     1422457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+0000000000000241 s     1422457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+000000000000004a s 1
+                 U 
+                 U _ustring_fill
+                 U 
+                 U _ft_ustrsub
+                 U ft_ustrlen
+                 U 
+                 s 22457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+000000000000020b S 
+
+
+
+#1/28           1422457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+00000000000000fb s 0846 4215  100644  1180      `
+ustr_next_helper.o
+0000000000000103 s 22457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+                 U char_tos
+00000000000001c8 S mcpy
+                 U _ft_ustrsub
+                 U c
+                 U tos
+0000000000000268 s 6 4215  100644  1180      `
+ustr_next_helper.o
+                 U         1422457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+0000000000000230 S ame1
+                 U ew
+                 s    1422457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+                 U _ft_ustrsub
+                 U trsub
+                 U trnew
+                 U 
+                 U p
+00000000000000d5 s 1422457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+0000000000000313 S 1422457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+0000000000000228 s 
+
+#1/28           1422457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+00000000000000dd S ft_memcpy
+                 U p
+00000000000001fa S loc
+000000000000011a S _ustring_fill
+                 U strsub
+                 U 
+                 U strnew
+                 U mcpy
+0000000000000190 S g_fill
+                 U strlen
+                 s _tos
+                 S _ft_ustrsub
+0000000000000072 S ustrlen
+                 U ame1
+00000000000001f8 s 1/28           1422457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+00000000000001d0 s EH_frame1
+00000000000001e8 s H_frame1
+00000000000005c0 s H_frame1
+                 U _ft_memalloc
+                 U _ft_memcpy
+00000000000000eb S _ft_ustrdup
+                 U _ft_ustrlen
+0000000000000146 S _ft_ustrnew
+00000000000001e5 s os
+                 U ng_fill
+                 U emcpy
+00000000000003db S py
+00000000000000aa S strnew
+                 S _ft_ustrsub
+                 S _ft_ustrsub
+                 S _ft_ustrsub
+                 U _malloc
+0000000000000191 S _uchar_tos
+0000000000000080 S _ustring_fill
+0000000000000518 S loc
+                 U l
+                 U trlen
+0000000000000230 s me1
+000000000000021c s string_fill
+000000000000021f s ng_fill
+0000000000000221 s ill
+0000000000000223 s _malloc
+0000000000000226 s loc
+0000000000000228 s _ft_ustrdup
+00000000000000ca s 
+                 U _ft_ustrsub
+                 U 
+                 U n
+                 s ustrdup
+0000000000000148 S w
+0000000000000208 s alloc
+                 U oc
+                 U _tos
+                 U strlen
+000000000000018a S _ustring_fill
+00000000000001d0 S _ft_memalloc
+0000000000000214 S rame1
+                 S _ft_ustrsub
+000000000000008e S t_ustrnew
+0000000000000240 s ft_ustrdup
+0000000000000288 s ft_ustrdup
+0000000000000178 S 
+                 U py
+00000000000000b6 S ew
+000000000000004f S strlen
+                 S _ft_ustrsub
+                 S _ft_ustrsub
+0000000000000165 S _malloc
+0000000000000126 S tring_fill
+00000000000000c4 S _ft_ustrnew
+00000000000000e7 S ew
+                 U alloc
+                 U _fill
+                 U _memcpy
+000000000000012a S ing_fill
+                 U rlen
+                 s rdup
+0000000000000340 s 
+                 s ϊνώ
+0000000000000530 s r_next_helper.o
+0000000000000527 s 
+
+
+#1/28           1422457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+0000000000000529 s 1/28           1422457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+000000000000052a s 846 4215  100644  1180      `
+ustr_next_helper.o
+000000000000052d s 4215  100644  1180      `
+ustr_next_helper.o
+000000000000020f s   100644  1180      `
+ustr_next_helper.o
+                 U dup
+0000000000000c98 s 80      `
+ustr_next_helper.o
+00000000000001be S alloc
+0000000000000567 S loc
+00000000000000b0 s _ustring_fill
+0000000000000028 s ub
+                 U _ft_ustrsub
+                 S _ft_ustrsub
+                 U rdup
+00000000000000e2 S rdup
+                 U _ft_ustrsub
+                 S _ft_ustrsub
+000000000000011c S _ft_ustrsub
+                 U 
+
+
+#1/28           1422457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+                 U _uchar_tos
+000000000000040b S 22457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+                 U  `
+ustr_next_helper.o
+                 U strnew
+0000000000000145 s 457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+                 U ft_ustrlen
+                 U rlen
+                 U cpy
+                 U _fill
+                 U 
+                 U `
+ustr_next_helper.o
+000000000000036a s      `
+ustr_next_helper.o
+                 U 
+0000000000000473 S oc
+                 U trnew
+                 s            1422457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+                 U 644  1180      `
+ustr_next_helper.o
+                 U uchar_tos
+                 U rame1
+                 U 5  10846 4215  100644  1180      `
+ustr_next_helper.o
+                 U 
+                 U           1422457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+                 U per.o
+                 U dup
+00000000000001dd S memcpy
+0000000000000043 S b
+                 U ft_ustrlen
+                 U strnew
+000000000000005d S new
+0000000000000077 S 
+000000000000016b S _ft_memalloc
+00000000000000f1 S l
+0000000000000134 S loc
+000000000000019b S EH_frame1
+                 S _ft_ustrsub
+00000000000008ff S 
+#1/28           1422457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+                 U _ustrlen
+                 U c
+                 U _ft_ustrnew
+                 U ustring_fill
+                 U ll
+000000000000008c S t_memcpy
+0000000000000023 S ub
+0000000000000069 S ustrnew
+0000000000000046 S strlen
+                 U rdup
+                 U y
+                 S _ft_ustrsub
+0000000000000114 S y
+                 U dup
+                 U ew
+                 U 15  100644  1180      `
+ustr_next_helper.o
+                 U H_frame1
+                 U 22457685  10846 4215  100644  1180      `
+ustr_next_helper.o
+                 U strlen
+../unit_test/custom_tests/lib_stat/libftprintf.a(ustr_next_helper.o):
+00000000000003c0 s Α
+00000000000002a0 s 
+                 U utustr
+                 U t_memcpy
+                 U           1422457685  10846 4215  100644  1876      `
+wstr_helper.o
+                 U join
+                 U 
+                 U e1
+                 U 
+                 U p
+                 U 
+                 U 
+000000000000005a S ft_ustrnew
+                 S _ft_ustrlen
+                 U ite
+000000000000013b S wstr_helper.o
+0000000000000184 S 
+00000000000000d0 S 2457685  10846 4215  100644  1876      `
+wstr_helper.o
+                 U 44  1876      `
+wstr_helper.o
+                 U 
+                 U 
+                 U  4215  100644  1876      `
+wstr_helper.o
+                 s 
+                 U _ft_ustrlen
+                 U join
+                 U _putustr
+                 U ew
+                 U H_frame1
+                 U 
+                 U 0           1422457685  10846 4215  100644  1876      `
+wstr_helper.o
+                 U 2457685  10846 4215  100644  1876      `
+wstr_helper.o
+                 U _ft_ustrjoin
+                 U 4  1876      `
+wstr_helper.o
+                 U 10846 4215  100644  1876      `
+wstr_helper.o
+00000000000001ca s 
+                 U 
+                 U 
+                 U 
+                 U 
+                 U 
+0000000000000118 s 
+00000000000002d0 s 
+0000000000000508 s 
+00000000000004fe s 
+0000000000000500 s 
+0000000000000502 s 
+000000000000019c s 
+00000000000000a6 s 
+                 U _ft_putustr
+                 U 
+                 U tustr
+                 U _ft_ustrlen
+                 U y
+                 U .o
+00000000000002c6 s 876      `
+wstr_helper.o
+00000000000002c8 s νώ
+0000000000000098 s tr_helper.o
+                 U 644  1876      `
+wstr_helper.o
+                 U #1/20           1422457685  10846 4215  100644  1876      `
+wstr_helper.o
+                 U      1422457685  10846 4215  100644  1876      `
+wstr_helper.o
+                 U 
+                 U t_ustrnew
+                 U t_memcpy
+                 U r
+                 U _ft_ustrlen
+0000000000000113 s o
+00000000000002c8 s 
+                 U n
+                 U new
+00000000000002ff s 
+                 s 
+0000000000000196 s 
+0000000000000248 s r.o
+000000000000023e s 422457685  10846 4215  100644  1876      `
+wstr_helper.o
+000000000000023f s 1876      `
+wstr_helper.o
+0000000000000280 s per.o
+0000000000000278 s  100644  1876      `
+wstr_helper.o
+00000000000000a6 s 644  1876      `
+wstr_helper.o
+                 U w
+                 U /20           1422457685  10846 4215  100644  1876      `
+wstr_helper.o
+                 s 0846 4215  100644  1876      `
+wstr_helper.o
+                 U write
+                 U ft_putustr
+                 U _ft_ustrjoin
+                 U frame1
+                 U       `
+wstr_helper.o
+0000000000000241 s       `
+wstr_helper.o
+000000000000004a s 4215  100644  1876      `
+wstr_helper.o
+                 U ustrjoin
+                 U _ustrnew
+                 U 1/20           1422457685  10846 4215  100644  1876      `
+wstr_helper.o
+                 U _ft_ustrlen
+                 U ft_putustr
+                 U H_frame1
+                 s `
+wstr_helper.o
+000000000000020b S 15  100644  1876      `
+wstr_helper.o
+00000000000000fb s er.o
+0000000000000103 s `
+wstr_helper.o
+                 U 422457685  10846 4215  100644  1876      `
+wstr_helper.o
+00000000000001c8 S n
+                 U _ft_ustrlen
+                 U    1422457685  10846 4215  100644  1876      `
+wstr_helper.o
+                 U 7685  10846 4215  100644  1876      `
+wstr_helper.o
+0000000000000268 s o
+                 U 1876      `
+wstr_helper.o
+0000000000000230 S 46 4215  100644  1876      `
+wstr_helper.o
+                 U t_ustrjoin
+                 s      `
+wstr_helper.o
+                 U _ft_ustrlen
+                 U trlen
+                 U 
+                 U H_frame1
+                 U #1/20           1422457685  10846 4215  100644  1876      `
+wstr_helper.o
+00000000000000d5 s   `
+wstr_helper.o
+0000000000000313 S   `
+wstr_helper.o
+0000000000000228 s   100644  1876      `
+wstr_helper.o
+00000000000000dd S trjoin
+                 U #1/20           1422457685  10846 4215  100644  1876      `
+wstr_helper.o
+00000000000001fa S      1422457685  10846 4215  100644  1876      `
+wstr_helper.o
+000000000000011a S _ustrnew
+                 U strlen
+                 U H_frame1
+                 U e
+                 U n
+0000000000000190 S w
+                 U utustr
+                 s 57685  10846 4215  100644  1876      `
+wstr_helper.o
+                 S _ft_ustrlen
+0000000000000072 S putustr
+                 U 46 4215  100644  1876      `
+wstr_helper.o
+00000000000001f8 s 00644  1876      `
+wstr_helper.o
+00000000000001d0 s   10846 4215  100644  1876      `
+wstr_helper.o
+00000000000001e8 s  10846 4215  100644  1876      `
+wstr_helper.o
+00000000000005c0 s  10846 4215  100644  1876      `
+wstr_helper.o
+                 U /20           1422457685  10846 4215  100644  1876      `
+wstr_helper.o
+                 U strjoin
+00000000000000eb S _frame1
+                 U _ft_putustr
+0000000000000146 S _write
+00000000000001e5 s 685  10846 4215  100644  1876      `
+wstr_helper.o
+                 U ew
+                 U in
+00000000000003db S _ft_ustrnew
+00000000000000aa S e
+                 S _ft_ustrlen
+                 S _ft_ustrlen
+                 S _ft_ustrlen
+                 U emcpy
+0000000000000191 S  1422457685  10846 4215  100644  1876      `
+wstr_helper.o
+0000000000000080 S _ustrnew
+0000000000000518 S      1422457685  10846 4215  100644  1876      `
+wstr_helper.o
+                 U _memcpy
+                 U tustr
+0000000000000230 s 6 4215  100644  1876      `
+wstr_helper.o
+000000000000021c s strnew
+000000000000021f s ew
+0000000000000221 s ft_memcpy
+0000000000000223 s emcpy
+0000000000000226 s y
+0000000000000228 s _frame1
+00000000000000ca s   1422457685  10846 4215  100644  1876      `
+wstr_helper.o
+                 U _ft_ustrlen
+                 U 
+                 U r
+                 s me1
+0000000000000148 S _ustrjoin
+0000000000000208 s        1422457685  10846 4215  100644  1876      `
+wstr_helper.o
+                 U 
+                 U 57685  10846 4215  100644  1876      `
+wstr_helper.o
+                 U utustr
+000000000000018a S _ustrnew
+00000000000001d0 S /20           1422457685  10846 4215  100644  1876      `
+wstr_helper.o
+0000000000000214 S 846 4215  100644  1876      `
+wstr_helper.o
+                 S _ft_ustrlen
+000000000000008e S rite
+0000000000000240 s frame1
+0000000000000288 s frame1
+0000000000000178 S memcpy
+                 U _ft_ustrnew
+00000000000000b6 S t_ustrjoin
+000000000000004f S utustr
+                 S _ft_ustrlen
+                 S _ft_ustrlen
+0000000000000165 S emcpy
+0000000000000126 S trnew
+00000000000000c4 S _write
+00000000000000e7 S t_ustrjoin
+                 U cpy
+                 U 
+                 U join
+000000000000012a S new
+                 U ustr
+                 s 
+0000000000000340 s 
+                 s 
+0000000000000530 s 
+0000000000000527 s 5  100644  1876      `
+wstr_helper.o
+0000000000000529 s 00644  1876      `
+wstr_helper.o
+000000000000052a s r.o
+000000000000052d s 
+000000000000020f s 
+                 U 
+0000000000000c98 s 
+0000000000000128 s EH_frame1
+                 U _ft_memcpy
+000000000000003c S _ft_putustr
+000000000000006a S _ft_ustrjoin
+00000000000001be S cpy
+0000000000000567 S      1422457685  10846 4215  100644  1876      `
+wstr_helper.o
+00000000000000b0 s _ustrnew
+0000000000000028 s en
+                 U _ft_ustrlen
+                 S _ft_ustrlen
+                 U 
+00000000000000e2 S 
+                 U _ft_ustrlen
+                 S _ft_ustrlen
+                 S _ft_ustrlen
+000000000000011c S _ft_ustrlen
+                 U 5  100644  1876      `
+wstr_helper.o
+                 U  1422457685  10846 4215  100644  1876      `
+wstr_helper.o
+000000000000040b S `
+wstr_helper.o
+                 U 
+                 U e
+0000000000000145 s wstr_helper.o
+                 U ft_putustr
+                 U ustr
+                 U 
+                 U 
+                 U   1422457685  10846 4215  100644  1876      `
+wstr_helper.o
+                 U 
+000000000000036a s 
+                 U 5  10846 4215  100644  1876      `
+wstr_helper.o
+0000000000000473 S 
+                 U 
+                 s 4  1876      `
+wstr_helper.o
+                 U _ft_ustrnew
+                 U _write
+                 U ώ
+                 U 1422457685  10846 4215  100644  1876      `
+wstr_helper.o
+                 U 846 4215  100644  1876      `
+wstr_helper.o
+                 U helper.o
+                 U memcpy
+                 U   1876      `
+wstr_helper.o
+                 U 
+                 U 
+00000000000001dd S oin
+0000000000000043 S n
+                 U ft_putustr
+                 U e
+000000000000005d S ft_ustrjoin
+0000000000000077 S 
+000000000000016b S /20           1422457685  10846 4215  100644  1876      `
+wstr_helper.o
+00000000000000f1 S _memcpy
+0000000000000134 S      1422457685  10846 4215  100644  1876      `
+wstr_helper.o
+000000000000019b S   10846 4215  100644  1876      `
+wstr_helper.o
+                 S _ft_ustrlen
+00000000000008ff S  100644  1876      `
+wstr_helper.o
+                 U _putustr
+                 U EH_frame1
+                 U _write
+                 U ustrnew
+                 U t_memcpy
+000000000000008c S rjoin
+0000000000000023 S en
+0000000000000069 S te
+0000000000000046 S utustr
+                 U 
+                 U ft_ustrnew
+                 S _ft_ustrlen
+0000000000000114 S ft_ustrnew
+                 U 
+                 U t_ustrjoin
+                 U 
+                 U  10846 4215  100644  1876      `
+wstr_helper.o
+                 U `
+wstr_helper.o
+                 U utustr
+../unit_test/custom_tests/lib_stat/libftprintf.a(wstr_helper.o):
+00000000000003c0 s 
+00000000000002a0 s 
+                 U t_wchar
+                 U ft_wstrlen
+                 U ar_tos
+                 U mcpy
+                 U 
+                 U strdup
+                 U er.o
+                 U 
+                 U 
+                 U tr_next_helper.o
+000000000000005a S ft_wstrjoin
+                 S _ft_wstrsub
+                 U alloc
+000000000000013b S 457685  10846 4215  100644  972       `
+wstr_next_helper.o
+0000000000000184 S 72       `
+wstr_next_helper.o
+00000000000000d0 S ng_fill
+                 U 8           1422457685  10846 4215  100644  972       `
+wstr_next_helper.o
+                 U   100644  972       `
+wstr_next_helper.o
+                 U 
+                 U me1
+                 s 
+                 U _ft_wstrsub
+                 U mcpy
+                 U unt_wchar
+                 U oin
+                 U 
+                 U 215  100644  972       `
+wstr_next_helper.o
+                 U char_tos
+                 U ng_fill
+                 U c
+                 U            1422457685  10846 4215  100644  972       `
+wstr_next_helper.o
+                 U H_frame1
+00000000000001ca s 
+                 U 
+                 U 72       `
+wstr_next_helper.o
+                 U 
+                 U t_helper.o
+                 U 
+0000000000000118 s 
+00000000000002d0 s   972       `
+wstr_next_helper.o
+0000000000000508 s 
+00000000000004fe s _helper.o
+0000000000000500 s Οϊνώ
+0000000000000502 s 
+000000000000019c s 
+00000000000000a6 s 
+                 U _count_wchar
+                 U  972       `
+wstr_next_helper.o
+                 U _wchar
+                 U _ft_wstrsub
+                 U len
+                 U 46 4215  100644  972       `
+wstr_next_helper.o
+00000000000002c6 s        1422457685  10846 4215  100644  972       `
+wstr_next_helper.o
+00000000000002c8 s 0644  972       `
+wstr_next_helper.o
+0000000000000098 s 7685  10846 4215  100644  972       `
+wstr_next_helper.o
+                 U 28           1422457685  10846 4215  100644  972       `
+wstr_next_helper.o
+                 U p
+                 U s
+                 U 
+                 U t_wstrjoin
+                 U ft_wstrlen
+                 U ar
+                 U _ft_wstrsub
+0000000000000113 s 6 4215  100644  972       `
+wstr_next_helper.o
+00000000000002c8 s 2       `
+wstr_next_helper.o
+                 U y
+                 U join
+00000000000002ff s 
+                 s per.o
+0000000000000196 s  100644  972       `
+wstr_next_helper.o
+0000000000000248 s 846 4215  100644  972       `
+wstr_next_helper.o
+000000000000023e s ring_fill
+000000000000023f s         1422457685  10846 4215  100644  972       `
+wstr_next_helper.o
+0000000000000280 s 10846 4215  100644  972       `
+wstr_next_helper.o
+0000000000000278 s 
+00000000000000a6 s 28           1422457685  10846 4215  100644  972       `
+wstr_next_helper.o
+                 U in
+                 U _wchar_tos
+                 s _frame1
+                 U _malloc
+                 U count_wchar
+                 U c
+                 U ft_wstrdup
+                 U     1422457685  10846 4215  100644  972       `
+wstr_next_helper.o
+0000000000000241 s     1422457685  10846 4215  100644  972       `
+wstr_next_helper.o
+000000000000004a s e1
+                 U t_memcpy
+                 U _wstrjoin
+                 U 
+                 U _ft_wstrsub
+                 U count_wchar
+                 U 
+                 s 22457685  10846 4215  100644  972       `
+wstr_next_helper.o
+000000000000020b S 
+00000000000000fb s 0846 4215  100644  972       `
+wstr_next_helper.o
+0000000000000103 s 22457685  10846 4215  100644  972       `
+wstr_next_helper.o
+                 U ring_fill
+00000000000001c8 S y
+                 U _ft_wstrsub
+                 U _wstring_fill
+                 U fill
+0000000000000268 s 6 4215  100644  972       `
+wstr_next_helper.o
+                 U         1422457685  10846 4215  100644  972       `
+wstr_next_helper.o
+0000000000000230 S rame1
+                 U _ft_memcpy
+                 s    1422457685  10846 4215  100644  972       `
+wstr_next_helper.o
+                 U _ft_wstrsub
+                 U trsub
+                 U oc
+                 U 
+                 U p
+00000000000000d5 s 1422457685  10846 4215  100644  972       `
+wstr_next_helper.o
+0000000000000313 S 1422457685  10846 4215  100644  972       `
+wstr_next_helper.o
+0000000000000228 s 
+00000000000000dd S memcpy
+                 U p
+00000000000001fa S s
+000000000000011a S _wstrjoin
+                 U strsub
+                 U 
+                 U loc
+                 U y
+0000000000000190 S in
+                 U t_wchar
+                 s _fill
+                 S _ft_wstrsub
+0000000000000072 S nt_wchar
+                 U rame1
+00000000000001f8 s 1/28           1422457685  10846 4215  100644  972       `
+wstr_next_helper.o
+00000000000001d0 s 
+00000000000001e8 s EH_frame1
+00000000000002c8 s EH_frame1
+00000000000005c0 s EH_frame1
+                 U _count_wchar
+                 U _ft_memcpy
+                 U _wchar_tos
+                 U _memcpy
+00000000000000eb S _ft_wstrdup
+                 U _count_wchar
+0000000000000146 S 
+00000000000001a1 S _ft_wstrdup
+00000000000000aa S _ft_wstrjoin
+00000000000001e5 s ill
+                 U oin
+                 U py
+00000000000003db S _ft_wstrjoin
+                 U _ft_wstrlen
+00000000000000aa S loc
+                 S _ft_wstrsub
+                 S _ft_wstrsub
+                 S _ft_wstrsub
+                 S _ft_wstrsub
+                 U _malloc
+0000000000000207 S _wchar_tos
+0000000000000244 S _wstring_fill
+                 U wstrlen
+0000000000000191 S string_fill
+0000000000000080 S _wstrjoin
+0000000000000518 S s
+                 U t_wstrlen
+                 U _wchar
+0000000000000230 s ame1
+000000000000021c s strjoin
+000000000000021f s oin
+0000000000000221 s _ft_wstrlen
+0000000000000223 s wstrlen
+0000000000000226 s len
+0000000000000228 s _ft_wstrdup
+00000000000000ca s wstring_fill
+                 U _ft_wstrsub
+                 U 
+                 U ar
+                 s wstrdup
+0000000000000148 S ft_memcpy
+0000000000000208 s tos
+                 U en
+                 U _fill
+                 U t_wchar
+000000000000018a S _wstrjoin
+00000000000001d0 S _wchar_tos
+0000000000000214 S frame1
+                 S _ft_wstrsub
+000000000000008e S malloc
+0000000000000240 s ft_wstrdup
+0000000000000288 s ft_wstrdup
+0000000000000178 S _wstrlen
+                 U _ft_wstrjoin
+00000000000000b6 S _ft_memcpy
+000000000000004f S t_wchar
+                 S _ft_wstrsub
+                 S _ft_wstrsub
+0000000000000165 S wstrlen
+0000000000000126 S trjoin
+00000000000000c4 S 
+00000000000000e7 S _ft_memcpy
+                 U trlen
+                 U n
+                 U mcpy
+000000000000012a S join
+                 U wchar
+                 s rdup
+0000000000000340 s 
+                 s ϊνώ
+0000000000000530 s r_next_helper.o
+0000000000000527 s 
+0000000000000529 s 1/28           1422457685  10846 4215  100644  972       `
+wstr_next_helper.o
+000000000000052a s 846 4215  100644  972       `
+wstr_next_helper.o
+000000000000052d s 4215  100644  972       `
+wstr_next_helper.o
+000000000000020f s   100644  972       `
+wstr_next_helper.o
+                 U dup
+0000000000000c98 s 2       `
+wstr_next_helper.o
+0000000000000128 s n
+                 U 
+000000000000003c S _count_wchar
+000000000000006a S c
+00000000000001be S trlen
+0000000000000567 S s
+00000000000000b0 s _wstrjoin
+0000000000000028 s ub
+                 U _ft_wstrsub
+                 S _ft_wstrsub
+                 U rdup
+00000000000000e2 S rdup
+                 U _ft_wstrsub
+                 S _ft_wstrsub
+                 S _ft_wstrsub
+000000000000011c S _ft_wstrsub
+                 U 
+                 U string_fill
+000000000000040b S 22457685  10846 4215  100644  972       `
+wstr_next_helper.o
+                 U  `
+wstr_next_helper.o
+                 U loc
+0000000000000145 s 457685  10846 4215  100644  972       `
+wstr_next_helper.o
+                 U count_wchar
+                 U wchar
+                 U 
+                 U n
+                 U wstring_fill
+                 U `
+wstr_next_helper.o
+000000000000036a s      `
+wstr_next_helper.o
+                 U l
+0000000000000473 S en
+                 U oc
+                 s            1422457685  10846 4215  100644  972       `
+wstr_next_helper.o
+                 U _ft_wstrjoin
+                 U 
+                 U 644  972       `
+wstr_next_helper.o
+                 U tring_fill
+                 U frame1
+                 U 5  10846 4215  100644  972       `
+wstr_next_helper.o
+                 U _wstrlen
+                 U           1422457685  10846 4215  100644  972       `
+wstr_next_helper.o
+                 U per.o
+                 U dup
+00000000000001dd S cpy
+0000000000000043 S b
+                 U count_wchar
+                 U loc
+000000000000005d S 
+0000000000000077 S r
+000000000000016b S _wchar_tos
+00000000000000f1 S t_wstrlen
+0000000000000134 S s
+000000000000019b S 
+                 S _ft_wstrsub
+00000000000008ff S 
+                 U unt_wchar
+                 U n
+                 U 
+                 U wstrjoin
+                 U ft_wstrlen
+000000000000008c S emcpy
+0000000000000023 S ub
+0000000000000069 S lloc
+0000000000000046 S t_wchar
+                 U rdup
+                 U ft_wstrjoin
+                 S _ft_wstrsub
+0000000000000114 S ft_wstrjoin
+                 U dup
+                 U _ft_memcpy
+                 U 15  100644  972       `
+wstr_next_helper.o
+                 U EH_frame1
+                 U 22457685  10846 4215  100644  972       `
+wstr_next_helper.o
+                 U t_wchar
+../unit_test/custom_tests/lib_stat/libftprintf.a(wstr_next_helper.o):
+00000000000003c0 s p
+00000000000002a0 s _text
+                 U able
+                 U ame1
+                 U 7685  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 U oc
+                 U 
+                 U      1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 U 
+                 U °
+                 U 
+                 U 
+000000000000005a S _memcpy
+                 S _ft_wstrjoin_nullable
+                 U strlen
+000000000000013b S .o
+0000000000000184 S 
+00000000000000d0 S 215  100644  1356      `
+wstr_size_helper.o
+                 U wstr_size_helper.o
+                 U 
+                 U 
+                 U 356      `
+wstr_size_helper.o
+                 s 
+                 U _ft_wstrjoin_nullable
+                 U oc
+                 U llable
+                 U EH_frame1
+                 U            1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 U ώ
+                 U 457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 U 215  100644  1356      `
+wstr_size_helper.o
+                 U en
+                 U str_size_helper.o
+                 U 44  1356      `
+wstr_size_helper.o
+00000000000001ca s 
+                 U 
+                 U 
+                 U 
+                 U θ
+                 U 
+0000000000000118 s 
+00000000000002d0 s 
+0000000000000508 s 
+00000000000004fe s 
+0000000000000500 s 
+0000000000000502 s 
+000000000000019c s 
+00000000000000a6 s °
+                 U _nullable
+                 U 
+                 U ble
+                 U _ft_wstrjoin_nullable
+                 U /28           1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 U 
+00000000000002c6 s size_helper.o
+00000000000002c8 s 
+0000000000000098 s 
+                 U 
+wstr_size_helper.o
+                 U 1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 U  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 U n_nullable
+                 U memcpy
+                 U ame1
+                 U _ft_wstrlen
+                 U _ft_wstrjoin_nullable
+0000000000000113 s Οϊνώ
+00000000000002c8 s 
+                 U _ft_memcpy
+                 U 
+00000000000002ff s 
+                 s 
+0000000000000196 s 
+0000000000000248 s 
+000000000000023e s  4215  100644  1356      `
+wstr_size_helper.o
+000000000000023f s _size_helper.o
+0000000000000280 s 
+0000000000000278 s    `
+wstr_size_helper.o
+00000000000000a6 s 
+wstr_size_helper.o
+                 U H_frame1
+                 U 22457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 s 4  1356      `
+wstr_size_helper.o
+                 U _wstrlen
+                 U nullable
+                 U en
+                 U          1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 U e_helper.o
+0000000000000241 s e_helper.o
+000000000000004a s 56      `
+wstr_size_helper.o
+                 U malloc
+                 U emcpy
+                 U 422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 U _ft_wstrjoin_nullable
+                 U nullable
+                 U            1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 s er.o
+000000000000020b S       `
+wstr_size_helper.o
+00000000000000fb s 
+0000000000000103 s er.o
+                 U  4215  100644  1356      `
+wstr_size_helper.o
+00000000000001c8 S _ft_memcpy
+                 U _ft_wstrjoin_nullable
+                 U 0846 4215  100644  1356      `
+wstr_size_helper.o
+                 U   100644  1356      `
+wstr_size_helper.o
+0000000000000268 s Οϊνώ
+                 U _size_helper.o
+0000000000000230 S  1356      `
+wstr_size_helper.o
+                 U 
+                 s _helper.o
+                 U _ft_wstrjoin_nullable
+                 U trjoin_nullable
+                 U len
+                 U            1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 U 1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+00000000000000d5 s lper.o
+0000000000000313 S lper.o
+0000000000000228 s     `
+wstr_size_helper.o
+00000000000000dd S lloc
+                 U 1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+00000000000001fa S  10846 4215  100644  1356      `
+wstr_size_helper.o
+000000000000011a S emcpy
+                 U strjoin_nullable
+                 U            1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 U rlen
+                 U _ft_memcpy
+0000000000000190 S H_frame1
+                 U able
+                 s 5  100644  1356      `
+wstr_size_helper.o
+                 S _ft_wstrjoin_nullable
+0000000000000072 S lable
+                 U  1356      `
+wstr_size_helper.o
+00000000000001f8 s  `
+wstr_size_helper.o
+00000000000001d0 s 0644  1356      `
+wstr_size_helper.o
+00000000000001e8 s 644  1356      `
+wstr_size_helper.o
+00000000000002c8 s 644  1356      `
+wstr_size_helper.o
+00000000000005c0 s 644  1356      `
+wstr_size_helper.o
+                 U _nullable
+                 U 
+                 U 22457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 U alloc
+00000000000000eb S           1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 U _nullable
+0000000000000146 S t_wstrlen
+00000000000001a1 S           1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+00000000000000aa S t_memcpy
+00000000000001e5 s  100644  1356      `
+wstr_size_helper.o
+                 U EH_frame1
+                 U 
+00000000000003db S t_memcpy
+                 U rame1
+00000000000000aa S rlen
+                 S _ft_wstrjoin_nullable
+                 S _ft_wstrjoin_nullable
+                 S _ft_wstrjoin_nullable
+                 S _ft_wstrjoin_nullable
+                 U _wstrlen
+0000000000000207 S 22457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+0000000000000244 S 0846 4215  100644  1356      `
+wstr_size_helper.o
+                 U 1
+0000000000000191 S 46 4215  100644  1356      `
+wstr_size_helper.o
+0000000000000080 S emcpy
+0000000000000518 S  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 U me1
+                 U ble
+0000000000000230 s 1356      `
+wstr_size_helper.o
+000000000000021c s cpy
+000000000000021f s EH_frame1
+0000000000000221 s rame1
+0000000000000223 s 1
+0000000000000226 s /28           1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+0000000000000228 s           1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+00000000000000ca s 846 4215  100644  1356      `
+wstr_size_helper.o
+                 U _ft_wstrjoin_nullable
+                 U n_nullable
+                 U _ft_wstrlen
+                 s       1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+0000000000000148 S _malloc
+0000000000000208 s 5  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 U 28           1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 U 5  100644  1356      `
+wstr_size_helper.o
+                 U able
+000000000000018a S emcpy
+00000000000001d0 S 22457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+0000000000000214 S   1356      `
+wstr_size_helper.o
+                 S _ft_wstrjoin_nullable
+000000000000008e S wstrlen
+0000000000000240 s          1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+0000000000000288 s          1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+0000000000000178 S e1
+                 U t_memcpy
+00000000000000b6 S 
+000000000000004f S able
+                 S _ft_wstrjoin_nullable
+                 S _ft_wstrjoin_nullable
+0000000000000165 S 1
+0000000000000126 S py
+00000000000000c4 S t_wstrlen
+00000000000000e7 S 
+                 U #1/28           1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 U _frame1
+                 U oc
+000000000000012a S 
+                 U le
+                 s    1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+0000000000000340 s 
+                 s 
+0000000000000530 s 
+0000000000000527 s      `
+wstr_size_helper.o
+0000000000000529 s  `
+wstr_size_helper.o
+000000000000052a s 
+000000000000052d s νώ
+000000000000020f s 
+                 U   1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+0000000000000c98 s 
+0000000000000128 s 8           1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 U frame1
+000000000000003c S _nullable
+000000000000006a S en
+00000000000001be S #1/28           1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+0000000000000567 S  10846 4215  100644  1356      `
+wstr_size_helper.o
+0000000000000128 s EH_frame1
+                 U _ft_memcpy
+00000000000000b0 s emcpy
+0000000000000028 s oin_nullable
+                 U _ft_wstrjoin_nullable
+                 S _ft_wstrjoin_nullable
+                 U    1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+00000000000000e2 S    1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 U _ft_wstrjoin_nullable
+                 S _ft_wstrjoin_nullable
+                 S _ft_wstrjoin_nullable
+                 S _ft_wstrjoin_nullable
+000000000000011c S _ft_wstrjoin_nullable
+                 U      `
+wstr_size_helper.o
+                 U 46 4215  100644  1356      `
+wstr_size_helper.o
+000000000000040b S er.o
+                 U  
+                 U rlen
+0000000000000145 s .o
+                 U nullable
+                 U le
+                 U ft_memcpy
+                 U _frame1
+                 U 846 4215  100644  1356      `
+wstr_size_helper.o
+                 U 
+000000000000036a s 
+                 U 00644  1356      `
+wstr_size_helper.o
+0000000000000473 S 28           1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 U len
+                 s str_size_helper.o
+                 U t_memcpy
+                 U t_wstrlen
+                 U 
+                 U 6 4215  100644  1356      `
+wstr_size_helper.o
+                 U   1356      `
+wstr_size_helper.o
+                 U 
+                 U _ft_wstrlen
+                 U _malloc
+                 U e1
+                 U tr_size_helper.o
+                 U 
+                 U   1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+00000000000001dd S c
+0000000000000043 S in_nullable
+                 U nullable
+                 U rlen
+000000000000005d S n
+0000000000000077 S ft_wstrlen
+000000000000016b S 22457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+00000000000000f1 S me1
+0000000000000134 S  10846 4215  100644  1356      `
+wstr_size_helper.o
+000000000000019b S 0644  1356      `
+wstr_size_helper.o
+                 S _ft_wstrjoin_nullable
+00000000000008ff S    `
+wstr_size_helper.o
+                 U llable
+                 U 8           1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 U t_wstrlen
+                 U mcpy
+                 U ame1
+000000000000008c S loc
+0000000000000023 S oin_nullable
+0000000000000069 S trlen
+0000000000000046 S able
+                 U    1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 U _memcpy
+                 S _ft_wstrjoin_nullable
+0000000000000114 S _memcpy
+                 U   1422457685  10846 4215  100644  1356      `
+wstr_size_helper.o
+                 U 
+                 U 
+                 U 644  1356      `
+wstr_size_helper.o
+                 U er.o
+                 U able
+../unit_test/custom_tests/lib_stat/libftprintf.a(wstr_size_helper.o):
+00000000000003c0 s 
+00000000000002a0 s 
+                 U s
+                 U strlen
+                 U           1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U 
+                 U 
+                 U 
+                 U 
+                 U 0
+                 U 
+                 U 
+000000000000005a S t_wchar
+                 S _get_unicode_bytes
+                 U its
+000000000000013b S wstr_byte_helper.o
+0000000000000184 S ϊνώ
+00000000000000d0 S 2457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U 44  1740      `
+wstr_byte_helper.o
+                 U 
+                 U 
+                 U  4215  100644  1740      `
+wstr_byte_helper.o
+                 s 
+                 U _get_unicode_bytes
+                 U 
+                 U tes
+                 U _ft_wstrlen
+                 U frame1
+                 U r.o
+                 U 8           1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U 2457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U _wsizeof
+                 U 4  1740      `
+wstr_byte_helper.o
+                 U 10846 4215  100644  1740      `
+wstr_byte_helper.o
+00000000000001ca s _TEXT
+                 U 
+                 U ϊνώ
+                 U 
+                 U P
+                 U 
+0000000000000118 s 
+00000000000002d0 s 
+0000000000000508 s 
+00000000000004fe s 
+0000000000000500 s 
+0000000000000502 s 
+000000000000019c s 
+00000000000000a6 s 
+                 U _bytes
+                 U 
+                 U 
+                 U _get_unicode_bytes
+                 U EH_frame1
+                 U elper.o
+00000000000002c6 s 740      `
+wstr_byte_helper.o
+00000000000002c8 s 
+0000000000000098 s tr_byte_helper.o
+                 U 644  1740      `
+wstr_byte_helper.o
+                 U #1/28           1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U      1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U e_bytes
+                 U _wchar
+                 U strlen
+                 U unt_bits
+                 U _get_unicode_bytes
+0000000000000113 s lper.o
+00000000000002c8 s νώ
+                 U ount_wchar
+                 U 
+00000000000002ff s 
+                 s  
+0000000000000196 s 
+0000000000000248 s helper.o
+000000000000023e s 422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+000000000000023f s 1740      `
+wstr_byte_helper.o
+0000000000000280 s e_helper.o
+0000000000000278 s  100644  1740      `
+wstr_byte_helper.o
+00000000000000a6 s 644  1740      `
+wstr_byte_helper.o
+                 U ft_wstrlen
+                 U /28           1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 s 0846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U _bits
+                 U bytes
+                 U _wsizeof
+                 U ame1
+                 U       `
+wstr_byte_helper.o
+0000000000000241 s       `
+wstr_byte_helper.o
+000000000000004a s 4215  100644  1740      `
+wstr_byte_helper.o
+                 U zeof
+                 U wchar
+                 U 1/28           1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U _get_unicode_bytes
+                 U bytes
+                 U frame1
+                 s `
+wstr_byte_helper.o
+000000000000020b S 15  100644  1740      `
+wstr_byte_helper.o
+00000000000000fb s _helper.o
+0000000000000103 s `
+wstr_byte_helper.o
+                 U 422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+00000000000001c8 S ount_wchar
+                 U _get_unicode_bytes
+                 U    1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U 7685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+0000000000000268 s lper.o
+                 U 1740      `
+wstr_byte_helper.o
+0000000000000230 S 46 4215  100644  1740      `
+wstr_byte_helper.o
+                 U sizeof
+                 s      `
+wstr_byte_helper.o
+                 U _get_unicode_bytes
+                 U nicode_bytes
+                 U 
+                 U frame1
+                 U #1/28           1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+00000000000000d5 s   `
+wstr_byte_helper.o
+0000000000000313 S   `
+wstr_byte_helper.o
+0000000000000228 s   100644  1740      `
+wstr_byte_helper.o
+00000000000000dd S of
+                 U #1/28           1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+00000000000001fa S      1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+000000000000011a S wchar
+                 U unicode_bytes
+                 U frame1
+                 U s
+                 U ount_wchar
+0000000000000190 S ft_wstrlen
+                 U s
+                 s 57685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 S _get_unicode_bytes
+0000000000000072 S es
+                 U 46 4215  100644  1740      `
+wstr_byte_helper.o
+00000000000001f8 s 00644  1740      `
+wstr_byte_helper.o
+00000000000001d0 s   10846 4215  100644  1740      `
+wstr_byte_helper.o
+00000000000001e8 s  10846 4215  100644  1740      `
+wstr_byte_helper.o
+00000000000002c8 s  10846 4215  100644  1740      `
+wstr_byte_helper.o
+00000000000005c0 s  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U _bytes
+                 U sizeof
+                 U /28           1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U eof
+00000000000000eb S rame1
+                 U _bytes
+0000000000000146 S t_bits
+00000000000001a1 S rame1
+00000000000000aa S nt_wchar
+00000000000001e5 s 685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U _ft_wstrlen
+                 U count_wchar
+00000000000003db S nt_wchar
+                 U wstrlen
+00000000000000aa S s
+                 S _get_unicode_bytes
+                 S _get_unicode_bytes
+                 S _get_unicode_bytes
+                 S _get_unicode_bytes
+                 U _bits
+0000000000000207 S /28           1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+0000000000000244 S    1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U len
+0000000000000191 S  1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+0000000000000080 S wchar
+0000000000000518 S      1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U trlen
+                 U 
+0000000000000230 s 6 4215  100644  1740      `
+wstr_byte_helper.o
+000000000000021c s har
+000000000000021f s _ft_wstrlen
+0000000000000221 s wstrlen
+0000000000000223 s len
+0000000000000226 s EH_frame1
+0000000000000228 s rame1
+00000000000000ca s   1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U _get_unicode_bytes
+                 U e_bytes
+                 U unt_bits
+                 s 1
+0000000000000148 S izeof
+0000000000000208 s        1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U H_frame1
+                 U 57685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U s
+000000000000018a S wchar
+00000000000001d0 S /28           1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+0000000000000214 S 846 4215  100644  1740      `
+wstr_byte_helper.o
+                 S _get_unicode_bytes
+000000000000008e S bits
+0000000000000240 s ame1
+0000000000000288 s ame1
+0000000000000178 S rlen
+                 U nt_wchar
+00000000000000b6 S sizeof
+000000000000004f S s
+                 S _get_unicode_bytes
+                 S _get_unicode_bytes
+0000000000000165 S len
+0000000000000126 S ar
+00000000000000c4 S t_bits
+00000000000000e7 S sizeof
+                 U n
+                 U t_wstrlen
+                 U 
+000000000000012a S 
+                 U _count_bits
+                 s 
+
+
+#1/28           1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+0000000000000340 s 
+                 s 
+0000000000000530 s 
+0000000000000527 s 5  100644  1740      `
+wstr_byte_helper.o
+0000000000000529 s 00644  1740      `
+wstr_byte_helper.o
+0000000000000180 s EH_frame1
+0000000000000028 S _count_bits
+00000000000000b3 S _count_wchar
+0000000000000144 S _ft_wstrlen
+000000000000052a s helper.o
+000000000000052d s er.o
+000000000000020f s 
+                 U 
+
+#1/28           1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+0000000000000c98 s νώ
+0000000000000128 s _frame1
+                 U _wstrlen
+000000000000003c S _bytes
+000000000000006a S _wsizeof
+00000000000001be S n
+0000000000000567 S      1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+0000000000000128 s _ft_wstrlen
+                 U ount_wchar
+00000000000000b0 s wchar
+0000000000000028 s ode_bytes
+                 U _get_unicode_bytes
+                 S _get_unicode_bytes
+                 U 
+
+
+#1/28           1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+00000000000000e2 S 
+
+
+#1/28           1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U _get_unicode_bytes
+                 S _get_unicode_bytes
+                 S _get_unicode_bytes
+                 S _get_unicode_bytes
+                 S _get_unicode_bytes
+000000000000011c S _get_unicode_bytes
+                 U 5  100644  1740      `
+wstr_byte_helper.o
+                 U  1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+000000000000040b S `
+wstr_byte_helper.o
+                 U 
+                 U s
+0000000000000145 s wstr_byte_helper.o
+                 U bytes
+                 U _count_bits
+                 U unt_wchar
+                 U t_wstrlen
+                 U   1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U 
+000000000000036a s 
+                 U 5  10846 4215  100644  1740      `
+wstr_byte_helper.o
+0000000000000473 S H_frame1
+                 U 
+                 s 4  1740      `
+wstr_byte_helper.o
+                 U nt_wchar
+                 U t_bits
+                 U 
+                 U 1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U 846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U byte_helper.o
+                 U unt_bits
+                 U izeof
+                 U rlen
+                 U   1740      `
+wstr_byte_helper.o
+                 U  
+                 U 
+
+#1/28           1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+00000000000001dd S _count_wchar
+000000000000004a S _wsizeof
+0000000000000043 S de_bytes
+                 U bytes
+                 U s
+000000000000005d S wsizeof
+0000000000000077 S nt_bits
+000000000000016b S /28           1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+00000000000000f1 S trlen
+0000000000000134 S      1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+000000000000019b S   10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 S _get_unicode_bytes
+00000000000008ff S  100644  1740      `
+wstr_byte_helper.o
+                 U tes
+                 U _frame1
+                 U t_bits
+                 U char
+                 U strlen
+000000000000008c S f
+0000000000000023 S ode_bytes
+0000000000000069 S ts
+0000000000000046 S s
+                 U 
+
+
+#1/28           1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U t_wchar
+                 S _get_unicode_bytes
+0000000000000114 S t_wchar
+                 U 
+
+#1/28           1422457685  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U sizeof
+                 U .o
+                 U  10846 4215  100644  1740      `
+wstr_byte_helper.o
+                 U `
+wstr_byte_helper.o
+                 U s
+../unit_test/custom_tests/lib_stat/libftprintf.a(wstr_byte_helper.o):
+00000000000003c0 s 
+00000000000002a0 s 
+                 U tes
+                 U yte_def
+                 U           1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+                 U _byte_start
+                 U 
+                 U 1
+                 U 
+                 U ψ
+                 U 
+                 U 
+000000000000005a S start
+                 S _int2bin
+                 U _bytes
+000000000000013b S wstr_display_helper.o
+0000000000000184 S ϊνώ
+00000000000000d0 S 2457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+                 U 44  2324      `
+wstr_display_helper.o
+                 U r.o
+                 U 
+                 U  4215  100644  2324      `
+wstr_display_helper.o
+                 s 
+                 U _int2bin
+                 U _byte_start
+                 U bytes
+                 U ill_byte_def
+                 U _frame1
+                 U lper.o
+                 U 8           1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+                 U 2457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+                 U es
+                 U 4  2324      `
+wstr_display_helper.o
+                 U 10846 4215  100644  2324      `
+wstr_display_helper.o
+00000000000001ca s _TEXT
+                 U 
+                 U ϊνώ
+                 U 
+                 U P
+                 U 
+0000000000000118 s 
+00000000000002d0 s 
+0000000000000508 s 
+00000000000004fe s 
+0000000000000500 s 
+0000000000000502 s 
+000000000000019c s 
+00000000000000a6 s 
+                 U py_bytes
+                 U 
+                 U es
+                 U _int2bin
+                 U 
+                 U y_helper.o
+00000000000002c6 s 324      `
+wstr_display_helper.o
+00000000000002c8 s 
+0000000000000098 s tr_display_helper.o
+                 U 644  2324      `
+wstr_display_helper.o
+                 U #1/28           1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+                 U      1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+                 U opy_bytes
+                 U tart
+                 U yte_def
+                 U parse_bytes
+                 U _int2bin
+0000000000000113 s _helper.o
+00000000000002c8 s νώ
+                 U te_start
+                 U fill_byte_def
+00000000000002ff s 
+                 s  
+0000000000000196 s .o
+0000000000000248 s ay_helper.o
+000000000000023e s 422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+000000000000023f s 2324      `
+wstr_display_helper.o
+0000000000000280 s play_helper.o
+0000000000000278 s  100644  2324      `
+wstr_display_helper.o
+00000000000000a6 s 644  2324      `
+wstr_display_helper.o
+                 U ll_byte_def
+                 U /28           1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+                 s 0846 4215  100644  2324      `
+wstr_display_helper.o
+                 U se_bytes
+                 U y_bytes
+                 U es
+                 U rame1
+                 U       `
+wstr_display_helper.o
+0000000000000241 s       `
+wstr_display_helper.o
+000000000000004a s 4215  100644  2324      `
+wstr_display_helper.o
+                 U fill_byte_start
+                 U art
+                 U 1/28           1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+                 U _int2bin
+                 U y_bytes
+                 U _frame1
+                 s `
+wstr_display_helper.o
+000000000000020b S 15  100644  2324      `
+wstr_display_helper.o
+00000000000000fb s lay_helper.o
+0000000000000103 s `
+wstr_display_helper.o
+                 U 422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+00000000000001c8 S te_start
+                 U _int2bin
+                 U    1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+                 U 7685  10846 4215  100644  2324      `
+wstr_display_helper.o
+0000000000000268 s _helper.o
+                 U 2324      `
+wstr_display_helper.o
+0000000000000230 S 46 4215  100644  2324      `
+wstr_display_helper.o
+                 U 
+                 s      `
+wstr_display_helper.o
+                 U _int2bin
+                 U in
+                 U tes
+                 U _frame1
+                 U #1/28           1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+00000000000000d5 s   `
+wstr_display_helper.o
+0000000000000313 S   `
+wstr_display_helper.o
+0000000000000228 s   100644  2324      `
+wstr_display_helper.o
+00000000000000dd S ll_byte_start
+                 U #1/28           1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+00000000000001fa S      1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+000000000000011a S art
+                 U bin
+                 U _frame1
+                 U ytes
+                 U te_start
+0000000000000190 S ll_byte_def
+                 U tes
+                 s 57685  10846 4215  100644  2324      `
+wstr_display_helper.o
+                 S _int2bin
+0000000000000072 S ytes
+                 U 46 4215  100644  2324      `
+wstr_display_helper.o
+00000000000001f8 s 00644  2324      `
+wstr_display_helper.o
+00000000000001d0 s   10846 4215  100644  2324      `
+wstr_display_helper.o
+00000000000001e8 s  10846 4215  100644  2324      `
+wstr_display_helper.o
+00000000000002c8 s  10846 4215  100644  2324      `
+wstr_display_helper.o
+00000000000005c0 s  10846 4215  100644  2324      `
+wstr_display_helper.o
+                 U py_bytes
+                 U 
+                 U /28           1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+                 U ill_byte_start
+00000000000000eb S frame1
+                 U py_bytes
+0000000000000146 S rse_bytes
+00000000000001a1 S frame1
+00000000000000aa S _start
+00000000000001e5 s 685  10846 4215  100644  2324      `
+wstr_display_helper.o
+                 U ill_byte_def
+                 U yte_start
+00000000000003db S _start
+                 U byte_def
+00000000000000aa S ytes
+                 S _int2bin
+                 S _int2bin
+                 S _int2bin
+                 S _int2bin
+                 U se_bytes
+0000000000000207 S /28           1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+0000000000000244 S    1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+                 U _def
+0000000000000191 S  1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+0000000000000080 S art
+0000000000000518 S      1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+                 U te_def
+                 U es
+0000000000000230 s 6 4215  100644  2324      `
+wstr_display_helper.o
+000000000000021c s t
+000000000000021f s ill_byte_def
+0000000000000221 s byte_def
+0000000000000223 s _def
+0000000000000226 s 
+0000000000000228 s frame1
+00000000000000ca s   1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+                 U _int2bin
+                 U opy_bytes
+                 U parse_bytes
+                 s e1
+0000000000000148 S _fill_byte_start
+0000000000000208 s        1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+                 U EH_frame1
+                 U 57685  10846 4215  100644  2324      `
+wstr_display_helper.o
+                 U tes
+000000000000018a S art
+00000000000001d0 S /28           1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+0000000000000214 S 846 4215  100644  2324      `
+wstr_display_helper.o
+                 S _int2bin
+000000000000008e S e_bytes
+0000000000000240 s rame1
+0000000000000288 s rame1
+0000000000000178 S e_def
+                 U _start
+00000000000000b6 S 
+000000000000004f S tes
+                 S _int2bin
+                 S _int2bin
+0000000000000165 S _def
+0000000000000126 S 
+00000000000000c4 S rse_bytes
+00000000000000e7 S 
+                 U ef
+                 U l_byte_def
+                 U _byte_start
+000000000000012a S fill_byte_def
+                 U s
+                 s 
+0000000000000340 s 
+                 s 
+0000000000000530 s 
+0000000000000527 s 5  100644  2324      `
+wstr_display_helper.o
+0000000000000529 s 00644  2324      `
+wstr_display_helper.o
+0000000000000180 s 
+0000000000000300 s EH_frame1
+0000000000000123 S _copy_bytes
+00000000000000c5 s _fill_byte_def
+0000000000000052 s _fill_byte_start
+0000000000000028 S s
+00000000000000b3 S byte_start
+0000000000000144 S ill_byte_def
+000000000000052a s ay_helper.o
+000000000000052d s elper.o
+000000000000020f s r.o
+                 U 
+0000000000000c98 s νώ
+0000000000000128 s H_frame1
+                 U _byte_def
+000000000000003c S py_bytes
+000000000000006a S es
+00000000000001be S ef
+0000000000000567 S      1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+0000000000000128 s ill_byte_def
+                 U te_start
+00000000000000b0 s art
+0000000000000028 s _copy_bytes
+                 U _int2bin
+                 S _int2bin
+                 U 
+00000000000000e2 S 
+                 U _int2bin
+                 S _int2bin
+                 S _int2bin
+                 S _int2bin
+                 S _int2bin
+                 S _int2bin
+000000000000011c S _int2bin
+                 U 5  100644  2324      `
+wstr_display_helper.o
+                 U  1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+000000000000040b S `
+wstr_display_helper.o
+                 U 
+                 U ytes
+0000000000000145 s wstr_display_helper.o
+                 U y_bytes
+                 U s
+                 U e_start
+                 U l_byte_def
+                 U   1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+                 U 
+000000000000036a s 
+                 U 5  10846 4215  100644  2324      `
+wstr_display_helper.o
+0000000000000473 S EH_frame1
+                 U tes
+                 s 4  2324      `
+wstr_display_helper.o
+                 U _start
+                 U rse_bytes
+                 U 
+                 U 1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+                 U 846 4215  100644  2324      `
+wstr_display_helper.o
+0000000000000233 S _parse_bytes
+                 U display_helper.o
+                 U parse_bytes
+                 U _fill_byte_start
+                 U e_def
+                 U   2324      `
+wstr_display_helper.o
+                 U  
+                 U 
+00000000000001dd S byte_start
+000000000000004a S es
+0000000000000043 S copy_bytes
+                 U y_bytes
+                 U ytes
+000000000000005d S s
+0000000000000077 S arse_bytes
+000000000000016b S /28           1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+00000000000000f1 S te_def
+0000000000000134 S      1422457685  10846 4215  100644  2324      `
+wstr_display_helper.o
+000000000000019b S   10846 4215  100644  2324      `
+wstr_display_helper.o
+                 S _int2bin
+00000000000008ff S  100644  2324      `
+wstr_display_helper.o
+                 U bytes
+                 U H_frame1
+                 U rse_bytes
+                 U rt
+                 U yte_def
+000000000000008c S l_byte_start
+0000000000000023 S _copy_bytes
+0000000000000069 S bytes
+0000000000000046 S tes
+                 U 
+                 U start
+                 S _int2bin
+0000000000000114 S start
+                 U 
+                 U 
+                 U per.o
+                 U  10846 4215  100644  2324      `
+wstr_display_helper.o
+                 U `
+wstr_display_helper.o
+                 U tes
+../unit_test/custom_tests/lib_stat/libftprintf.a(wstr_display_helper.o):
+00000000000003c0 s 
+00000000000002a0 s lper.o
+                 U ar
+                 U opy_bytes
+                 U s
+                 U et_unicode_bytes
+                 U onversion_helper.o
+                 U _parse_bytes
+                 U       1422457685  10846 4215  100644  1508      `
+conversion_helper.o
+                 U 1508      `
+conversion_helper.o
+                 U 7685  10846 4215  100644  1508      `
+conversion_helper.o
+                 U 
+000000000000005a S code_bytes
+                 S _write
+                 U 
+000000000000013b S rlen
+0000000000000184 S l
+00000000000000d0 S _nullable
+                 U _putwstr
+                 U rs
+                 U 4215  100644  1508      `
+conversion_helper.o
+                 U nt_bits
+                 s 
+                 U _write
+                 U et_unicode_bytes
+                 U char
+                 U es
+                 U _free
+                 U chars
+                 U tes
+                 U _nullable
+                 U t2bin
+                 U putwstr
+                 U 
+00000000000001ca s 
+                 U 0644  1508      `
+conversion_helper.o
+                 U l
+                 U onversion_helper.o
+                 U 8           1422457685  10846 4215  100644  1508      `
+conversion_helper.o
+                 U 57685  10846 4215  100644  1508      `
+conversion_helper.o
+0000000000000118 s 
+00000000000002d0 s _bml
+0000000000000508 s ion_helper.o
+00000000000004fe s            1422457685  10846 4215  100644  1508      `
+conversion_helper.o
+0000000000000500 s 85  10846 4215  100644  1508      `
+conversion_helper.o
+0000000000000502 s 10846 4215  100644  1508      `
+conversion_helper.o
+000000000000019c s  1508      `
+conversion_helper.o
+00000000000000a6 s 6 4215  100644  1508      `
+conversion_helper.o
+                 U putchar
+                 U bml
+                 U r
+                 U _write
+                 U es
+                 U ay_wchars
+00000000000002c6 s str
+00000000000002c8 s wstr_bml
+0000000000000098 s en
+                 U t_putwstr
+                 U e_bytes
+                 U _wputstr_nullable
+                 U wputchar
+                 U ode_bytes
+                 U opy_bytes
+                 U alloc
+                 U _write
+0000000000000113 s y_wchars
+00000000000002c8 s 
+                 U unicode_bytes
+                 U tes
+00000000000002ff s  `
+conversion_helper.o
+                 s        1422457685  10846 4215  100644  1508      `
+conversion_helper.o
+00000000000003c8 s EH_frame1
+                 U _copy_bytes
+                 U _count_bits
+                 s _display_wchars
+                 U _free
+00000000000002af S _ft_putwstr
+000000000000008e S _ft_wputchar
+00000000000001a6 S _ft_wputstr_nullable
+                 U _ft_wstrlen
+                 U _get_unicode_bytes
+                 U _int2bin
+                 U _malloc
+                 U _parse_bytes
+                 U _write
+0000000000000063 s _wstr_bml
+0000000000000196 s s
+0000000000000248 s lay_wchars
+000000000000023e s tr_nullable
+000000000000023f s wstr
+0000000000000280 s splay_wchars
+0000000000000278 s s
+00000000000000a6 s t_putwstr
+                 U s
+                 U bytes
+                 s _count_bits
+                 U oc
+                 U utchar
+                 U t2bin
+                 U ree
+                 U 
+0000000000000241 s 
+000000000000004a s t_bits
+                 U n
+                 U de_bytes
+                 U _bytes
+                 U _write
+                 U utchar
+                 U _free
+                 s strlen
+000000000000020b S bits
+00000000000000fb s play_wchars
+0000000000000103 s strlen
+                 U tr_nullable
+00000000000001c8 S unicode_bytes
+                 U _write
+                 U putstr_nullable
+                 U llable
+0000000000000268 s y_wchars
+                 U wstr
+0000000000000230 S ount_bits
+                 U bin
+                 s _ft_wstrlen
+                 U _write
+                 U 
+                 U nt2bin
+                 U _free
+                 U e_bytes
+00000000000000d5 s _wstrlen
+0000000000000313 S _wstrlen
+0000000000000228 s ts
+00000000000000dd S _get_unicode_bytes
+                 U e_bytes
+00000000000001fa S _wputstr_nullable
+000000000000011a S de_bytes
+                 U e
+                 U _free
+                 U int2bin
+                 U unicode_bytes
+0000000000000190 S s
+                 U ar
+                 s ullable
+                 S _write
+0000000000000072 S har
+                 U ount_bits
+00000000000001f8 s _ft_putwstr
+00000000000001d0 s le
+00000000000001e8 s e
+00000000000002c8 s e
+00000000000005c0 s e
+                 U putchar
+                 U bin
+                 U bytes
+                 U 
+00000000000000eb S free
+                 U putchar
+0000000000000146 S loc
+00000000000001a1 S free
+00000000000000aa S icode_bytes
+00000000000001e5 s lable
+                 U es
+                 U _unicode_bytes
+00000000000003db S icode_bytes
+                 U copy_bytes
+00000000000000aa S int2bin
+                 S _write
+                 S _write
+                 S _write
+                 S _write
+                 U oc
+0000000000000207 S bytes
+0000000000000244 S putstr_nullable
+                 U _bytes
+0000000000000191 S tstr_nullable
+0000000000000080 S de_bytes
+0000000000000518 S _wputstr_nullable
+                 U py_bytes
+                 U r
+0000000000000230 s unt_bits
+000000000000021c s _bytes
+000000000000021f s es
+0000000000000221 s copy_bytes
+0000000000000223 s _bytes
+0000000000000226 s es
+0000000000000228 s free
+00000000000000ca s utstr_nullable
+                 U _write
+                 U wputchar
+                 U alloc
+                 s 
+0000000000000148 S in
+0000000000000208 s ft_wputstr_nullable
+                 U s
+                 U ullable
+                 U ar
+000000000000018a S de_bytes
+00000000000001d0 S bytes
+0000000000000214 S count_bits
+                 S _write
+000000000000008e S c
+0000000000000240 s ree
+0000000000000288 s ree
+0000000000000178 S y_bytes
+                 U icode_bytes
+00000000000000b6 S bin
+000000000000004f S ar
+                 S _write
+                 S _write
+0000000000000165 S _bytes
+0000000000000126 S bytes
+00000000000000c4 S loc
+00000000000000e7 S bin
+                 U ytes
+                 U 
+                 U et_unicode_bytes
+000000000000012a S tes
+                 U 
+                 s arse_bytes
+0000000000000340 s 5  100644  1508      `
+conversion_helper.o
+                 s 5  10846 4215  100644  1508      `
+conversion_helper.o
+0000000000000530 s 
+0000000000000527 s its
+0000000000000529 s _ft_putwstr
+0000000000000180 s es
+0000000000000300 s s
+0000000000000123 S t_wputchar
+00000000000000c5 s ytes
+0000000000000052 s in
+0000000000000028 S 
+00000000000000b3 S t_unicode_bytes
+0000000000000144 S es
+000000000000052a s lay_wchars
+000000000000052d s wchars
+000000000000020f s rs
+                 U rse_bytes
+0000000000000c98 s 
+0000000000000128 s 
+                 U _copy_bytes
+000000000000003c S putchar
+000000000000006a S t2bin
+00000000000001be S ytes
+0000000000000567 S _wputstr_nullable
+0000000000000128 s es
+                 U unicode_bytes
+00000000000000b0 s de_bytes
+0000000000000028 s t_wputchar
+                 U _write
+                 S _write
+                 U arse_bytes
+00000000000000e2 S arse_bytes
+                 U _write
+                 S _write
+                 S _write
+                 S _write
+                 S _write
+                 S _write
+000000000000011c S _write
+                 U its
+                 U tstr_nullable
+000000000000040b S strlen
+                 U me1
+                 U int2bin
+0000000000000145 s rlen
+                 U utchar
+                 U 
+                 U nicode_bytes
+                 U 
+                 U utstr_nullable
+                 U e1
+000000000000036a s _frame1
+                 U ble
+0000000000000473 S s
+                 U nt2bin
+                 s putwstr
+                 U icode_bytes
+                 U loc
+                 U str_bml
+                 U str_nullable
+                 U count_bits
+0000000000000233 S malloc
+                 U _display_wchars
+                 U alloc
+                 U in
+                 U y_bytes
+                 U utwstr
+                 U        1422457685  10846 4215  100644  1508      `
+conversion_helper.o
+                 U rse_bytes
+00000000000001dd S t_unicode_bytes
+000000000000004a S t2bin
+0000000000000043 S _wputchar
+                 U utchar
+                 U int2bin
+000000000000005d S 2bin
+0000000000000077 S lloc
+000000000000016b S bytes
+00000000000000f1 S py_bytes
+0000000000000134 S _wputstr_nullable
+000000000000019b S le
+                 S _write
+00000000000008ff S s
+                 U char
+                 U 
+                 U loc
+                 U e_bytes
+                 U opy_bytes
+000000000000008c S get_unicode_bytes
+0000000000000023 S t_wputchar
+0000000000000069 S _int2bin
+0000000000000046 S ar
+                 U arse_bytes
+                 U code_bytes
+                 S _write
+0000000000000114 S code_bytes
+                 U rse_bytes
+                 U bin
+                 U hars
+                 U e
+                 U strlen
+                 U ar
+../unit_test/custom_tests/lib_stat/libftprintf.a(conversion_helper.o):
+00000000000003c0 s 
+00000000000002a0 s 
+                 U ev
+                 U al_hex
+                 U rame1
+                 U unt_hexdigit
+                 U 
+                 U on_maj
+                 U 
+                 U 
+                 U 
+                 U 
+000000000000005a S xdigit
+                 S _decimal_octal
+                 U octdigit
+000000000000013b S 44  1052      `
+multi_init.o
+0000000000000184 S 
+00000000000000d0 S 20           1422457685  10846 4215  100644  1052      `
+multi_init.o
+                 U 10846 4215  100644  1052      `
+multi_init.o
+                 U lti_init.o
+                 U 
+                 U 422457685  10846 4215  100644  1052      `
+multi_init.o
+                 s 
+                 U _decimal_octal
+                 U unt_hexdigit
+                 U _rev
+                 U decimal_hex
+                 U nversion_maj
+                 U 
+multi_init.o
+                 U _frame1
+                 U 20           1422457685  10846 4215  100644  1052      `
+multi_init.o
+                 U igit
+                 U 0846 4215  100644  1052      `
+multi_init.o
+                 U     1422457685  10846 4215  100644  1052      `
+multi_init.o
+00000000000001ca s 
+                 U 
+                 U 
+                 U 
+                 U 
+                 U 
+0000000000000118 s 
+00000000000002d0 s .o
+0000000000000508 s 
+00000000000004fe s 
+0000000000000500 s 
+0000000000000502 s θ
+000000000000019c s 
+00000000000000a6 s 
+                 U al
+                 U o
+                 U v
+                 U _decimal_octal
+                 U _conversion_maj
+                 U    `
+multi_init.o
+00000000000002c6 s  4215  100644  1052      `
+multi_init.o
+00000000000002c8 s init.o
+0000000000000098 s   1052      `
+multi_init.o
+                 U  10846 4215  100644  1052      `
+multi_init.o
+                 U j
+                 U 
+                 U tal
+                 U digit
+                 U al_hex
+                 U ount_octdigit
+                 U _decimal_octal
+0000000000000113 s   `
+multi_init.o
+00000000000002c8 s 
+                 U _hexdigit
+                 U _decimal_hex
+00000000000002ff s 
+                 s 
+00000000000003c8 s 
+                 U imal_hex
+                 U    1422457685  10846 4215  100644  1052      `
+multi_init.o
+                 s 052      `
+multi_init.o
+                 U nversion_maj
+00000000000002af S 5  10846 4215  100644  1052      `
+multi_init.o
+000000000000008e S l_octal
+00000000000001a6 S me1
+                 U 5  100644  1052      `
+multi_init.o
+                 U count_hexdigit
+                 U ctdigit
+                 U _count_octdigit
+                 U on_maj
+                 U _decimal_octal
+0000000000000063 s _init.o
+0000000000000196 s ti_init.o
+0000000000000248 s     `
+multi_init.o
+000000000000023e s 1/20           1422457685  10846 4215  100644  1052      `
+multi_init.o
+000000000000023f s 6 4215  100644  1052      `
+multi_init.o
+0000000000000280 s       `
+multi_init.o
+0000000000000278 s 685  10846 4215  100644  1052      `
+multi_init.o
+00000000000000a6 s  10846 4215  100644  1052      `
+multi_init.o
+                 U ecimal_hex
+                 U EH_frame1
+                 s    1422457685  10846 4215  100644  1052      `
+multi_init.o
+                 U t_octdigit
+                 U l
+                 U igit
+                 U ersion_maj
+                 U 15  100644  1052      `
+multi_init.o
+0000000000000241 s 15  100644  1052      `
+multi_init.o
+000000000000004a s 22457685  10846 4215  100644  1052      `
+multi_init.o
+                 U 
+                 U igit
+                 U 
+                 U _decimal_octal
+                 U l
+                 U nversion_maj
+                 s 0644  1052      `
+multi_init.o
+000000000000020b S 457685  10846 4215  100644  1052      `
+multi_init.o
+00000000000000fb s      `
+multi_init.o
+0000000000000103 s 0644  1052      `
+multi_init.o
+                 U 1/20           1422457685  10846 4215  100644  1052      `
+multi_init.o
+00000000000001c8 S _hexdigit
+                 U _decimal_octal
+                 U 
+
+
+#1/20           1422457685  10846 4215  100644  1052      `
+multi_init.o
+                 U           1422457685  10846 4215  100644  1052      `
+multi_init.o
+0000000000000268 s   `
+multi_init.o
+                 U 6 4215  100644  1052      `
+multi_init.o
+0000000000000230 S  1422457685  10846 4215  100644  1052      `
+multi_init.o
+                 U it
+                 s 5  100644  1052      `
+multi_init.o
+                 U _decimal_octal
+                 U al_octal
+                 U digit
+                 U nversion_maj
+                 U j
+00000000000000d5 s 100644  1052      `
+multi_init.o
+0000000000000313 S 100644  1052      `
+multi_init.o
+0000000000000228 s 7685  10846 4215  100644  1052      `
+multi_init.o
+00000000000000dd S count_hexdigit
+                 U j
+00000000000001fa S 
+000000000000011a S igit
+                 U mal_octal
+                 U nversion_maj
+                 U tdigit
+                 U _hexdigit
+0000000000000190 S ecimal_hex
+                 U ev
+                 s            1422457685  10846 4215  100644  1052      `
+multi_init.o
+                 S _decimal_octal
+0000000000000072 S rev
+                 U  1422457685  10846 4215  100644  1052      `
+multi_init.o
+00000000000001f8 s 5  10846 4215  100644  1052      `
+multi_init.o
+00000000000001d0 s       1422457685  10846 4215  100644  1052      `
+multi_init.o
+00000000000001e8 s      1422457685  10846 4215  100644  1052      `
+multi_init.o
+00000000000002c8 s      1422457685  10846 4215  100644  1052      `
+multi_init.o
+00000000000005c0 s      1422457685  10846 4215  100644  1052      `
+multi_init.o
+                 U al
+                 U it
+                 U EH_frame1
+                 U _count_hexdigit
+00000000000000eb S version_maj
+                 U al
+0000000000000146 S nt_octdigit
+00000000000001a1 S version_maj
+00000000000000aa S exdigit
+00000000000001e5 s          1422457685  10846 4215  100644  1052      `
+multi_init.o
+                 U decimal_hex
+                 U t_hexdigit
+00000000000003db S exdigit
+                 U mal_hex
+00000000000000aa S tdigit
+                 S _decimal_octal
+                 S _decimal_octal
+                 S _decimal_octal
+                 S _decimal_octal
+                 U t_octdigit
+0000000000000207 S EH_frame1
+0000000000000244 S 
+
+
+#1/20           1422457685  10846 4215  100644  1052      `
+multi_init.o
+                 U hex
+0000000000000191 S 
+#1/20           1422457685  10846 4215  100644  1052      `
+multi_init.o
+0000000000000080 S igit
+0000000000000518 S 
+                 U l_hex
+                 U v
+0000000000000230 s 1422457685  10846 4215  100644  1052      `
+multi_init.o
+00000000000001f0 s EH_frame1
+0000000000000106 s _conversion_maj
+00000000000000c9 S _count_hexdigit
+000000000000008c S _count_octdigit
+0000000000000127 S _decimal_hex
+                 S _decimal_octal
+000000000000021c s it
+000000000000021f s decimal_hex
+0000000000000221 s mal_hex
+0000000000000223 s hex
+0000000000000226 s _conversion_maj
+0000000000000228 s version_maj
+00000000000000ca s 
+
+#1/20           1422457685  10846 4215  100644  1052      `
+multi_init.o
+                 U _decimal_octal
+                 U tal
+                 U ount_octdigit
+                 s ion_maj
+0000000000000148 S t
+0000000000000208 s e1
+                 U conversion_maj
+                 U            1422457685  10846 4215  100644  1052      `
+multi_init.o
+                 U ev
+000000000000018a S igit
+00000000000001d0 S EH_frame1
+0000000000000214 S   1422457685  10846 4215  100644  1052      `
+multi_init.o
+                 S _decimal_octal
+000000000000008e S _octdigit
+0000000000000240 s ersion_maj
+0000000000000288 s ersion_maj
+0000000000000178 S _hex
+                 U exdigit
+00000000000000b6 S it
+000000000000004f S ev
+                 S _decimal_octal
+                 S _decimal_octal
+0000000000000165 S hex
+0000000000000126 S t
+00000000000000c4 S nt_octdigit
+00000000000000e7 S it
+                 U x
+                 U cimal_hex
+                 U unt_hexdigit
+000000000000012a S _decimal_hex
+                 U 
+                 s _maj
+0000000000000340 s 
+                 s 
+0000000000000530 s 
+0000000000000527 s 57685  10846 4215  100644  1052      `
+multi_init.o
+0000000000000529 s 5  10846 4215  100644  1052      `
+multi_init.o
+0000000000000180 s _conversion_maj
+0000000000000300 s conversion_maj
+0000000000000123 S octal
+00000000000000c5 s 
+0000000000000052 s t
+0000000000000028 S 
+00000000000000b3 S nt_hexdigit
+0000000000000144 S decimal_hex
+000000000000052a s     `
+multi_init.o
+000000000000052d s `
+multi_init.o
+000000000000020f s lti_init.o
+                 U maj
+0000000000000c98 s 
+0000000000000128 s onversion_maj
+                 U imal_hex
+000000000000003c S al
+000000000000006a S igit
+00000000000001be S x
+0000000000000567 S 
+0000000000000128 s decimal_hex
+                 U _hexdigit
+00000000000000b0 s igit
+0000000000000028 s octal
+                 U _decimal_octal
+                 S _decimal_octal
+                 U _maj
+00000000000000e2 S _maj
+                 U _decimal_octal
+                 S _decimal_octal
+                 S _decimal_octal
+                 S _decimal_octal
+                 S _decimal_octal
+                 S _decimal_octal
+000000000000011c S _decimal_octal
+                 U 57685  10846 4215  100644  1052      `
+multi_init.o
+                 U 
+#1/20           1422457685  10846 4215  100644  1052      `
+multi_init.o
+000000000000040b S 0644  1052      `
+multi_init.o
+                 U ϊνώ
+                 U tdigit
+0000000000000145 s 44  1052      `
+multi_init.o
+                 U _rev
+                 U l
+                 U 
+                 U hexdigit
+                 U cimal_hex
+                 U 
+
+#1/20           1422457685  10846 4215  100644  1052      `
+multi_init.o
+                 U νώ
+000000000000036a s 
+                 U        1422457685  10846 4215  100644  1052      `
+multi_init.o
+0000000000000473 S conversion_maj
+                 U digit
+                 s 0846 4215  100644  1052      `
+multi_init.o
+                 U exdigit
+                 U nt_octdigit
+                 U nit.o
+                 U #1/20           1422457685  10846 4215  100644  1052      `
+multi_init.o
+                 U   1422457685  10846 4215  100644  1052      `
+multi_init.o
+0000000000000233 S count_octdigit
+                 U 052      `
+multi_init.o
+                 U ount_octdigit
+                 U t
+                 U _hex
+                 U 846 4215  100644  1052      `
+multi_init.o
+                 U 
+                 U maj
+00000000000001dd S nt_hexdigit
+000000000000004a S igit
+0000000000000043 S ctal
+                 U l
+                 U tdigit
+000000000000005d S git
+0000000000000077 S unt_octdigit
+000000000000016b S EH_frame1
+00000000000000f1 S l_hex
+0000000000000134 S 
+000000000000019b S       1422457685  10846 4215  100644  1052      `
+multi_init.o
+                 S _decimal_octal
+00000000000008ff S 685  10846 4215  100644  1052      `
+multi_init.o
+                 U _rev
+                 U onversion_maj
+                 U nt_octdigit
+                 U git
+                 U al_hex
+000000000000008c S ount_hexdigit
+0000000000000023 S octal
+0000000000000069 S ctdigit
+0000000000000046 S ev
+                 U _maj
+                 U xdigit
+                 S _decimal_octal
+0000000000000114 S xdigit
+                 U maj
+                 U it
+                 U multi_init.o
+                 U      1422457685  10846 4215  100644  1052      `
+multi_init.o
+                 U 0644  1052      `
+multi_init.o
+                 U ev
+../unit_test/custom_tests/lib_stat/libftprintf.a(multi_init.o):
+00000000000003c0 s 
+00000000000002a0 s 
+                 U multi_set
+                 U 
+                 U 
+                 U v
+                 U 
+                 U 
+                 U 
+                 U 
+                 U 
+                 U 
+000000000000005a S loc
+                 S _multi_int_init
+                 U _init_printfv
+000000000000013b S 
+0000000000000184 S 
+00000000000000d0 S 
+                 U 
+                 U 
+                 U 
+                 U 
+                 s 
+                 U _multi_int_init
+                 U v
+                 U 
+                 U rame1
+                 U 
+                 U 
+                 U 
+                 U 
+                 U t_printfv
+                 U 
+                 U 
+00000000000001ca s 
+                 U 
+                 U 
+                 U 
+                 U 
+                 U 
+0000000000000118 s 
+00000000000002d0 s 
+0000000000000508 s 
+00000000000004fe s 
+0000000000000500 s 
+0000000000000502 s 
+000000000000019c s 
+00000000000000a6 s 
+                 U nit
+                 U 
+                 U ulti_set
+                 U _multi_int_init
+                 U 
+                 U 
+00000000000002c6 s 
+00000000000002c8 s 
+0000000000000098 s 
+                 U 
+                 U 
+                 U 
+                 U init
+                 U oc
+                 U 
+                 U _set
+                 U _multi_int_init
+0000000000000113 s 
+00000000000002c8 s 
+                 U malloc
+                 U frame1
+00000000000002ff s 
+                 s 
+00000000000003c8 s 
+                 U e1
+                 U 
+                 s 
+                 U 
+00000000000002af S 
+000000000000008e S int_init
+00000000000001a6 S 
+                 U 
+                 U tfv
+                 U init_printfv
+                 U ti_set
+                 U 
+                 U _multi_int_init
+0000000000000063 s 
+0000000000000196 s 
+0000000000000248 s 
+000000000000023e s 
+000000000000023f s 
+0000000000000280 s 
+0000000000000278 s 
+00000000000000a6 s 
+                 U ame1
+                 U 
+                 s 
+                 U t
+                 U it
+                 U t_printfv
+                 U 
+                 U 
+0000000000000241 s 
+000000000000004a s 
+                 U intfv
+                 U c
+                 U 
+                 U _multi_int_init
+                 U it
+                 U 
+                 s 
+000000000000020b S 
+00000000000000fb s 
+0000000000000103 s 
+                 U 
+00000000000001c8 S malloc
+                 U _multi_int_init
+                 U 
+                 U 
+0000000000000268 s 
+                 U 
+0000000000000230 S 
+                 U printfv
+                 s 
+                 U _multi_int_init
+                 U _int_init
+                 U it_printfv
+                 U 
+                 U 
+00000000000000d5 s 
+0000000000000313 S 
+0000000000000228 s 
+00000000000000dd S tfv
+                 U 
+00000000000001fa S 
+000000000000011a S c
+                 U i_int_init
+                 U 
+                 U nit_printfv
+                 U malloc
+0000000000000190 S ame1
+                 U multi_set
+                 s 
+                 S _multi_int_init
+0000000000000072 S _multi_set
+                 U 
+00000000000001f8 s 
+00000000000001d0 s 
+00000000000001e8 s 
+00000000000002c8 s 
+00000000000005c0 s 
+                 U nit
+                 U printfv
+                 U 
+                 U ntfv
+00000000000000eb S 
+                 U nit
+0000000000000146 S et
+00000000000001a1 S 
+00000000000000aa S lloc
+00000000000001e5 s 
+                 U rame1
+                 U _malloc
+00000000000003db S lloc
+                 U 1
+00000000000000aa S nit_printfv
+                 S _multi_int_init
+                 S _multi_int_init
+                 S _multi_int_init
+                 S _multi_int_init
+                 U t
+0000000000000207 S 
+0000000000000244 S 
+                 U 
+
+
+0000000000000191 S 
+0000000000000080 S c
+0000000000000518 S 
+                 U 
+
+
+
+
+                 U ulti_set
+0000000000000230 s 
+00000000000001f0 s 
+0000000000000106 s 
+00000000000000c9 S ntfv
+000000000000008c S ti_set
+0000000000000127 S frame1
+                 S _multi_int_init
+000000000000021c s EH_frame1
+000000000000021f s rame1
+0000000000000221 s 1
+0000000000000223 s 
+
+
+0000000000000226 s 
+0000000000000228 s 
+00000000000000ca s 
+                 U _multi_int_init
+                 U init
+                 U _set
+                 s 
+0000000000000148 S rintfv
+0000000000000208 s 
+                 U 
+                 U 
+                 U multi_set
+000000000000018a S c
+00000000000001d0 S 
+0000000000000214 S 
+                 S _multi_int_init
+000000000000008e S 
+0000000000000240 s 
+0000000000000288 s 
+0000000000000178 S 
+
+
+
+                 U lloc
+00000000000000b6 S printfv
+000000000000004f S multi_set
+                 S _multi_int_init
+                 S _multi_int_init
+0000000000000165 S 
+
+
+0000000000000126 S H_frame1
+00000000000000c4 S et
+00000000000000e7 S printfv
+                 U 
+                 U me1
+                 U v
+000000000000012a S frame1
+                 U lti_set
+                 s 
+0000000000000340 s 
+                 s 
+0000000000000530 s 
+0000000000000527 s 
+0000000000000529 s 
+0000000000000180 s 
+0000000000000300 s 
+0000000000000123 S t_init
+00000000000000c5 s _frame1
+0000000000000052 s rintfv
+0000000000000028 S lti_set
+00000000000000b3 S 
+0000000000000144 S rame1
+000000000000052a s 
+000000000000052d s 
+000000000000020f s 
+                 U 
+0000000000000c98 s 
+0000000000000128 s 
+                 U e1
+000000000000003c S nit
+000000000000006a S t_printfv
+00000000000001be S 
+0000000000000567 S 
+0000000000000110 s EH_frame1
+000000000000004f S _init_printfv
+                 U _malloc
+0000000000000128 s rame1
+                 U malloc
+00000000000000b0 s c
+0000000000000028 s t_init
+                 U _multi_int_init
+                 S _multi_int_init
+                 U 
+00000000000000e2 S 
+                 U _multi_int_init
+                 S _multi_int_init
+                 S _multi_int_init
+                 S _multi_int_init
+                 S _multi_int_init
+                 S _multi_int_init
+                 S _multi_int_init
+000000000000011c S _multi_int_init
+                 U 
+                 U 
+000000000000040b S 
+                 U 
+                 U nit_printfv
+0000000000000145 s 
+                 U 
+                 U it
+                 U lti_set
+                 U alloc
+                 U me1
+                 U 
+                 U 
+000000000000036a s 
+                 U 
+0000000000000473 S 
+                 U it_printfv
+                 s 
+                 U lloc
+                 U et
+                 U 
+                 U 
+                 U 
+0000000000000233 S i_set
+                 U 
+                 U _set
+                 U rintfv
+                 U 
+
+
+
+                 U 
+                 U 
+                 U 
+00000000000001dd S 
+000000000000004a S t_printfv
+0000000000000043 S _init
+0000000000000029 S _multi_set
+                 U it
+                 U nit_printfv
+000000000000005d S _printfv
+0000000000000077 S set
+000000000000016b S 
+00000000000000f1 S 
+
+
+
+
+0000000000000134 S 
+000000000000019b S 
+                 S _multi_int_init
+00000000000008ff S 
+                 U 
+                 U 
+                 U et
+                 U 
+                 U 
+000000000000008c S fv
+0000000000000023 S t_init
+0000000000000069 S init_printfv
+0000000000000046 S multi_set
+                 U 
+                 U loc
+                 S _multi_int_init
+0000000000000114 S loc
+                 U 
+                 U printfv
+                 U 
+                 U 
+                 U 
+                 U multi_set
+../unit_test/custom_tests/lib_stat/libftprintf.a():

@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:01 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/25 17:32:43 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/25 18:50:31 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ typedef struct s_file_attribute
 {
 	char *name;
 	size_t size;
+	int		ac;
 	void *offset;
 } t_file_attribute;
 

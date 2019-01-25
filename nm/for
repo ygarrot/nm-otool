@@ -1,4 +1,0 @@
-for file in /usr/bin/*;
-do
-file $file
-done

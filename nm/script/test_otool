@@ -1,7 +1,0 @@
-rm t t2
-for file in `find /Applications  -maxdepth 1 -type f -name '*.dylib'`;
-do
-./ft_nm $file > t2 
-nm $file >t
-diff t t2 > log
-done

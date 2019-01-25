@@ -1,2 +1,0 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/nm: /Users/ygarrot/git/nm-otool/nm/unit_test/custom_tests/test_wrong_lc_command_size truncated or malformed object (load command 0 cmdsize not a multiple of 8)
-

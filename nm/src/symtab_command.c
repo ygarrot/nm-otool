@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/29 17:23:51 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/25 14:51:55 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/25 17:39:03 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	apply_sort_sym(void *ptr, void *struc, uint32_t index)
 
 	(void)index;
 	nm = struc;
+	if (nm->offset_handler(nm, ptr, get_int_endian(nm, index * sizeof(t_list64))))
+		return ;
 	if (nm->head.magic == MH_MAGIC_64)
 		btree_insert_data(&nm->btree, &(((t_list64*)ptr)[index]), ft_alphacmp, ft_del_nothing);
 	else
@@ -27,8 +29,12 @@ void	apply_sort_sym(void *ptr, void *struc, uint32_t index)
 
 void	apply_symtab(t_symtab_command *sym, t_nm *nm)
 {
+	if (nm->offset_handler(nm, nm->head.ptr, get_int_endian(nm, sym->stroff)))
+		return ;
 	nm->head.string_table = nm->head.ptr +  get_int_endian(nm, sym->stroff);
 	nm->mem.iter_nb = get_int_endian(nm, sym->nsyms);
 	iter_over_mem(nm->head.ptr + get_int_endian(nm, sym->symoff), nm, SYM_TAB, &apply_sort_sym);
+	if (nm->error)
+		return ;
 	iter_btree(&nm->btree, nm, print_nm_format);
 }

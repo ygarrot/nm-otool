@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:58 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/25 16:27:35 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/25 17:32:43 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ int		mmap_file(char *file)
 		return (ft_error(file, "mmap errror"));
 	nm = get_nm(0);
 	nm->count_sect = 1;
+	nm->file.size = buf.st_size;
 	nm->file.offset = ptr + buf.st_size;
 	nm->head.no_arch = 0;
 	nm->file.name = file;

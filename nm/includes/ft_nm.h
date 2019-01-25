@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:01 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/25 16:18:09 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/25 17:32:43 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ typedef struct s_fat_h
 typedef struct s_file_attribute
 {
 	char *name;
+	size_t size;
 	void *offset;
 } t_file_attribute;
 

@@ -6,7 +6,7 @@
 #    By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 13:13:35 by ygarrot           #+#    #+#              #
-#    Updated: 2019/01/25 18:41:27 by ygarrot          ###   ########.fr        #
+#    Updated: 2019/01/25 18:42:19 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,8 +37,8 @@ clean:
 
 
 fclean:
-	make -C fclean nm
-	make -C fclean otool
+	make -C nm fclean
+	make -C otool fclean
 
 re: fclean all
 

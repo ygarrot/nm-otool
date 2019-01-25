@@ -10,10 +10,10 @@ import textwrap
 
 
 # absolute path to your nm_otool project
-PROJECT_PATH = '/Users/ygarrot/git/nm-otool/nm'
+PROJECT_PATH = '/Users/ygarrot/git/nm-otool'
 
-NM_PATH = os.path.join(PROJECT_PATH, 'ft_nm')
-OTOOL_PATH = os.path.join(PROJECT_PATH, 'ft_otool')
+NM_PATH = os.path.join(PROJECT_PATH, 'nm/ft_nm')
+OTOOL_PATH = os.path.join(PROJECT_PATH, 'otool/ft_otool')
 
 
 def execute(cmd):

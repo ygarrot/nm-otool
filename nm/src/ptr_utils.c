@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/30 11:34:41 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/24 17:55:36 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/25 15:05:42 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int get_magic(void *ptr)
 
 int get_iter_nb(void *ptr, int type)
 {
+	t_segment_command_64 *segment_command64;
+	t_segment_command *segment_command;
 	t_nm *nm;
 
 	nm = get_nm(0);
@@ -29,11 +31,13 @@ int get_iter_nb(void *ptr, int type)
 		return (nm->mem.iter_nb);
 	if (type == SECTION_64)
 	{
-		return (((t_segment_command_64 *)(ptr - sizeof(t_segment_command_64)))->nsects);
+		segment_command64 = (ptr - sizeof(t_segment_command_64));
+		return (get_int_endian(nm, segment_command64->nsects));
 	}
 	if (type == SECTION)
 	{
-		return (((t_segment_command *)(ptr - sizeof(t_segment_command)))->nsects);
+		segment_command = (ptr - sizeof(t_segment_command));
+		return (get_int_endian(nm, segment_command->nsects));
 	}
 	if (type == SYM_TAB)
 		return (nm->mem.iter_nb);
@@ -48,7 +52,7 @@ int get_inc_value(void *ptr, int type)
 	int size;
 
 	if (type == LOAD_COMMAND)
-		return (((t_load_command *)ptr)->cmdsize);
+		return (get_int_endian(get_nm(0), ((t_load_command *)ptr)->cmdsize));
 	if (type == SECTION_64)
 		return (sizeof(t_section_64));
 	if (type == SECTION)
@@ -77,11 +81,11 @@ void iter_over_mem(void *child, void *struc, int type,
 
 	nm = struc;
 	i = -1;
-	iter_nb = get_int_indian(struc, get_iter_nb(child, type));
+	iter_nb = get_iter_nb(child, type);
 	while (++i < iter_nb)
 	{
 		(*f)(child, struc, i);
-		inc_value = get_int_indian(struc, get_inc_value(child, type));
+		inc_value = get_inc_value(child, type);
 		if (nm->error || nm->offset_handler(nm, child, inc_value))
 		{
 			/* ft_printf("ABORT\n"); */

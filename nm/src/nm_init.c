@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/24 17:40:41 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/24 17:55:36 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/25 14:48:55 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ t_nm	*get_nm(t_nm *ptr)
 	return (&nm);
 }
 
-long		get_int_indian(t_nm *nm, long value)
+long		get_int_endian(t_nm *nm, long value)
 {
 	return (nm->mem.is_big_endian ? __builtin_bswap32(value) : value);
 }

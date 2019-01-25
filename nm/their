@@ -1,116 +1,342 @@
-                 U _TABSIZE
-                 U __DefaultRuneLocale
-                 U ___error
-                 U ___maskrune
-0000000000003ee0 S ___menu_5_4VersionNumber
-0000000000003eb0 S ___menu_5_4VersionString
+
+/Users/ygarrot/git/nm-otool/nm/unit_test/custom_tests/fat/MachO-iOS-armv7-armv7s-arm64-Helloworld (for architecture armv7):
+0000e0bc s  stub helpers
+0000dfa0 t -[AppDelegate .cxx_destruct]
+0000d34c t -[AppDelegate application:didFinishLaunchingWithOptions:]
+0000d7d0 t -[AppDelegate applicationDidBecomeActive:]
+0000d770 t -[AppDelegate applicationDidEnterBackground:]
+0000dedc t -[AppDelegate applicationDocumentsDirectory]
+0000d7a0 t -[AppDelegate applicationWillEnterForeground:]
+0000d740 t -[AppDelegate applicationWillResignActive:]
+0000d800 t -[AppDelegate applicationWillTerminate:]
+0000d97c t -[AppDelegate managedObjectContext]
+0000dac4 t -[AppDelegate managedObjectModel]
+0000dc38 t -[AppDelegate persistentStoreCoordinator]
+0000d85c t -[AppDelegate saveContext]
+0000df74 t -[AppDelegate setWindow:]
+0000df58 t -[AppDelegate window]
+0000b5d4 t -[DetailViewController .cxx_destruct]
+0000b024 t -[DetailViewController configureView]
+0000b534 t -[DetailViewController detailDescriptionLabel]
+0000b518 t -[DetailViewController detailItem]
+0000b1c4 t -[DetailViewController didReceiveMemoryWarning]
+0000b58c t -[DetailViewController masterPopoverController]
+0000b55c t -[DetailViewController setDetailDescriptionLabel:]
+0000af00 t -[DetailViewController setDetailItem:]
+0000b5a8 t -[DetailViewController setMasterPopoverController:]
+0000b208 t -[DetailViewController splitViewController:willHideViewController:withBarButtonItem:forPopoverController:]
+0000b400 t -[DetailViewController splitViewController:willShowViewController:invalidatingBarButtonItem:]
+0000b15c t -[DetailViewController viewDidLoad]
+0000d2e8 t -[MasterViewController .cxx_destruct]
+0000b634 t -[MasterViewController awakeFromNib]
+0000d0a4 t -[MasterViewController configureCell:atIndexPath:]
+0000ccb4 t -[MasterViewController controller:didChangeObject:atIndexPath:forChangeType:newIndexPath:]
+0000cafc t -[MasterViewController controller:didChangeSection:atIndex:forChangeType:]
+0000d020 t -[MasterViewController controllerDidChangeContent:]
+0000ca78 t -[MasterViewController controllerWillChangeContent:]
+0000d22c t -[MasterViewController detailViewController]
+0000ba00 t -[MasterViewController didReceiveMemoryWarning]
+0000c5c8 t -[MasterViewController fetchedResultsController]
+0000ba44 t -[MasterViewController insertNewObject:]
+0000d2a0 t -[MasterViewController managedObjectContext]
+0000bd18 t -[MasterViewController numberOfSectionsInTableView:]
+0000c3dc t -[MasterViewController prepareForSegue:sender:]
+0000d248 t -[MasterViewController setDetailViewController:]
+0000d274 t -[MasterViewController setFetchedResultsController:]
+0000d2bc t -[MasterViewController setManagedObjectContext:]
+0000bf94 t -[MasterViewController tableView:canEditRowAtIndexPath:]
+0000c200 t -[MasterViewController tableView:canMoveRowAtIndexPath:]
+0000bef0 t -[MasterViewController tableView:cellForRowAtIndexPath:]
+0000bff4 t -[MasterViewController tableView:commitEditingStyle:forRowAtIndexPath:]
+0000c260 t -[MasterViewController tableView:didSelectRowAtIndexPath:]
+0000bddc t -[MasterViewController tableView:numberOfRowsInSection:]
+0000b764 t -[MasterViewController viewDidLoad]
+0000b72c t _CGSizeMake
+         U _NSLog
+         U _NSSQLiteStoreType
+         U _NSStringFromClass
+00010bb0 S _OBJC_CLASS_$_AppDelegate
+00010b4c S _OBJC_CLASS_$_DetailViewController
+00010b74 S _OBJC_CLASS_$_MasterViewController
+         U _OBJC_CLASS_$_NSArray
+         U _OBJC_CLASS_$_NSBundle
+         U _OBJC_CLASS_$_NSDate
+         U _OBJC_CLASS_$_NSEntityDescription
+         U _OBJC_CLASS_$_NSFetchRequest
+         U _OBJC_CLASS_$_NSFetchedResultsController
+         U _OBJC_CLASS_$_NSFileManager
+         U _OBJC_CLASS_$_NSIndexSet
+         U _OBJC_CLASS_$_NSManagedObjectContext
+         U _OBJC_CLASS_$_NSManagedObjectModel
+         U _OBJC_CLASS_$_NSPersistentStoreCoordinator
+         U _OBJC_CLASS_$_NSSortDescriptor
+         U _OBJC_CLASS_$_UIBarButtonItem
+         U _OBJC_CLASS_$_UIDevice
+         U _OBJC_CLASS_$_UIResponder
+         U _OBJC_CLASS_$_UITableViewController
+         U _OBJC_CLASS_$_UIViewController
+00010bdc s _OBJC_IVAR_$_AppDelegate._managedObjectContext
+00010be0 s _OBJC_IVAR_$_AppDelegate._managedObjectModel
+00010be4 s _OBJC_IVAR_$_AppDelegate._persistentStoreCoordinator
+00010be8 s _OBJC_IVAR_$_AppDelegate._window
+00010bc8 s _OBJC_IVAR_$_DetailViewController._detailDescriptionLabel
+00010bc4 s _OBJC_IVAR_$_DetailViewController._detailItem
+00010bcc s _OBJC_IVAR_$_DetailViewController._masterPopoverController
+00010bd4 s _OBJC_IVAR_$_MasterViewController._detailViewController
+00010bd0 s _OBJC_IVAR_$_MasterViewController._fetchedResultsController
+00010bd8 s _OBJC_IVAR_$_MasterViewController._managedObjectContext
+00010b9c S _OBJC_METACLASS_$_AppDelegate
+00010b60 S _OBJC_METACLASS_$_DetailViewController
+00010b88 S _OBJC_METACLASS_$_MasterViewController
+         U _OBJC_METACLASS_$_NSObject
+         U _OBJC_METACLASS_$_UIResponder
+         U _OBJC_METACLASS_$_UITableViewController
+         U _OBJC_METACLASS_$_UIViewController
+         U _UIApplicationMain
+         U ___CFConstantStringClassReference
+00004000 T __mh_execute_header
+         U __objc_empty_cache
+         U _abort
+0000e020 T _main
+         U _objc_autoreleasePoolPop
+         U _objc_autoreleasePoolPush
+         U _objc_autoreleaseReturnValue
+0000e0b0 t _objc_autoreleaseReturnValue$shim
+         U _objc_destroyWeak
+         U _objc_loadWeakRetained
+         U _objc_msgSend
+         U _objc_msgSendSuper2
+         U _objc_release
+         U _objc_retain
+         U _objc_retainAutoreleasedReturnValue
+         U _objc_storeStrong
+         U _objc_storeWeak
+         U dyld_stub_binder
+
+/Users/ygarrot/git/nm-otool/nm/unit_test/custom_tests/fat/MachO-iOS-armv7-armv7s-arm64-Helloworld (for architecture armv7s):
+0000e0bc s  stub helpers
+0000dfa0 t -[AppDelegate .cxx_destruct]
+0000d34c t -[AppDelegate application:didFinishLaunchingWithOptions:]
+0000d7d0 t -[AppDelegate applicationDidBecomeActive:]
+0000d770 t -[AppDelegate applicationDidEnterBackground:]
+0000dedc t -[AppDelegate applicationDocumentsDirectory]
+0000d7a0 t -[AppDelegate applicationWillEnterForeground:]
+0000d740 t -[AppDelegate applicationWillResignActive:]
+0000d800 t -[AppDelegate applicationWillTerminate:]
+0000d97c t -[AppDelegate managedObjectContext]
+0000dac4 t -[AppDelegate managedObjectModel]
+0000dc38 t -[AppDelegate persistentStoreCoordinator]
+0000d85c t -[AppDelegate saveContext]
+0000df74 t -[AppDelegate setWindow:]
+0000df58 t -[AppDelegate window]
+0000b5d4 t -[DetailViewController .cxx_destruct]
+0000b024 t -[DetailViewController configureView]
+0000b534 t -[DetailViewController detailDescriptionLabel]
+0000b518 t -[DetailViewController detailItem]
+0000b1c4 t -[DetailViewController didReceiveMemoryWarning]
+0000b58c t -[DetailViewController masterPopoverController]
+0000b55c t -[DetailViewController setDetailDescriptionLabel:]
+0000af00 t -[DetailViewController setDetailItem:]
+0000b5a8 t -[DetailViewController setMasterPopoverController:]
+0000b208 t -[DetailViewController splitViewController:willHideViewController:withBarButtonItem:forPopoverController:]
+0000b400 t -[DetailViewController splitViewController:willShowViewController:invalidatingBarButtonItem:]
+0000b15c t -[DetailViewController viewDidLoad]
+0000d2e8 t -[MasterViewController .cxx_destruct]
+0000b634 t -[MasterViewController awakeFromNib]
+0000d0a4 t -[MasterViewController configureCell:atIndexPath:]
+0000ccb4 t -[MasterViewController controller:didChangeObject:atIndexPath:forChangeType:newIndexPath:]
+0000cafc t -[MasterViewController controller:didChangeSection:atIndex:forChangeType:]
+0000d020 t -[MasterViewController controllerDidChangeContent:]
+0000ca78 t -[MasterViewController controllerWillChangeContent:]
+0000d22c t -[MasterViewController detailViewController]
+0000ba00 t -[MasterViewController didReceiveMemoryWarning]
+0000c5c8 t -[MasterViewController fetchedResultsController]
+0000ba44 t -[MasterViewController insertNewObject:]
+0000d2a0 t -[MasterViewController managedObjectContext]
+0000bd18 t -[MasterViewController numberOfSectionsInTableView:]
+0000c3dc t -[MasterViewController prepareForSegue:sender:]
+0000d248 t -[MasterViewController setDetailViewController:]
+0000d274 t -[MasterViewController setFetchedResultsController:]
+0000d2bc t -[MasterViewController setManagedObjectContext:]
+0000bf94 t -[MasterViewController tableView:canEditRowAtIndexPath:]
+0000c200 t -[MasterViewController tableView:canMoveRowAtIndexPath:]
+0000bef0 t -[MasterViewController tableView:cellForRowAtIndexPath:]
+0000bff4 t -[MasterViewController tableView:commitEditingStyle:forRowAtIndexPath:]
+0000c260 t -[MasterViewController tableView:didSelectRowAtIndexPath:]
+0000bddc t -[MasterViewController tableView:numberOfRowsInSection:]
+0000b764 t -[MasterViewController viewDidLoad]
+0000b72c t _CGSizeMake
+         U _NSLog
+         U _NSSQLiteStoreType
+         U _NSStringFromClass
+00010bb0 S _OBJC_CLASS_$_AppDelegate
+00010b4c S _OBJC_CLASS_$_DetailViewController
+00010b74 S _OBJC_CLASS_$_MasterViewController
+         U _OBJC_CLASS_$_NSArray
+         U _OBJC_CLASS_$_NSBundle
+         U _OBJC_CLASS_$_NSDate
+         U _OBJC_CLASS_$_NSEntityDescription
+         U _OBJC_CLASS_$_NSFetchRequest
+         U _OBJC_CLASS_$_NSFetchedResultsController
+         U _OBJC_CLASS_$_NSFileManager
+         U _OBJC_CLASS_$_NSIndexSet
+         U _OBJC_CLASS_$_NSManagedObjectContext
+         U _OBJC_CLASS_$_NSManagedObjectModel
+         U _OBJC_CLASS_$_NSPersistentStoreCoordinator
+         U _OBJC_CLASS_$_NSSortDescriptor
+         U _OBJC_CLASS_$_UIBarButtonItem
+         U _OBJC_CLASS_$_UIDevice
+         U _OBJC_CLASS_$_UIResponder
+         U _OBJC_CLASS_$_UITableViewController
+         U _OBJC_CLASS_$_UIViewController
+00010bdc s _OBJC_IVAR_$_AppDelegate._managedObjectContext
+00010be0 s _OBJC_IVAR_$_AppDelegate._managedObjectModel
+00010be4 s _OBJC_IVAR_$_AppDelegate._persistentStoreCoordinator
+00010be8 s _OBJC_IVAR_$_AppDelegate._window
+00010bc8 s _OBJC_IVAR_$_DetailViewController._detailDescriptionLabel
+00010bc4 s _OBJC_IVAR_$_DetailViewController._detailItem
+00010bcc s _OBJC_IVAR_$_DetailViewController._masterPopoverController
+00010bd4 s _OBJC_IVAR_$_MasterViewController._detailViewController
+00010bd0 s _OBJC_IVAR_$_MasterViewController._fetchedResultsController
+00010bd8 s _OBJC_IVAR_$_MasterViewController._managedObjectContext
+00010b9c S _OBJC_METACLASS_$_AppDelegate
+00010b60 S _OBJC_METACLASS_$_DetailViewController
+00010b88 S _OBJC_METACLASS_$_MasterViewController
+         U _OBJC_METACLASS_$_NSObject
+         U _OBJC_METACLASS_$_UIResponder
+         U _OBJC_METACLASS_$_UITableViewController
+         U _OBJC_METACLASS_$_UIViewController
+         U _UIApplicationMain
+         U ___CFConstantStringClassReference
+00004000 T __mh_execute_header
+         U __objc_empty_cache
+         U _abort
+0000e020 T _main
+         U _objc_autoreleasePoolPop
+         U _objc_autoreleasePoolPush
+         U _objc_autoreleaseReturnValue
+0000e0b0 t _objc_autoreleaseReturnValue$shim
+         U _objc_destroyWeak
+         U _objc_loadWeakRetained
+         U _objc_msgSend
+         U _objc_msgSendSuper2
+         U _objc_release
+         U _objc_retain
+         U _objc_retainAutoreleasedReturnValue
+         U _objc_storeStrong
+         U _objc_storeWeak
+         U dyld_stub_binder
+
+/Users/ygarrot/git/nm-otool/nm/unit_test/custom_tests/fat/MachO-iOS-armv7-armv7s-arm64-Helloworld (for architecture arm64):
+0000000100009dd8 t -[AppDelegate .cxx_destruct]
+0000000100009014 t -[AppDelegate application:didFinishLaunchingWithOptions:]
+00000001000094b0 t -[AppDelegate applicationDidBecomeActive:]
+0000000100009428 t -[AppDelegate applicationDidEnterBackground:]
+0000000100009cac t -[AppDelegate applicationDocumentsDirectory]
+000000010000946c t -[AppDelegate applicationWillEnterForeground:]
+00000001000093e4 t -[AppDelegate applicationWillResignActive:]
+00000001000094f4 t -[AppDelegate applicationWillTerminate:]
+00000001000096ac t -[AppDelegate managedObjectContext]
+000000010000983c t -[AppDelegate managedObjectModel]
+00000001000099d0 t -[AppDelegate persistentStoreCoordinator]
+0000000100009564 t -[AppDelegate saveContext]
+0000000100009d8c t -[AppDelegate setWindow:]
+0000000100009d60 t -[AppDelegate window]
+00000001000070bc t -[DetailViewController .cxx_destruct]
+0000000100006a94 t -[DetailViewController configureView]
+0000000100006fb4 t -[DetailViewController detailDescriptionLabel]
+0000000100006f88 t -[DetailViewController detailItem]
+0000000100006c14 t -[DetailViewController didReceiveMemoryWarning]
+0000000100007044 t -[DetailViewController masterPopoverController]
+0000000100006ff4 t -[DetailViewController setDetailDescriptionLabel:]
+0000000100006960 t -[DetailViewController setDetailItem:]
+0000000100007070 t -[DetailViewController setMasterPopoverController:]
+0000000100006c60 t -[DetailViewController splitViewController:willHideViewController:withBarButtonItem:forPopoverController:]
+0000000100006e58 t -[DetailViewController splitViewController:willShowViewController:invalidatingBarButtonItem:]
+0000000100006bac t -[DetailViewController viewDidLoad]
+0000000100008f7c t -[MasterViewController .cxx_destruct]
+0000000100007150 t -[MasterViewController awakeFromNib]
+0000000100008cc4 t -[MasterViewController configureCell:atIndexPath:]
+000000010000888c t -[MasterViewController controller:didChangeObject:atIndexPath:forChangeType:newIndexPath:]
+00000001000086d8 t -[MasterViewController controller:didChangeSection:atIndex:forChangeType:]
+0000000100008c3c t -[MasterViewController controllerDidChangeContent:]
+0000000100008650 t -[MasterViewController controllerWillChangeContent:]
+0000000100008e40 t -[MasterViewController detailViewController]
+00000001000074e0 t -[MasterViewController didReceiveMemoryWarning]
+0000000100008164 t -[MasterViewController fetchedResultsController]
+000000010000752c t -[MasterViewController insertNewObject:]
+0000000100008f04 t -[MasterViewController managedObjectContext]
+00000001000077f4 t -[MasterViewController numberOfSectionsInTableView:]
+0000000100007f94 t -[MasterViewController prepareForSegue:sender:]
+0000000100008e6c t -[MasterViewController setDetailViewController:]
+0000000100008eb8 t -[MasterViewController setFetchedResultsController:]
+0000000100008f30 t -[MasterViewController setManagedObjectContext:]
+0000000100007ad0 t -[MasterViewController tableView:canEditRowAtIndexPath:]
+0000000100007d80 t -[MasterViewController tableView:canMoveRowAtIndexPath:]
+00000001000079dc t -[MasterViewController tableView:cellForRowAtIndexPath:]
+0000000100007b58 t -[MasterViewController tableView:commitEditingStyle:forRowAtIndexPath:]
+0000000100007e08 t -[MasterViewController tableView:didSelectRowAtIndexPath:]
+00000001000078bc t -[MasterViewController tableView:numberOfRowsInSection:]
+0000000100007298 t -[MasterViewController viewDidLoad]
+000000010000726c t _CGSizeMake
+                 U _NSLog
+                 U _NSSQLiteStoreType
+                 U _NSStringFromClass
+000000010000d650 S _OBJC_CLASS_$_AppDelegate
+000000010000d588 S _OBJC_CLASS_$_DetailViewController
+000000010000d5d8 S _OBJC_CLASS_$_MasterViewController
+                 U _OBJC_CLASS_$_NSArray
+                 U _OBJC_CLASS_$_NSBundle
+                 U _OBJC_CLASS_$_NSDate
+                 U _OBJC_CLASS_$_NSEntityDescription
+                 U _OBJC_CLASS_$_NSFetchRequest
+                 U _OBJC_CLASS_$_NSFetchedResultsController
+                 U _OBJC_CLASS_$_NSFileManager
+                 U _OBJC_CLASS_$_NSIndexSet
+                 U _OBJC_CLASS_$_NSManagedObjectContext
+                 U _OBJC_CLASS_$_NSManagedObjectModel
+                 U _OBJC_CLASS_$_NSPersistentStoreCoordinator
+                 U _OBJC_CLASS_$_NSSortDescriptor
+                 U _OBJC_CLASS_$_UIBarButtonItem
+                 U _OBJC_CLASS_$_UIDevice
+                 U _OBJC_CLASS_$_UIResponder
+                 U _OBJC_CLASS_$_UITableViewController
+                 U _OBJC_CLASS_$_UIViewController
+000000010000d690 s _OBJC_IVAR_$_AppDelegate._managedObjectContext
+000000010000d694 s _OBJC_IVAR_$_AppDelegate._managedObjectModel
+000000010000d698 s _OBJC_IVAR_$_AppDelegate._persistentStoreCoordinator
+000000010000d69c s _OBJC_IVAR_$_AppDelegate._window
+000000010000d67c s _OBJC_IVAR_$_DetailViewController._detailDescriptionLabel
+000000010000d678 s _OBJC_IVAR_$_DetailViewController._detailItem
+000000010000d680 s _OBJC_IVAR_$_DetailViewController._masterPopoverController
+000000010000d688 s _OBJC_IVAR_$_MasterViewController._detailViewController
+000000010000d684 s _OBJC_IVAR_$_MasterViewController._fetchedResultsController
+000000010000d68c s _OBJC_IVAR_$_MasterViewController._managedObjectContext
+000000010000d628 S _OBJC_METACLASS_$_AppDelegate
+000000010000d5b0 S _OBJC_METACLASS_$_DetailViewController
+000000010000d600 S _OBJC_METACLASS_$_MasterViewController
+                 U _OBJC_METACLASS_$_NSObject
+                 U _OBJC_METACLASS_$_UIResponder
+                 U _OBJC_METACLASS_$_UITableViewController
+                 U _OBJC_METACLASS_$_UIViewController
+                 U _UIApplicationMain
+                 U ___CFConstantStringClassReference
                  U ___stack_chk_fail
                  U ___stack_chk_guard
-                 U ___toupper
-0000000000001b78 T __nc_Calculate_Item_Length_and_Width
-0000000000001acf T __nc_Calculate_Text_Width
-00000000000018df T __nc_Connect_Items
-0000000000004288 D __nc_Default_Item
-00000000000041d0 D __nc_Default_Menu
-0000000000001a63 T __nc_Disconnect_Items
-00000000000033db T __nc_Draw_Menu
-0000000000001c4e T __nc_Link_Items
-0000000000000ef8 T __nc_Match_Next_Character_In_Item_Name
-0000000000001fe7 T __nc_New_TopRow_and_CurrentItem
-0000000000002f43 T __nc_Post_Item
-0000000000001f29 T __nc_Show_Menu
-0000000000000dcd T __nc_menu_cursor_pos
-                 U _calloc
-                 U _copywin
-000000000000236b T _current_item
-                 U _delwin
-                 U _free
-0000000000002532 T _free_item
-0000000000002b24 T _free_menu
-                 U _getmouse
-0000000000002a7b T _item_count
-00000000000023b0 T _item_description
-0000000000002385 T _item_index
-0000000000002248 T _item_init
-00000000000023a0 T _item_name
-00000000000027c4 T _item_opts
-0000000000002768 T _item_opts_off
-00000000000027a3 T _item_opts_on
-0000000000002285 T _item_term
-0000000000003bd0 T _item_userptr
-000000000000298a T _item_value
-000000000000299e T _item_visible
-                 U _malloc
-                 U _mbstowcs
-                 U _memcpy
-0000000000000d2e T _menu_back
-00000000000010f3 T _menu_driver
-0000000000000ca3 T _menu_fore
-00000000000018ad T _menu_format
-0000000000000db9 T _menu_grey
-00000000000021ce T _menu_init
-0000000000002a6a T _menu_items
-00000000000026b0 T _menu_mark
-0000000000002cd0 T _menu_opts
-0000000000002c8b T _menu_opts_off
-0000000000002caf T _menu_opts_on
-0000000000002d6e T _menu_pad
-0000000000002d83 T _menu_pattern
-0000000000003898 T _menu_request_by_name
-000000000000386b T _menu_request_name
-0000000000003a51 T _menu_spacing
-0000000000003ad9 T _menu_sub
-000000000000220b T _menu_term
-0000000000003b2a T _menu_userptr
-0000000000003b8b T _menu_win
-                 U _mvderwin
-00000000000023c1 T _new_item
-0000000000002a8f T _new_menu
-                 U _newpad
-0000000000000e2f T _pos_menu_cursor
-0000000000003575 T _post_menu
-0000000000003955 T _scale_menu
-000000000000229d T _set_current_item
-0000000000002223 T _set_item_init
-00000000000026c8 T _set_item_opts
-0000000000002260 T _set_item_term
-0000000000003bae T _set_item_userptr
-00000000000028c9 T _set_item_value
-0000000000000cb7 T _set_menu_back
-0000000000000c2c T _set_menu_fore
-000000000000177c T _set_menu_format
-0000000000000d42 T _set_menu_grey
-00000000000021a9 T _set_menu_init
-00000000000029d5 T _set_menu_items
-000000000000257a T _set_menu_mark
-0000000000002ba8 T _set_menu_opts
-0000000000002cea T _set_menu_pad
-0000000000002da4 T _set_menu_pattern
-00000000000039b5 T _set_menu_spacing
-0000000000003a90 T _set_menu_sub
-00000000000021e6 T _set_menu_term
-0000000000003b05 T _set_menu_userptr
-0000000000003b42 T _set_menu_win
-00000000000027db T _set_top_row
-                 U _stdscr
-                 U _strcpy
-                 U _strlen
-                 U _strncmp
-                 U _strncpy
-                 U _subpad
-00000000000028a6 T _top_row
-0000000000003753 T _unpost_menu
-                 U _waddch
-                 U _waddnstr
-                 U _wattr_off
-                 U _wattr_on
-                 U _wbkgdset
-                 U _wcursyncup
-                 U _wcwidth
-                 U _wenclose
-                 U _werase
-                 U _wmouse_trafo
-                 U _wmove
-                 U _wsyncup
-                 U _wtouchln
+0000000100000000 T __mh_execute_header
+                 U __objc_empty_cache
+                 U _abort
+0000000100009e94 T _main
+                 U _objc_autoreleasePoolPop
+                 U _objc_autoreleasePoolPush
+                 U _objc_autoreleaseReturnValue
+                 U _objc_destroyWeak
+                 U _objc_loadWeakRetained
+                 U _objc_msgSend
+                 U _objc_msgSendSuper2
+                 U _objc_release
+                 U _objc_retain
+                 U _objc_retainAutoreleasedReturnValue
+                 U _objc_storeStrong
+                 U _objc_storeWeak
                  U dyld_stub_binder

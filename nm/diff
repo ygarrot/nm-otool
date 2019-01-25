@@ -1,9 +1,572 @@
 diff --git a/their b/mine
-index 82e99e5..c412f5f 100644
+index 579a4db..ab5f5db 100644
 --- a/their
 +++ b/mine
-@@ -1,3 +1,4 @@
-+unit_test/custom_tests/fat_lib/libmenu.dylib:
-                  U _TABSIZE
-                  U __DefaultRuneLocale
-                  U ___error
+@@ -1,5 +1,3 @@
+-
+-/Users/ygarrot/git/nm-otool/nm/unit_test/custom_tests/fat/MachO-iOS-armv7-armv7s-arm64-Helloworld (for architecture armv7):
+ 0000e0bc s  stub helpers
+ 0000dfa0 t -[AppDelegate .cxx_destruct]
+ 0000d34c t -[AppDelegate application:didFinishLaunchingWithOptions:]
+@@ -112,60 +110,144 @@
+          U _objc_storeStrong
+          U _objc_storeWeak
+          U dyld_stub_binder
+-
+-/Users/ygarrot/git/nm-otool/nm/unit_test/custom_tests/fat/MachO-iOS-armv7-armv7s-arm64-Helloworld (for architecture armv7s):
++0000e0bc s him
++0000dfa0 s w:]
++0000d34c s ct]
++0000d7d0 s d:]
++0000d770 s e:]
++0000dedc s or]
++0000d7a0 s d:]
++0000d740 s s:]
++0000d800 s e:]
++0000d97c s xt]
++0000dac4 s xt]
++0000dc38 s el]
++0000d85c s e:]
++0000df74 s ow]
++0000df58 s ry]
++0000b5d4 s r:]
++0000b024 s m:]
++0000b534 s em]
++0000b518 s m:]
++0000b1c4 s ad]
++0000b58c s l:]
++0000b55c s el]
++0000af00 s ain
++0000b5a8 s er]
++0000b208 s ng]
++0000b400 s r:]
+ 0000e0bc s  stub helpers
+-0000dfa0 t -[AppDelegate .cxx_destruct]
+-0000d34c t -[AppDelegate application:didFinishLaunchingWithOptions:]
+-0000d7d0 t -[AppDelegate applicationDidBecomeActive:]
+-0000d770 t -[AppDelegate applicationDidEnterBackground:]
+-0000dedc t -[AppDelegate applicationDocumentsDirectory]
+-0000d7a0 t -[AppDelegate applicationWillEnterForeground:]
+-0000d740 t -[AppDelegate applicationWillResignActive:]
+-0000d800 t -[AppDelegate applicationWillTerminate:]
+-0000d97c t -[AppDelegate managedObjectContext]
+-0000dac4 t -[AppDelegate managedObjectModel]
+-0000dc38 t -[AppDelegate persistentStoreCoordinator]
+-0000d85c t -[AppDelegate saveContext]
+-0000df74 t -[AppDelegate setWindow:]
+-0000df58 t -[AppDelegate window]
+-0000b5d4 t -[DetailViewController .cxx_destruct]
+-0000b024 t -[DetailViewController configureView]
+-0000b534 t -[DetailViewController detailDescriptionLabel]
+-0000b518 t -[DetailViewController detailItem]
+-0000b1c4 t -[DetailViewController didReceiveMemoryWarning]
+-0000b58c t -[DetailViewController masterPopoverController]
+-0000b55c t -[DetailViewController setDetailDescriptionLabel:]
+-0000af00 t -[DetailViewController setDetailItem:]
+-0000b5a8 t -[DetailViewController setMasterPopoverController:]
+-0000b208 t -[DetailViewController splitViewController:willHideViewController:withBarButtonItem:forPopoverController:]
+-0000b400 t -[DetailViewController splitViewController:willShowViewController:invalidatingBarButtonItem:]
+-0000b15c t -[DetailViewController viewDidLoad]
+-0000d2e8 t -[MasterViewController .cxx_destruct]
+-0000b634 t -[MasterViewController awakeFromNib]
+-0000d0a4 t -[MasterViewController configureCell:atIndexPath:]
+-0000ccb4 t -[MasterViewController controller:didChangeObject:atIndexPath:forChangeType:newIndexPath:]
+-0000cafc t -[MasterViewController controller:didChangeSection:atIndex:forChangeType:]
+-0000d020 t -[MasterViewController controllerDidChangeContent:]
+-0000ca78 t -[MasterViewController controllerWillChangeContent:]
+-0000d22c t -[MasterViewController detailViewController]
+-0000ba00 t -[MasterViewController didReceiveMemoryWarning]
+-0000c5c8 t -[MasterViewController fetchedResultsController]
+-0000ba44 t -[MasterViewController insertNewObject:]
+-0000d2a0 t -[MasterViewController managedObjectContext]
+-0000bd18 t -[MasterViewController numberOfSectionsInTableView:]
+-0000c3dc t -[MasterViewController prepareForSegue:sender:]
+-0000d248 t -[MasterViewController setDetailViewController:]
+-0000d274 t -[MasterViewController setFetchedResultsController:]
+-0000d2bc t -[MasterViewController setManagedObjectContext:]
+-0000bf94 t -[MasterViewController tableView:canEditRowAtIndexPath:]
+-0000c200 t -[MasterViewController tableView:canMoveRowAtIndexPath:]
+-0000bef0 t -[MasterViewController tableView:cellForRowAtIndexPath:]
+-0000bff4 t -[MasterViewController tableView:commitEditingStyle:forRowAtIndexPath:]
+-0000c260 t -[MasterViewController tableView:didSelectRowAtIndexPath:]
+-0000bddc t -[MasterViewController tableView:numberOfRowsInSection:]
+-0000b764 t -[MasterViewController viewDidLoad]
+-0000b72c t _CGSizeMake
++0000dfa0 s -[AppDelegate .cxx_destruct]
++0000d34c s -[AppDelegate application:didFinishLaunchingWithOptions:]
++0000d7d0 s -[AppDelegate applicationDidBecomeActive:]
++0000d770 s -[AppDelegate applicationDidEnterBackground:]
++0000dedc s -[AppDelegate applicationDocumentsDirectory]
++0000d7a0 s -[AppDelegate applicationWillEnterForeground:]
++0000d740 s -[AppDelegate applicationWillResignActive:]
++0000d800 s -[AppDelegate applicationWillTerminate:]
++0000d97c s -[AppDelegate managedObjectContext]
++0000dac4 s -[AppDelegate managedObjectModel]
++0000dc38 s -[AppDelegate persistentStoreCoordinator]
++0000d85c s -[AppDelegate saveContext]
++0000df74 s -[AppDelegate setWindow:]
++0000df58 s -[AppDelegate window]
++0000b5d4 s -[DetailViewController .cxx_destruct]
++0000b024 s -[DetailViewController configureView]
++0000b534 s -[DetailViewController detailDescriptionLabel]
++0000b518 s -[DetailViewController detailItem]
++0000b1c4 s -[DetailViewController didReceiveMemoryWarning]
++0000b58c s -[DetailViewController masterPopoverController]
++0000b55c s -[DetailViewController setDetailDescriptionLabel:]
++0000af00 s -[DetailViewController setDetailItem:]
++0000b5a8 s -[DetailViewController setMasterPopoverController:]
++0000b208 s -[DetailViewController splitViewController:willHideViewController:withBarButtonItem:forPopoverController:]
++0000b400 s -[DetailViewController splitViewController:willShowViewController:invalidatingBarButtonItem:]
++0000b15c s -[DetailViewController viewDidLoad]
++0000d2e8 s -[MasterViewController .cxx_destruct]
++0000b634 s -[MasterViewController awakeFromNib]
++0000d0a4 s -[MasterViewController configureCell:atIndexPath:]
++0000ccb4 s -[MasterViewController controller:didChangeObject:atIndexPath:forChangeType:newIndexPath:]
++0000cafc s -[MasterViewController controller:didChangeSection:atIndex:forChangeType:]
++0000d020 s -[MasterViewController controllerDidChangeContent:]
++0000ca78 s -[MasterViewController controllerWillChangeContent:]
++0000d22c s -[MasterViewController detailViewController]
++0000ba00 s -[MasterViewController didReceiveMemoryWarning]
++0000c5c8 s -[MasterViewController fetchedResultsController]
++0000ba44 s -[MasterViewController insertNewObject:]
++0000d2a0 s -[MasterViewController managedObjectContext]
++0000bd18 s -[MasterViewController numberOfSectionsInTableView:]
++0000c3dc s -[MasterViewController prepareForSegue:sender:]
++0000d248 s -[MasterViewController setDetailViewController:]
++0000d274 s -[MasterViewController setFetchedResultsController:]
++0000d2bc s -[MasterViewController setManagedObjectContext:]
++0000bf94 s -[MasterViewController tableView:canEditRowAtIndexPath:]
++0000c200 s -[MasterViewController tableView:canMoveRowAtIndexPath:]
++0000bef0 s -[MasterViewController tableView:cellForRowAtIndexPath:]
++0000bff4 s -[MasterViewController tableView:commitEditingStyle:forRowAtIndexPath:]
++0000c260 s -[MasterViewController tableView:didSelectRowAtIndexPath:]
++0000bddc s -[MasterViewController tableView:numberOfRowsInSection:]
++0000b764 s -[MasterViewController viewDidLoad]
++0000b15c s ew]
++0000d2e8 s t:]
++0000b634 s ct]
++0000d0a4 s t:]
++0000ccb4 s e:]
++0000cafc s t:]
++0000d020 s h:]
++0000ca78 s er]
++0000d22c s h:]
++0000ba00 s ad]
++0000c5c8 s r:]
++0000ba44 s ng]
++0000d2a0 s r:]
++0000bd18 s t:]
++0000c3dc s h:]
++0000d248 s er]
++0000d274 s r:]
++0000d2bc s xt]
++0000bf94 s h:]
++0000c200 s h:]
++0000bef0 s n:]
++0000bff4 s h:]
++0000c260 s h:]
++0000bddc s w:]
++0000b764 s ake
++0000b72c s ib]
++         U ain
++         U Log
++         U ype
++00010bb0 S dow
++00010b4c S ate
++00010b74 S ler
++         U ass
++         U ray
++         U dle
++         U ate
++         U ion
++         U est
++         U ler
++         U ger
++         U Set
++         U ext
++         U del
++         U tor
++         U tor
++         U tem
++         U ice
++         U der
++         U ler
++00010bdc s ext
++00010be0 s ext
++00010be4 s del
++00010be8 s tor
++00010bc8 s tem
++00010bc4 s ers
++00010bcc s bel
++00010bd4 s ler
++00010bd0 s ler
++00010bd8 s ler
++00010b9c S ler
++0000b72c s _CGSizeMake
+          U _NSLog
+          U _NSSQLiteStoreType
+          U _NSStringFromClass
+@@ -208,14 +290,14 @@
+          U _OBJC_METACLASS_$_UIViewController
+          U _UIApplicationMain
+          U ___CFConstantStringClassReference
+-00004000 T __mh_execute_header
++00004000 S __mh_execute_header
+          U __objc_empty_cache
+          U _abort
+-0000e020 T _main
++0000e020 S _main
+          U _objc_autoreleasePoolPop
+          U _objc_autoreleasePoolPush
+          U _objc_autoreleaseReturnValue
+-0000e0b0 t _objc_autoreleaseReturnValue$shim
++0000e0b0 s _objc_autoreleaseReturnValue$shim
+          U _objc_destroyWeak
+          U _objc_loadWeakRetained
+          U _objc_msgSend
+@@ -225,65 +307,200 @@
+          U _objc_retainAutoreleasedReturnValue
+          U _objc_storeStrong
+          U _objc_storeWeak
++00010b60 S ate
+          U dyld_stub_binder
+-
+-/Users/ygarrot/git/nm-otool/nm/unit_test/custom_tests/fat/MachO-iOS-armv7-armv7s-arm64-Helloworld (for architecture arm64):
++00010b88 S ler
++         U ler
++         U ect
++         U der
++         U ler
++         U ler
++         U ain
++00004000 S ler
++         U nce
++         U che
++0000e020 S der
++         U ort
++         U Pop
++         U ush
++0000e0b0 s ct]
++         U lue
++         U eak
++         U ned
++         U end
++         U er2
++         U ase
++         U ain
++         U lue
++         U ong
++         U eak
+ 0000000100009dd8 t -[AppDelegate .cxx_destruct]
++00001be20000e0bc s _detailItem
++00001bb20000dfa0 t -[AppDelegate .cxx_destruct]
+ 0000000100009014 t -[AppDelegate application:didFinishLaunchingWithOptions:]
++000019d00000d34c t -[AppDelegate application:didFinishLaunchingWithOptions:]
+ 00000001000094b0 t -[AppDelegate applicationDidBecomeActive:]
++00001a840000d7d0 t -[AppDelegate applicationDidBecomeActive:]
+ 0000000100009428 t -[AppDelegate applicationDidEnterBackground:]
++00001a2a0000d770 t -[AppDelegate applicationDidEnterBackground:]
+ 0000000100009cac t -[AppDelegate applicationDocumentsDirectory]
++00001b650000dedc t -[AppDelegate applicationDocumentsDirectory]
+ 000000010000946c t -[AppDelegate applicationWillEnterForeground:]
++00001a590000d7a0 t -[AppDelegate applicationWillEnterForeground:]
+ 00000001000093e4 t -[AppDelegate applicationWillResignActive:]
++000019fc0000d740 t -[AppDelegate applicationWillResignActive:]
+ 00000001000094f4 t -[AppDelegate applicationWillTerminate:]
++00001aad0000d800 t -[AppDelegate applicationWillTerminate:]
+ 00000001000096ac t -[AppDelegate managedObjectContext]
++00001aec0000d97c t -[AppDelegate managedObjectContext]
+ 000000010000983c t -[AppDelegate managedObjectModel]
++00001b0e0000dac4 t -[AppDelegate managedObjectModel]
+ 00000001000099d0 t -[AppDelegate persistentStoreCoordinator]
++00001b380000dc38 t -[AppDelegate persistentStoreCoordinator]
+ 0000000100009564 t -[AppDelegate saveContext]
++00001ac80000d85c t -[AppDelegate saveContext]
+ 0000000100009d8c t -[AppDelegate setWindow:]
++00001b950000df74 t -[AppDelegate setWindow:]
+ 0000000100009d60 t -[AppDelegate window]
++00001b7b0000df58 t -[AppDelegate window]
+ 00000001000070bc t -[DetailViewController .cxx_destruct]
++000014920000b5d4 t -[DetailViewController .cxx_destruct]
+ 0000000100006a94 t -[DetailViewController configureView]
++000012660000b024 t -[DetailViewController configureView]
+ 0000000100006fb4 t -[DetailViewController detailDescriptionLabel]
++000013d50000b534 t -[DetailViewController detailDescriptionLabel]
+ 0000000100006f88 t -[DetailViewController detailItem]
++000013a60000b518 t -[DetailViewController detailItem]
+ 0000000100006c14 t -[DetailViewController didReceiveMemoryWarning]
++000012ba0000b1c4 t -[DetailViewController didReceiveMemoryWarning]
+ 0000000100007044 t -[DetailViewController masterPopoverController]
++000014380000b58c t -[DetailViewController masterPopoverController]
+ 0000000100006ff4 t -[DetailViewController setDetailDescriptionLabel:]
++000014080000b55c t -[DetailViewController setDetailDescriptionLabel:]
+ 0000000100006960 t -[DetailViewController setDetailItem:]
++000012400000af00 t -[DetailViewController setDetailItem:]
+ 0000000100007070 t -[DetailViewController setMasterPopoverController:]
++0000146c0000b5a8 t -[DetailViewController setMasterPopoverController:]
+ 0000000100006c60 t -[DetailViewController splitViewController:willHideViewController:withBarButtonItem:forPopoverController:]
++000013250000b208 t -[DetailViewController splitViewController:willHideViewController:withBarButtonItem:forPopoverController:]
+ 0000000100006e58 t -[DetailViewController splitViewController:willShowViewController:invalidatingBarButtonItem:]
++000013830000b400 t -[DetailViewController splitViewController:willShowViewController:invalidatingBarButtonItem:]
+ 0000000100006bac t -[DetailViewController viewDidLoad]
++00001be60000e0bc s ailItem
++00001bb60000dfa0 t pDelegate .cxx_destruct]
++000019d40000d34c t pDelegate application:didFinishLaunchingWithOptions:]
++00001a880000d7d0 t pDelegate applicationDidBecomeActive:]
++00001a2e0000d770 t pDelegate applicationDidEnterBackground:]
++00001b690000dedc t pDelegate applicationDocumentsDirectory]
++00001a5d0000d7a0 t pDelegate applicationWillEnterForeground:]
++00001a000000d740 t pDelegate applicationWillResignActive:]
++00001ab10000d800 t pDelegate applicationWillTerminate:]
++00001af00000d97c t pDelegate managedObjectContext]
++00001b120000dac4 t pDelegate managedObjectModel]
++00001b3c0000dc38 t pDelegate persistentStoreCoordinator]
++00001acc0000d85c t pDelegate saveContext]
++00001b990000df74 t pDelegate setWindow:]
++00001b7f0000df58 t pDelegate window]
++000014960000b5d4 t tailViewController .cxx_destruct]
++0000126a0000b024 t tailViewController configureView]
++000013d90000b534 t tailViewController detailDescriptionLabel]
++000013aa0000b518 t tailViewController detailItem]
++000012be0000b1c4 t tailViewController didReceiveMemoryWarning]
++0000143c0000b58c t tailViewController masterPopoverController]
++0000140c0000b55c t tailViewController setDetailDescriptionLabel:]
++000012440000af00 t tailViewController setDetailItem:]
++000014700000b5a8 t tailViewController setMasterPopoverController:]
++000013290000b208 t tailViewController splitViewController:willHideViewController:withBarButtonItem:forPopoverController:]
++000013870000b400 t tailViewController splitViewController:willShowViewController:invalidatingBarButtonItem:]
++0000128e0000b15c t tailViewController viewDidLoad]
++0000199a0000d2e8 t sterViewController .cxx_destruct]
++000014bb0000b634 t sterViewController awakeFromNib]
++000018830000d0a4 t sterViewController configureCell:atIndexPath:]
++0000181c0000ccb4 t sterViewController controller:didChangeObject:atIndexPath:forChangeType:newIndexPath:]
++000017c10000cafc t sterViewController controller:didChangeSection:atIndex:forChangeType:]
++000018500000d020 t sterViewController controllerDidChangeContent:]
++000017760000ca78 t sterViewController controllerWillChangeContent:]
++000018b00000d22c t sterViewController detailViewController]
++0000151b0000ba00 t sterViewController didReceiveMemoryWarning]
++000017410000c5c8 t sterViewController fetchedResultsController]
++000015440000ba44 t sterViewController insertNewObject:]
++000019430000d2a0 t sterViewController managedObjectContext]
++000015790000bd18 t sterViewController numberOfSectionsInTableView:]
++000017100000c3dc t sterViewController prepareForSegue:sender:]
++000018e10000d248 t sterViewController setDetailViewController:]
++000019160000d274 t sterViewController setFetchedResultsController:]
++000019740000d2bc t sterViewController setManagedObjectContext:]
++000016240000bf94 t sterViewController tableView:canEditRowAtIndexPath:]
++000016a50000c200 t sterViewController tableView:canMoveRowAtIndexPath:]
++000015eb0000bef0 t sterViewController tableView:cellForRowAtIndexPath:]
++0000166c0000bff4 t sterViewController tableView:commitEditingStyle:forRowAtIndexPath:]
++000016e00000c260 t sterViewController tableView:didSelectRowAtIndexPath:]
++000015b20000bddc t sterViewController tableView:numberOfRowsInSection:]
++000014eb0000b764 t sterViewController viewDidLoad]
++0000128a0000b15c t -[DetailViewController viewDidLoad]
+ 0000000100008f7c t -[MasterViewController .cxx_destruct]
++000019960000d2e8 t -[MasterViewController .cxx_destruct]
+ 0000000100007150 t -[MasterViewController awakeFromNib]
++000014b70000b634 t -[MasterViewController awakeFromNib]
+ 0000000100008cc4 t -[MasterViewController configureCell:atIndexPath:]
++0000187f0000d0a4 t -[MasterViewController configureCell:atIndexPath:]
+ 000000010000888c t -[MasterViewController controller:didChangeObject:atIndexPath:forChangeType:newIndexPath:]
++000018180000ccb4 t -[MasterViewController controller:didChangeObject:atIndexPath:forChangeType:newIndexPath:]
+ 00000001000086d8 t -[MasterViewController controller:didChangeSection:atIndex:forChangeType:]
++000017bd0000cafc t -[MasterViewController controller:didChangeSection:atIndex:forChangeType:]
+ 0000000100008c3c t -[MasterViewController controllerDidChangeContent:]
++0000184c0000d020 t -[MasterViewController controllerDidChangeContent:]
+ 0000000100008650 t -[MasterViewController controllerWillChangeContent:]
++000017720000ca78 t -[MasterViewController controllerWillChangeContent:]
+ 0000000100008e40 t -[MasterViewController detailViewController]
++000018ac0000d22c t -[MasterViewController detailViewController]
+ 00000001000074e0 t -[MasterViewController didReceiveMemoryWarning]
++000015170000ba00 t -[MasterViewController didReceiveMemoryWarning]
+ 0000000100008164 t -[MasterViewController fetchedResultsController]
++0000173d0000c5c8 t -[MasterViewController fetchedResultsController]
+ 000000010000752c t -[MasterViewController insertNewObject:]
++000015400000ba44 t -[MasterViewController insertNewObject:]
+ 0000000100008f04 t -[MasterViewController managedObjectContext]
++0000193f0000d2a0 t -[MasterViewController managedObjectContext]
+ 00000001000077f4 t -[MasterViewController numberOfSectionsInTableView:]
++000015750000bd18 t -[MasterViewController numberOfSectionsInTableView:]
+ 0000000100007f94 t -[MasterViewController prepareForSegue:sender:]
++0000170c0000c3dc t -[MasterViewController prepareForSegue:sender:]
+ 0000000100008e6c t -[MasterViewController setDetailViewController:]
++000018dd0000d248 t -[MasterViewController setDetailViewController:]
+ 0000000100008eb8 t -[MasterViewController setFetchedResultsController:]
++000019120000d274 t -[MasterViewController setFetchedResultsController:]
+ 0000000100008f30 t -[MasterViewController setManagedObjectContext:]
++000019700000d2bc t -[MasterViewController setManagedObjectContext:]
+ 0000000100007ad0 t -[MasterViewController tableView:canEditRowAtIndexPath:]
++000016200000bf94 t -[MasterViewController tableView:canEditRowAtIndexPath:]
+ 0000000100007d80 t -[MasterViewController tableView:canMoveRowAtIndexPath:]
++000016a10000c200 t -[MasterViewController tableView:canMoveRowAtIndexPath:]
+ 00000001000079dc t -[MasterViewController tableView:cellForRowAtIndexPath:]
++000015e70000bef0 t -[MasterViewController tableView:cellForRowAtIndexPath:]
+ 0000000100007b58 t -[MasterViewController tableView:commitEditingStyle:forRowAtIndexPath:]
++000016680000bff4 t -[MasterViewController tableView:commitEditingStyle:forRowAtIndexPath:]
+ 0000000100007e08 t -[MasterViewController tableView:didSelectRowAtIndexPath:]
++000016dc0000c260 t -[MasterViewController tableView:didSelectRowAtIndexPath:]
+ 00000001000078bc t -[MasterViewController tableView:numberOfRowsInSection:]
++000015ae0000bddc t -[MasterViewController tableView:numberOfRowsInSection:]
+ 0000000100007298 t -[MasterViewController viewDidLoad]
++000014e70000b764 t -[MasterViewController viewDidLoad]
+ 000000010000726c t _CGSizeMake
++000014c30000b72c t _CGSizeMake
++00001ed000000000 U JC_CLASS_$_NSArray
++00001ee300000000 U S_$_NSArray
++00001ef600000000 U LASS_$_NSBundle
+                  U _NSLog
+                  U _NSSQLiteStoreType
+                  U _NSStringFromClass
+ 000000010000d650 S _OBJC_CLASS_$_AppDelegate
++00001dfd00010bb0 S ewController
++00001e2000010b4c S _MasterViewController
+ 000000010000d588 S _OBJC_CLASS_$_DetailViewController
++00001e4300010b74 S SS_$_AppDelegate
++00001f0c00000000 U JC_CLASS_$_NSDate
++00001f2300000000 U C_CLASS_$_NSEntityDescription
+ 000000010000d5d8 S _OBJC_CLASS_$_MasterViewController
+                  U _OBJC_CLASS_$_NSArray
+                  U _OBJC_CLASS_$_NSBundle
+@@ -302,18 +519,106 @@
+                  U _OBJC_CLASS_$_UIResponder
+                  U _OBJC_CLASS_$_UITableViewController
+                  U _OBJC_CLASS_$_UIViewController
++00001f3800000000 U iption
++00001f5a00000000 U NSFetchRequest
++00001f7700000000 U chedResultsController
++00001fa000000000 U LASS_$_NSFileManager
++00001fbc00000000 U xSet
++00001fd500000000 U ObjectContext
++00001ffa00000000 U _$_NSManagedObjectModel
++0000201d00000000 U _NSPersistentStoreCoordinator
++0000204800000000 U _CLASS_$_NSSortDescriptor
++0000206700000000 U arButtonItem
++0000208500000000 U vice
++0000209c00000000 U 
++000020b600000000 U iewController
++000020da00000000 U $_UIViewController
++000020f900000000 U _NSObject
++00001d6000010bdc s OBJC_IVAR_$_AppDelegate._managedObjectModel
+ 000000010000d690 s _OBJC_IVAR_$_AppDelegate._managedObjectContext
++00001d8d00010be0 s JC_IVAR_$_AppDelegate._persistentStoreCoordinator
+ 000000010000d694 s _OBJC_IVAR_$_AppDelegate._managedObjectModel
+ 000000010000d698 s _OBJC_IVAR_$_AppDelegate._persistentStoreCoordinator
++00001dc200010be4 s ator
+ 000000010000d69c s _OBJC_IVAR_$_AppDelegate._window
++00001de300010be8 s ppDelegate
+ 000000010000d67c s _OBJC_IVAR_$_DetailViewController._detailDescriptionLabel
++00001c4a00010bc8 s tionLabel
++00001c1000010bc4 s BJC_IVAR_$_DetailViewController._detailDescriptionLabel
+ 000000010000d678 s _OBJC_IVAR_$_DetailViewController._detailItem
++00001c8500010bcc s Controller
+ 000000010000d680 s _OBJC_IVAR_$_DetailViewController._masterPopoverController
+ 000000010000d688 s _OBJC_IVAR_$_MasterViewController._detailViewController
++00001cf900010bd4 s troller
+ 000000010000d684 s _OBJC_IVAR_$_MasterViewController._fetchedResultsController
++00001cc100010bd0 s sController
++00001d3100010bd8 s Context
+ 000000010000d68c s _OBJC_IVAR_$_MasterViewController._managedObjectContext
++00001e6100010b9c S DetailViewController
+ 000000010000d628 S _OBJC_METACLASS_$_AppDelegate
++000014c70000b72c t izeMake
++00001ed400000000 U LASS_$_NSArray
++00001ee700000000 U NSArray
++00001efa00000000 U _$_NSBundle
++00001e0100010bb0 S ntroller
++00001e2400010b4c S terViewController
++00001e4700010b74 S _AppDelegate
++00001f1000000000 U LASS_$_NSDate
++00001f2700000000 U ASS_$_NSEntityDescription
++00001f3c00000000 U on
++00001f5e00000000 U tchRequest
++00001f7b00000000 U ResultsController
++00001fa400000000 U _$_NSFileManager
++00001fc000000000 U 
++00001fd900000000 U ctContext
++00001ffe00000000 U SManagedObjectModel
++0000202100000000 U ersistentStoreCoordinator
++0000204c00000000 U SS_$_NSSortDescriptor
++0000206b00000000 U ttonItem
++0000208900000000 U 
++000020a000000000 U JC_CLASS_$_UITableViewController
++000020ba00000000 U ontroller
++000020de00000000 U ViewController
++000020fd00000000 U bject
++00001d6400010bdc s _IVAR_$_AppDelegate._managedObjectModel
++00001d9100010be0 s VAR_$_AppDelegate._persistentStoreCoordinator
++00001dc600010be4 s 
++00001de700010be8 s legate
++00001c4e00010bc8 s Label
++00001c1400010bc4 s IVAR_$_DetailViewController._detailDescriptionLabel
++00001c8900010bcc s roller
++00001cfd00010bd4 s ler
++00001cc500010bd0 s troller
++00001d3500010bd8 s ext
++00001e6500010b9c S ilViewController
++00001e8c00010b60 S SS_$_MasterViewController
++00001eb300010b88 S header
++0000211800000000 U nder
++0000213600000000 U bleViewController
++0000215e00000000 U ASS_$_UIViewController
++0000218100000000 U n
++0000219400000000 U 
++000021b600000000 U ___stack_chk_guard
++00001ec700004000 T _NSStringFromClass
++000021c900000000 U che
++000021d000000000 U toreleasePoolPop
++00001ecd0000e020 T OBJC_CLASS_$_NSArray
++000021e900000000 U sePoolPop
++0000220300000000 U sePoolPush
++0000222000000000 U seReturnValue
++00001bd80000e0b0 t C_IVAR_$_DetailViewController._detailItem
++0000223200000000 U ak
++0000224900000000 U etained
++0000225700000000 U objc_msgSendSuper2
++0000226b00000000 U per2
++0000227900000000 U objc_retain
++0000228600000000 U bjc_retainAutoreleasedReturnValue
++000022aa00000000 U oreleasedReturnValue
++000022bc00000000 U ng
++000022cc00000000 U 
++00001e8800010b60 S ACLASS_$_MasterViewController
+ 000000010000d5b0 S _OBJC_METACLASS_$_DetailViewController
++0000015300000000 U r
+ 000000010000d600 S _OBJC_METACLASS_$_MasterViewController
+                  U _OBJC_METACLASS_$_NSObject
+                  U _OBJC_METACLASS_$_UIResponder
+@@ -327,6 +632,21 @@
+                  U __objc_empty_cache
+                  U _abort
+ 0000000100009e94 T _main
++00001eaf00010b88 S ute_header
++0000211400000000 U esponder
++0000213200000000 U UITableViewController
++0000215a00000000 U TACLASS_$_UIViewController
++0000217d00000000 U nMain
++0000219000000000 U ence
++000021b200000000 U ail
++00001ec300004000 T ype
++000021c500000000 U y_cache
++000021cc00000000 U c_autoreleasePoolPop
++00001ec90000e020 T ss
++000021e500000000 U eleasePoolPop
++000021ff00000000 U eleasePoolPush
++0000221c00000000 U eleaseReturnValue
++00001bd40000e0b0 t _OBJC_IVAR_$_DetailViewController._detailItem
+                  U _objc_autoreleasePoolPop
+                  U _objc_autoreleasePoolPush
+                  U _objc_autoreleaseReturnValue
+@@ -340,3 +660,13 @@
+                  U _objc_storeStrong
+                  U _objc_storeWeak
+                  U dyld_stub_binder
++0000222e00000000 U oyWeak
++0000224500000000 U eakRetained
++0000225300000000 U nd
++0000226700000000 U ndSuper2
++0000227500000000 U se
++0000228200000000 U n
++000022a600000000 U nAutoreleasedReturnValue
++000022b800000000 U Strong
++000022c800000000 U Weak
++0000015300000000 U inder

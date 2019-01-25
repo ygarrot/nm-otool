@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:01 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/25 13:50:20 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/25 15:40:22 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,10 @@ typedef struct s_cpu_family
 {
 	const int type;
 	const char *name;
+	const	int width;
+	const	int mask;
 	const char *print_format;
+	
 	// void (*print_func)(unsigned char *ptr, int index);
 } t_cpu_family;
 
@@ -86,11 +89,12 @@ typedef struct s_nm
 	int opt;
 } t_nm;
 
+t_cpu_family	get_cpu_family(int type);
 void is_fat_header(void *ptr, void *otool);
 void handle_header64(void *ptr, void *otool);
 void handle_header32(void *ptr, void *otool);
 void ranlib_handler(void *ptr, void *struc);
-long get_int_indian(t_nm *nm, long to_convert);
+long get_int_endian(t_nm *nm, long to_convert);
 void btree_erase(t_btree **root, void *erase(void **));
 void iter_over_section(t_segment_command_64 *segm, void *struc,
 					   void (*f)(t_section_64 *, void *ptr, uint32_t index));

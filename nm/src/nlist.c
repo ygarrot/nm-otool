@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/28 14:47:16 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/25 13:53:10 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/25 15:50:20 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,8 @@ char get_flag_from_section(int type, long sect_address[TEXT_ADD + 1])
 {
 	t_list_temp *template;
 
-
 	/* ft_printf("%d %d %d type %d ", sect_address[DATA_ADD], */ 
-			/* sect_address[BSS_ADD], sect_address[TEXT_ADD], type); */
+	/* 		sect_address[BSS_ADD], sect_address[TEXT_ADD], type); */
 	template = (t_list_temp[5]){
 		{sect_address[DATA_ADD], 'd'},
 		{sect_address[BSS_ADD], 'b'},
@@ -63,24 +62,27 @@ void print_nm_format(void *ptr, void *struc)
 {
 	char flag;
 	t_nm *nm;
-	char *string_table;
-	int mask;
+	t_cpu_family	cpu;
 	t_list64 list;
 
 	list = *((t_list64 *)ptr);
 	nm = struc;
-	mask = (nm->head.magic == MH_MAGIC_64 ? 0xffffffff : 0xff);
-	string_table = nm->head.string_table;
+	cpu = get_cpu_family(nm->head.cputype);
+	list.n_un.n_strx = get_int_endian(nm, list.n_un.n_strx);
+	/* list.n_type = get_int_endian(nm, list.n_type); */
 	if (list.n_type & N_STAB)
 		return;
-	if (!*(string_table + list.n_un.n_strx))
+	if (!(nm->head.string_table + list.n_un.n_strx))
 		return;
 	if ((flag = get_flag(list, 0, nm)) != 'U')
 		;
-	int format = (mask == 0xff ? 8 : 16);
-	if (list.n_value & mask)
-		ft_printf("%0*llx", format, list.n_value & mask);
+	/* ft_printf("{%016llx}%s", list.n_value, cpu.name); */
+	if (list.n_value & cpu.mask)
+	{	
+		list.n_value = get_int_endian(nm, list.n_value);
+		ft_printf("%0*llx", cpu.width, list.n_value & cpu.mask);
+	}
 	else
-		ft_printf("%*c", format, ' ');
-	ft_printf(" %c %s\n", flag, string_table + list.n_un.n_strx);
+		ft_printf("%*c", cpu.width, ' ');
+	ft_printf(" %c %s\n", flag, nm->head.string_table + list.n_un.n_strx);
 }

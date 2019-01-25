@@ -6,7 +6,7 @@
 #    By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 13:13:35 by ygarrot           #+#    #+#              #
-#    Updated: 2018/12/24 13:17:12 by ygarrot          ###   ########.fr        #
+#    Updated: 2019/01/25 18:41:27 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,18 +28,17 @@ $(OBJ_DIR)/%.o: src/%.c
 	@gcc $(FLAGS) -o $@ -c $< -I $(INCLUDE)
 
 $(NAME): $(OBJ)
-	@make -C libft -j
-	@gcc $(FLAGS) -o $(NAME) $(OBJ) -L libft -l ft
+	@make -C nm 
+	@make -C otool 
 
 clean:
-	@rm -f $(OBJ)
-	@make -C libft clean
+	@make -C nm
+	@make -C otool 
+
 
 fclean:
-	@rm -f $(OBJ)
-	@rm -f $(NAME)
-	@rm -f $(NAME_NO_HOST)
-	@make -C libft fclean
+	make -C fclean nm
+	make -C fclean otool
 
 re: fclean all
 

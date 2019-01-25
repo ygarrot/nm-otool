@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:58 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/25 17:32:43 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/25 18:39:58 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ int		mmap_file(char *file)
 	nm->file.size = buf.st_size;
 	nm->file.offset = ptr + buf.st_size;
 	nm->head.no_arch = 0;
+	nm->btree = 0;
 	nm->file.name = file;
 	ret = cross_arch(ptr, file);
 	if (munmap(ptr, buf.st_size))

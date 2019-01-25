@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/28 14:08:01 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/25 15:40:22 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/25 16:21:04 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void		set_section_addresses(void *ptr,
 		void	*struc, uint32_t address)
 {
 	int index;
-	static int iter = 1;
 	t_section	*section;
 	t_nm		*nm;
 
@@ -35,15 +34,16 @@ void		set_section_addresses(void *ptr,
 			!ft_strcmp(section->sectname, SECT_TEXT))
 		index = TEXT_ADD;
 	if (index != -1)
-		nm->sect_address[index] = iter;
-	iter++;
+		nm->sect_address[index] = nm->count_sect;
+	/* ft_printf("%d %d %d %d type %d \n", nm->sect_address[DATA_ADD], */ 
+	/* 		nm->sect_address[BSS_ADD], nm->sect_address[TEXT_ADD], index, nm->count_sect); */
+	nm->count_sect++;
 }
 
 void		set_section_64_addresses(void *ptr,
 		void	*struc, uint32_t address)
 {
 	int index;
-	static int iter = 1;
 	t_section_64	*section;
 	t_nm		*nm;
 
@@ -63,9 +63,11 @@ void		set_section_64_addresses(void *ptr,
 		index = TEXT_ADD;
 	if (index != -1)
 	{
-		nm->sect_address[index] = iter;
+		nm->sect_address[index] = nm->count_sect;
 	}
-	iter++;
+	/* ft_printf("%d %d %d type %d \n", nm->sect_address[DATA_ADD], */ 
+	/* 		nm->sect_address[BSS_ADD], nm->sect_address[TEXT_ADD], index); */
+	nm->count_sect++;
 }
 
 void	cross_command(void *ptr, void *struc, uint32_t index)

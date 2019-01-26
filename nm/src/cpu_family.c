@@ -6,16 +6,26 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 14:13:16 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/25 19:10:27 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 18:23:59 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_nm.h"
+#include <mach-o/arch.h>
 
-t_cpu_family	get_cpu_family(int type)
+char delspace(char *ptr)
+{
+	/* ft_printf("%c\n", *(ptr + 1)); */
+	if (*ptr == ' ')
+		*ptr = *(ptr + 1);
+	return *ptr;
+}
+
+t_cpu_family	get_cpu_family(t_nm *nm)
 {
 	static const char	*flags32 = "%08llx\t";
 	static const char	*flags64 = "%016llx\t";
+	NXArchInfo *archInfo;
 	int					i;
 	t_cpu_family		*cpu_family;
 
@@ -36,27 +46,36 @@ t_cpu_family	get_cpu_family(int type)
 		{ CPU_TYPE_POWERPC64, "ppc64", 8, 0xffffff, flags32},
 		{ -1, "?", 16, 0xffffffff, flags64}
 	};
-	while (cpu_family[i].type != -1 && cpu_family[i].type != type)
+	while (cpu_family[i].type != -1 && cpu_family[i].type != nm->head.cputype)
 		i++;
+	archInfo = (NXArchInfo*)NXGetArchInfoFromCpuType(nm->head.cputype,
+			nm->head.cpusubtype);
+	if (archInfo)
+	 cpu_family[i].name = ft_strmap2(ft_strdup(archInfo->name), delspace);
+	else 
+		cpu_family[i].name = strdup(cpu_family[i].name); 
 	return (cpu_family[i]);
 }
 
 char			*print_arch(char *file_name, void *ptr)
 {
 	t_cpu_family		cpu;
+	t_nm						*nm;
 	int					is_lib;
 
-	if (!get_nm(0)->head.no_arch && get_nm(0)->file.ac <= 1)
+	nm = get_nm(0);
+	if (!nm->head.no_arch && nm->file.ac <= 1)
 		return (0);
-	cpu = get_cpu_family(get_int_endian(get_nm(0),
-				*(unsigned int*)(ptr + sizeof(unsigned int))));
+	set_nm(nm, ptr);
+	cpu = get_cpu_family(nm);
 	is_lib = ft_memcmp(ptr, ARLIB, ft_strlen(ARLIB));
 	if (!is_lib)
 		ft_printf("Archive : ");
 	if (file_name)
 		ft_printf("\n%s", file_name);
-	if (*cpu.name != '?' && get_nm(0)->head.no_arch)
+	if (*cpu.name != '?' /*&& !get_nm(0)->head.no_arch*/)
 		ft_printf(" (for architecture %s)", cpu.name);
+	ft_memdel((void**)&cpu.name);
 	ft_printf(is_lib ? ":\n" : "\n");
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/28 14:47:16 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 15:59:43 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 17:51:43 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	get_flag(t_list64 list, int type, t_nm *nm)
 	char				flag;
 
 	(void)type;
-	cpu = get_cpu_family(nm->head.cputype);
+	cpu = get_cpu_family(nm);
 	flag = 0;
 	template = (t_list_temp[5]){
 		{N_UNDF, 'u'},
@@ -68,7 +68,7 @@ void	print_nm_format(void *ptr, void *struc)
 
 	list = *((t_list64 *)ptr);
 	nm = struc;
-	cpu = get_cpu_family(nm->head.cputype);
+	cpu = get_cpu_family(nm);
 	list.n_un.n_strx = get_int_endian(nm, list.n_un.n_strx);
 	list.n_value = get_int_endian(nm, list.n_value);
 	if (list.n_type & N_STAB)

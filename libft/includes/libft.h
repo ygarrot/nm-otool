@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 15:23:29 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/05 10:57:20 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 17:50:22 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ char			*ft_strdup(const char *src);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_str_tabjoin(char const **s2);
 char			*ft_strmap(char const *s, char (*f)(char));
+char			*ft_strmap2(char *s, char (*f)(char*));
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strncat(char *dest, const char *src, size_t n);
 char			*ft_strncpy(char *dst, const char *src, size_t len);

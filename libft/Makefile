@@ -6,7 +6,7 @@
 #    By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 12:06:15 by ygarrot           #+#    #+#              #
-#    Updated: 2019/01/05 10:56:54 by ygarrot          ###   ########.fr        #
+#    Updated: 2019/01/26 17:47:37 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -94,6 +94,7 @@ SRC += \
 	   str/ft_strlcat.c \
 	   str/ft_strlen.c \
 	   str/ft_strmap.c \
+	   str/ft_strmap2.c \
 	   str/ft_strmapi.c \
 	   str/ft_strncat.c \
 	   str/ft_strncmp.c \

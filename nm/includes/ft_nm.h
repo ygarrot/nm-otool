@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:01 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 15:51:37 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 18:10:56 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ typedef struct s_head_utils
 	int type;
 	void *string_table;
 	int cputype;
+	int cpusubtype;
 } t_head_utils;
 
 typedef struct s_cpu_family
@@ -91,7 +92,8 @@ typedef struct s_nm
 	int opt;
 } t_nm;
 
-t_cpu_family	get_cpu_family(int type);
+void	set_nm(t_nm *nm, void *ptr);
+t_cpu_family	get_cpu_family(t_nm *nm);
 void is_fat_header(void *ptr, void *otool);
 void handle_header64(void *ptr, void *otool);
 void handle_header32(void *ptr, void *otool);

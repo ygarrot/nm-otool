@@ -6,12 +6,31 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/24 17:40:41 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 15:51:37 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 18:11:03 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_nm.h"
 #include <inttypes.h>
+
+void	set_nm(t_nm *nm, void *ptr)
+{
+	t_mach_header_64			*header64;
+	t_mach_header			*header;
+
+	header64 = ptr;
+	header = ptr;
+	if (get_int_endian(nm, nm->head.magic) == MH_MAGIC)
+	{
+		nm->head.cputype = get_int_endian(nm, header->cputype);
+		nm->head.cpusubtype = get_int_endian(nm, header->cpusubtype);
+	}
+	else if (get_int_endian(nm, nm->head.magic == MH_MAGIC_64))
+	{
+		nm->head.cputype = get_int_endian(nm, header64->cputype);
+		nm->head.cpusubtype = get_int_endian(nm, header64->cpusubtype);
+	}
+}
 
 int			offset_handler(t_nm *nm, void *ptr, int inc_value)
 {

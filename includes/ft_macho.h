@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/04 12:30:12 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/06 16:19:48 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 18:25:10 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # include <mach-o/loader.h>
 # include <mach-o/fat.h>
 # include <mach-o/ranlib.h>
+#include <mach-o/arch.h>
 # include <sys/stat.h>
 
 # define ARLIB "!<arch>\n"

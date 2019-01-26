@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 11:49:33 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/25 15:40:22 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 18:41:14 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ int		get_nb_from_map(unsigned char *map, int index, int nb_bytes)
 void	print_32(unsigned char *ptr, int i)
 {
 	if (!(i % 4))
-		ft_printf("%0.8x ", get_int_indian(get_otool(0), *(int*)(ptr + i)));
+		ft_printf("%0.8x ", get_int_endian(get_otool(0), *(int*)(ptr + i)));
 }
 
 void	print_64(unsigned char *ptr, int i)
 {
-	ft_printf("%02x ", get_int_indian(get_otool(0), ptr[i]));
+	ft_printf("%02x ", get_int_endian(get_otool(0), ptr[i]));
 }
 
 int		otool_format(t_sec section)
@@ -50,7 +50,7 @@ int		otool_format(t_sec section)
 			return (EXIT_FAILURE);
 		if (!(i % 16))
 		{
-			ft_printf(cpu.print_format, get_int_indian(otool,
+			ft_printf(cpu.print_format, get_int_endian(otool,
 			(long)section.addr) + i, "        ");
 		}
 		cpu.print_func(section.ptr, i);

@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/05 10:08:00 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/24 15:42:32 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 18:41:14 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,8 @@ void	handle_header64(void *ptr, void *otool)
 
 	o = otool;
 	header = ptr;
-	o->mem.iter_nb = get_int_indian(o, header->ncmds);
-	o->head.cputype = get_int_indian(o, header->cputype);
+	o->mem.iter_nb = get_int_endian(o, header->ncmds);
+	o->head.cputype = get_int_endian(o, header->cputype);
 	iter_over_mem(ptr + sizeof(t_mach_header_64),
 	otool, LOAD_COMMAND, &cross_command);
 }
@@ -80,8 +80,8 @@ void	handle_header32(void *ptr, void *otool)
 
 	o = otool;
 	header = ptr;
-	o->mem.iter_nb = get_int_indian(o, header->ncmds);
-	o->head.cputype = get_int_indian(o, header->cputype);
+	o->mem.iter_nb = get_int_endian(o, header->ncmds);
+	o->head.cputype = get_int_endian(o, header->cputype);
 	iter_over_mem(ptr + sizeof(t_mach_header), otool,
 	LOAD_COMMAND, &cross_command);
 }

@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:32:25 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/24 15:35:01 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 18:41:04 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ typedef struct s_file_attribute
 typedef struct s_symtab_utils
 {
 	void *symhead;
+	bool active;
 } t_symtab_utils;
 
 typedef struct s_mem_utils
@@ -94,5 +95,6 @@ void print_32(unsigned char *ptr, int i);
 void print_64(unsigned char *ptr, int i);
 char *print_arch(char *r, void *ptr);
 int is_text_sect(void *sect, unsigned int arch_type);
-long get_int_indian(t_otool *otool, long to_convert);
+long get_int_endian(t_otool *otool, long to_convert);
+int		ft_error(char *file, char *str);
 #endif

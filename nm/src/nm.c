@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:58 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 17:21:49 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 19:00:19 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int		is_valid_arch(unsigned int magic_number, t_nm *nm, void *ptr)
 			|| (index = ft_uint_isin(magic_number, arch_type, 3)) > 0
 			|| (!ft_memcmp(ptr, ARLIB, ft_strlen(ARLIB)) && (index = 4)))
 	{
+		set_nm(nm, nm->head.ptr);
 		index != 3 ? print_arch(nm->file.name, ptr) : 0;
 		func_tab[index - 1](ptr, nm);
 	}

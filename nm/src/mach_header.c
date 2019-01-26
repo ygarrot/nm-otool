@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/05 10:08:00 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 17:51:44 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 18:50:18 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,6 @@ void	handle_header64(void *ptr, void *nm)
 	o = nm;
 	header = ptr;
 	o->mem.iter_nb = get_int_endian(o, header->ncmds);
-	o->head.cputype = get_int_endian(o, header->cputype);
-	o->head.cpusubtype = get_int_endian(o, header->cpusubtype);
 	iter_over_mem(ptr + sizeof(t_mach_header_64),
 	nm, LOAD_COMMAND, &cross_command);
 }
@@ -82,8 +80,6 @@ void	handle_header32(void *ptr, void *nm)
 	o = nm;
 	header = ptr;
 	o->mem.iter_nb = get_int_endian(o, header->ncmds);
-	o->head.cputype = get_int_endian(o, header->cputype);
-	o->head.cpusubtype = get_int_endian(o, header->cpusubtype);
 	iter_over_mem(ptr + sizeof(t_mach_header), nm,
 	LOAD_COMMAND, &cross_command);
 }

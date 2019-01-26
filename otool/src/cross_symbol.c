@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 17:39:02 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/24 15:15:32 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 18:41:14 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,15 @@ void	cross_symbol(void *ptr, void *struc, uint32_t index)
 	otool = struc;
 	str = ptr;
 	file = &str[ft_strlento(str, '\n') + 1];
+	if (!ft_strlen(file))
+	{
+		otool->error = 2;
+		return ;
+	}
 	ft_printf("%s(%s):\n", otool->file.name, file);
 	len = ft_strlen(str);
 	while (!str[len])
 		len++;
-	/* TODO : check offset */
 	cross_arch(str + len, 0);
 }
 
@@ -67,5 +71,7 @@ void	ranlib_handler(void *ptr, void *struc)
 	otool->head.type = RANLIB_64;
 	size = ft_atoi(tab[5]);
 	ft_free_dblechar_tab(tab);
+	otool->symtab.active = true;
 	iter_over_mem(ptr + 68 + size, otool, SYM_TAB_L, &cross_symbol);
+	otool->symtab.active = false;
 }

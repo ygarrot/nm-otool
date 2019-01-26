@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/24 17:40:41 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 18:11:03 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 19:01:23 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,11 @@ void	set_nm(t_nm *nm, void *ptr)
 
 	header64 = ptr;
 	header = ptr;
+	nm->error = 0;
+	btree_erase(&nm->btree, ft_del_nothing_2);
+	nm->head.magic = *(unsigned int *)ptr;
+	nm->head.ptr = ptr;
+	nm->count_sect = 1;
 	if (get_int_endian(nm, nm->head.magic) == MH_MAGIC)
 	{
 		nm->head.cputype = get_int_endian(nm, header->cputype);

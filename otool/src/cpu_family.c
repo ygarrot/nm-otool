@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 14:13:16 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 17:03:33 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 18:41:14 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,9 @@ char			*print_arch(char *file_name, void *ptr)
 	t_cpu_family		cpu;
 	int					is_lib;
 
-	cpu = get_cpu_family(get_int_indian(get_otool(0),
+	if (get_otool(0)->symtab.active)
+		return (0);
+	cpu = get_cpu_family(get_int_endian(get_otool(0),
 				*(unsigned int*)(ptr + sizeof(unsigned int))));
 	is_lib = ft_memcmp(ptr, ARLIB, ft_strlen(ARLIB));
 	if (!is_lib)

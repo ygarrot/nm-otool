@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:34:12 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/24 16:27:15 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 18:41:14 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 int		ft_error(char *file, char *str)
 {
-	ft_printf("'%s': %s\n", file, str);
+	ft_putstr_fd("'", STDERR_FILENO);
+	ft_putstr_fd(file, STDERR_FILENO);
+	ft_putstr_fd("': ", STDERR_FILENO);
+	ft_putendl_fd(str, STDERR_FILENO);
 	return (EXIT_FAILURE);
 }
 
@@ -52,7 +55,7 @@ int		cross_arch(void *ptr, char *file_name)
 	otool->head.magic = magic_number;
 	otool->head.ptr = ptr;
 	if (!is_valid_arch(magic_number, otool, ptr))
-		ft_printf("%s: %s\n", file_name, NOTOBJ);
+		ft_error(file_name, NOTOBJ);
 	return (otool->error);
 }
 
@@ -80,7 +83,7 @@ int		mmap_file(char *file)
 	ret = cross_arch(ptr, file);
 	if (munmap(ptr, buf.st_size))
 		return (ft_error(file, "munmap errror"));
-	return (ret);
+	return (ret == 1);
 }
 
 int		main(int ac, char **av)

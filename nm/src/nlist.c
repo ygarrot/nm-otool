@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/28 14:47:16 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 12:34:49 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 12:53:11 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,7 @@ void print_nm_format(void *ptr, void *struc)
 		return;
 	if ((flag = get_flag(list, 0, nm)) != 'U')
 		;
-	/* ft_printf("{%016llx}%s", list.n_value, cpu.name); */
-	if (list.n_value & cpu.mask)
+	if (tolower(flag) != 'u')
 	{	
 		ft_printf("%0*llx", cpu.width, list.n_value & cpu.mask);
 	}

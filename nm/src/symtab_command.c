@@ -15,17 +15,17 @@
 void	apply_sort_sym(void *ptr, void *struc, uint32_t index)
 {
 	t_nm		*nm;
-	t_list64	list64;
-	t_nlist		list;
+	t_list64	*list64;
+	t_nlist		*list;
 
 	(void)index;
 	nm = struc;
-	list64 = ((t_list64*)ptr)[index];
-	list = ((t_nlist*)ptr)[index];
+	list64 = &((t_list64*)ptr)[index];
+	list = &((t_nlist*)ptr)[index];
 	if (nm->head.magic == MH_MAGIC_64)
-		btree_insert_data(&nm->btree, &list64, ft_alphacmp, ft_del_nothing);
+		btree_insert_data(&nm->btree, list64, ft_alphacmp, ft_del_nothing);
 	else
-		btree_insert_data(&nm->btree, &list, ft_alphacmp, ft_del_nothing);
+		btree_insert_data(&nm->btree, list, ft_alphacmp, ft_del_nothing);
 }
 
 void	apply_symtab(t_symtab_command *sym, t_nm *nm)

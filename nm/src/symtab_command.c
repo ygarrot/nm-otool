@@ -12,19 +12,20 @@
 
 #include "ft_nm.h"
 
-
 void	apply_sort_sym(void *ptr, void *struc, uint32_t index)
 {
-	t_nm *nm;
+	t_nm		*nm;
+	t_list64	list64;
+	t_nlist		list;
 
 	(void)index;
 	nm = struc;
-	/* if (nm->offset_handler(nm, ptr, get_int_endian(nm, index * sizeof(t_list64)))) */
-	/* 	return ; */
+	list64 = ((t_list64*)ptr)[index];
+	list = ((t_nlist*)ptr)[index];
 	if (nm->head.magic == MH_MAGIC_64)
-		btree_insert_data(&nm->btree, &(((t_list64*)ptr)[index]), ft_alphacmp, ft_del_nothing);
+		btree_insert_data(&nm->btree, &list64, ft_alphacmp, ft_del_nothing);
 	else
-		btree_insert_data(&nm->btree, &(((t_nlist*)ptr)[index]), ft_alphacmp, ft_del_nothing);
+		btree_insert_data(&nm->btree, &list, ft_alphacmp, ft_del_nothing);
 }
 
 void	apply_symtab(t_symtab_command *sym, t_nm *nm)
@@ -33,7 +34,8 @@ void	apply_symtab(t_symtab_command *sym, t_nm *nm)
 		return ;
 	nm->head.string_table = nm->head.ptr + get_int_endian(nm, sym->stroff);
 	nm->mem.iter_nb = get_int_endian(nm, sym->nsyms);
-	iter_over_mem(nm->head.ptr + get_int_endian(nm, sym->symoff), nm, SYM_TAB, &apply_sort_sym);
+	iter_over_mem(nm->head.ptr + get_int_endian(nm, sym->symoff),
+	nm, SYM_TAB, &apply_sort_sym);
 	if (nm->error)
 		return ;
 	iter_btree(&nm->btree, nm, print_nm_format);

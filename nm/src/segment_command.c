@@ -6,18 +6,18 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/28 14:08:01 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 14:22:26 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 16:07:31 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_nm.h"
 
 void		set_section_addresses(void *ptr,
-		void	*struc, uint32_t address)
+		void *struc, uint32_t address)
 {
-	int index;
-	t_section	*section;
 	t_nm		*nm;
+	t_section	*section;
+	int			index;
 
 	nm = struc;
 	section = ptr;
@@ -25,7 +25,7 @@ void		set_section_addresses(void *ptr,
 	(void)address;
 	if (!ft_strcmp(section->segname, SEG_DATA))
 	{
-		if (!ft_strcmp(section->sectname, SECT_DATA))	
+		if (!ft_strcmp(section->sectname, SECT_DATA))
 			index = DATA_ADD;
 		if (!ft_strcmp(section->sectname, SECT_BSS))
 			index = BSS_ADD;
@@ -35,17 +35,15 @@ void		set_section_addresses(void *ptr,
 		index = TEXT_ADD;
 	if (index != -1)
 		nm->sect_address[index] = nm->count_sect;
-	/* ft_printf("%d %d %d %d type %d \n", nm->sect_address[DATA_ADD], */ 
-	/* 		nm->sect_address[BSS_ADD], nm->sect_address[TEXT_ADD], index, nm->count_sect); */
 	nm->count_sect++;
 }
 
 void		set_section_64_addresses(void *ptr,
-		void	*struc, uint32_t address)
+		void *struc, uint32_t address)
 {
-	int index;
 	t_section_64	*section;
-	t_nm		*nm;
+	t_nm			*nm;
+	int				index;
 
 	(void)address;
 	nm = struc;
@@ -53,7 +51,7 @@ void		set_section_64_addresses(void *ptr,
 	index = -1;
 	if (!ft_strcmp(section->segname, SEG_DATA))
 	{
-		if (!ft_strcmp(section->sectname, SECT_DATA))	
+		if (!ft_strcmp(section->sectname, SECT_DATA))
 			index = DATA_ADD;
 		if (!ft_strcmp(section->sectname, SECT_BSS))
 			index = BSS_ADD;
@@ -65,18 +63,16 @@ void		set_section_64_addresses(void *ptr,
 	{
 		nm->sect_address[index] = nm->count_sect;
 	}
-	/* ft_printf("%d %d %d type %d \n", nm->sect_address[DATA_ADD], */ 
-	/* 		nm->sect_address[BSS_ADD], nm->sect_address[TEXT_ADD], index); */
 	nm->count_sect++;
 }
 
-void	cross_command(void *ptr, void *struc, uint32_t index)
+void		cross_command(void *ptr, void *struc, uint32_t index)
 {
-	t_load_command 				*lc;
-	int										cmd;
-	t_nm								*nm;
+	t_load_command		*lc;
+	t_nm				*nm;
+	int					cmd;
 
-	lc =  ptr;
+	lc = ptr;
 	nm = struc;
 	cmd = get_int_endian(nm, lc->cmd);
 	(void)index;
@@ -86,11 +82,12 @@ void	cross_command(void *ptr, void *struc, uint32_t index)
 	}
 	if (cmd == LC_SEGMENT_64)
 	{
-		iter_over_mem(ptr + sizeof(t_segment_command_64), nm, SECTION_64, &set_section_64_addresses);
-	}		
+		iter_over_mem(ptr + sizeof(t_segment_command_64), nm,
+				SECTION_64, &set_section_64_addresses);
+	}
 	if (cmd == LC_SEGMENT)
 	{
-		iter_over_mem(ptr + sizeof(t_segment_command), 
+		iter_over_mem(ptr + sizeof(t_segment_command),
 				nm, SECTION, &set_section_addresses);
 	}
 }

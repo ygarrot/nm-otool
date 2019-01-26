@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 17:39:02 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 14:22:26 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 15:51:37 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ void	cross_symbol(void *ptr, void *struc, uint32_t index)
 	if (!ft_strlen(file))
 	{
 		nm->error = 2;
-			return ;
+		return ;
 	}
-	ft_printf("\n%s(%s):\n", nm->file.name,file);
+	ft_printf("\n%s(%s):\n", nm->file.name, file);
 	len = ft_strlen(str);
 	while (!str[len])
 		len++;

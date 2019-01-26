@@ -6,25 +6,25 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/30 11:34:41 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 14:22:26 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 15:51:36 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_nm.h"
 
-int get_magic(void *ptr)
+int		get_magic(void *ptr)
 {
-	int magic_number;
+	int		magic_number;
 
 	magic_number = *(int *)ptr;
 	return (magic_number);
 }
 
-int get_iter_nb(void *ptr, int type)
+int		get_iter_nb(void *ptr, int type)
 {
-	t_segment_command_64 *segment_command64;
-	t_segment_command *segment_command;
-	t_nm *nm;
+	t_segment_command_64	*segment_command64;
+	t_segment_command		*segment_command;
+	t_nm					*nm;
 
 	nm = get_nm(0);
 	if (type == LOAD_COMMAND)
@@ -46,10 +46,10 @@ int get_iter_nb(void *ptr, int type)
 	return (0);
 }
 
-int get_inc_value(void *ptr, int type)
+int		get_inc_value(void *ptr, int type)
 {
-	char **str;
-	int size;
+	char		**str;
+	int			size;
 
 	if (type == LOAD_COMMAND)
 		return (get_int_endian(get_nm(0), ((t_load_command *)ptr)->cmdsize));
@@ -71,13 +71,13 @@ int get_inc_value(void *ptr, int type)
 	return (0);
 }
 
-void iter_over_mem(void *child, void *struc, int type,
-				   void (*f)(void *elem, void *struc, uint32_t index))
+void	iter_over_mem(void *child, void *struc, int type,
+		void (*f)(void *elem, void *struc, uint32_t index))
 {
-	t_nm *nm;
-	uint32_t iter_nb;
-	uint32_t i;
-	int inc_value;
+	t_nm		*nm;
+	uint32_t	iter_nb;
+	uint32_t	i;
+	int			inc_value;
 
 	nm = struc;
 	i = -1;
@@ -87,11 +87,7 @@ void iter_over_mem(void *child, void *struc, int type,
 		(*f)(child, struc, i);
 		inc_value = get_inc_value(child, type);
 		if (nm->error || nm->offset_handler(nm, child, inc_value))
-		{
-			/* ft_printf("ABORT\n"); */
-			/* TODO : handle it lul */
-			return;
-		}
+			return ;
 		child = (void *)child + inc_value;
 	}
 }

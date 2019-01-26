@@ -39,13 +39,13 @@
 	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/audiodevice_corupted                [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 1 but the error messages were not compared for more flexibility
 	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/bad_string_index                    [91mERROR[0m: nm returned 0, ft_nm returned 1.
 	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/curl_truncated_load                 [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 1 but the error messages were not compared for more flexibility
-	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/fat_bad_string_index                [91mERROR[0m: nm returned 0, ft_nm returned 1.
+	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/fat_bad_string_index                [91mERROR[0m: output differs
 	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/fat_hard_corupted                   [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 1 but the error messages were not compared for more flexibility
 	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/fat_not_fail_except_one             [91mERROR[0m: nm returned 1, ft_nm returned 0.
-	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/indirect_bad_string                 [91mERROR[0m: nm returned 0, ft_nm returned 1.
+	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/indirect_bad_string                 [91mERROR[0m: output differs
 	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/mega_bad_string                     [91mERROR[0m: nm returned 0, ft_nm returned 1.
-	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/truncated_10_load                   [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 1 but the error messages were not compared for more flexibility
-	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/truncated_cputype                   [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 1 but the error messages were not compared for more flexibility
+	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/truncated_10_load                   [91mERROR[0m: nm returned 1, ft_nm returned 0.
+	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/truncated_cputype                   [91mERROR[0m: nm returned 1, ft_nm returned 0.
 	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/truncated_load_2                    [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 1 but the error messages were not compared for more flexibility
 	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/32_exe_hard_corupted                [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 1 but the error messages were not compared for more flexibility
 	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/64_corrupted_string_table           [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 1 but the error messages were not compared for more flexibility
@@ -54,15 +54,15 @@
 	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/bad_string_index                    [91mERROR[0m: nm returned 0, ft_nm returned 1.
 	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/curl_truncated_load                 [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 1 but the error messages were not compared for more flexibility
 	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/empty                               [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 1 but the error messages were not compared for more flexibility
-	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/fat_bad_string_index                [91mERROR[0m: nm returned 0, ft_nm returned 1.
+	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/fat_bad_string_index                [91mERROR[0m: output differs
 	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/fat_hard_corupted                   [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 1 but the error messages were not compared for more flexibility
 	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/fat_not_fail_except_one             [91mERROR[0m: nm returned 1, ft_nm returned 0.
-	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/indirect_bad_string                 [91mERROR[0m: nm returned 0, ft_nm returned 1.
+	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/indirect_bad_string                 [91mERROR[0m: output differs
 	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/lib_static.a                        [91mERROR[0m: nm returned 1, ft_nm returned 0.
 	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/libmlx_corupted.a                   [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 1 but the error messages were not compared for more flexibility
 	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/mega_bad_string                     [91mERROR[0m: nm returned 0, ft_nm returned 1.
-	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/truncated_10_load                   [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 1 but the error messages were not compared for more flexibility
-	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/truncated_cputype                   [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 1 but the error messages were not compared for more flexibility
+	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/truncated_10_load                   [91mERROR[0m: nm returned 1, ft_nm returned 0.
+	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/truncated_cputype                   [91mERROR[0m: nm returned 1, ft_nm returned 0.
 	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/corrupt/truncated_load_2                    [92mOK[0m: [93mWARNING[0m nm returned 1 and ft_nm returned 1 but the error messages were not compared for more flexibility
 	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/fat/appsleepd                               [92mOK[0m
 	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/fat/audiodevice                             [92mOK[0m
@@ -180,4 +180,4 @@
 	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/test_moins_facile                           [92mOK[0m
 	+ /Users/ygarrot/git/nm-otool/unit_test/custom_tests/test_wrong_lc_command_size                  [91mERROR[0m: nm returned 1, ft_nm returned 0.
 
-[!] total amount of errors: [91m17[0m
+[!] total amount of errors: [91m21[0m

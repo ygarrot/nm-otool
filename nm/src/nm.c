@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:58 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 14:22:26 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 16:01:34 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 int		ft_error(char *file, char *str)
 {
 	ft_putstr_fd("'", STDERR_FILENO);
-	ft_putstr_fd(file, STDERR_FILENO );
-	ft_putstr_fd("': ", STDERR_FILENO );
-	ft_putendl_fd(str, STDERR_FILENO );
+	ft_putstr_fd(file, STDERR_FILENO);
+	ft_putstr_fd("': ", STDERR_FILENO);
+	ft_putendl_fd(str, STDERR_FILENO);
 	return (EXIT_FAILURE);
 }
 
@@ -51,6 +51,7 @@ int		cross_arch(void *ptr, char *file_name)
 	if (!ptr)
 		return (EXIT_FAILURE);
 	nm = get_nm(0);
+	nm->error = 0;
 	btree_erase(&nm->btree, ft_del_nothing_2);
 	magic_number = *(unsigned int *)ptr;
 	nm->head.magic = magic_number;
@@ -98,11 +99,11 @@ int		main(int ac, char **av)
 	int		ret;
 
 	i = 0;
+	ret = 0;
 	if (ac < 2)
 		return (mmap_file("./a.out"));
-	get_nm(0)->file.ac = ac -1;
+	get_nm(0)->file.ac = ac - 1;
 	while (++i < ac)
-		if ((ret = mmap_file(av[i])) != EXIT_SUCCESS)
-			return (EXIT_FAILURE);
-	return (EXIT_SUCCESS);
+		ret |= mmap_file(av[i]);
+	return (ret);
 }

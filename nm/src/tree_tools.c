@@ -12,19 +12,20 @@
 
 #include "ft_nm.h"
 
-void	ft_del_nothing(void *why)
+void		ft_del_nothing(void *why)
 {
 	(void)why;
-	return ; 
+	return ;
 }
 
-void	*ft_del_nothing_2(void **why)
+void		*ft_del_nothing_2(void **why)
 {
 	(void)why;
-	return (0); 
+	return (0);
 }
 
-void		iter_btree(t_btree **root, void *struc, void (*f)(void *, void *struc))
+void		iter_btree(t_btree **root, void *struc,
+						void (*f)(void *, void *struc))
 {
 	void	*content;
 
@@ -39,7 +40,7 @@ void		iter_btree(t_btree **root, void *struc, void (*f)(void *, void *struc))
 		iter_btree(&(*root)->right, struc, f);
 }
 
-void	btree_erase(t_btree **root, void *erase(void **))
+void		btree_erase(t_btree **root, void *erase(void **))
 {
 	if (!root || !*root)
 		return ;
@@ -48,9 +49,6 @@ void	btree_erase(t_btree **root, void *erase(void **))
 	if ((*root)->right)
 		btree_erase(&((*root)->right), erase);
 	erase(&((*root)->item));
-	/* ft_memdel((void**)*root); */
 	free(*root);
 	*root = 0;
 }
-
-

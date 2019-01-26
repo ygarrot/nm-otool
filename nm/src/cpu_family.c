@@ -76,7 +76,7 @@ char			*print_arch(char *file_name, void *ptr)
 		ft_printf("Archive : ");
 	if (file_name)
 		ft_printf("\n%s", file_name);
-	if (*cpu.name != '?' /*&& !get_nm(0)->head.no_arch*/)
+	if (*cpu.name != '?' && (nm->head.no_arch || ft_strcmp(cpu.name, "x86_64")))
 		ft_printf(" (for architecture %s)", cpu.name);
 	ft_memdel((void**)&cpu.name);
 	ft_printf(is_lib ? ":\n" : "\n");

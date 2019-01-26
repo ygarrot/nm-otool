@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 17:39:02 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 12:36:18 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 14:22:26 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,12 @@ void	cross_symbol(void *ptr, void *struc, uint32_t index)
 	nm = struc;
 	str = ptr;
 	file = &str[ft_strlento(str, '\n') + 1];
-	ft_printf("\n%s(%s):\n", nm->file.name, file);
+	if (!ft_strlen(file))
+	{
+		nm->error = 2;
+			return ;
+	}
+	ft_printf("\n%s(%s):\n", nm->file.name,file);
 	len = ft_strlen(str);
 	while (!str[len])
 		len++;
@@ -67,4 +72,5 @@ void	ranlib_handler(void *ptr, void *struc)
 	size = ft_atoi(tab[5]);
 	ft_free_dblechar_tab(tab);
 	iter_over_mem(ptr + 68 + size, nm, SYM_TAB_L, &cross_symbol);
+	/* nm->error = 0; */
 }

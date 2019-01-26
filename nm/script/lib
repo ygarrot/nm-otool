@@ -1,4 +1,0 @@
-for file in `find /Applications -name '*.dylib'`;
-do
-file $file 
-done

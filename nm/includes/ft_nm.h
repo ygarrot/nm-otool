@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:01 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/25 18:50:31 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 14:22:26 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,4 +115,5 @@ t_nm *get_nm(t_nm *nm);
 void print_output(int nsyms, int symoff, t_nm *nm);
 void cross_command(void *ptr, void *struc, uint32_t index);
 int cross_arch(void *ptr, char *file_name);
+int		ft_error(char *file, char *str);
 #endif

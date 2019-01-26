@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:58 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 12:34:22 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 14:22:26 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 int		ft_error(char *file, char *str)
 {
-	ft_printf("'%s': %s\n", file, str);
+	ft_putstr_fd("'", STDERR_FILENO);
+	ft_putstr_fd(file, STDERR_FILENO );
+	ft_putstr_fd("': ", STDERR_FILENO );
+	ft_putendl_fd(str, STDERR_FILENO );
 	return (EXIT_FAILURE);
 }
 
@@ -48,11 +51,12 @@ int		cross_arch(void *ptr, char *file_name)
 	if (!ptr)
 		return (EXIT_FAILURE);
 	nm = get_nm(0);
-		btree_erase(&nm->btree, ft_del_nothing_2);
+	btree_erase(&nm->btree, ft_del_nothing_2);
 	magic_number = *(unsigned int *)ptr;
 	nm->head.magic = magic_number;
 	nm->head.ptr = ptr;
 	nm->count_sect = 1;
+	ft_bzero(nm->sect_address, sizeof(nm->sect_address));
 	if (!is_valid_arch(magic_number, nm, ptr))
 		ft_printf("%s: %s\n", file_name, NOTOBJ);
 	return (nm->error);
@@ -73,7 +77,7 @@ int		mmap_file(char *file)
 	if (is_directory(fd))
 		return (ft_error(file, FT_EISDIR));
 	if ((ptr = mmap(0, buf.st_size,
-			PROT_READ, MAP_PRIVATE, fd, 0)) == MAP_FAILED)
+					PROT_READ, MAP_PRIVATE, fd, 0)) == MAP_FAILED)
 		return (ft_error(file, "mmap errror"));
 	nm = get_nm(0);
 	nm->count_sect = 1;
@@ -85,7 +89,7 @@ int		mmap_file(char *file)
 	ret = cross_arch(ptr, file);
 	if (munmap(ptr, buf.st_size))
 		return (ft_error(file, "munmap errror"));
-	return (ret);
+	return (ret == 1);
 }
 
 int		main(int ac, char **av)

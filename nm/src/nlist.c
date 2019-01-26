@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/28 14:47:16 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 12:53:11 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 14:29:40 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,11 @@ char get_flag_from_section(int type, long sect_address[TEXT_ADD + 1])
 char get_flag(t_list64 list, int type, t_nm *nm)
 {
 	static t_list_temp *template;
+	t_cpu_family	cpu;
 	char flag;
 
 	(void)type;
+	cpu = get_cpu_family(nm->head.cputype);
 	flag = 0;
 	template = (t_list_temp[5]){
 		{N_UNDF, 'u'},
@@ -52,7 +54,11 @@ char get_flag(t_list64 list, int type, t_nm *nm)
 	if ((list.n_type & N_TYPE) == N_SECT)
 		flag = get_flag_from_section(list.n_sect, nm->sect_address);
 	else
+	{
 		flag = get_flag_from_template(template, list.n_type & N_TYPE);
+		if ( flag == 'u' && (list.n_value & cpu.mask))
+			flag = 'c';
+	}
 	/* ft_printf(" n_type: %#x, n_sect: %#x, n_desc: %#x, n_value: %#x, str: ", list.n_type, list.n_sect, */
 	/* 		GET_COMM_ALIGN(list.n_desc), list.n_value); */
 	return (list.n_type & N_EXT ? ft_toupper(flag) : flag);

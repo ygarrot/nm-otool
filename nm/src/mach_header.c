@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/05 10:08:00 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/25 16:20:18 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/26 13:06:41 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		is_user_arch(t_nm *nm, void *fat_header, int offset)
 	{
 		nm->count_sect = 1;
 		cross_arch((void*)fat_header + offset, nm->file.name);
-		btree_erase(&nm->btree, ft_del_nothing_2);
+		/* btree_erase(&nm->btree, ft_del_nothing_2); */
 		if (!nm->head.no_arch)
 			return (1);
 	}

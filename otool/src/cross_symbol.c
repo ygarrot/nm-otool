@@ -48,9 +48,9 @@ void	cross_symbol(void *ptr, void *struc, uint32_t index)
 	cross_arch(str + len, 0);
 }
 
-int		ft_memalign(int size, int alignment)
+int		ft_memalign(int size, int aligotoolent)
 {
-	return ((size + alignment) & (~alignment));
+	return ((size + aligotoolent) & (~aligotoolent));
 }
 
 void	ranlib_handler(void *ptr, void *struc)
@@ -67,11 +67,8 @@ void	ranlib_handler(void *ptr, void *struc)
 	table = (void *)strr;
 	otool->mem.iter_nb = table->size / sizeof(t_symbol_info);
 	otool->symtab.symhead = ptr;
-	otool->head.string_table = (void *)table + table->size;
 	otool->head.type = RANLIB_64;
 	size = ft_atoi(tab[5]);
 	ft_free_dblechar_tab(tab);
-	otool->symtab.active = true;
 	iter_over_mem(ptr + 68 + size, otool, SYM_TAB_L, &cross_symbol);
-	otool->symtab.active = false;
 }

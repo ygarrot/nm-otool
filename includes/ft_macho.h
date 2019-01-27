@@ -23,6 +23,7 @@
 # include <mach-o/fat.h>
 # include <mach-o/ranlib.h>
 #include <mach-o/arch.h>
+#include <mach/machine.h>
 # include <sys/stat.h>
 
 # define ARLIB "!<arch>\n"

@@ -15,7 +15,6 @@
 
 char delspace(char *ptr)
 {
-	/* ft_printf("%c\n", *(ptr + 1)); */
 	if (*ptr == ' ')
 		*ptr = *(ptr + 1);
 	return *ptr;

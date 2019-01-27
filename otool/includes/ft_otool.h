@@ -37,12 +37,14 @@ typedef struct s_sec
 
 typedef struct s_head_utils
 {
+	bool active;
 	int no_arch;
 	unsigned long magic;
 	void *ptr;
 	int type;
 	void *string_table;
-	int cputype;
+	cpu_type_t cpu_type;
+	cpu_subtype_t cpu_subtype;
 } t_head_utils;
 
 typedef struct s_file_attribute
@@ -81,7 +83,7 @@ void ranlib_handler(void *ptr, void *struc);
 t_otool *get_otool(t_otool *ptr);
 void iter_over_mem(void *ptr, void *struc, int type,
 				   void (*f)(void *, void *struc, uint32_t index));
-t_cpu_family get_cpu_family(int type);
+t_cpu_family get_cpu_family(cpu_type_t type, cpu_subtype_t subtype);
 void cross_symbol(void *ptr, void *struc, uint32_t index);
 void print_otool(void *ptr, void *struc, uint32_t index);
 void set_section_values(void *ptr, t_otool *otool);
@@ -97,4 +99,5 @@ char *print_arch(char *r, void *ptr);
 int is_text_sect(void *sect, unsigned int arch_type);
 long get_int_endian(t_otool *otool, long to_convert);
 int		ft_error(char *file, char *str);
+void	set_otool(t_otool *otool, void *ptr);
 #endif

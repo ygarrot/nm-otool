@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:58 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 19:00:19 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/27 10:38:08 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,9 @@ int		is_valid_arch(unsigned int magic_number, t_nm *nm, void *ptr)
 		set_nm(nm, nm->head.ptr);
 		index != 3 ? print_arch(nm->file.name, ptr) : 0;
 		func_tab[index - 1](ptr, nm);
+		return (1);
 	}
-	return (-1);
+	return (0);
 }
 
 int		cross_arch(void *ptr, char *file_name)
@@ -60,7 +61,7 @@ int		cross_arch(void *ptr, char *file_name)
 	nm->count_sect = 1;
 	ft_bzero(nm->sect_address, sizeof(nm->sect_address));
 	if (!is_valid_arch(magic_number, nm, ptr))
-		ft_printf("%s: %s\n", file_name, NOTOBJ);
+		ft_error(file_name, NOTOBJ);
 	return (nm->error);
 }
 

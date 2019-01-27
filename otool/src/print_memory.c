@@ -43,7 +43,7 @@ int		otool_format(t_sec section)
 
 	i = 0;
 	otool = get_otool(0);
-	cpu = get_cpu_family(otool->head.cputype);
+	cpu = get_cpu_family(otool->head.cpu_type, otool->head.cpu_subtype);
 	while (i < section.size)
 	{
 		if (otool->offset_handler(otool, section.ptr, i + 1))
@@ -57,7 +57,9 @@ int		otool_format(t_sec section)
 		if (++i && !(i % 16) && i < section.size)
 			ft_printf("\n");
 	}
-	ft_putendl("");
+	if (i)
+		ft_putendl("");
+	
 	return (EXIT_SUCCESS);
 }
 

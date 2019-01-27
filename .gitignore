@@ -54,3 +54,6 @@ dkms.conf
 # vim swp
 *.swp
 *.swo
+
+test 7
+unit_test

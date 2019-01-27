@@ -12,6 +12,29 @@
 
 #include "ft_otool.h"
 
+void	set_otool(t_otool *otool, void *ptr)
+{
+	t_mach_header_64			*header64;
+	t_mach_header			*header;
+
+	header64 = ptr;
+	header = ptr;
+	otool->error = 0;
+	otool->head.magic = *(unsigned int *)ptr;
+	otool->head.ptr = ptr;
+	otool->mem.is_big_endian = (otool->head.magic == MH_CIGAM || otool->head.magic == MH_CIGAM_64);
+	if (get_int_endian(otool, otool->head.magic) == MH_MAGIC)
+	{
+		otool->head.cpu_type = get_int_endian(otool, header->cputype);
+		otool->head.cpu_subtype = get_int_endian(otool, header->cpusubtype);
+	}
+	else if (get_int_endian(otool, otool->head.magic == MH_MAGIC_64))
+	{
+		otool->head.cpu_type = get_int_endian(otool, header64->cputype);
+		otool->head.cpu_subtype = get_int_endian(otool, header64->cpusubtype);
+	}
+}
+
 int		offset_handler(t_otool *otool, void *ptr, int inc_value)
 {
 if (otool->error == 2)

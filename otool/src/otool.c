@@ -32,30 +32,27 @@ int		is_valid_arch(unsigned int magic_number, t_otool *otool, void *ptr)
 
 	arch_type = (unsigned int[3]){MH_MAGIC_64, MH_MAGIC, FAT_MAGIC};
 	arch_type_r = (unsigned int[3]){MH_CIGAM_64, MH_CIGAM, FAT_CIGAM};
-	if (((index = ft_uint_isin(magic_number, arch_type_r, 3)) > 0
-				&& (otool->mem.is_big_endian = true))
+	if (((index = ft_uint_isin(magic_number, arch_type_r, 3)) > 0)
 			|| (index = ft_uint_isin(magic_number, arch_type, 3)) > 0
 			|| (!ft_memcmp(ptr, ARLIB, ft_strlen(ARLIB)) && (index = 4)))
 	{
 		index != 3 ? print_arch(otool->file.name, ptr) : 0;
 		func_tab[index - 1](ptr, otool);
+		return (1);
 	}
-	return (-1);
+	return (0);
 }
 
 int		cross_arch(void *ptr, char *file_name)
 {
-	unsigned int	magic_number;
 	t_otool			*otool;
 
 	if (!ptr)
 		return (EXIT_FAILURE);
 	otool = get_otool(0);
-	magic_number = *(unsigned int *)ptr;
-	otool->head.magic = magic_number;
-	otool->head.ptr = ptr;
-	if (!is_valid_arch(magic_number, otool, ptr))
-		ft_error(file_name, NOTOBJ);
+	set_otool(otool, ptr);
+	if (!is_valid_arch(otool->head.magic, otool, ptr))
+		ft_printf("%s: %s\n", file_name, NOTOBJ);
 	return (otool->error);
 }
 

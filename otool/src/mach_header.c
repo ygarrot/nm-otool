@@ -40,6 +40,7 @@ void	is_fat_header(void *fat_header, void *struc)
 	int			nfat;
 
 	otool = struc;
+	otool->head.active = true;
 	if (otool->offset_handler(otool, fat_header, sizeof(t_fat_header)))
 		return ;
 	arch = (t_fat_arch*)(fat_header + sizeof(t_fat_header));
@@ -58,6 +59,7 @@ void	is_fat_header(void *fat_header, void *struc)
 		return ;
 	otool->head.no_arch = true;
 	is_fat_header(fat_header, otool);
+	otool->head.active = false;
 }
 
 void	handle_header64(void *ptr, void *otool)
@@ -68,7 +70,6 @@ void	handle_header64(void *ptr, void *otool)
 	o = otool;
 	header = ptr;
 	o->mem.iter_nb = get_int_endian(o, header->ncmds);
-	o->head.cputype = get_int_endian(o, header->cputype);
 	iter_over_mem(ptr + sizeof(t_mach_header_64),
 	otool, LOAD_COMMAND, &cross_command);
 }
@@ -81,7 +82,6 @@ void	handle_header32(void *ptr, void *otool)
 	o = otool;
 	header = ptr;
 	o->mem.iter_nb = get_int_endian(o, header->ncmds);
-	o->head.cputype = get_int_endian(o, header->cputype);
 	iter_over_mem(ptr + sizeof(t_mach_header), otool,
 	LOAD_COMMAND, &cross_command);
 }

@@ -1,6 +1,7 @@
 mkdir /tmp/log
 rm t t2
-for file in `find /Applications -type f -name '*.dylib'`;
+for file in `find / `
+	#`find /Applications -type f -name '*.dylib'`;
 do
 	# base=$(basename $file)
 	./ft_nm $file > t2 

@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/28 14:47:16 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 17:51:43 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/27 13:37:27 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,8 @@ void	print_nm_format(void *ptr, void *struc)
 	if (!(nm->head.string_table + list.n_un.n_strx))
 		return ;
 	flag = get_flag(list, 0, nm);
+	if (nm->opt & OPT_STR[0])
+		ft_printf("%s: ", nm->file.name);
 	if (tolower(flag) != 'u')
 	{
 		ft_printf("%0*llx", cpu.width, list.n_value & cpu.mask);

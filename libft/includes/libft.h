@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 15:23:29 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 17:50:22 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/27 13:23:01 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -204,5 +204,6 @@ int				ft_isin_unicode(char *str, char *pattern);
 int 			is_directory(int fd);
 int 			is_regular_file(int fd);
 int				ft_swap_int(int num);
+int				ft_getopt(int ac, char *av[], const char *optst);
 
 #endif

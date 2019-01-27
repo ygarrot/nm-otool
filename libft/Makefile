@@ -6,7 +6,7 @@
 #    By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 12:06:15 by ygarrot           #+#    #+#              #
-#    Updated: 2019/01/26 17:47:37 by ygarrot          ###   ########.fr        #
+#    Updated: 2019/01/27 13:22:14 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -185,6 +185,8 @@ SRC +=\
 			 unix/stat/is_directory.c\
 			 unix/stat/is_regular_file.c
 
+SRC +=\
+			parsing/ft_getopt.c
 #Colors
 
 _RED=$(shell tput setaf 1)

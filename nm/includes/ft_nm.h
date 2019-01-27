@@ -6,13 +6,14 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:01 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 18:10:56 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/27 13:38:17 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_NM_H
 #define FT_NM_H
 
+#define OPT_STR "A"
 #include "./debug.h"
 #include "../../libft/includes/libft.h"
 #include "../../includes/ft_macho.h"

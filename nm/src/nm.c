@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:58 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/27 10:38:08 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/27 13:38:25 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,8 @@ int		mmap_file(char *file)
 	struct stat	buf;
 	t_nm		*nm;
 
+	if (*file == '-')
+		return (0);
 	if ((fd = open(file, O_RDONLY)) < 0)
 		return (ft_error(file, FT_ENOENT));
 	if (fstat(fd, &buf) < 0)
@@ -105,6 +107,7 @@ int		main(int ac, char **av)
 	if (ac < 2)
 		return (mmap_file("./a.out"));
 	get_nm(0)->file.ac = ac - 1;
+	get_nm(0)->opt = ft_getopt(ac, av, OPT_STR);
 	while (++i < ac)
 		ret |= mmap_file(av[i]);
 	return (ret);

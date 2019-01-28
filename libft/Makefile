@@ -6,7 +6,7 @@
 #    By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 12:06:15 by ygarrot           #+#    #+#              #
-#    Updated: 2019/01/27 13:22:14 by ygarrot          ###   ########.fr        #
+#    Updated: 2019/01/28 12:40:04 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,8 @@ SRC += \
 	   tern/ft_isdigit.c \
 	   tern/ft_isin.c \
 	   tern/ft_ismax.c \
+	   tern/ft_isupper.c \
+	   tern/ft_islower.c \
 	   tern/ft_ismin.c \
 	   tern/ft_isprint.c \
 	   tern/ft_strisin.c \
@@ -93,6 +95,7 @@ SRC += \
 	   str/ft_strjoin.c \
 	   str/ft_strlcat.c \
 	   str/ft_strlen.c \
+	   str/ft_strnlen.c \
 	   str/ft_strmap.c \
 	   str/ft_strmap2.c \
 	   str/ft_strmapi.c \

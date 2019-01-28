@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:58 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/27 13:38:25 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/28 12:31:23 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,8 +106,8 @@ int		main(int ac, char **av)
 	ret = 0;
 	if (ac < 2)
 		return (mmap_file("./a.out"));
-	get_nm(0)->file.ac = ac - 1;
-	get_nm(0)->opt = ft_getopt(ac, av, OPT_STR);
+	get_nm(0)->file.ac = 0;
+	get_nm(0)->opt = ft_getopt(ac, av, OPT_STR, &get_nm(0)->file.ac);
 	while (++i < ac)
 		ret |= mmap_file(av[i]);
 	return (ret);

@@ -6,18 +6,18 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 10:48:17 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/28 12:40:33 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/28 12:40:51 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-size_t ft_strlen(const char *str)
+size_t ft_strnlen(const char *str, size_t maxlen)
 {
 	size_t i;
 
 	i = 0;
-	while (str && str[i])
+	while (str && i < maxlen && str[i])
 		i++;
 	return (i);
 }

@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 17:39:02 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 18:41:14 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/28 12:51:57 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,7 @@ void	ranlib_handler(void *ptr, void *struc)
 	otool->head.type = RANLIB_64;
 	size = ft_atoi(tab[5]);
 	ft_free_dblechar_tab(tab);
+	otool->symtab.active = true;
 	iter_over_mem(ptr + 68 + size, otool, SYM_TAB_L, &cross_symbol);
+	otool->symtab.active = false;
 }

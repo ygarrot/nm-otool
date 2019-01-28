@@ -8,7 +8,7 @@ do
 	nm $file >t
 	diff=`diff t t2`
 	if [ ! -z "$diff" -a "$diff" != " " ]; then
-		echo "/tmp/log/"$(basename $file)".log"
+		# echo "/tmp/log/"$(basename $file)".log"
 		echo $diff >> "/tmp/log/"$(basename $file)".log"
 	fi
 done

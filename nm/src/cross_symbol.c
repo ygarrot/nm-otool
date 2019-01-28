@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 17:39:02 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 18:36:31 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/28 12:46:57 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,10 @@ void	cross_symbol(void *ptr, void *struc, uint32_t index)
 	}
 	ft_printf("\n%s(%s):\n", nm->file.name, file);
 	len = ft_strlen(str);
-	while (!str[len])
+	while (!str[len] && !nm->offset_handler(nm, str, len + 1))
 		len++;
-	/* TODO : check offset */
+	if (nm->offset_handler(nm, str, len))
+		return ;
 	cross_arch(str + len , 0);
 }
 
@@ -58,19 +59,19 @@ void	ranlib_handler(void *ptr, void *struc)
 {
 	t_nm			*nm;
 	char			**tab;
-	unsigned char	*strr;
 	t_symbol_table	*table;
 	int				size;
 
 	nm = struc;
+	if (nm->offset_handler(nm, ptr, 8)
+			|| nm->offset_handler(nm, ptr, 8 + ft_strlen(ptr + 4)))
+		return ;
 	tab = ft_strsplit((char *)ptr + 8, ' ');
-	strr = (unsigned char *)ptr + 8 + ft_strlen((char *)ptr + 4);
-	table = (void *)strr;
+	table = ptr + 8 + ft_strlen((char *)ptr + 4);
 	nm->mem.iter_nb = table->size / sizeof(t_symbol_info);
 	nm->symtab.symhead = ptr;
 	nm->head.type = RANLIB_64;
 	size = ft_atoi(tab[5]);
 	ft_free_dblechar_tab(tab);
 	iter_over_mem(ptr + 68 + size, nm, SYM_TAB_L, &cross_symbol);
-	/* nm->error = 0; */
 }

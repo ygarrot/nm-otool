@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/28 14:47:16 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/27 13:37:27 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/27 19:27:27 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char	get_flag(t_list64 list, int type, t_nm *nm)
 	return (list.n_type & N_EXT ? ft_toupper(flag) : flag);
 }
 
-void	print_nm_format(void *ptr, void *struc)
+void	print_nm_format(void *ptr)
 {
 	t_nm			*nm;
 	t_cpu_family	cpu;
@@ -67,22 +67,25 @@ void	print_nm_format(void *ptr, void *struc)
 	char			flag;
 
 	list = *((t_list64 *)ptr);
-	nm = struc;
+	nm = get_nm(0);
 	cpu = get_cpu_family(nm);
 	list.n_un.n_strx = get_int_endian(nm, list.n_un.n_strx);
 	list.n_value = get_int_endian(nm, list.n_value);
-	if (list.n_type & N_STAB)
+	if (((nm->opt & EXTERN_ONLY) && !(list.n_type & N_EXT))
+		|| list.n_type & N_STAB
+	 || nm->offset_handler(nm, nm->head.string_table, list.n_un.n_strx))
 		return ;
-	if (!(nm->head.string_table + list.n_un.n_strx))
+	if (tolower(flag = get_flag(list, 0, nm)) == 'u' && nm->opt & DEFINED_ONLY)
 		return ;
-	flag = get_flag(list, 0, nm);
-	if (nm->opt & OPT_STR[0])
-		ft_printf("%s: ", nm->file.name);
-	if (tolower(flag) != 'u')
+	if (nm->opt & UNDEFINED_ONLY)
 	{
-		ft_printf("%0*llx", cpu.width, list.n_value & cpu.mask);
+		if (tolower(flag) == 'u') 
+			ft_printf("%s\n", nm->head.string_table + list.n_un.n_strx);
+		return ;
 	}
-	else
+	(nm->opt & PRINT_FILE_NAME) ? ft_printf("%s: ", nm->file.name) : 0;
+	(tolower(flag) != 'u') ?
+		ft_printf("%0*llx", cpu.width, list.n_value & cpu.mask):
 		ft_printf("%*c", cpu.width, ' ');
 	ft_printf(" %c %s\n", flag, nm->head.string_table + list.n_un.n_strx);
 }

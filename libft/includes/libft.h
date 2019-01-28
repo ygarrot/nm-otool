@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 15:23:29 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/27 13:23:01 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/28 12:39:51 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,6 +118,7 @@ int				ft_toupper(int c);
 size_t			ft_sizeof_tab(char **tab);
 size_t			ft_strlcat(char *dest, const char *src, size_t size);
 size_t			ft_strlen(const char *str1);
+size_t			ft_strnlen(const char *str1, size_t maxsize);
 
 t_list			*ft_lstnew(void const *content, size_t content_size);
 t_list			*ft_lstnewc(void const *content, size_t content_size);
@@ -204,6 +205,8 @@ int				ft_isin_unicode(char *str, char *pattern);
 int 			is_directory(int fd);
 int 			is_regular_file(int fd);
 int				ft_swap_int(int num);
-int				ft_getopt(int ac, char *av[], const char *optst);
+int				ft_getopt(int ac, char *av[], const char *optst, int *nb);
+int				ft_islower(int c);
+int				ft_isupper(int c);
 
 #endif

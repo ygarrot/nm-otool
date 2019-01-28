@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/28 14:47:16 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/28 18:59:09 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/28 19:10:54 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ char	get_flag(t_list64 list, int type, t_nm *nm)
 	char				flag;
 
 	(void)type;
-	cpu = get_cpu_family(nm);
 	flag = 0;
 	template = (t_list_temp[5]){
 		{N_UNDF, 'u'},
@@ -42,9 +41,11 @@ char	get_flag(t_list64 list, int type, t_nm *nm)
 		flag = get_flag_from_section(list.n_sect, nm->sect_address);
 	else
 	{
+		cpu = get_cpu_family(nm);
 		flag = get_flag_from_template(template, list.n_type & N_TYPE);
 		if (flag == 'u' && (list.n_value & cpu.mask))
 			flag = 'c';
+		ft_memdel((void**)&cpu.name);
 	}
 	return (list.n_type & N_EXT ? ft_toupper(flag) : flag);
 }
@@ -56,8 +57,11 @@ int		undefined_only(char flag, t_nm *nm, t_list64 list)
 	return (1);
 }
 
-void	print_value(t_cpu_family cpu, t_nm *nm, char flag, t_list64 list)
+void	print_value(t_nm *nm, char flag, t_list64 list)
 {
+	t_cpu_family	cpu;
+
+	cpu = get_cpu_family(nm);
 	(nm->opt & PRINT_FILE_NAME) ? ft_printf("%s: ", nm->file.name) : 0;
 	if (nm->head.magic == MH_MAGIC)
 	{
@@ -72,18 +76,17 @@ void	print_value(t_cpu_family cpu, t_nm *nm, char flag, t_list64 list)
 			: ft_printf("%*c", cpu.width, ' ');
 	}
 	ft_printf(" %c %s\n", flag, nm->head.string_table + list.n_un.n_strx);
+	ft_memdel((void**)&cpu.name);
 }
 
 void	print_nm_format(void *ptr)
 {
 	t_nm			*nm;
-	t_cpu_family	cpu;
 	t_list64		list;
 	char			flag;
 
 	list = *((t_list64 *)ptr);
 	nm = get_nm(0);
-	cpu = get_cpu_family(nm);
 	list.n_un.n_strx = get_int_endian(nm, list.n_un.n_strx);
 	list.n_value = get_int_endian(nm, list.n_value);
 	if (((nm->opt & EXTERN_ONLY) && !(list.n_type & N_EXT))
@@ -95,5 +98,5 @@ void	print_nm_format(void *ptr)
 	(nm->opt & UNDEFINED_ONLY) ? (undefined_only(flag, nm, list)) : 0;
 	if (nm->opt & UNDEFINED_ONLY)
 		return ;
-	print_value(cpu, nm, flag, list);
+	print_value(nm, flag, list);
 }

@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/30 11:34:41 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 18:41:14 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/28 19:16:18 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,10 @@ int		get_inc_value(void *ptr, int type)
 	{
 		str = ft_strsplit(ptr, ' ');
 		if (ft_tablen(str) < 5)
+		{
+			ft_free_dblechar_tab(str);
 			return (INT_MAX);
+		}
 		size = ft_atoi(str[5]);
 		ft_free_dblechar_tab(str);
 		return (size + 60);

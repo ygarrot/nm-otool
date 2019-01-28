@@ -6,14 +6,14 @@
 #    By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 13:13:35 by ygarrot           #+#    #+#              #
-#    Updated: 2019/01/27 19:03:24 by ygarrot          ###   ########.fr        #
+#    Updated: 2019/01/28 19:08:31 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = ft_nm 
 
 FLAGS = -Wall -Werror -Wextra -g3
-FLAGS +=  -fsanitize=address
+#FLAGS +=  -fsanitize=address
 
 SRC_FOLDER = src/
 INCLUDE =  includes/\

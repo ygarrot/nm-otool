@@ -47,18 +47,18 @@ int		otool_format(t_sec section)
 	while (i < section.size)
 	{
 		if (otool->offset_handler(otool, section.ptr, i + 1))
-			return (EXIT_FAILURE);
-		if (!(i % 16))
 		{
-			ft_printf(cpu.print_format, get_int_endian(otool,
-			(long)section.addr) + i, "        ");
+			ft_memdel((void**)&cpu.name);
+			return (EXIT_FAILURE);
 		}
+		(!(i % 16)) ? ft_printf(cpu.print_format, get_int_endian(otool,
+			(long)section.addr) + i, "        ") : 0;
 		cpu.print_func(section.ptr, i);
 		if (++i && !(i % 16) && i < section.size)
 			ft_printf("\n");
 	}
-	if (i)
-		ft_putendl("");
+	i ? ft_putendl("") : 0;
+	ft_memdel((void**)&cpu.name);
 	return (EXIT_SUCCESS);
 }
 

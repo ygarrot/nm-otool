@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 14:13:16 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/28 13:25:58 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/28 19:20:12 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,6 @@ char			*print_arch(char *file_name, void *ptr)
 	&& ft_strcmp(cpu.name, "x86_64"))
 		ft_printf(" (architecture %s)", cpu.name);
 	ft_printf(is_lib ? ":\n" : "\n");
+	ft_memdel((void**)&cpu.name);
 	return (NULL);
 }

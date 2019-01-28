@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 14:13:16 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/28 14:37:58 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/28 16:48:01 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ t_cpu_family	get_cpu_family(t_nm *nm)
 	cpu_family = (t_cpu_family[14]){
 		{ CPU_TYPE_VAX, "vax", 8, 0xffffff, flags32},
 			{ CPU_TYPE_MC680x0, "mc680", 8, 0xffff, flags32},
-			{ CPU_TYPE_X86, "i386", 8, 0xffffff, flags32},
+			{ CPU_TYPE_X86, "x86", 8, 0xffffffff, flags64},
 			{ CPU_TYPE_I386, "i386", 8, 0xffffff, flags32},
 			{ CPU_TYPE_X86_64, "x86_64", 16, 0xffffffff, flags64},
 			{ CPU_TYPE_MC98000, "mc98000", 8, 0xffff, flags32},
@@ -75,7 +75,7 @@ char			*print_arch(char *file_name, void *ptr)
 		ft_printf("Archive : ");
 	if (file_name)
 		ft_printf("\n%s", file_name);
-	if (*cpu.name != '?' && (nm->head.no_arch || ft_strcmp(cpu.name, "x86_64")))
+	if (*cpu.name != '?' && nm->head.no_arch && ft_strcmp(cpu.name, "x86_64"))
 		ft_printf(" (for architecture %s)", cpu.name);
 	ft_memdel((void**)&cpu.name);
 	ft_printf(is_lib ? ":\n" : "\n");

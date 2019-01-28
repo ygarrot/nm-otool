@@ -45,8 +45,8 @@ typedef struct	s_cpu_family
 {
 	const int	type;
 	const char	*name;
-	const int	width;
-	const int	mask;
+	const long	width;
+	const long	mask;
 	const char	*print_format;
 }				t_cpu_family;
 

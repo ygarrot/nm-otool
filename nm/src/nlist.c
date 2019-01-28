@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/28 14:47:16 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/28 14:55:57 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/28 16:22:28 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,28 @@ int		undefined_only(char flag, t_nm *nm, t_list64 list)
 	return (1);
 }
 
+void	print_value(t_cpu_family cpu, t_nm *nm, char flag, t_list64 list)
+{
+
+	(nm->opt & PRINT_FILE_NAME) ? ft_printf("%s: ", nm->file.name) : 0;
+	if (nm->head.magic == MH_MAGIC)
+	{
+	(tolower(flag) != 'u') ?
+		ft_printf("%0*llx", cpu.width, list.n_value & (uint32_t)cpu.mask) : 
+		ft_printf("%*c", cpu.width, ' ');
+	}
+	else
+	{
+		(tolower(flag) != 'u') ?
+		ft_printf("%0*llx", cpu.width, list.n_value & (int)cpu.mask) : 
+		ft_printf("%*c", cpu.width, ' ');
+	}
+	ft_printf(" %c %s\n", flag, nm->head.string_table + list.n_un.n_strx);
+		/* ft_printf("%0*llx\n", cpu.width,list.n_value & cpu.mask) ; */
+		/* ft_printf("%016llx, %016llx\n", cpu.mask, cpu.width) ; */
+
+}
+
 void	print_nm_format(void *ptr)
 {
 	t_nm			*nm;
@@ -87,9 +109,5 @@ void	print_nm_format(void *ptr)
 	(nm->opt & UNDEFINED_ONLY) ? (undefined_only(flag, nm, list)) : 0;
 	if (nm->opt & UNDEFINED_ONLY) 
 		return ;
-	(nm->opt & PRINT_FILE_NAME) ? ft_printf("%s: ", nm->file.name) : 0;
-	(tolower(flag) != 'u') ?
-		ft_printf("%0*llx", cpu.width, list.n_value & cpu.mask) :
-		ft_printf("%*c", cpu.width, ' ');
-	ft_printf(" %c %s\n", flag, nm->head.string_table + list.n_un.n_strx);
+	print_value(cpu, nm, flag, list);
 }

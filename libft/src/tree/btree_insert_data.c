@@ -6,7 +6,7 @@
 /*   By: tcharrie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/21 16:16:59 by tcharrie          #+#    #+#             */
-/*   Updated: 2019/01/25 15:32:06 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/28 19:35:06 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,5 @@ int			btree_insert_data(t_btree **root, void *item, int (*cmpf)(void *,
 		tmp = (val < 0) ? (tmp->left) : (tmp->right);
 		val = cmpf(item, tmp->item);
 	}
-	/* if (!val) */
-	/* { */
-	/* 	del(tmp->item); */
-	/* 	tmp->item = item; */
-	/* 	return (0); */
-	/* } */
 	return (btree_insert_data_n(item, val, tmp));
 }

@@ -6,14 +6,14 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/04 12:22:07 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/04 15:23:27 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/28 19:41:08 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sys/types.h>
 #include <sys/stat.h>
 
-int is_directory(int fd) 
+int	is_directory(int fd)
 {
 	struct stat statbuf;
 

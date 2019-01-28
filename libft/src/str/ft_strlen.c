@@ -6,13 +6,13 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 10:48:17 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/28 12:40:33 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/28 19:36:20 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-size_t ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t i;
 

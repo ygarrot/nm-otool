@@ -14,7 +14,7 @@
 
 void	set_otool(t_otool *otool, void *ptr)
 {
-	t_mach_header_64			*header64;
+	t_mach_header_64		*header64;
 	t_mach_header			*header;
 
 	header64 = ptr;
@@ -22,7 +22,8 @@ void	set_otool(t_otool *otool, void *ptr)
 	otool->error = 0;
 	otool->head.magic = *(unsigned int *)ptr;
 	otool->head.ptr = ptr;
-	otool->mem.is_big_endian = (otool->head.magic == MH_CIGAM || otool->head.magic == MH_CIGAM_64);
+	otool->mem.is_big_endian = (otool->head.magic == MH_CIGAM
+	|| otool->head.magic == MH_CIGAM_64);
 	if (get_int_endian(otool, otool->head.magic) == MH_MAGIC)
 	{
 		otool->head.cpu_type = get_int_endian(otool, header->cputype);
@@ -37,13 +38,13 @@ void	set_otool(t_otool *otool, void *ptr)
 
 int		offset_handler(t_otool *otool, void *ptr, int inc_value)
 {
-if (otool->error == 2)
+	if (otool->error == 2)
 	{
 		otool->error = 0;
 		return (1);
 	}
 	otool->error = (otool->file.offset < ptr + inc_value
-			|| (otool->file.offset - ptr + inc_value < 0));
+	|| (otool->file.offset - ptr + inc_value < 0));
 	if (otool->error)
 		ft_error(otool->file.name, "truncated or malformed object");
 	return (otool->error);

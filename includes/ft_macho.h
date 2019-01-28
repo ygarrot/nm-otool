@@ -115,6 +115,7 @@ typedef struct	s_head_utils
 	void			*string_table;
 	cpu_type_t		cpu_type;
 	cpu_subtype_t	cpu_subtype;
+	void			*arch_offset;
 }				t_head_utils;
 
 typedef struct	s_mem_utils

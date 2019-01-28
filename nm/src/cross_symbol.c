@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 17:39:02 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/28 12:46:57 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/28 18:08:52 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		get_symtab_size(char *ptr)
 		return (INT_MAX);
 	size = ft_atoi(str[5]);
 	ft_free_dblechar_tab(str);
-	return (size + 60);
+	return (size + 68);
 }
 
 void	cross_symbol(void *ptr, void *struc, uint32_t index)
@@ -36,7 +36,8 @@ void	cross_symbol(void *ptr, void *struc, uint32_t index)
 	nm = struc;
 	str = ptr;
 	file = &str[ft_strlento(str, '\n') + 1];
-	if (!ft_strlen(file))
+	if ((nm->head.arch_offset && ptr > nm->head.arch_offset)
+	|| !ft_strlen(file))
 	{
 		nm->error = 2;
 		return ;
@@ -73,5 +74,7 @@ void	ranlib_handler(void *ptr, void *struc)
 	nm->head.type = RANLIB_64;
 	size = ft_atoi(tab[5]);
 	ft_free_dblechar_tab(tab);
+	nm->symtab.active = true;
 	iter_over_mem(ptr + 68 + size, nm, SYM_TAB_L, &cross_symbol);
+	nm->symtab.active = false;
 }

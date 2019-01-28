@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/05 10:08:00 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 18:50:18 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/28 17:50:04 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ void	is_fat_header(void *fat_header, void *struc)
 		offset = ft_swap_int(arch->offset);
 		if (nm->offset_handler(nm, fat_header, offset))
 			return ;
+		nm->head.arch_offset = nm->head.ptr + ft_swap_int(arch->size);
 		if (is_user_arch(nm, fat_header, offset))
 			return ;
 		arch++;

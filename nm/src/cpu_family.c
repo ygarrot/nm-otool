@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 14:13:16 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/28 16:48:01 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/28 18:08:59 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char			*print_arch(char *file_name, void *ptr)
 	int					is_lib;
 
 	nm = get_nm(0);
-	if (!nm->head.no_arch && nm->file.ac <= 1)
+	if (nm->symtab.active || (!nm->head.no_arch && nm->file.ac <= 1))
 		return (0);
 	cpu = get_cpu_family(nm);
 	is_lib = ft_memcmp(ptr, ARLIB, ft_strlen(ARLIB));

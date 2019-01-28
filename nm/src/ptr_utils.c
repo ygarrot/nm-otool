@@ -12,6 +12,16 @@
 
 #include "ft_nm.h"
 
+char	get_flag_from_template(t_list_temp *template, int to_find)
+{
+	int	i;
+
+	i = 0;
+	while (template[i].symb != -1 && template[i].symb != to_find)
+		i++;
+	return (template[i].c);
+}
+
 int		get_magic(void *ptr)
 {
 	int		magic_number;

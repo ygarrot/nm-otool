@@ -96,4 +96,6 @@ int				ft_error(char *file, char *str);
 int				ft_digitcmp(void *s1, void *s2);
 int				ft_nosort(void *s1, void *s2);
 int				ft_sizesort(void *s1, void *s2);
+char			get_flag_from_template(t_list_temp *template, int to_find);
+
 #endif

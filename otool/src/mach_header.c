@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/05 10:08:00 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 18:41:14 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/28 18:01:49 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@ int		is_user_arch(t_otool *otool, void *fat_header, int offset)
 	t_mach_header_64		*header64;
 	t_mach_header			*header;
 
+	if (otool->offset_handler(otool, fat_header, offset))
+		return (1);
+	ft_bzero(&otool->mem, sizeof(otool->mem));
 	magic = *(unsigned int*)(fat_header + offset);
 	header64 = fat_header + offset;
 	header = fat_header + offset;
@@ -47,10 +50,8 @@ void	is_fat_header(void *fat_header, void *struc)
 	nfat = ft_swap_int(((t_fat_header*)fat_header)->nfat_arch);
 	while (--nfat >= 0)
 	{
-		ft_bzero(&otool->mem, sizeof(otool->mem));
 		offset = ft_swap_int(arch->offset);
-		if (otool->offset_handler(otool, fat_header, offset))
-			return ;
+		otool->head.arch_offset = otool->head.ptr + ft_swap_int(arch->size);
 		if (is_user_arch(otool, fat_header, offset))
 			return ;
 		arch++;

@@ -12,20 +12,21 @@
 
 #include "ft_otool.h"
 
-char delspace(char *ptr)
+char			delspace(char *ptr)
 {
 	if (*ptr == ' ')
 		*ptr = *(ptr + 1);
-	return *ptr;
+	return (*ptr);
 }
 
-t_cpu_family insert_name(cpu_type_t type, cpu_subtype_t subtype, t_cpu_family *cpu)
+t_cpu_family	insert_name(cpu_type_t type,
+	cpu_subtype_t subtype, t_cpu_family *cpu)
 {
-	NXArchInfo *archInfo;
+	NXArchInfo	*archInfo;
 
 	archInfo = (NXArchInfo*)NXGetArchInfoFromCpuType(type, subtype);
 	cpu->name = archInfo ? ft_strmap2(ft_strdup(archInfo->name),
-			delspace) : strdup(cpu->name); 
+		delspace) : strdup(cpu->name);
 	return (*cpu);
 }
 
@@ -73,7 +74,8 @@ char			*print_arch(char *file_name, void *ptr)
 		ft_printf("Archive : ");
 	if (file_name)
 		ft_printf("%s", file_name);
-	if (*cpu.name != '?' && (otool->head.active) && ft_strcmp(cpu.name, "x86_64"))
+	if (*cpu.name != '?' && (otool->head.active)
+	&& ft_strcmp(cpu.name, "x86_64"))
 		ft_printf(" (architecture %s)", cpu.name);
 	ft_printf(is_lib ? ":\n" : "\n");
 	return (NULL);

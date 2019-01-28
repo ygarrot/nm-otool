@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 17:39:02 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/28 13:03:11 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/28 18:04:04 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ void	cross_symbol(void *ptr, void *struc, uint32_t index)
 	otool = struc;
 	str = ptr;
 	file = &str[ft_strlento(str, '\n') + 1];
-	if (!ft_strlen(file))
+	if ((otool->head.arch_offset
+	&& ptr > otool->head.arch_offset) || !ft_strlen(file))
 	{
 		otool->error = 2;
 		return ;

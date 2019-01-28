@@ -59,7 +59,6 @@ int		otool_format(t_sec section)
 	}
 	if (i)
 		ft_putendl("");
-	
 	return (EXIT_SUCCESS);
 }
 

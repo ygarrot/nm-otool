@@ -6,16 +6,16 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/24 17:40:41 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 19:01:23 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/28 14:56:25 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_nm.h"
 #include <inttypes.h>
 
-void	set_nm(t_nm *nm, void *ptr)
+void		set_nm(t_nm *nm, void *ptr)
 {
-	t_mach_header_64			*header64;
+	t_mach_header_64		*header64;
 	t_mach_header			*header;
 
 	header64 = ptr;
@@ -27,13 +27,13 @@ void	set_nm(t_nm *nm, void *ptr)
 	nm->count_sect = 1;
 	if (get_int_endian(nm, nm->head.magic) == MH_MAGIC)
 	{
-		nm->head.cputype = get_int_endian(nm, header->cputype);
-		nm->head.cpusubtype = get_int_endian(nm, header->cpusubtype);
+		nm->head.cpu_type = get_int_endian(nm, header->cputype);
+		nm->head.cpu_subtype = get_int_endian(nm, header->cpusubtype);
 	}
 	else if (get_int_endian(nm, nm->head.magic == MH_MAGIC_64))
 	{
-		nm->head.cputype = get_int_endian(nm, header64->cputype);
-		nm->head.cpusubtype = get_int_endian(nm, header64->cpusubtype);
+		nm->head.cpu_type = get_int_endian(nm, header64->cputype);
+		nm->head.cpu_subtype = get_int_endian(nm, header64->cpusubtype);
 	}
 }
 

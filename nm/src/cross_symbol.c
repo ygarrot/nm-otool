@@ -47,7 +47,7 @@ void	cross_symbol(void *ptr, void *struc, uint32_t index)
 		len++;
 	if (nm->offset_handler(nm, str, len))
 		return ;
-	cross_arch(str + len , 0);
+	cross_arch(str + len, 0);
 }
 
 int		ft_memalign(int size, int alignment)

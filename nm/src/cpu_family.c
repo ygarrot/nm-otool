@@ -6,28 +6,28 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 14:13:16 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/28 12:31:39 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/28 14:37:58 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_nm.h"
 #include <mach-o/arch.h>
 
-char delspace(char *ptr)
+char			delspace(char *ptr)
 {
 	if (*ptr == ' ')
 		*ptr = *(ptr + 1);
-	return *ptr;
+	return (*ptr);
 }
 
-t_cpu_family insert_name(t_nm *nm, t_cpu_family *cpu)
+t_cpu_family	insert_name(t_nm *nm, t_cpu_family *cpu)
 {
-	NXArchInfo *archInfo;
+	NXArchInfo	*archInfo;
 
-	archInfo = (NXArchInfo*)NXGetArchInfoFromCpuType(nm->head.cputype,
-			nm->head.cpusubtype);
+	archInfo = (NXArchInfo*)NXGetArchInfoFromCpuType(nm->head.cpu_type,
+			nm->head.cpu_subtype);
 	cpu->name = archInfo ? ft_strmap2(ft_strdup(archInfo->name),
-			delspace) : strdup(cpu->name); 
+			delspace) : strdup(cpu->name);
 	return (*cpu);
 }
 
@@ -55,15 +55,15 @@ t_cpu_family	get_cpu_family(t_nm *nm)
 			{ CPU_TYPE_POWERPC64, "ppc64", 8, 0xffffff, flags32},
 			{ -1, "?", 16, 0xffffffff, flags64}
 	};
-	while (cpu_family[i].type != -1 && cpu_family[i].type != nm->head.cputype)
+	while (cpu_family[i].type != -1 && cpu_family[i].type != nm->head.cpu_type)
 		i++;
-	return insert_name(nm, &cpu_family[i]);
+	return (insert_name(nm, &cpu_family[i]));
 }
 
 char			*print_arch(char *file_name, void *ptr)
 {
 	t_cpu_family		cpu;
-	t_nm						*nm;
+	t_nm				*nm;
 	int					is_lib;
 
 	nm = get_nm(0);

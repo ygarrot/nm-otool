@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/28 14:47:16 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/27 19:27:27 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/28 14:55:57 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,13 @@ char	get_flag(t_list64 list, int type, t_nm *nm)
 	return (list.n_type & N_EXT ? ft_toupper(flag) : flag);
 }
 
+int		undefined_only(char flag, t_nm *nm, t_list64 list)
+{
+	if (tolower(flag) == 'u')
+		ft_printf("%s\n", nm->head.string_table + list.n_un.n_strx);
+	return (1);
+}
+
 void	print_nm_format(void *ptr)
 {
 	t_nm			*nm;
@@ -73,19 +80,16 @@ void	print_nm_format(void *ptr)
 	list.n_value = get_int_endian(nm, list.n_value);
 	if (((nm->opt & EXTERN_ONLY) && !(list.n_type & N_EXT))
 		|| list.n_type & N_STAB
-	 || nm->offset_handler(nm, nm->head.string_table, list.n_un.n_strx))
+		|| nm->offset_handler(nm, nm->head.string_table, list.n_un.n_strx))
 		return ;
 	if (tolower(flag = get_flag(list, 0, nm)) == 'u' && nm->opt & DEFINED_ONLY)
 		return ;
-	if (nm->opt & UNDEFINED_ONLY)
-	{
-		if (tolower(flag) == 'u') 
-			ft_printf("%s\n", nm->head.string_table + list.n_un.n_strx);
+	(nm->opt & UNDEFINED_ONLY) ? (undefined_only(flag, nm, list)) : 0;
+	if (nm->opt & UNDEFINED_ONLY) 
 		return ;
-	}
 	(nm->opt & PRINT_FILE_NAME) ? ft_printf("%s: ", nm->file.name) : 0;
 	(tolower(flag) != 'u') ?
-		ft_printf("%0*llx", cpu.width, list.n_value & cpu.mask):
+		ft_printf("%0*llx", cpu.width, list.n_value & cpu.mask) :
 		ft_printf("%*c", cpu.width, ' ');
 	ft_printf(" %c %s\n", flag, nm->head.string_table + list.n_un.n_strx);
 }

@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 17:39:02 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/28 12:51:57 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/28 13:03:11 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	cross_symbol(void *ptr, void *struc, uint32_t index)
 	}
 	ft_printf("%s(%s):\n", otool->file.name, file);
 	len = ft_strlen(str);
-	while (!str[len])
+	while (!str[len] && !otool->offset_handler(otool, str, len + 1))
 		len++;
 	cross_arch(str + len, 0);
 }

@@ -85,11 +85,8 @@ int		mmap_file(char *file)
 					PROT_READ, MAP_PRIVATE, fd, 0)) == MAP_FAILED)
 		return (ft_error(file, "mmap errror"));
 	nm = get_nm(0);
-	nm->count_sect = 1;
 	nm->file.size = buf.st_size;
 	nm->file.offset = ptr + buf.st_size;
-	nm->head.no_arch = 0;
-	nm->btree = 0;
 	nm->file.name = file;
 	ret = cross_arch(ptr, file);
 	if (munmap(ptr, buf.st_size))

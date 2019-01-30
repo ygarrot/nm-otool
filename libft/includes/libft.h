@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 15:23:29 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/28 12:39:51 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/29 11:46:21 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -202,8 +202,8 @@ int				ft_lenchar_r(char *str, int pos);
 int				ft_lenchar_l(char *str, int pos);
 int				ft_isin_unicode(char *str, char *pattern);
 
-int 			is_directory(int fd);
-int 			is_regular_file(int fd);
+int				is_directory(int fd);
+int				is_regular_file(int fd);
 int				ft_swap_int(int num);
 int				ft_getopt(int ac, char *av[], const char *optst, int *nb);
 int				ft_islower(int c);

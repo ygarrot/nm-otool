@@ -6,21 +6,19 @@
 #    By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 13:13:35 by ygarrot           #+#    #+#              #
-#    Updated: 2019/01/28 19:08:31 by ygarrot          ###   ########.fr        #
+#    Updated: 2019/01/29 16:20:40 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = ft_nm 
 
-FLAGS = -Wall -Werror -Wextra -g3
-#FLAGS +=  -fsanitize=address
+FLAGS = -Wall -Werror -Wextra
 
 SRC_FOLDER = src/
 INCLUDE =  includes/\
 					 -I ../includes/
 
 OBJ_DIR = mkdir obj
-# :r !ls
 SRC_FP =\
 	cross_symbol.c\
 	cpu_family.c\
@@ -35,7 +33,7 @@ SRC_FP =\
 	tree_tools.c
 
 OBJ = $(addprefix $(SRC_FOLDER), $(SRC_FP:.c=.o))
-	LIBFT = ../libft/libft.a
+LIBFT = ../libft/libft.a
 
 all: $(NAME)
 

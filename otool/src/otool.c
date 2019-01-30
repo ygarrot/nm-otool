@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:34:12 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 18:41:14 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/29 11:28:54 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ int		main(int ac, char **av)
 
 	i = 0;
 	if (ac < 2)
-		return (mmap_file("./a.out"));
+		return (ft_printf("Please give me an argument\n"));
 	while (++i < ac)
 		if ((ret = mmap_file(av[i])) != EXIT_SUCCESS)
 			return (EXIT_FAILURE);

@@ -6,9 +6,12 @@
 #    By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 12:06:15 by ygarrot           #+#    #+#              #
-#    Updated: 2019/01/28 12:40:04 by ygarrot          ###   ########.fr        #
+#    Updated: 2019/01/29 16:20:00 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+.PHONY: all $(NAME) clean fclean re
+.SUFFIXES:
 
 NAME = libft.a
 
@@ -232,4 +235,3 @@ re:
 	make all
 
 
-.PHONY: all $(NAME) clean fclean re

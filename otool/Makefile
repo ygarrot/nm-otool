@@ -6,21 +6,20 @@
 #    By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 13:13:35 by ygarrot           #+#    #+#              #
-#    Updated: 2019/01/28 19:16:29 by ygarrot          ###   ########.fr        #
+#    Updated: 2019/01/29 12:27:30 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = ft_otool
 
 FLAGS = -Wall -Werror -Wextra
-# FLAGS +=  -fsanitize=address -g3
 
 SRC_FOLDER = src/
 INCLUDE =  includes/\
 					 -I ../includes/
 
 OBJ_DIR = mkdir obj
-# :r !ls
+
 SRC_FP =\
 				otool.c \
 				indian.c \

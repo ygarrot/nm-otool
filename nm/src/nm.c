@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:58 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/28 18:06:17 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/29 16:22:57 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ int		cross_arch(void *ptr, char *file_name)
 		return (EXIT_FAILURE);
 	nm = get_nm(0);
 	nm->error = 0;
-	btree_erase(&nm->btree, ft_del_nothing_2);
 	magic_number = *(unsigned int *)ptr;
 	nm->head.magic = magic_number;
 	nm->head.ptr = ptr;
@@ -62,6 +61,7 @@ int		cross_arch(void *ptr, char *file_name)
 	ft_bzero(nm->sect_address, sizeof(nm->sect_address));
 	if (!is_valid_arch(magic_number, nm, ptr))
 		ft_error(file_name, NOTOBJ);
+	btree_erase(&nm->btree, ft_del_nothing_2);
 	return (nm->error);
 }
 

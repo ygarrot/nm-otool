@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 14:13:16 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/28 19:20:12 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/01/29 17:08:33 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ char			delspace(char *ptr)
 t_cpu_family	insert_name(cpu_type_t type,
 	cpu_subtype_t subtype, t_cpu_family *cpu)
 {
-	NXArchInfo	*archInfo;
+	t_nxarchinfo	*arch_info;
 
-	archInfo = (NXArchInfo*)NXGetArchInfoFromCpuType(type, subtype);
-	cpu->name = archInfo ? ft_strmap2(ft_strdup(archInfo->name),
-		delspace) : strdup(cpu->name);
+	arch_info = (t_nxarchinfo*)NXGetArchInfoFromCpuType(type, subtype);
+	cpu->name = arch_info ? ft_strmap2(ft_strdup(arch_info->name),
+		delspace) : ft_strdup(cpu->name);
 	return (*cpu);
 }
 

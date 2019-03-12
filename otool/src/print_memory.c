@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/06 11:49:33 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/26 18:41:14 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/03/12 13:40:52 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int		otool_format(t_sec section)
 			ft_memdel((void**)&cpu.name);
 			return (EXIT_FAILURE);
 		}
-		(!(i % 16)) ? ft_printf(cpu.print_format, get_int_endian(otool,
+		(!(i % 16)) ? ft_printf("%*llx\t", cpu.width, get_int_endian(otool,
 			(long)section.addr) + i, "        ") : 0;
 		cpu.print_func(section.ptr, i);
 		if (++i && !(i % 16) && i < section.size)

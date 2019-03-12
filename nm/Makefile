@@ -6,54 +6,80 @@
 #    By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 13:13:35 by ygarrot           #+#    #+#              #
-#    Updated: 2019/01/29 16:20:40 by ygarrot          ###   ########.fr        #
+#    Updated: 2019/03/12 15:23:26 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+.PHONY: $(NAME) all clean fclean re
 
 NAME = ft_nm 
 
 FLAGS = -Wall -Werror -Wextra
+FLAGS += -g3
+# FLAGS += -fsanitize=address,undefined
+SRC_DIR = src
 
-SRC_FOLDER = src/
 INCLUDE =  includes/\
-					 -I ../includes/
+		   -I ../includes/
 
-OBJ_DIR = mkdir obj
-SRC_FP =\
-	cross_symbol.c\
-	cpu_family.c\
-	ft_alphacmp.c\
-	mach_header.c\
-	nlist.c\
-	nm.c\
-	nm_init.c\
-	ptr_utils.c\
-	segment_command.c\
-	symtab_command.c\
-	tree_tools.c
+SHARED_DIR = ../shared
+OBJ_DIR = obj
 
-OBJ = $(addprefix $(SRC_FOLDER), $(SRC_FP:.c=.o))
+SHARED_SRC = \
+			 cpu_family.c\
+			 cross_symbol.c\
+			 mach_header.c\
+			 ptr_utils.c
+
+SRC =\
+	 cross_symbol.c\
+	 cpu_family.c\
+	 ft_alphacmp.c\
+	 mach_header.c\
+	 nlist.c\
+	 nm.c\
+	 nm_init.c\
+	 ptr_utils.c\
+	 segment_command.c\
+	 symtab_command.c\
+	 tree_tools.c
+
+SRCS = $(addprefix $(SRC_DIR)/, $(SRC))
+
+SHARED_SRCS = $(addprefix $(SHARED_DIR)/, $(SHARED_SRC))
+
+OBJS = $(addprefix $(OBJ_DIR)/, $(addsuffix .o, $(basename $(SRC))))
+SHARED_OBJS = $(addprefix ../$(OBJ_DIR)/, $(addsuffix .o, $(basename $(SHARED_SRC))))
+
+OBJ_FILES = $(sort $(dir $(OBJS) $(dir $SHARED_OBJS)))
+
 LIBFT = ../libft/libft.a
 
 all: $(NAME)
 
-src/%.o: src/%.c
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c includes/$(NAME).h ../include/ft_macho.h
 	@gcc $(FLAGS) -o $@ -c $<  -I $(INCLUDE)
 
-$(NAME): $(OBJ)
-	@make -C ../libft -j
-	@gcc $(FLAGS) -o $(NAME) $(OBJ) -I $(INCLUDE) -L ../libft -l ft
+../$(OBJ_DIR)/%.o: $(SHARED_DIR)/%.c
+	@gcc $(FLAGS) -o $@ -c $<  -I $(INCLUDE)
+
+$(NAME): obj_dir $(OBJS) $(SHARED_OBJS) 
+	@make -C ../libft
+	@gcc $(FLAGS) -o $(NAME) $(OBJS) $(SHARED_OBJS) -I $(INCLUDE) -L ../libft -l ft
+	@echo $(NAME) is compiled
+
+obj_dir:
+	@mkdir -p $(OBJ_DIR) || true
+	@mkdir -p ../$(OBJ_DIR) || true
 
 clean:
-	@rm -f $(OBJ)
+	@rm -rf $(OBJ_DIR)
+	@rm -rf ../$(OBJ_DIR)
 	@make -C ../libft clean
 
-fclean:
-	@rm -f $(OBJ)
+fclean: clean
 	@rm -f $(NAME)
-	@rm -f $(NAME_NO_HOST)
 	@make -C ../libft fclean
 
 re: fclean all
 
-.PHONY: $(NAME) all clean fclean re

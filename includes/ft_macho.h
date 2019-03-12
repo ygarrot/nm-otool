@@ -6,13 +6,14 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/04 12:30:12 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/29 11:19:33 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/03/12 14:35:16 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_MACHO_H
 # define FT_MACHO_H
 
+#include "libft/includes/libft.h"
 # include <stdlib.h>
 # include <sys/mman.h>
 # include <stdio.h>
@@ -24,6 +25,13 @@
 # include <mach-o/arch.h>
 # include <mach/machine.h>
 # include <sys/stat.h>
+
+#define MASK32 0xffff
+#define MASK64 0xffffff
+#define MASK64_X 0xffffffff
+
+#define WIDTH32 8
+#define WIDTH64 16
 
 # define ARLIB "!<arch>\n"
 # define FT_EISDIR "Is a directory"
@@ -119,6 +127,16 @@ typedef struct	s_head_utils
 	void			*arch_offset;
 }				t_head_utils;
 
+
+typedef struct	s_cpu_family
+{
+	const int	type;
+	const char	*name;
+	const long	width;
+	const long	mask;
+	void		(*print_func)(unsigned char *ptr, int index);
+}				t_cpu_family;
+
 typedef struct	s_mem_utils
 {
 	bool	is_big_endian;
@@ -130,4 +148,24 @@ typedef struct	s_symbol_table {
 	t_symbol_info	ranlib;
 }				t_symbol_table;
 
+typedef struct	s_macho
+{
+	t_mem_utils			mem;
+	t_head_utils		head;
+	t_fat_h				fat_h;
+	t_file_attribute	file;
+	t_symtab_utils		symtab;
+	int					error;
+	int					(*offset_handler)(struct s_macho *macho,
+	void *ptr, int inc_value);
+}				t_macho;
+
+t_cpu_family	get_cpu_family(t_head_utils *nm);
+void			print_32(unsigned char *ptr, int i);
+void			print_64(unsigned char *ptr, int i);
+void			cross_command(void *ptr, void *struc, uint32_t index);
+int				cross_arch(void *ptr, char *file_name);
+void			iter_over_mem(void *ptr, void *struc, int type,
+				void (*f)(void *, void *struc, uint32_t index));
+long			get_int_endian(t_macho *macho, long to_convert);
 #endif

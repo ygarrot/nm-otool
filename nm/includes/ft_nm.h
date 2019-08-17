@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/26 14:15:01 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/28 14:54:32 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/08/17 12:43:07 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define FT_NM_H
 
 # define OPT_STR "AgnpruU"
-# include "../../libft/includes/libft.h"
+# include "../../libft/libft/includes/libft.h"
 # include "../../includes/ft_macho.h"
 
 enum

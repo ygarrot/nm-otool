@@ -6,7 +6,7 @@
 #    By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 13:13:35 by ygarrot           #+#    #+#              #
-#    Updated: 2019/01/29 12:27:30 by ygarrot          ###   ########.fr        #
+#    Updated: 2019/08/17 12:46:00 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ FLAGS = -Wall -Werror -Wextra
 
 SRC_FOLDER = src/
 INCLUDE =  includes/\
-					 -I ../includes/
+					 -I ../includes/\
+					 -I ../libft/libft/includes 
 
 OBJ_DIR = mkdir obj
 

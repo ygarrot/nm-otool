@@ -6,14 +6,14 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 17:32:25 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/28 14:26:24 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/08/17 12:43:39 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_OTOOL_H
 # define FT_OTOOL_H
 
-# include "../../libft/includes/libft.h"
+# include "../../libft/libft/includes/libft.h"
 # include "../../includes/ft_macho.h"
 
 typedef struct s_otool	t_otool;

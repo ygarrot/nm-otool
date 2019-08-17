@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   is_directory.c                                     :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/04 12:22:07 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/28 19:41:08 by ygarrot          ###   ########.fr       */
+/*   Created: 2017/11/09 10:44:02 by ygarrot           #+#    #+#             */
+/*   Updated: 2019/03/07 09:43:02 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <sys/types.h>
-#include <sys/stat.h>
+#include "libft.h"
 
-int	is_directory(int fd)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	struct stat statbuf;
+	size_t i;
 
-	if (fstat(fd, &statbuf) != 0)
+	if (!dst || !src)
 		return (0);
-	return (S_ISDIR(statbuf.st_mode));
+	i = 0;
+	while (i < n)
+	{
+		((unsigned char*)dst)[i] = ((unsigned char*)src)[i];
+		i++;
+	}
+	return (dst);
 }

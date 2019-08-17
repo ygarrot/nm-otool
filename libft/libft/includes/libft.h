@@ -6,14 +6,14 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 15:23:29 by ygarrot           #+#    #+#             */
-/*   Updated: 2019/01/29 11:46:21 by ygarrot          ###   ########.fr       */
+/*   Updated: 2019/08/17 12:24:44 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# define BUFF_SIZE 32
+# define BUFF_SIZE 300
 # define RED "\x1b[31m"
 # define GREEN "\x1b[32m"
 # define YELLOW "\x1b[33m"
@@ -41,6 +41,7 @@
 # include "ft_printf.h"
 # include "get_next_line.h"
 # include "ft_btree.h"
+# include "libftasm.h"
 
 typedef struct	s_list
 {
@@ -58,10 +59,7 @@ char			*ft_implode(char *glue, const char *str, const char *str2);
 char			*ft_itoa(int n);
 char			*ft_itoabase(int value, int base);
 
-char			*ft_strcat(char *dest, const char *src);
 char			*ft_strchr(const char *s, int c);
-char			*ft_strcpy(char *dst, const char *src);
-char			*ft_strdup(const char *src);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_str_tabjoin(char const **s2);
 char			*ft_strmap(char const *s, char (*f)(char));
@@ -69,7 +67,6 @@ char			*ft_strmap2(char *s, char (*f)(char*));
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strncat(char *dest, const char *src, size_t n);
 char			*ft_strncpy(char *dst, const char *src, size_t len);
-char			*ft_strndup(char *todup, size_t siz);
 char			*ft_strnew(size_t size);
 char			*ft_strnstr(const char *s1, const char *s2, size_t len);
 char			*ft_strrchr(const char *s, int c);
@@ -84,22 +81,14 @@ char			*ft_uimaxtoabase(uintmax_t value, int base);
 int				**ft_init_char_tab(int size, int size2);
 int				**ft_initdbl_int_tab(size_t size1, size_t size2);
 int				*ft_init_int_tab(int size);
-int				ft_abs(int value);
 int				ft_atoi(const char *str);
 int				ft_atoi_base(const char *str, int base);
 
 int				ft_uint_isin(unsigned int tofind, unsigned int *tab, int size);
 int				ft_int_isin(int tofind, int *tab, int size);
-int				ft_isalnum(int c);
-int				ft_isalnum(int c);
-int				ft_isalpha(int c);
-int				ft_isascii(int c);
 int				ft_isbase(int c, int base);
-int				ft_isdigit(int c);
-int				ft_isin(char c, char *str);
 int				ft_ismax(int i, int i2);
 int				ft_ismin(int i, int i2);
-int				ft_isprint(int c);
 
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 int				ft_occiter(char *str, int base, int (*f)(int, int));
@@ -118,7 +107,6 @@ int				ft_toupper(int c);
 size_t			ft_sizeof_tab(char **tab);
 size_t			ft_strlcat(char *dest, const char *src, size_t size);
 size_t			ft_strlen(const char *str1);
-size_t			ft_strnlen(const char *str1, size_t maxsize);
 
 t_list			*ft_lstnew(void const *content, size_t content_size);
 t_list			*ft_lstnewc(void const *content, size_t content_size);
@@ -145,11 +133,8 @@ void			ft_lstfusion(t_list **l, t_list *r, int (*c)(void *, void *),
 void			*ft_memalloc(size_t size);
 void			*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);
-void			*ft_memcpy(void *dst, const void *src, size_t n);
 void			*ft_memmove(void *dst, const void *src, size_t len);
-void			*ft_memset(void *b, int c, size_t len);
 void			*ft_realloc(void *str, size_t size);
-void			ft_bzero(void *s, size_t n);
 void			ft_capitalize(char *str);
 void			ft_free_dblechar_tab(char **tab);
 void			ft_free_dblint_tab(int **tab, int size);
@@ -175,17 +160,13 @@ void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 void			ft_strswap(char *str, char *str2);
 
 char			**ft_strtabdup(char **tabl);
-char			*ft_strdupto(char *str, char to);
 int				ft_indexmin(int *tabl, size_t len);
 int				ft_sqrt(int n);
 int				ft_gotmod(size_t nb, int i);
 int				ft_writenchar(char c, int n);
 int				ft_strlenin(char *str, char *lim);
-int				ft_strlento(char *str, char c);
 int				ft_strlento_rev(char *str, int size, char *lim);
 int				ft_strnocc(char *str, char c, int n);
-int				ft_max(int n, int m);
-int				ft_min(int n, int m);
 int				ft_divideby(int nb, int div);
 int				ft_insert(char **str, char *in, size_t to, size_t size);
 int				ft_addtofd(char *str, int fd);
@@ -203,6 +184,7 @@ int				ft_lenchar_l(char *str, int pos);
 int				ft_isin_unicode(char *str, char *pattern);
 
 int				is_directory(int fd);
+int				is_directory_str(char *name);
 int				is_regular_file(int fd);
 int				ft_swap_int(int num);
 int				ft_getopt(int ac, char *av[], const char *optst, int *nb);

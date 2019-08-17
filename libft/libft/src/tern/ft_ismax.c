@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_ismax.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 10:44:02 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/04/11 14:44:47 by ygarrot          ###   ########.fr       */
+/*   Created: 2018/01/01 20:02:29 by ygarrot           #+#    #+#             */
+/*   Updated: 2019/03/03 12:28:42 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int		ft_ismax(int i, int i2)
 {
-	size_t i;
-
-	if (!dst || !src)
-		return (0);
-	i = 0;
-	while (i < n)
-	{
-		((unsigned char*)dst)[i] = ((unsigned char*)src)[i];
-		i++;
-	}
-	return (dst);
+	return ((i > i2) ? i : i2);
 }

@@ -6,7 +6,7 @@
 #    By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 13:13:35 by ygarrot           #+#    #+#              #
-#    Updated: 2019/03/12 15:23:26 by ygarrot          ###   ########.fr        #
+#    Updated: 2019/03/12 18:28:12 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,14 +32,10 @@ SHARED_SRC = \
 			 ptr_utils.c
 
 SRC =\
-	 cross_symbol.c\
-	 cpu_family.c\
 	 ft_alphacmp.c\
-	 mach_header.c\
 	 nlist.c\
 	 nm.c\
 	 nm_init.c\
-	 ptr_utils.c\
 	 segment_command.c\
 	 symtab_command.c\
 	 tree_tools.c
@@ -57,7 +53,7 @@ LIBFT = ../libft/libft.a
 
 all: $(NAME)
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c includes/$(NAME).h ../include/ft_macho.h
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@gcc $(FLAGS) -o $@ -c $<  -I $(INCLUDE)
 
 ../$(OBJ_DIR)/%.o: $(SHARED_DIR)/%.c
